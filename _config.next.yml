@@ -1,0 +1,70 @@
+# ==============================================================
+# NexT 主题个性化配置
+# 此文件为"备用主题配置"(Alternate Theme Config)，会自动与
+# themes/next/_config.yml 合并覆盖，升级主题时不会被覆盖丢失。
+# 文档: https://theme-next.js.org/docs/getting-started/configuration
+# ==============================================================
+
+# Scheme 布局方案: Muse | Mist | Pisces | Gemini
+scheme: Gemini
+
+# 深色模式：true = 跟随系统自动切换
+darkmode: true
+
+# ---------------------------------------------------------------
+# 菜单设置
+# ---------------------------------------------------------------
+menu:
+  home: / || fa fa-home
+  about: /about/ || fa fa-user
+  tags: /tags/ || fa fa-tags
+  categories: /categories/ || fa fa-th
+  archives: /archives/ || fa fa-archive
+
+menu_settings:
+  icons: true
+  badges: true
+
+# ---------------------------------------------------------------
+# 侧边栏设置
+# ---------------------------------------------------------------
+sidebar:
+  position: left
+  display: post
+
+# 侧边栏头像（可放入 source/uploads/avatar.png 后取消注释）
+# avatar:
+#   url: /uploads/avatar.png
+#   rounded: true
+#   rotated: false
+
+# ---------------------------------------------------------------
+# 社交链接
+# ---------------------------------------------------------------
+social:
+  GitHub: https://github.com/JiaShiqi-THINKDIFFERENT || fab fa-github
+
+social_icons:
+  enable: true
+  icons_only: false
+  transition: true
+
+# ---------------------------------------------------------------
+# 页脚设置
+# ---------------------------------------------------------------
+footer:
+  since: 2026
+  icon:
+    name: fa fa-heart
+    animated: true
+    color: "#ff2d55"
+  powered: true
+
+# ---------------------------------------------------------------
+# 文章目录
+# ---------------------------------------------------------------
+toc:
+  enable: true
+  number: true
+  expand_all: true
+  max_depth: 6
