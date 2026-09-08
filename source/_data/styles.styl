@@ -48,3 +48,45 @@
     --theme-color: #14352b;
   }
 }
+
+// ==============================================================
+// 站点品牌横幅（首页顶部大标题 CLIVIA）
+// 深墨绿底 + 白色加粗大标题，亮/暗模式均适用
+// ==============================================================
+header.header {
+  background: #1b4d3e;
+}
+
+.brand {
+  color: #ffffff;
+}
+
+.brand:hover {
+  color: #ffffff;
+}
+
+.site-title {
+  font-size: 2.25em;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #ffffff;
+}
+
+.site-subtitle {
+  color: #cfe2d7;
+}
+
+// 暗色模式：横幅用更深的墨绿，避免过亮
+@media (prefers-color-scheme: dark) {
+  header.header {
+    background: #14352b;
+  }
+}
+
+// 窄屏：汉堡菜单按钮线条改为白色，在墨绿横幅上清晰可见
+@media (max-width: 991px) {
+  .site-nav-toggle .toggle-line {
+    background: #ffffff;
+  }
+}
+
