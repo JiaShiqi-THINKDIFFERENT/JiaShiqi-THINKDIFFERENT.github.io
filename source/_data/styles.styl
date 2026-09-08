@@ -1,0 +1,50 @@
+// ==============================================================
+// CLIVIA 全局配色 —— 深墨绿
+// 此文件在 main.styl 末尾注入，:root 变量覆盖优先级最高
+// 主色: #1b4d3e (深墨绿) / 悬停: #0e3328
+// ==============================================================
+
+// 亮色模式
+:root {
+  --body-bg-color: #f4f7f5;            // 页面底色（淡墨绿灰）
+  --content-bg-color: #ffffff;         // 内容卡片
+  --card-bg-color: #edf3ef;            // 侧边栏 / 卡片
+  --menu-item-bg-color: #edf3ef;       // 菜单项悬停底色
+  --text-color: #2e3b34;               // 正文文字（墨绿灰）
+  --link-color: #1b4d3e;               // 链接主色
+  --link-hover-color: #0e3328;         // 链接悬停
+  --link-decoration-color: #9dbcae;    // 链接下划线
+  --brand-color: #1b4d3e;              // 品牌/标题强调色
+  --brand-hover-color: #0e3328;
+  --blockquote-color: #51635a;         // 引用文字
+  --selection-bg: #cfe2d7;             // 选中文字底色
+  --selection-color: #14352b;
+  --table-row-odd-bg-color: #f6faf7;   // 表格奇数行
+  --table-row-hover-bg-color: #e4efe8; // 表格悬停行
+  --theme-color: #1b4d3e;              // 浏览器头部面板色
+  --btn-default-hover-bg: #e4efe8;     // 按钮悬停
+  --btn-default-hover-color: #0e3328;
+  --btn-default-hover-border-color: #1b4d3e;
+}
+
+// 暗色模式（跟随系统）
+@media (prefers-color-scheme: dark) {
+  :root {
+    --body-bg-color: #12201a;
+    --content-bg-color: #17281f;
+    --card-bg-color: #1c2f26;
+    --menu-item-bg-color: #1c2f26;
+    --text-color: #c9d6ce;
+    --link-color: #7fbf9e;
+    --link-hover-color: #a9dcc0;
+    --link-decoration-color: #3f5c4d;
+    --brand-color: #7fbf9e;
+    --brand-hover-color: #a9dcc0;
+    --blockquote-color: #93a89b;
+    --selection-bg: #2a4437;
+    --selection-color: #e6f2ea;
+    --table-row-odd-bg-color: #1a2c23;
+    --table-row-hover-bg-color: #23382d;
+    --theme-color: #14352b;
+  }
+}
