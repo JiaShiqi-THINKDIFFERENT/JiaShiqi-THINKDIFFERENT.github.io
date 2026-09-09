@@ -6,3 +6,9 @@ node_modules/
 public/
 .deploy*/
 _multiconfig.yml
+# 数据库口令等本地敏感配置（切勿提交）
+.env
+tools/stockdb/.env
+tools/**/.env
+# 抓取临时产物
+tools/stockdb/.cache/
