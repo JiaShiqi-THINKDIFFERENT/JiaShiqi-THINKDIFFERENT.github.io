@@ -1,0 +1,10 @@
+{#
+  评论区占位容器（Artalk 自托管评论系统）
+  - 此文件经 _config.next.yml 的 custom_file_path.postBodyEnd 注入，
+    仅出现在 post 文章页正文末尾（首页与列表页不会输出）。
+  - Artalk.js / Artalk.css 与初始化由 body-end.njk 统一加载（避免重复引入）。
+  - 若某篇文章不想显示评论区，在该文章 front-matter 加：comments: false
+#}
+{%- if page.comments !== false %}
+<div id="Comments" style="margin-top: 24px"></div>
+{%- endif %}

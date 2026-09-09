@@ -21,6 +21,8 @@ theme_color:
 
 custom_file_path:
   style: source/_data/styles.styl
+  postBodyEnd: source/_data/post-body-end.njk   # Artalk 评论区占位（文章页）
+  bodyEnd: source/_data/body-end.njk            # Artalk 统一加载与初始化
 
 # ---------------------------------------------------------------
 # 菜单设置

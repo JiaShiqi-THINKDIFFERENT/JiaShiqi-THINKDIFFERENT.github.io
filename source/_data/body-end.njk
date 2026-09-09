@@ -1,0 +1,42 @@
+{#
+  Artalk 评论区统一加载器
+  - 经 _config.next.yml 的 custom_file_path.bodyEnd 注入到每个页面。
+  - 逻辑：页面存在 #Comments 挂载点 && 当前是单篇内容页(post/page 布局)
+         → 动态注入 Artalk.css / Artalk.js 并初始化一次。
+  - 文章页挂载点来自 post-body-end.njk；独立页面(如个股页)在其 md 末尾手写 <div id="Comments"></div>。
+  - ★部署前必改：下方 server 地址 comments.YOUR-DOMAIN.com 换成你的真实评论域名(HTTPS)。
+#}
+<script>
+(function () {
+  var el = document.getElementById('Comments');
+  if (!el) return;
+  var main = document.querySelector('.main-inner');
+  if (main && !(/(^|\s)(post|page)(\s|$)/.test(main.className))) return;
+  // TODO(部署时): 替换为你的评论服务地址，例如 https://comments.clivia.com
+  var server = 'https://comments.YOUR-DOMAIN.com';
+  function start() {
+    if (typeof Artalk === 'undefined') return;
+    Artalk.init({
+      el: el,
+      server: server,
+      site: 'CLIVIA',
+      darkMode: 'auto'
+    });
+  }
+  if (!document.getElementById('artalk-css')) {
+    var l = document.createElement('link');
+    l.id = 'artalk-css';
+    l.rel = 'stylesheet';
+    l.href = '/js/artalk/Artalk.css';
+    document.head.appendChild(l);
+  }
+  if (typeof Artalk === 'undefined') {
+    var s = document.createElement('script');
+    s.src = '/js/artalk/Artalk.js';
+    s.onload = start;
+    document.body.appendChild(s);
+  } else {
+    start();
+  }
+})();
+</script>
