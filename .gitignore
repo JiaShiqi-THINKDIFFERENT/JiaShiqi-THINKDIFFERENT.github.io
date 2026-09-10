@@ -12,3 +12,5 @@ tools/stockdb/.env
 tools/**/.env
 # 抓取临时产物
 tools/stockdb/.cache/
+__pycache__/
+*.pyc
