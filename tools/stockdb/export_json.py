@@ -90,7 +90,7 @@ def main() -> None:
             "end": latest.isoformat(),
             "days": len(wrows),
         },
-        "note": "close:东财不复权收盘价; pe_ttm/pb:百度股市通(周采样,日频前向填充); "
+        "note": "close:不复权收盘价(东财/腾讯/新浪多源回退); pe_ttm/pb:百度股市通(周采样,日频前向填充); "
                 "dv_ttm:近12月每股现金分红/收盘价 自算近似(东财分红配送)",
         "latest": {
             "date": latest.isoformat(),

@@ -26,9 +26,9 @@ def build_daily_rows(symbol: str):
     start = (today - timedelta(days=365 * 11)).strftime("%Y%m%d")
     end = today.strftime("%Y%m%d")
 
-    closes = sources.fetch_em_close(symbol, start, end)          # [(date_iso, close)]
+    closes = sources.fetch_close_series(symbol, start, end)      # [(date_iso, close)] 多源回退
     if not closes:
-        raise RuntimeError("东财收盘价为空，中止")
+        raise RuntimeError("收盘价为空，中止")
 
     pe_map, pb_map = {}, {}
     try:

@@ -69,10 +69,11 @@ def _secid(symbol: str) -> str:
         return f"1.{symbol}"      # 沪市
     return f"0.{symbol}"          # 深市/北交所特殊处理留待扩展
 
-def fetch_em_close(symbol: str, start: str, end: str) -> list[tuple[str, float]]:
+def fetch_em_close(symbol: str, start: str, end: str, tries: int = 5) -> list[tuple[str, float]]:
     """
     返回 [(date_iso, close_raw), ...] 升序，不复权。
     start/end 形如 YYYYMMDD（含）。EM klines 字段：f51日期 f52开 f53收 f54高 f55低 f56量 f57额。
+    tries 可调低以便在主源不可用时快速失败、切换到备用源。
     """
     url = "https://push2his.eastmoney.com/api/qt/stock/kline/get"
     params = {
@@ -85,7 +86,7 @@ def fetch_em_close(symbol: str, start: str, end: str) -> list[tuple[str, float]]
     }
     headers = dict(UA)
     headers["Referer"] = "https://quote.eastmoney.com/"
-    r = _get_retry(url, params=params, headers=headers)
+    r = _get_retry(url, params=params, headers=headers, tries=tries)
     data = r.json()
     klines = (data.get("data") or {}).get("klines") or []
     out = []
@@ -96,6 +97,65 @@ def fetch_em_close(symbol: str, start: str, end: str) -> list[tuple[str, float]]
         except (IndexError, ValueError):
             continue
     return out
+
+# --------------------------------------------------------------------------- #
+# 1b) 备用收盘价源（东财 push2his 被网络策略阻断时的降级通道）
+#     腾讯 / 新浪 均为「不复权」日线，与东财口径一致。
+# --------------------------------------------------------------------------- #
+def _ak_symbol(symbol: str) -> str:
+    """转为新浪/腾讯接口所需的带交易所前缀代码：600519 -> sh600519。"""
+    if symbol.startswith(("6", "9")):
+        return "sh" + symbol
+    if symbol.startswith(("4", "8")):
+        return "bj" + symbol
+    return "sz" + symbol
+
+def _df_to_close_series(df) -> list[tuple[str, float]]:
+    out = []
+    for _, r in df.iterrows():
+        d = _to_date(r["date"])
+        c = r["close"]
+        if d is not None and c is not None and pd.notna(c):
+            out.append((d.isoformat(), float(c)))
+    out.sort(key=lambda x: x[0])
+    return out
+
+def fetch_tx_close(symbol: str, start: str, end: str) -> list[tuple[str, float]]:
+    """腾讯财经 不复权日线收盘价。start/end 形如 YYYYMMDD。"""
+    import akshare as ak
+    df = _ak_retry(ak.stock_zh_a_hist_tx, symbol=_ak_symbol(symbol),
+                   start_date=start, end_date=end, adjust="")
+    return _df_to_close_series(df)
+
+def fetch_sina_close(symbol: str, start: str, end: str) -> list[tuple[str, float]]:
+    """新浪财经 不复权日线收盘价（末位备用源）。"""
+    import akshare as ak
+    df = _ak_retry(ak.stock_zh_a_daily, symbol=_ak_symbol(symbol),
+                   start_date=start, end_date=end, adjust="")
+    return _df_to_close_series(df)
+
+def fetch_close_series(symbol: str, start: str, end: str) -> list[tuple[str, float]]:
+    """
+    多源回退获取不复权收盘价，返回 [(date_iso, close)] 升序。
+    顺序：东财(快失败) -> 腾讯 -> 新浪；全部失败才抛错。
+    """
+    attempts = (
+        ("东财", lambda: fetch_em_close(symbol, start, end, tries=2)),
+        ("腾讯", lambda: fetch_tx_close(symbol, start, end)),
+        ("新浪", lambda: fetch_sina_close(symbol, start, end)),
+    )
+    errors: list[str] = []
+    for name, fn in attempts:
+        try:
+            out = fn()
+        except Exception as e:  # noqa: BLE001
+            errors.append(f"{name}:{type(e).__name__}:{str(e)[:70]}")
+            continue
+        if out:
+            print(f"[close] 来源={name}, {len(out)} 条, {out[0][0]} ~ {out[-1][0]}")
+            return out
+        errors.append(f"{name}:空数据")
+    raise RuntimeError("收盘价全部数据源失败 -> " + " | ".join(errors))
 
 # --------------------------------------------------------------------------- #
 # 2) 百度股市通 估值（市盈率TTM / 市净率）

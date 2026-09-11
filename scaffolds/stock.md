@@ -23,3 +23,9 @@ date: {{ date }}
 ## 研究笔记
 
 > 自由记录区：可写调研纪要、观点变化、买卖计划等。
+
+## 十年估值纵览
+
+<div id="stock-viz" data-json="valuation-data.json"></div>
+
+<script src="/js/stock-viz.js" defer></script>

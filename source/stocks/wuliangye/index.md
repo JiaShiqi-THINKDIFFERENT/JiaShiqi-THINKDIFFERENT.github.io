@@ -24,5 +24,11 @@ date: 2026-09-08 09:12:00
 
 > 自由记录区：可写调研纪要、观点变化、买卖计划等。
 
+## 十年估值纵览
+
+<div id="stock-viz" data-json="valuation-data.json"></div>
+
+<script src="/js/stock-viz.js" defer></script>
+
 <!-- 本页评论区挂载点：不需要评论请删除此行 -->
 <div id="Comments" style="margin-top:24px"></div>
