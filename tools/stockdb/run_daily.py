@@ -16,6 +16,7 @@ from __future__ import annotations
 
 import argparse
 import os
+import shutil
 import subprocess
 import sys
 import time
@@ -114,8 +115,12 @@ def main() -> None:
         sh([PY, str(HERE / "export_json.py"), "--symbol", symbol, "--slug", slug, "--name", name], retry=1, timeout=120)
 
     print("\n===== hexo 构建 =====")
-    node_bin = os.environ.get("NODE_BIN", "")
-    if node_bin:
+    node_bin = os.environ.get(
+        "NODE_BIN",
+        r"C:\Users\jiashiqi\.workbuddy\binaries\node\versions\22.22.2-2" if os.name == "nt" else "",
+    )
+    if node_bin and os.path.isdir(node_bin):
+        # 计划任务以裸环境运行，node 不在系统 PATH，需显式注入
         os.environ["PATH"] = node_bin + os.pathsep + os.environ["PATH"]
     sh([os.environ.get("HEXO", str(REPO / "node_modules/.bin/hexo" if os.name != "nt" else REPO / "node_modules/.bin/hexo.cmd")), "generate"], timeout=300)
 
