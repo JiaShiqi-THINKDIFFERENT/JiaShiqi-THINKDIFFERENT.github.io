@@ -76,6 +76,56 @@ header.header {
   color: #cfe2d7;
 }
 
+// 横幅内导航菜单：深绿底上必须用白字（默认继承 --link-color 与背景同色，不可读）
+.menu {
+  .menu-item a {
+    color: #ffffff;
+  }
+
+  .menu-item a:hover {
+    color: #cfe2d7; // 悬停淡墨绿，保持可读
+  }
+
+  // 当前页对应菜单项：NexT 用 .menu-item-active 标记
+  .menu-item-active a,
+  li.active a {
+    color: #ffffff;
+    border-bottom-color: #cfe2d7; // NexT 给激活项加下划线，同步调亮
+  }
+
+  // NexT 的 hover/active 类加在 a 元素上且会加浅色背景，此时需深色字保证对比
+  .menu-item a:hover,
+  .menu-item a.menu-item-active {
+    color: #1b4d3e;
+    background: var(--menu-item-bg-color);
+  }
+
+  // 搜索/图标按钮同样提亮
+  .search-popout,
+  .popup {
+    color: #2e3b34; // 弹层在白底上，恢复深色字
+  }
+}
+
+// 暗色模式：横幅内菜单文字仍为白色（背景更深，对比足够）
+@media (prefers-color-scheme: dark) {
+  .menu .menu-item a,
+  .menu .menu-item-active a,
+  .menu li.active a {
+    color: #ffffff;
+  }
+
+  .menu .menu-item a:hover {
+    color: #a9dcc0;
+  }
+
+  // 暗色模式浅字配深底即可，hover/active 同样用亮绿字
+  .menu .menu-item a:hover,
+  .menu .menu-item a.menu-item-active {
+    color: #a9dcc0;
+  }
+}
+
 // 暗色模式：横幅用更深的墨绿，避免过亮
 @media (prefers-color-scheme: dark) {
   header.header {
