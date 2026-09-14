@@ -126,6 +126,144 @@ header.header {
   }
 }
 
+// ==============================================================
+// 左侧栏折叠（参考 CSDN 布局）
+// 桌面端可隐藏整个左侧栏，内容区扩展为全宽；折叠后在视口左缘显示浮出把手。
+// 关键数值：左栏 240px + 12px 间距 = 252px（与主题 .main-inner 的 calc 一致）
+// ==============================================================
+html.sidebar-collapsed .clivia-sidebar-toggle svg,
+html.sidebar-collapsed .clivia-sidebar-reopen svg {
+  transform: rotate(180deg);
+}
+
+@media (min-width: 992px) {
+  header.header {
+    position: relative; // 折叠按钮的定位参照
+  }
+
+  .main > .column {
+    transition: margin-left 0.3s ease, opacity 0.25s ease;
+  }
+
+  .main-inner,
+  .footer-inner {
+    transition: width 0.3s ease, padding-left 0.3s ease;
+  }
+
+  // 折叠态：负外边距抵消左栏占位，内容区补满宽度
+  html.sidebar-collapsed .main > .column {
+    margin-left: -252px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  html.sidebar-collapsed .main-inner {
+    width: 100%;
+  }
+
+  html.sidebar-collapsed .footer-inner {
+    padding-left: 0;
+  }
+}
+
+// 折叠按钮：位于品牌区右上角（深墨绿底上白字）
+.clivia-sidebar-toggle {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.14);
+  border: 0;
+  border-radius: 6px;
+  color: #ffffff;
+  cursor: pointer;
+  display: none; // 仅桌面端显示
+  height: 26px;
+  justify-content: center;
+  padding: 0;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  transition: background 0.2s ease, color 0.2s ease;
+  width: 26px;
+  z-index: 5;
+}
+
+.clivia-sidebar-toggle:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.clivia-sidebar-toggle svg,
+.clivia-sidebar-reopen svg {
+  transition: transform 0.3s ease;
+}
+
+// 浮出把手：折叠后贴在视口左缘垂直居中
+.clivia-sidebar-reopen {
+  align-items: center;
+  background: #1b4d3e;
+  border: 0;
+  border-radius: 0 8px 8px 0;
+  box-shadow: 2px 0 6px rgba(0, 0, 0, 0.18);
+  color: #ffffff;
+  cursor: pointer;
+  display: none;
+  height: 62px;
+  justify-content: center;
+  left: 0;
+  padding: 0;
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: background 0.2s ease, width 0.2s ease;
+  width: 20px;
+  z-index: 30;
+}
+
+.clivia-sidebar-reopen:hover {
+  background: #0e3328;
+  width: 24px;
+}
+
+@media (min-width: 992px) {
+  .clivia-sidebar-toggle {
+    display: flex;
+  }
+
+  html.sidebar-collapsed .clivia-sidebar-reopen {
+    display: flex;
+  }
+}
+
+// 移动端不启用：沿用 NexT 自带抽屉侧栏
+@media (max-width: 991px) {
+  .clivia-sidebar-toggle,
+  .clivia-sidebar-reopen {
+    display: none !important;
+  }
+}
+
+// 无障碍：尊重「减少动态效果」偏好
+@media (prefers-reduced-motion: reduce) {
+  .main > .column,
+  .main-inner,
+  .footer-inner,
+  .clivia-sidebar-toggle svg,
+  .clivia-sidebar-reopen,
+  .clivia-sidebar-reopen svg {
+    transition: none;
+  }
+}
+
+// 暗色模式：横幅更深，按钮底色略提亮
+@media (prefers-color-scheme: dark) {
+  .clivia-sidebar-toggle {
+    background: rgba(255, 255, 255, 0.16);
+  }
+
+  .clivia-sidebar-reopen {
+    background: #1b4d3e;
+  }
+}
+
 // 暗色模式：横幅用更深的墨绿，避免过亮
 @media (prefers-color-scheme: dark) {
   header.header {

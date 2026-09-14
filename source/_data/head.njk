@@ -1,0 +1,14 @@
+{#
+  首屏前置脚本：在 <head> 中尽早恢复上次的侧栏折叠状态，避免刷新时侧栏闪现。
+  经 _config.next.yml 的 custom_file_path.head 注入。
+#}
+<script>
+  (function () {
+    try {
+      if (localStorage.getItem('clivia-sidebar-collapsed') === '1' &&
+          window.matchMedia('(min-width: 992px)').matches) {
+        document.documentElement.classList.add('sidebar-collapsed');
+      }
+    } catch (e) { /* 忽略隐私模式异常 */ }
+  })();
+</script>
