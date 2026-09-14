@@ -120,6 +120,46 @@ header.header {
   }
 }
 
+// ==============================================================
+// 左栏独立滚动：菜单栏固定在视口内，与正文分别滚动
+// 左栏（品牌 + 菜单 + 作者卡）高度锁定 100vh，内容超高时
+// 自身出现滚动条；正文仍走页面滚动，互不影响。
+// ==============================================================
+@media (min-width: 992px) {
+  .main > .column {
+    position: sticky;
+    top: 0;
+    align-self: flex-start; // 抵消 .main 的 align-items: stretch 拉伸
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    // 注意：不要加 overscroll-behavior: contain
+    // 左栏内容通常不足一屏（无溢出）时，contain 会阻断滚轮向页面传递，
+    // 导致鼠标停在菜单上滚不动正文。
+    scrollbar-width: thin; // Firefox 细滚动条
+  }
+
+  // WebKit 细滚动条：浅色，不抢视觉
+  .main > .column::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  .main > .column::-webkit-scrollbar-thumb {
+    background: rgba(27, 77, 62, 0.28);
+    border-radius: 3px;
+  }
+
+  .main > .column::-webkit-scrollbar-thumb:hover {
+    background: rgba(27, 77, 62, 0.5);
+  }
+
+  .main > .column::-webkit-scrollbar-track {
+    background: transparent;
+  }
+}
+
+// 折叠态下左栏整体隐藏，滚动条随元素一起消失，无需额外处理
+
 // 暗色模式：横幅内菜单文字仍为白色（背景更深，对比足够）
 @media (prefers-color-scheme: dark) {
   .menu .menu-item a,
