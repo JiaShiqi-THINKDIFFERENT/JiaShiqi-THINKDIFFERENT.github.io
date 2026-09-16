@@ -79,12 +79,21 @@ def ensure_git_proxy() -> None:
 
 
 def setup_push_env() -> None:
-    """让 git 传输与 GCM 凭据助手都走本地代理（GCM 不读 HTTPS_PROXY 环境变量，
-    需依赖全局 credential.httpsProxy；此处只补传输层代理）。"""
+    """让 git 传输走本地代理，并绕开 GCM 凭据助手。
+
+    2026-09-17 实测：GCM 在推送过程中会联网校验凭据，受限网络下被掐死导致 git push
+    长时间挂起（凭据选择器/空响应）。改用内置 store 助手直读 ~/.git-credentials，
+    通过 GIT_CONFIG_* 环境变量注入，对 hexo-deployer-git 内部 spawn 的 git 同样生效。
+    """
     ensure_git_proxy()
     for k in ("HTTP_PROXY", "http_proxy", "HTTPS_PROXY", "https_proxy"):
         os.environ[k] = PROXY_URL
     os.environ["GIT_TERMINAL_PROMPT"] = "0"
+    os.environ["GIT_CONFIG_COUNT"] = "2"
+    os.environ["GIT_CONFIG_KEY_0"] = "credential.helper"
+    os.environ["GIT_CONFIG_VALUE_0"] = ""
+    os.environ["GIT_CONFIG_KEY_1"] = "credential.helper"
+    os.environ["GIT_CONFIG_VALUE_1"] = "store"
 
 
 def sh(cmd: list[str], cwd: Path = REPO, retry: int = 1, timeout: int = 300) -> None:
