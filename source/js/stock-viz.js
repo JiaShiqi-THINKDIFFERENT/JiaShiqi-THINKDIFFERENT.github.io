@@ -6,7 +6,7 @@
  * 渲染：快照表（当前/十年最低/中位/最高/分位条）+ 同花顺式估值带图表
  *   标签栏位于图表上方（市盈率 / 市净率 / 市销率 / 股息率，按数据有无动态生成）；
  *   每张图不直接画指标曲线，而是展示前复权收盘价，并按财报区间叠加该指标的
- *   估值分档横线：近五年最高/最低估值对应上下沿，中间五等分共 6 条阶梯横线
+ *   估值分档横线：近十年最高/最低估值对应上下沿，中间四等分共 5 条阶梯横线
  *   （价格 = 财报区间每股基本面 × 档位估值；股息率为倒数：价格 = 每股股息 ÷ 档位）；
  *   默认显示市盈率，默认视窗近一年，可拖动底部时间轴回溯十年；
  *   支持键盘左右方向键 / Home / End 切换。
@@ -174,10 +174,13 @@
   // 绘图区四周的完整边框由 CSS（#stock-chart::after）按相同偏移绘制。
   var GRID = { left: 88, right: 52, top: 34, bottom: 82 };
 
-  // 同花顺式估值带图：前复权收盘价 + 该指标近五年五等分估值档位横线
+  // 同花顺式估值带图：前复权收盘价 + 该指标近十年四等分估值档位横线（五档）
   function bandOption(data, key, m, dark, text, gridLine, border) {
     var color = dark ? m.dark : m.light;
-    var bandColor = dark ? '#d9b56a' : '#c96a4f';   // 估值档位线：暖色，与价格线区分
+    // 档位线颜色（从下到上）：绿 / 蓝 / 黄 / 橙 / 红
+    var bandColors = dark
+      ? ['#3ddc68', '#4d8dff', '#ffd21e', '#ff9436', '#ff5c5c']
+      : ['#1f9e44', '#1667d9', '#d9a400', '#e87d1e', '#d93636'];
     var st = data.stats[key] || {};
     var dates = data.series.dates;
     var qfq = data.series.close_qfq || [];
@@ -213,7 +216,7 @@
       for (var k = 0; k < dates.length; k++) {
         if (vals[k] !== null) lineData.push([dates[k], vals[k]]);
       }
-      var edge = (j === 0 || j === n - 1);
+      var bandColor = bandColors[j % bandColors.length];
       series.push({
         name: '估值档位' + j, type: 'line', data: lineData,
         showSymbol: false, smooth: false, connectNulls: false,
@@ -221,10 +224,10 @@
         // 避免相邻季度档位价格不同被连成斜线（同花顺式画法）
         step: 'end',
         lineStyle: {
-          width: edge ? 1.6 : 1,
-          type: edge ? 'solid' : 'dashed',
+          width: 2,
+          type: 'solid',
           color: bandColor,
-          opacity: edge ? 0.95 : 0.55
+          opacity: 0.95
         },
         itemStyle: { color: bandColor },
         emphasis: { disabled: true },
@@ -276,7 +279,7 @@
             '收盘价(前复权)：<b>' + fmt(price, 2) + '</b> 元'];
           if (mv !== null && mv !== undefined && !isNaN(mv)) {
             var lv = levelOf(mv);
-            var lvDesc = (lv === null) ? '' : '（近五年第 ' + (lv + 1) + ' 低档 / 共 ' + n + ' 档）';
+            var lvDesc = (lv === null) ? '' : '（近十年第 ' + (lv + 1) + ' 低档 / 共 ' + n + ' 档）';
             lines.push(m.label + '：<b>' + fmt(mv, m.digits) + '</b> ' + m.unit + lvDesc);
           }
           return lines.join('<br/>');
@@ -381,10 +384,10 @@
       var lo = inv ? bm.levels[bm.levels.length - 1] : bm.levels[0];
       var hi = inv ? bm.levels[0] : bm.levels[bm.levels.length - 1];
       cap.innerHTML = '<span class="sviz-cur">' + m.label + ' ' + fmt(st.current, m.digits) + ' ' + m.unit + '</span>' +
-        '<span class="sviz-muted">近五年最低 ' + fmt(st.bmin, m.digits) + ' · 最高 ' + fmt(st.bmax, m.digits) + ' ' + m.unit + '</span>' +
+        '<span class="sviz-muted">近十年最低 ' + fmt(st.bmin, m.digits) + ' · 最高 ' + fmt(st.bmax, m.digits) + ' ' + m.unit + '</span>' +
         '<span class="sviz-muted">当前分位 ' + fmt(st.pct, 1) + '%</span>' +
-        '<span class="sviz-muted">横线 = 近五年' + m.label + (inv ? '最高→最低' : '最低→最高') +
-        '（' + fmt(lo, m.digits) + ' ~ ' + fmt(hi, m.digits) + ' ' + m.unit + '）五等分档位对应价格，按财报区间阶梯更新</span>';
+        '<span class="sviz-muted">横线 = 近十年' + m.label + (inv ? '最高→最低' : '最低→最高') +
+        '（' + fmt(lo, m.digits) + ' ~ ' + fmt(hi, m.digits) + ' ' + m.unit + '）四等分五档，按财报区间阶梯更新</span>';
       chart.setOption(bandOption(data, m.key, m, dark, text, gridLine, border), true);
     }
 
@@ -434,7 +437,7 @@
         var idxMap = {};
         data.series.dates.forEach(function (d, i) { idxMap[d] = i; });
         data.__dateIdx = idxMap;
-        // 近五年最低/最高（估值带口径），供摘要行使用
+        // 近十年最低/最高（估值带口径），供摘要行使用
         if (data.bands && data.bands.metrics) {
           Object.keys(data.bands.metrics).forEach(function (k) {
             var bm = data.bands.metrics[k];
