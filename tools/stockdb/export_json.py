@@ -122,34 +122,41 @@ def _build_bands(dates: list[str],
         # 每条线：按财报区间生成阶梯段 [起始日, 结束日, 价格]
         # 注意：段起止必须对齐到实际交易日——若用固定日历日（如 05-01 假期），
         # 前端 idxMap 查不到该日期会整段丢弃，导致档位线出现长斜线缺口。
-        lines: list[list] = [[] for _ in levels]
-        for seg_start, seg_end in segs:
-            # 段内第一个/最后一个「指标与价格都有效」的交易日
-            si = ei = None
-            for i, d in enumerate(dates):
-                if d > seg_end:
-                    break
-                if d < seg_start:
+        # 同时导出两套口径：前复权收盘价（segments）与不复权收盘价（segments_raw），
+        # 供前端「前复权 / 不复权」切换，保证任意口径下价格线与档位线历史对齐。
+        def _lines_for(close_arr: list) -> list[list]:
+            lines: list[list] = [[] for _ in levels]
+            for seg_start, seg_end in segs:
+                # 段内第一个/最后一个「指标与价格都有效」的交易日
+                si = ei = None
+                for i, d in enumerate(dates):
+                    if d > seg_end:
+                        break
+                    if d < seg_start:
+                        continue
+                    if (vals[i] is not None and vals[i] > 0
+                            and close_arr[i] not in (None, 0)):
+                        if si is None:
+                            si = i
+                        ei = i
+                if si is None:
                     continue
-                if (vals[i] is not None and vals[i] > 0
-                        and series["close_qfq"][i] not in (None, 0)):
-                    if si is None:
-                        si = i
-                    ei = i
-            if si is None:
-                continue
-            if key == "pe_ttm":
-                f = series["close_qfq"][si] / vals[si]        # 每股收益(TTM)
-            elif key == "pb":
-                f = series["close_qfq"][si] / vals[si]        # 每股净资产
-            elif key == "ps_ttm":
-                f = series["close_qfq"][si] / vals[si]        # 每股营收(TTM)
-            else:  # dv_ttm
-                f = vals[si] / 100.0 * series["close_qfq"][si]  # 每股股息(TTM)
-            for j, lv in enumerate(levels):
-                # dv_ttm 以百分数存储：价格 = 每股股息 / (档位/100)；其余 = 基本面 × 档位
-                price = (f * 100.0 / lv) if inverse else (f * lv)
-                lines[j].append([dates[si], dates[ei], round(price, 2)])
+                if key == "pe_ttm":
+                    f = close_arr[si] / vals[si]        # 每股收益(TTM)
+                elif key == "pb":
+                    f = close_arr[si] / vals[si]        # 每股净资产
+                elif key == "ps_ttm":
+                    f = close_arr[si] / vals[si]        # 每股营收(TTM)
+                else:  # dv_ttm
+                    f = vals[si] / 100.0 * close_arr[si]  # 每股股息(TTM)
+                for j, lv in enumerate(levels):
+                    # dv_ttm 以百分数存储：价格 = 每股股息 / (档位/100)；其余 = 基本面 × 档位
+                    price = (f * 100.0 / lv) if inverse else (f * lv)
+                    lines[j].append([dates[si], dates[ei], round(price, 2)])
+            return lines
+
+        lines = _lines_for(series["close_qfq"])
+        lines_raw = _lines_for(series["close"])
         if not any(lines):
             continue
         out[key] = {
@@ -158,6 +165,7 @@ def _build_bands(dates: list[str],
             "inverse": inverse,
             "levels": levels,
             "segments": lines,
+            "segments_raw": lines_raw,
         }
     if not out:
         return None
@@ -214,7 +222,8 @@ def main() -> None:
         "note": "close:不复权收盘价(东财/腾讯/新浪多源回退); close_qfq:前复权收盘价(腾讯/新浪); "
                 "pe_ttm/pb:百度股市通(周采样,日频前向填充); ps_ttm:东财数据中心估值分析; "
                 "dv_ttm:近12月每股现金分红/收盘价 自算近似(东财分红配送); "
-                "bands:近五年估值五等分横线,按财报区间阶梯更新(同花顺估值带风格)",
+                "bands:近十年估值四等分五档横线,按财报区间阶梯更新(同花顺估值带风格); "
+                "bands.metrics.*.segments按前复权价计算,segments_raw按不复权价计算",
         "latest": {
             "date": latest.isoformat(),
             "close": _num(latest_row["close"]),
