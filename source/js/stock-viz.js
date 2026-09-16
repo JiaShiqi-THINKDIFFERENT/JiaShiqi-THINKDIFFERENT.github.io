@@ -7,6 +7,9 @@
  *   标签栏位于图表上方（收盘价 / 市盈率 / 市净率 / 股息率），
  *   切换标签后下方展示对应指标的十年走势图，默认显示收盘价；
  *   支持键盘左右方向键 / Home / End 切换。
+ *   图表为时间轴（横轴）+ 数值轴（纵轴），横竖网格线均为实色可见，
+ *   绘图区四周绘制完整边框，坐标轴线与刻度一并显示；
+ *   默认视窗为近一年，可拖动底部时间轴回溯十年。
  * JSON 由 tools/stockdb/export_json.py 从 PostgreSQL 导出。
  */
 (function () {
@@ -34,11 +37,13 @@
     '.sviz-tab:focus-visible{outline:2px solid #1b4d3e;outline-offset:2px}',
     '.sviz-cap{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 14px;margin:10px 0 2px;font-size:.92em}',
     '.sviz-cap .sviz-cur{font-weight:700;font-size:1.05em}',
-    '#stock-chart{width:100%;height:440px}',
+    '#stock-chart{width:100%;height:440px;position:relative}',
+    // 绘图区四周完整边框：与 ECharts grid 的像素偏移严格一致（left/right/top/bottom）
+    '#stock-chart::after{content:\'\';position:absolute;left:88px;right:52px;top:34px;bottom:82px;border:1px solid #7f938a;border-radius:3px;pointer-events:none}',
     '@media (max-width:767px){#stock-chart{height:360px}}',
     '.sviz-note{margin-top:10px;font-size:.8em;opacity:.62;line-height:1.6}',
     '.sviz-empty{padding:18px;border:1px dashed #9aa8a0;border-radius:6px;color:#77857d;font-size:.95em}',
-    '@media (prefers-color-scheme:dark){.sviz-tab{border-color:#3f5c4d}.sviz-tab:hover{background:#1c2f26;border-color:#7fbf9e}.sviz-tab[aria-selected="true"]{background:#7fbf9e;border-color:#7fbf9e;color:#12201a}.sviz-tab:focus-visible{outline-color:#7fbf9e}}'
+    '@media (prefers-color-scheme:dark){.sviz-tab{border-color:#3f5c4d}.sviz-tab:hover{background:#1c2f26;border-color:#7fbf9e}.sviz-tab[aria-selected="true"]{background:#7fbf9e;border-color:#7fbf9e;color:#12201a}.sviz-tab:focus-visible{outline-color:#7fbf9e}#stock-chart::after{border-color:#87a295}}'
   ].join('');
 
   function injectCss() {
@@ -54,6 +59,27 @@
   function fmt(v, digits) {
     if (v === null || v === undefined || isNaN(v)) return '—';
     return Number(v).toFixed(digits === undefined ? 2 : digits);
+  }
+
+  function pad2(n) { return (n < 10 ? '0' : '') + n; }
+
+  // 时间轴取值统一格式化为 YYYY-MM 或 YYYY-MM-DD（本地时区，避免跨日偏移）
+  function fmtDate(v, mode) {
+    var d = (v instanceof Date) ? v : new Date(v);
+    if (isNaN(d.getTime())) return String(v);
+    var s = d.getFullYear() + '-' + pad2(d.getMonth() + 1);
+    if (mode === 'ymd') s += '-' + pad2(d.getDate());
+    return s;
+  }
+
+  // 从 tooltip 回调参数中还原原始日期串
+  function itemDate(p) {
+    var d = p && p.data;
+    if (d && typeof d === 'object' && d.length) d = d[0];
+    else d = p ? p.axisValue : null;
+    if (typeof d === 'string') return d;
+    if (typeof d === 'number') return fmtDate(d, 'ymd');
+    return '';
   }
 
   function loadEcharts(cb) {
@@ -131,15 +157,26 @@
   }
 
   // 单个指标的完整图表配置（一屏一图，含中位参考线）
-  function metricOption(data, m, dark, text, axis) {
+  // 坐标系：时间轴（横轴）+ 数值轴（纵轴），横竖网格线均为实色可见；
+  // 绘图区四周的完整边框由 CSS（#stock-chart::after）按相同偏移绘制。
+  var GRID = { left: 88, right: 52, top: 34, bottom: 82 };
+
+  function metricOption(data, m, dark, text, gridLine, border) {
     var color = dark ? m.dark : m.light;
     var st = data.stats[m.key] || {};
     var startPct = oneYearStartPct(data.series.dates);
+    var dates = data.series.dates;
+    var vals = data.series[m.key] || [];
+    var pts = [];
+    for (var i = 0; i < dates.length; i++) {
+      var v = vals[i];
+      pts.push([dates[i], (v === null || v === undefined || isNaN(v)) ? null : v]);
+    }
     var markData = [];
     if (st.median !== undefined && st.median !== null) {
       markData.push({
         yAxis: st.median,
-        lineStyle: { color: axis, type: 'dashed', width: 1 },
+        lineStyle: { color: border, type: 'dashed', width: 1.2 },
         label: {
           formatter: '十年中位 ' + fmt(st.median, m.digits),
           position: 'insideEndTop', color: text, fontSize: 12
@@ -152,36 +189,47 @@
       textStyle: { color: text, fontSize: 12 },
       tooltip: {
         trigger: 'axis',
-        axisPointer: { type: 'line', lineStyle: { color: color, width: 1 } },
+        axisPointer: {
+          type: 'line',
+          lineStyle: { color: color, width: 1 },
+          label: { formatter: function (p) { return fmtDate(p.value, 'ymd'); } }
+        },
         textStyle: { fontSize: 13 },
         formatter: function (ps) {
           if (!ps || !ps.length) return '';
-          var v = ps[0].value;
+          var p = ps[0];
+          var v = p.value;
+          if (v && typeof v === 'object' && v.length) v = v[1];
           var shown = (v === null || v === undefined || isNaN(v)) ? '—' : Number(v).toFixed(m.digits);
-          return ps[0].axisValue + '<br/>' + m.label + '：<b>' + shown + '</b> ' + m.unit;
+          return itemDate(p) + '<br/>' + m.label + '：<b>' + shown + '</b> ' + m.unit;
         }
       },
       // 左右留足空间：左侧容纳数值+单位，右侧避免最后一个日期被裁切
-      grid: { left: 88, right: 52, top: 34, bottom: 82 },
+      grid: { left: GRID.left, right: GRID.right, top: GRID.top, bottom: GRID.bottom },
       xAxis: {
-        type: 'category', data: data.series.dates, boundaryGap: false,
+        type: 'time',
         axisLabel: {
-          color: text, fontSize: 12, hideOverlap: true, margin: 10,
+          color: text, fontSize: 12, hideOverlap: true, margin: 12,
           // 轴标签只显示到月份（YYYY-MM），避免日期过长互相挤压/超出绘图区
-          formatter: function (v) { return String(v).slice(0, 7); }
+          formatter: function (v) { return fmtDate(v, 'ym'); }
         },
-        axisLine: { lineStyle: { color: axis } },
-        axisTick: { show: false }
+        axisLine: { show: true, lineStyle: { color: border, width: 1 } },
+        axisTick: { show: true, length: 5, lineStyle: { color: border, width: 1 } },
+        // 竖线：随缩放自动选取合适的年月间隔
+        splitLine: { show: true, lineStyle: { color: gridLine, type: 'dashed', width: 1 } }
       },
       yAxis: {
         type: 'value', scale: true,
         name: m.unit,
         nameTextStyle: { color: text, fontSize: 12, align: 'right', padding: [0, 4, 0, 0] },
-        axisLabel: { color: text, fontSize: 12, margin: 10 },
-        splitLine: { lineStyle: { color: axis, type: 'dashed' } }
+        axisLabel: { color: text, fontSize: 12, margin: 12 },
+        axisLine: { show: true, lineStyle: { color: border, width: 1 } },
+        axisTick: { show: true, length: 5, lineStyle: { color: border, width: 1 } },
+        // 横线：明显的网格线（不再使用近白色的主题表格底色）
+        splitLine: { show: true, lineStyle: { color: gridLine, type: 'dashed', width: 1 } }
       },
       series: [{
-        name: m.label, type: 'line', data: data.series[m.key],
+        name: m.label, type: 'line', data: pts,
         showSymbol: false, smooth: false, connectNulls: true,
         lineStyle: { width: 1.6, color: color },
         itemStyle: { color: color },
@@ -198,12 +246,16 @@
       dataZoom: [
         { type: 'inside', start: startPct, end: 100 },
         {
-          type: 'slider', bottom: 12, height: 22, left: 88, right: 52,
+          type: 'slider', bottom: 12, height: 22, left: GRID.left, right: GRID.right,
           start: startPct, end: 100,
           borderColor: 'transparent', backgroundColor: 'transparent',
           fillerColor: hexToRgba(dark ? '#7fbf9e' : '#1b4d3e', 0.14),
           handleStyle: { color: color, borderColor: color },
-          labelFormatter: function (v) { return String(v).slice(0, 7); },
+          dataBackground: {
+            lineStyle: { color: gridLine, width: 1 },
+            areaStyle: { color: hexToRgba(dark ? '#7fbf9e' : '#1b4d3e', 0.1) }
+          },
+          labelFormatter: function (v) { return fmtDate(v, 'ym'); },
           textStyle: { color: text, fontSize: 12 }
         }
       ]
@@ -214,7 +266,9 @@
   function renderChart(data, root) {
     var dark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
     var text = themeVar('--text-color', dark ? '#c9d6ce' : '#37474f');
-    var axis = themeVar('--table-row-odd-bg-color', 'rgba(128,128,128,.35)');
+    // 网格线 / 坐标轴与边框：使用高对比实色，保证横竖线都清晰可见
+    var gridLine = dark ? '#3f5a4c' : '#c0cdc5';
+    var border = dark ? '#87a295' : '#7f938a';
 
     var tabs = document.createElement('div');
     tabs.className = 'sviz-tabs';
@@ -247,7 +301,7 @@
         fmt(st.median, m.digits) + ' · 最高 ' + fmt(st.max, m.digits) + ' ' + m.unit + '</span>' +
         '<span class="sviz-muted">当前分位 ' + fmt(st.pct, 1) + '%</span>' +
         '<span class="sviz-muted">默认显示近一年，拖动下方时间轴可回溯十年</span>';
-      chart.setOption(metricOption(data, m, dark, text, axis), true);
+      chart.setOption(metricOption(data, m, dark, text, gridLine, border), true);
     }
 
     METRICS.forEach(function (m, i) {
