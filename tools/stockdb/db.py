@@ -35,6 +35,11 @@ def connect():
 # --------------------------------------------------------------------------- #
 # 写入
 # --------------------------------------------------------------------------- #
+def ensure_schema(conn) -> None:
+    """对已有库做轻量迁移：补齐估值带所需的列（幂等）。"""
+    conn.execute("ALTER TABLE stock_daily ADD COLUMN IF NOT EXISTS close_qfq numeric(14,3)")
+    conn.execute("ALTER TABLE stock_daily ADD COLUMN IF NOT EXISTS ps_ttm numeric(14,3)")
+
 def upsert_basic(conn, symbol: str, name: str, slug: str, industry: str | None = None) -> None:
     conn.execute(
         """
@@ -49,17 +54,18 @@ def upsert_basic(conn, symbol: str, name: str, slug: str, industry: str | None =
     )
 
 def upsert_daily(conn, rows: list[tuple]) -> int:
-    """rows: [(symbol, trade_date, close, pe_ttm, pb, dv_ttm), ...] 幂等覆盖。"""
+    """rows: [(symbol, trade_date, close, close_qfq, pe_ttm, pb, ps_ttm, dv_ttm), ...] 幂等覆盖。"""
     if not rows:
         return 0
     with conn.cursor() as cur:
         cur.executemany(
             """
-            INSERT INTO stock_daily (symbol, trade_date, close, pe_ttm, pb, dv_ttm)
-            VALUES (%s, %s, %s, %s, %s, %s)
+            INSERT INTO stock_daily (symbol, trade_date, close, close_qfq, pe_ttm, pb, ps_ttm, dv_ttm)
+            VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
             ON CONFLICT (symbol, trade_date) DO UPDATE
-              SET close = EXCLUDED.close, pe_ttm = EXCLUDED.pe_ttm,
-                  pb = EXCLUDED.pb, dv_ttm = EXCLUDED.dv_ttm
+              SET close = EXCLUDED.close, close_qfq = EXCLUDED.close_qfq,
+                  pe_ttm = EXCLUDED.pe_ttm, pb = EXCLUDED.pb,
+                  ps_ttm = EXCLUDED.ps_ttm, dv_ttm = EXCLUDED.dv_ttm
             """,
             rows,
         )
@@ -95,8 +101,8 @@ def log_update(conn, symbol: str, last_date, fetched_rows: int, status: str, mes
 def query_daily(conn, symbol: str) -> list[dict]:
     """全量升序日线。"""
     return conn.execute(
-        "SELECT symbol, trade_date, close, pe_ttm, pb, dv_ttm FROM stock_daily "
-        "WHERE symbol = %s ORDER BY trade_date ASC",
+        "SELECT symbol, trade_date, close, close_qfq, pe_ttm, pb, ps_ttm, dv_ttm "
+        "FROM stock_daily WHERE symbol = %s ORDER BY trade_date ASC",
         (symbol,),
     ).fetchall()
 

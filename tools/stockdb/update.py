@@ -21,14 +21,27 @@ import metrics       # noqa: E402
 
 
 def build_daily_rows(symbol: str):
-    """抓取并组装日线（close/pe_ttm/pb 对齐 + 前向填充百度周采样缺口），再派生 dv_ttm。"""
+    """抓取并组装日线（close/pe_ttm/pb/ps_ttm 对齐 + 前向填充采样缺口），再派生 dv_ttm。
+
+    - close：不复权收盘价（东财→腾讯→新浪多源回退），与估值指标同口径
+    - close_qfq：前复权收盘价（腾讯→新浪），估值带展示用
+    - pe_ttm/pb：百度股市通（周采样，逐日前向填充）
+    - ps_ttm：东财数据中心估值分析（日频）
+    - dv_ttm：分红事件 + 收盘价自算
+    """
     today = date.today()
     start = (today - timedelta(days=365 * 11)).strftime("%Y%m%d")
     end = today.strftime("%Y%m%d")
 
-    closes = sources.fetch_close_series(symbol, start, end)      # [(date_iso, close)] 多源回退
+    closes = sources.fetch_close_series(symbol, start, end)              # 不复权
     if not closes:
         raise RuntimeError("收盘价为空，中止")
+
+    try:
+        closes_qfq = dict(sources.fetch_close_series(symbol, start, end, adjust="qfq"))
+    except Exception as e:                                        # noqa: BLE001
+        print("[warn] 前复权收盘价抓取失败，close_qfq 置空:", e)
+        closes_qfq = {}
 
     pe_map, pb_map = {}, {}
     try:
@@ -36,6 +49,12 @@ def build_daily_rows(symbol: str):
         pe_map, pb_map = bd["pe_ttm"], bd["pb"]
     except Exception as e:                                        # noqa: BLE001
         print("[warn] 百度估值抓取失败，PE/PB 置空:", e)
+
+    ps_map = {}
+    try:
+        ps_map = sources.fetch_em_valuation(symbol)
+    except Exception as e:                                        # noqa: BLE001
+        print("[warn] 东财市销率抓取失败，ps_ttm 置空:", e)
 
     events = []
     try:
@@ -49,21 +68,20 @@ def build_daily_rows(symbol: str):
     per_shares = [e["per_share"] for e in events]
     dv = metrics.compute_dv_ttm(dates, ex_dates, per_shares, raw_close)
 
-    # 百度为周采样：逐日前向填充，保证日频表无估值空洞
-    last_pe = last_pb = None
+    # 百度为周采样 / ps 为日频但可能缺日：逐日前向填充，保证日频表无估值空洞
+    last_pe = last_pb = last_ps = None
     rows = []
     for i, (iso, close) in enumerate(closes):
-        pe = pe_map.get(iso)
-        pb = pb_map.get(iso)
-        if pe is None:
-            pe = last_pe
-        if pb is None:
-            pb = last_pb
+        pe = pe_map.get(iso, last_pe)
+        pb = pb_map.get(iso, last_pb)
+        ps = ps_map.get(iso, last_ps)
         if pe_map.get(iso) is not None:
             last_pe = pe_map[iso]
         if pb_map.get(iso) is not None:
             last_pb = pb_map[iso]
-        rows.append((symbol, dates[i], close, pe, pb, dv[i]))
+        if ps_map.get(iso) is not None:
+            last_ps = ps_map[iso]
+        rows.append((symbol, dates[i], close, closes_qfq.get(iso), pe, pb, ps, dv[i]))
     return rows, events
 
 
@@ -72,6 +90,7 @@ def run(symbol: str, name: str, slug: str, industry: str | None = None) -> None:
     status = "OK"
     msg = ""
     try:
+        db.ensure_schema(conn)          # 轻量迁移：补齐 close_qfq / ps_ttm 列
         rows, events = build_daily_rows(symbol)
         db.upsert_basic(conn, symbol, name, slug, industry)
         n = db.upsert_daily(conn, rows)

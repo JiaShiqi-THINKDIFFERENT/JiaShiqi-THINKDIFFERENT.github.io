@@ -21,8 +21,10 @@ CREATE TABLE IF NOT EXISTS stock_daily (
   symbol     varchar(12)  NOT NULL,
   trade_date date         NOT NULL,
   close      numeric(14,3),   -- 不复权收盘价（元）
+  close_qfq  numeric(14,3),   -- 前复权收盘价（元，估值带展示用，除权日全历史重算）
   pe_ttm     numeric(14,3),   -- 市盈率 TTM（百度股市通）
   pb         numeric(14,3),   -- 市净率（百度股市通）
+  ps_ttm     numeric(14,3),   -- 市销率 TTM（东财数据中心估值分析）
   dv_ttm     numeric(10,4),   -- 股息率 TTM %（自算：近12月每股分红/收盘价）
   PRIMARY KEY (symbol, trade_date)
 );

@@ -120,30 +120,34 @@ def _df_to_close_series(df) -> list[tuple[str, float]]:
     out.sort(key=lambda x: x[0])
     return out
 
-def fetch_tx_close(symbol: str, start: str, end: str) -> list[tuple[str, float]]:
-    """腾讯财经 不复权日线收盘价。start/end 形如 YYYYMMDD。"""
+def fetch_tx_close(symbol: str, start: str, end: str, adjust: str = "") -> list[tuple[str, float]]:
+    """腾讯财经 日线收盘价。adjust: ""=不复权, "qfq"=前复权。start/end 形如 YYYYMMDD。"""
     import akshare as ak
     df = _ak_retry(ak.stock_zh_a_hist_tx, symbol=_ak_symbol(symbol),
-                   start_date=start, end_date=end, adjust="")
+                   start_date=start, end_date=end, adjust=adjust)
     return _df_to_close_series(df)
 
-def fetch_sina_close(symbol: str, start: str, end: str) -> list[tuple[str, float]]:
-    """新浪财经 不复权日线收盘价（末位备用源）。"""
+def fetch_sina_close(symbol: str, start: str, end: str, adjust: str = "") -> list[tuple[str, float]]:
+    """新浪财经 日线收盘价（末位备用源）。adjust: ""=不复权, "qfq"=前复权。"""
     import akshare as ak
     df = _ak_retry(ak.stock_zh_a_daily, symbol=_ak_symbol(symbol),
-                   start_date=start, end_date=end, adjust="")
+                   start_date=start, end_date=end, adjust=adjust)
     return _df_to_close_series(df)
 
-def fetch_close_series(symbol: str, start: str, end: str) -> list[tuple[str, float]]:
+def fetch_close_series(symbol: str, start: str, end: str, adjust: str = "") -> list[tuple[str, float]]:
     """
-    多源回退获取不复权收盘价，返回 [(date_iso, close)] 升序。
+    多源回退获取日线收盘价，返回 [(date_iso, close)] 升序。
+    adjust: ""=不复权（与估值指标同口径），"qfq"=前复权（估值带展示用）。
     顺序：东财(快失败) -> 腾讯 -> 新浪；全部失败才抛错。
     """
     attempts = (
         ("东财", lambda: fetch_em_close(symbol, start, end, tries=2)),
-        ("腾讯", lambda: fetch_tx_close(symbol, start, end)),
-        ("新浪", lambda: fetch_sina_close(symbol, start, end)),
+        ("腾讯", lambda: fetch_tx_close(symbol, start, end, adjust=adjust)),
+        ("新浪", lambda: fetch_sina_close(symbol, start, end, adjust=adjust)),
     )
+    if adjust == "qfq":
+        # 东财 push2his 本机常被阻断，qfq 通道直接跳过，先走腾讯
+        attempts = attempts[1:]
     errors: list[str] = []
     for name, fn in attempts:
         try:
@@ -152,7 +156,7 @@ def fetch_close_series(symbol: str, start: str, end: str) -> list[tuple[str, flo
             errors.append(f"{name}:{type(e).__name__}:{str(e)[:70]}")
             continue
         if out:
-            print(f"[close] 来源={name}, {len(out)} 条, {out[0][0]} ~ {out[-1][0]}")
+            print(f"[close adjust={adjust or 'raw'}] 来源={name}, {len(out)} 条, {out[0][0]} ~ {out[-1][0]}")
             return out
         errors.append(f"{name}:空数据")
     raise RuntimeError("收盘价全部数据源失败 -> " + " | ".join(errors))
@@ -198,6 +202,49 @@ def fetch_baidu_valuation(symbol: str) -> dict[str, dict[str, float]]:
                 m[d] = float(v)
         out[col] = m
         time.sleep(1)
+    return out
+
+# --------------------------------------------------------------------------- #
+# 2b) 东财数据中心 估值分析（PS_TTM 历史来源，datacenter-web 域名独立于 push2his）
+# --------------------------------------------------------------------------- #
+def fetch_em_valuation(symbol: str, days: int = 4000) -> dict[str, float]:
+    """
+    东财数据中心「估值分析」日线：返回 {date_iso: ps_ttm}。
+    接口含 PE_TTM/PB_MRQ/PS_TTM/PCF 等，历史约 8 年，足够覆盖近五年估值带。
+    """
+    url = "https://datacenter-web.eastmoney.com/api/data/v1/get"
+    headers = dict(UA)
+    headers["Referer"] = "https://data.eastmoney.com/gzfx/detail/%s.html" % symbol
+    out: dict[str, float] = {}
+    page, page_size = 1, 500
+    total_pages = None
+    while True:
+        params = {
+            "reportName": "RPT_VALUEANALYSIS_DET",
+            "columns": "TRADE_DATE,PS_TTM",
+            "filter": '(SECURITY_CODE="%s")' % symbol,
+            "pageNumber": str(page), "pageSize": str(page_size),
+            "sortTypes": "1", "sortColumns": "TRADE_DATE",
+            "source": "WEB", "client": "WEB",
+        }
+        r = _get_retry(url, params=params, headers=headers, tries=3)
+        j = r.json()
+        res = (j or {}).get("result") or {}
+        data = res.get("data") or []
+        if total_pages is None:
+            total_pages = res.get("pages") or 1
+        for row in data:
+            d = str(row.get("TRADE_DATE") or "")[:10]
+            v = row.get("PS_TTM")
+            if d and v is not None:
+                try:
+                    out[d] = float(v)
+                except (TypeError, ValueError):
+                    continue
+        if page >= total_pages or not data:
+            break
+        page += 1
+        time.sleep(0.5)
     return out
 
 # --------------------------------------------------------------------------- #

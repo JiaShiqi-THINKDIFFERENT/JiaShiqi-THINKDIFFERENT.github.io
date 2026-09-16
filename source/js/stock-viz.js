@@ -3,15 +3,14 @@
  * 用法：在任意股票页正文放置
  *   <div id="stock-viz" data-json="valuation-data.json"></div>
  *   <script src="/js/stock-viz.js" defer></script>
- * 渲染：快照表（当前/十年最低/中位/最高/分位条）+ 指标标签页图表
- *   标签栏位于图表上方（收盘价 / 市盈率 / 市净率 / 股息率），
- *   切换标签后下方展示对应指标的十年走势图，默认显示收盘价；
- *   标签按 JSON 中实际有数据的指标生成（如从未分红的个股不显示「股息率」）；
+ * 渲染：快照表（当前/十年最低/中位/最高/分位条）+ 同花顺式估值带图表
+ *   标签栏位于图表上方（市盈率 / 市净率 / 市销率 / 股息率，按数据有无动态生成）；
+ *   每张图不直接画指标曲线，而是展示前复权收盘价，并按财报区间叠加该指标的
+ *   估值分档横线：近五年最高/最低估值对应上下沿，中间五等分共 6 条阶梯横线
+ *   （价格 = 财报区间每股基本面 × 档位估值；股息率为倒数：价格 = 每股股息 ÷ 档位）；
+ *   默认显示市盈率，默认视窗近一年，可拖动底部时间轴回溯十年；
  *   支持键盘左右方向键 / Home / End 切换。
- *   图表为时间轴（横轴）+ 数值轴（纵轴），横竖网格线均为实色可见，
- *   绘图区四周绘制完整边框，坐标轴线与刻度一并显示；
- *   默认视窗为近一年，可拖动底部时间轴回溯十年。
- * JSON 由 tools/stockdb/export_json.py 从 PostgreSQL 导出。
+ * JSON 由 tools/stockdb/export_json.py 从 PostgreSQL 导出（bands 字段）。
  */
 (function () {
   'use strict';
@@ -38,10 +37,10 @@
     '.sviz-tab:focus-visible{outline:2px solid #1b4d3e;outline-offset:2px}',
     '.sviz-cap{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 14px;margin:10px 0 2px;font-size:.92em}',
     '.sviz-cap .sviz-cur{font-weight:700;font-size:1.05em}',
-    '#stock-chart{width:100%;height:440px;position:relative}',
+    '#stock-chart{width:100%;height:460px;position:relative}',
     // 绘图区四周完整边框：与 ECharts grid 的像素偏移严格一致（left/right/top/bottom）
     '#stock-chart::after{content:\'\';position:absolute;left:88px;right:52px;top:34px;bottom:82px;border:1px solid #7f938a;border-radius:3px;pointer-events:none}',
-    '@media (max-width:767px){#stock-chart{height:360px}}',
+    '@media (max-width:767px){#stock-chart{height:380px}}',
     '.sviz-note{margin-top:10px;font-size:.8em;opacity:.62;line-height:1.6}',
     '.sviz-empty{padding:18px;border:1px dashed #9aa8a0;border-radius:6px;color:#77857d;font-size:.95em}',
     '@media (prefers-color-scheme:dark){.sviz-tab{border-color:#3f5c4d}.sviz-tab:hover{background:#1c2f26;border-color:#7fbf9e}.sviz-tab[aria-selected="true"]{background:#7fbf9e;border-color:#7fbf9e;color:#12201a}.sviz-tab:focus-visible{outline-color:#7fbf9e}#stock-chart::after{border-color:#87a295}}'
@@ -102,6 +101,7 @@
       { key: 'close', label: '收盘价', unit: '元', digits: 2, dir: 0 },
       { key: 'pe_ttm', label: '市盈率 TTM', unit: '倍', digits: 2, dir: -1 },
       { key: 'pb', label: '市净率', unit: '倍', digits: 2, dir: -1 },
+      { key: 'ps_ttm', label: '市销率 TTM', unit: '倍', digits: 2, dir: -1 },
       { key: 'dv_ttm', label: '股息率 TTM', unit: '%', digits: 3, dir: 1 }
     ];
     var h = '<table class="sviz-table"><thead><tr><th>指标</th><th>当前值</th>' +
@@ -129,12 +129,12 @@
     root.appendChild(wrap.firstChild);
   }
 
-  // 四个指标的展示定义（与快照表口径一致）
-  var METRICS = [
-    { key: 'close',  label: '收盘价', unit: '元', digits: 2, light: '#1b4d3e', dark: '#7fbf9e' },
-    { key: 'pe_ttm', label: '市盈率', unit: '倍', digits: 2, light: '#4f7fb0', dark: '#7fb0d8' },
+  // 估值带指标定义（顺序即标签顺序；与 export_json.py 的 BAND_METRICS 对应）
+  var BAND_METRICS = [
+    { key: 'pe_ttm', label: '市盈率', unit: '倍', digits: 1, light: '#4f7fb0', dark: '#7fb0d8' },
     { key: 'pb',     label: '市净率', unit: '倍', digits: 2, light: '#b08a3e', dark: '#d9b56a' },
-    { key: 'dv_ttm', label: '股息率', unit: '%',  digits: 3, light: '#4c9e6b', dark: '#7fd0a0' }
+    { key: 'ps_ttm', label: '市销率', unit: '倍', digits: 2, light: '#8a6fb0', dark: '#b39ddb' },
+    { key: 'dv_ttm', label: '股息率', unit: '%',  digits: 2, light: '#4c9e6b', dark: '#7fd0a0' }
   ];
 
   function hexToRgba(hex, alpha) {
@@ -157,33 +157,98 @@
     return (i / (n - 1)) * 100;
   }
 
-  // 单个指标的完整图表配置（一屏一图，含中位参考线）
-  // 坐标系：时间轴（横轴）+ 数值轴（纵轴），横竖网格线均为实色可见；
+  // 把估值带阶梯段 [[起日, 止日, 价格], ...] 展开为与 dates 对齐的取值数组（段外为 null）
+  function expandBand(dates, idxMap, segs) {
+    var arr = new Array(dates.length);
+    for (var i = 0; i < arr.length; i++) arr[i] = null;
+    (segs || []).forEach(function (s) {
+      var i0 = idxMap[s[0]];
+      var i1 = idxMap[s[1]];
+      if (i0 === undefined || i1 === undefined) return;
+      for (var i = i0; i <= i1 && i < arr.length; i++) arr[i] = s[2];
+    });
+    return arr;
+  }
+
+  // 坐标系：时间轴（横轴）+ 价格轴（纵轴），横竖网格线均为实色可见；
   // 绘图区四周的完整边框由 CSS（#stock-chart::after）按相同偏移绘制。
   var GRID = { left: 88, right: 52, top: 34, bottom: 82 };
 
-  function metricOption(data, m, dark, text, gridLine, border) {
+  // 同花顺式估值带图：前复权收盘价 + 该指标近五年五等分估值档位横线
+  function bandOption(data, key, m, dark, text, gridLine, border) {
     var color = dark ? m.dark : m.light;
-    var st = data.stats[m.key] || {};
-    var startPct = oneYearStartPct(data.series.dates);
+    var bandColor = dark ? '#d9b56a' : '#c96a4f';   // 估值档位线：暖色，与价格线区分
+    var st = data.stats[key] || {};
     var dates = data.series.dates;
-    var vals = data.series[m.key] || [];
+    var qfq = data.series.close_qfq || [];
+    var metricVals = data.series[key] || [];
+    var idxMap = data.__dateIdx;
+
     var pts = [];
     for (var i = 0; i < dates.length; i++) {
-      var v = vals[i];
+      var v = qfq[i];
       pts.push([dates[i], (v === null || v === undefined || isNaN(v)) ? null : v]);
     }
-    var markData = [];
-    if (st.median !== undefined && st.median !== null) {
-      markData.push({
-        yAxis: st.median,
-        lineStyle: { color: border, type: 'dashed', width: 1.2 },
-        label: {
-          formatter: '十年中位 ' + fmt(st.median, m.digits),
-          position: 'insideEndTop', color: text, fontSize: 12
-        }
+
+    var series = [{
+      name: '收盘价(前复权)', type: 'line', data: pts,
+      showSymbol: false, smooth: false, connectNulls: true,
+      lineStyle: { width: 1.8, color: color },
+      itemStyle: { color: color },
+      areaStyle: {
+        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+          { offset: 0, color: hexToRgba(color, dark ? 0.3 : 0.16) },
+          { offset: 1, color: hexToRgba(color, 0) }
+        ])
+      },
+      emphasis: { disabled: true },
+      z: 10
+    }];
+
+    var bm = data.bands.metrics[key];
+    var n = bm.levels.length;
+    for (var j = 0; j < n; j++) {
+      var vals = expandBand(dates, idxMap, bm.segments[j]);
+      var lineData = [];
+      for (var k = 0; k < dates.length; k++) {
+        if (vals[k] !== null) lineData.push([dates[k], vals[k]]);
+      }
+      var edge = (j === 0 || j === n - 1);
+      series.push({
+        name: '估值档位' + j, type: 'line', data: lineData,
+        showSymbol: false, smooth: false, connectNulls: false,
+        lineStyle: {
+          width: edge ? 1.6 : 1,
+          type: edge ? 'solid' : 'dashed',
+          color: bandColor,
+          opacity: edge ? 0.95 : 0.55
+        },
+        itemStyle: { color: bandColor },
+        emphasis: { disabled: true },
+        silent: true, z: 5
       });
     }
+
+    function levelOf(val) {
+      // 返回当前估值落在的档位序号（0=最低档）与描述
+      if (val === null || val === undefined || isNaN(val)) return null;
+      var L = bm.levels;
+      if (bm.inverse) {
+        if (val <= L[0]) return 0;
+        if (val >= L[n - 1]) return n - 1;
+        for (var j2 = 0; j2 < n - 1; j2++) {
+          if (val >= L[j2] && val <= L[j2 + 1]) return (val - L[j2] < L[j2 + 1] - val) ? j2 : j2 + 1;
+        }
+        return null;
+      }
+      if (val <= L[0]) return 0;
+      if (val >= L[n - 1]) return n - 1;
+      for (var j3 = 0; j3 < n - 1; j3++) {
+        if (val >= L[j3] && val <= L[j3 + 1]) return (val - L[j3] < L[j3 + 1] - val) ? j3 : j3 + 1;
+      }
+      return null;
+    }
+
     return {
       animation: false,
       backgroundColor: 'transparent',
@@ -199,10 +264,19 @@
         formatter: function (ps) {
           if (!ps || !ps.length) return '';
           var p = ps[0];
-          var v = p.value;
-          if (v && typeof v === 'object' && v.length) v = v[1];
-          var shown = (v === null || v === undefined || isNaN(v)) ? '—' : Number(v).toFixed(m.digits);
-          return itemDate(p) + '<br/>' + m.label + '：<b>' + shown + '</b> ' + m.unit;
+          var price = p.value;
+          if (price && typeof price === 'object' && price.length) price = price[1];
+          var iso = itemDate(p);
+          var i = data.__dateIdx[iso];
+          var mv = (i !== undefined) ? metricVals[i] : null;
+          var lines = [iso,
+            '收盘价(前复权)：<b>' + fmt(price, 2) + '</b> 元'];
+          if (mv !== null && mv !== undefined && !isNaN(mv)) {
+            var lv = levelOf(mv);
+            var lvDesc = (lv === null) ? '' : '（近五年第 ' + (lv + 1) + ' 低档 / 共 ' + n + ' 档）';
+            lines.push(m.label + '：<b>' + fmt(mv, m.digits) + '</b> ' + m.unit + lvDesc);
+          }
+          return lines.join('<br/>');
         }
       },
       // 左右留足空间：左侧容纳数值+单位，右侧避免最后一个日期被裁切
@@ -211,7 +285,6 @@
         type: 'time',
         axisLabel: {
           color: text, fontSize: 12, hideOverlap: true, margin: 12,
-          // 轴标签只显示到月份（YYYY-MM），避免日期过长互相挤压/超出绘图区
           formatter: function (v) { return fmtDate(v, 'ym'); }
         },
         axisLine: { show: true, lineStyle: { color: border, width: 1 } },
@@ -221,34 +294,20 @@
       },
       yAxis: {
         type: 'value', scale: true,
-        name: m.unit,
+        name: '元(前复权)',
         nameTextStyle: { color: text, fontSize: 12, align: 'right', padding: [0, 4, 0, 0] },
         axisLabel: { color: text, fontSize: 12, margin: 12 },
         axisLine: { show: true, lineStyle: { color: border, width: 1 } },
         axisTick: { show: true, length: 5, lineStyle: { color: border, width: 1 } },
-        // 横线：明显的网格线（不再使用近白色的主题表格底色）
         splitLine: { show: true, lineStyle: { color: gridLine, type: 'dashed', width: 1 } }
       },
-      series: [{
-        name: m.label, type: 'line', data: pts,
-        showSymbol: false, smooth: false, connectNulls: true,
-        lineStyle: { width: 1.6, color: color },
-        itemStyle: { color: color },
-        areaStyle: {
-          color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
-            { offset: 0, color: hexToRgba(color, dark ? 0.3 : 0.18) },
-            { offset: 1, color: hexToRgba(color, 0) }
-          ])
-        },
-        emphasis: { disabled: true },
-        markLine: { silent: true, symbol: 'none', animation: false, data: markData }
-      }],
+      series: series,
       // 默认只展示近一年，可拖动下方时间轴回溯十年
       dataZoom: [
-        { type: 'inside', start: startPct, end: 100 },
+        { type: 'inside', start: oneYearStartPct(dates), end: 100 },
         {
           type: 'slider', bottom: 12, height: 22, left: GRID.left, right: GRID.right,
-          start: startPct, end: 100,
+          start: oneYearStartPct(dates), end: 100,
           borderColor: 'transparent', backgroundColor: 'transparent',
           fillerColor: hexToRgba(dark ? '#7fbf9e' : '#1b4d3e', 0.14),
           handleStyle: { color: color, borderColor: color },
@@ -263,11 +322,17 @@
     };
   }
 
-  // 图表上方标签栏 + 下方单指标图；默认展示收盘价
+  // 图表上方标签栏 + 下方估值带图；默认展示市盈率
   function renderChart(data, root) {
+    if (!data.bands || !data.bands.metrics) {
+      var empty = document.createElement('div');
+      empty.className = 'sviz-empty';
+      empty.textContent = '估值带数据尚未生成，请重新执行数据导出。';
+      root.appendChild(empty);
+      return;
+    }
     var dark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
     var text = themeVar('--text-color', dark ? '#c9d6ce' : '#37474f');
-    // 网格线 / 坐标轴与边框：使用高对比实色，保证横竖线都清晰可见
     var gridLine = dark ? '#3f5a4c' : '#c0cdc5';
     var border = dark ? '#87a295' : '#7f938a';
 
@@ -290,14 +355,14 @@
     var chart = echarts.init(holder);
     var btns = [];
 
-    // 只展示 JSON 中确实有该指标数据的标签页（如从未分红的个股不显示「股息率」）
-    var metrics = METRICS.filter(function (m) {
-      return !!(data.stats && data.stats[m.key]);
+    // 只展示 JSON 中有估值带数据的标签（如从未分红的个股不显示「股息率」）
+    var metrics = BAND_METRICS.filter(function (m) {
+      return !!(data.bands.metrics[m.key]);
     });
     if (!metrics.length) {
       tabs.style.display = 'none';
       cap.style.display = 'none';
-      holder.innerHTML = '<div class="sviz-empty">暂无估值数据</div>';
+      holder.innerHTML = '<div class="sviz-empty">暂无估值带数据</div>';
       return;
     }
 
@@ -308,12 +373,16 @@
       });
       var m = metrics[i];
       var st = data.stats[m.key] || {};
+      var bm = data.bands.metrics[m.key];
+      var inv = bm.inverse;
+      var lo = inv ? bm.levels[bm.levels.length - 1] : bm.levels[0];
+      var hi = inv ? bm.levels[0] : bm.levels[bm.levels.length - 1];
       cap.innerHTML = '<span class="sviz-cur">' + m.label + ' ' + fmt(st.current, m.digits) + ' ' + m.unit + '</span>' +
-        '<span class="sviz-muted">十年最低 ' + fmt(st.min, m.digits) + ' · 中位 ' +
-        fmt(st.median, m.digits) + ' · 最高 ' + fmt(st.max, m.digits) + ' ' + m.unit + '</span>' +
+        '<span class="sviz-muted">近五年最低 ' + fmt(st.bmin, m.digits) + ' · 最高 ' + fmt(st.bmax, m.digits) + ' ' + m.unit + '</span>' +
         '<span class="sviz-muted">当前分位 ' + fmt(st.pct, 1) + '%</span>' +
-        '<span class="sviz-muted">默认显示近一年，拖动下方时间轴可回溯十年</span>';
-      chart.setOption(metricOption(data, m, dark, text, gridLine, border), true);
+        '<span class="sviz-muted">横线 = 近五年' + m.label + (inv ? '最高→最低' : '最低→最高') +
+        '（' + fmt(lo, m.digits) + ' ~ ' + fmt(hi, m.digits) + ' ' + m.unit + '）五等分档位对应价格，按财报区间阶梯更新</span>';
+      chart.setOption(bandOption(data, m.key, m, dark, text, gridLine, border), true);
     }
 
     metrics.forEach(function (m, i) {
@@ -338,7 +407,7 @@
       btns.push(b);
     });
 
-    select(0); // 默认显示收盘价
+    select(0); // 默认显示市盈率
     window.addEventListener('resize', function () { chart.resize(); });
   }
 
@@ -358,6 +427,21 @@
     fetch(url)
       .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
       .then(function (data) {
+        // 预建日期索引（tooltip 档位说明 / 带线展开共用）
+        var idxMap = {};
+        data.series.dates.forEach(function (d, i) { idxMap[d] = i; });
+        data.__dateIdx = idxMap;
+        // 近五年最低/最高（估值带口径），供摘要行使用
+        if (data.bands && data.bands.metrics) {
+          Object.keys(data.bands.metrics).forEach(function (k) {
+            var bm = data.bands.metrics[k];
+            var st = data.stats[k];
+            if (st) {
+              st.bmin = bm.inverse ? bm.levels[bm.levels.length - 1] : bm.levels[0];
+              st.bmax = bm.inverse ? bm.levels[0] : bm.levels[bm.levels.length - 1];
+            }
+          });
+        }
         // 标题行
         var head = document.createElement('div');
         head.className = 'sviz-head';
