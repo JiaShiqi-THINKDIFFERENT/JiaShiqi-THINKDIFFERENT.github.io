@@ -5,8 +5,9 @@
  *   <script src="/js/stock-viz.js" defer></script>
  * 渲染：快照表（当前/十年最低/中位/最高/分位条）+ 同花顺式估值带图表
  *   标签栏位于图表上方（市盈率 / 市净率 / 市销率 / 股息率，按数据有无动态生成）；
- *   每张图不直接画指标曲线，而是展示前复权收盘价，并按财报区间叠加该指标的
- *   估值分档横线：近十年最高/最低估值对应上下沿，中间四等分共 5 条阶梯横线
+ *   每张图不直接画指标曲线，而是展示收盘价（默认前复权，标签栏右侧可切换不复权），
+ *   并按财报区间叠加该指标的估值分档横线（档位随口径同步切换，历史完全对齐）：
+ *   横线为近十年最高/最低估值对应上下沿，中间四等分共 5 条阶梯线
  *   （价格 = 财报区间每股基本面 × 档位估值；股息率为倒数：价格 = 每股股息 ÷ 档位）；
  *   默认显示市盈率，默认视窗近一年，可拖动底部时间轴回溯十年；
  *   支持键盘左右方向键 / Home / End 切换。
@@ -35,6 +36,12 @@
     '.sviz-tab:hover{background:var(--menu-item-bg-color,#edf3ef);border-color:#1b4d3e}',
     '.sviz-tab[aria-selected="true"]{background:#1b4d3e;border-color:#1b4d3e;color:#fff;font-weight:600}',
     '.sviz-tab:focus-visible{outline:2px solid #1b4d3e;outline-offset:2px}',
+    // 复权方式切换（前复权 / 不复权）：贴在标签栏右侧的连体胶囊按钮组
+    '.sviz-adj{display:flex;margin-left:auto}',
+    '.sviz-adj .sviz-tab{font-size:.82em;padding:6px 13px;border-radius:0}',
+    '.sviz-adj .sviz-tab:first-child{border-radius:16px 0 0 16px}',
+    '.sviz-adj .sviz-tab+.sviz-tab{border-left:none}',
+    '.sviz-adj .sviz-tab:last-child{border-radius:0 16px 16px 0}',
     '.sviz-cap{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 14px;margin:10px 0 2px;font-size:.92em}',
     '.sviz-cap .sviz-cur{font-weight:700;font-size:1.05em}',
     '#stock-chart{width:100%;height:460px;position:relative}',
@@ -174,8 +181,9 @@
   // 绘图区四周的完整边框由 CSS（#stock-chart::after）按相同偏移绘制。
   var GRID = { left: 88, right: 52, top: 34, bottom: 82 };
 
-  // 同花顺式估值带图：前复权收盘价 + 该指标近十年四等分估值档位横线（五档）
-  function bandOption(data, key, m, dark, text, gridLine, border) {
+  // 同花顺式估值带图：收盘价（adj='qfq'前复权 / 'raw'不复权）+ 该指标近十年四等分
+  // 估值档位横线（五档），档位段按同口径计算（segments / segments_raw），历史完全对齐
+  function bandOption(data, key, m, dark, text, gridLine, border, adj) {
     var color = dark ? m.dark : m.light;
     // 档位线颜色（从下到上）：绿 / 蓝 / 黄 / 橙 / 红
     var bandColors = dark
@@ -183,9 +191,10 @@
       : ['#1f9e44', '#1667d9', '#d9a400', '#e87d1e', '#d93636'];
     var st = data.stats[key] || {};
     var dates = data.series.dates;
-    var qfq = data.series.close_qfq || [];
+    var qfq = adj === 'raw' ? (data.series.close || []) : (data.series.close_qfq || []);
     var metricVals = data.series[key] || [];
     var idxMap = data.__dateIdx;
+    var priceLabel = adj === 'raw' ? '收盘价(不复权)' : '收盘价(前复权)';
 
     var pts = [];
     for (var i = 0; i < dates.length; i++) {
@@ -194,7 +203,7 @@
     }
 
     var series = [{
-      name: '收盘价(前复权)', type: 'line', data: pts,
+      name: priceLabel, type: 'line', data: pts,
       showSymbol: false, smooth: false, connectNulls: true,
       lineStyle: { width: 1.8, color: color },
       itemStyle: { color: color },
@@ -209,9 +218,11 @@
     }];
 
     var bm = data.bands.metrics[key];
+    // 档位段按所选口径取：segments=前复权口径，segments_raw=不复权口径（导出端同源计算）
+    var bandSegs = (adj === 'raw' && bm.segments_raw) ? bm.segments_raw : bm.segments;
     var n = bm.levels.length;
     for (var j = 0; j < n; j++) {
-      var vals = expandBand(dates, idxMap, bm.segments[j]);
+      var vals = expandBand(dates, idxMap, bandSegs[j]);
       var lineData = [];
       for (var k = 0; k < dates.length; k++) {
         if (vals[k] !== null) lineData.push([dates[k], vals[k]]);
@@ -276,7 +287,7 @@
           var i = data.__dateIdx[iso];
           var mv = (i !== undefined) ? metricVals[i] : null;
           var lines = [iso,
-            '收盘价(前复权)：<b>' + fmt(price, 2) + '</b> 元'];
+            priceLabel + '：<b>' + fmt(price, 2) + '</b> 元'];
           if (mv !== null && mv !== undefined && !isNaN(mv)) {
             var lv = levelOf(mv);
             var lvDesc = (lv === null) ? '' : '（近十年第 ' + (lv + 1) + ' 低档 / 共 ' + n + ' 档）';
@@ -300,7 +311,7 @@
       },
       yAxis: {
         type: 'value', scale: true,
-        name: '元(前复权)',
+        name: adj === 'raw' ? '元(不复权)' : '元(前复权)',
         nameTextStyle: { color: text, fontSize: 12, align: 'right', padding: [0, 4, 0, 0] },
         axisLabel: { color: text, fontSize: 12, margin: 12 },
         axisLine: { show: true, lineStyle: { color: border, width: 1 } },
@@ -360,6 +371,8 @@
 
     var chart = echarts.init(holder);
     var btns = [];
+    var cur = 0;          // 当前选中的指标序号
+    var adj = 'qfq';      // 价格口径：'qfq'=前复权（默认）/ 'raw'=不复权
 
     // 只展示 JSON 中有估值带数据的标签（如从未分红的个股不显示「股息率」）
     var metrics = BAND_METRICS.filter(function (m) {
@@ -388,8 +401,32 @@
         '<span class="sviz-muted">当前分位 ' + fmt(st.pct, 1) + '%</span>' +
         '<span class="sviz-muted">横线 = 近十年' + m.label + (inv ? '最高→最低' : '最低→最高') +
         '（' + fmt(lo, m.digits) + ' ~ ' + fmt(hi, m.digits) + ' ' + m.unit + '）四等分五档，按财报区间阶梯更新</span>';
-      chart.setOption(bandOption(data, m.key, m, dark, text, gridLine, border), true);
+      chart.setOption(bandOption(data, m.key, m, dark, text, gridLine, border, adj), true);
     }
+
+    // 复权方式切换按钮组（前复权 / 不复权），贴在标签栏右侧
+    var adjWrap = document.createElement('div');
+    adjWrap.className = 'sviz-adj';
+    adjWrap.setAttribute('role', 'group');
+    adjWrap.setAttribute('aria-label', '复权方式切换');
+    [['qfq', '前复权'], ['raw', '不复权']].forEach(function (pair) {
+      var val = pair[0];
+      var ab = document.createElement('button');
+      ab.type = 'button';
+      ab.className = 'sviz-tab';
+      ab.textContent = pair[1];
+      ab.setAttribute('aria-pressed', val === adj ? 'true' : 'false');
+      ab.addEventListener('click', function () {
+        if (adj === val) return;
+        adj = val;
+        adjWrap.querySelectorAll('.sviz-tab').forEach(function (x) {
+          x.setAttribute('aria-pressed', x === ab ? 'true' : 'false');
+        });
+        select(cur);
+      });
+      adjWrap.appendChild(ab);
+    });
+    tabs.appendChild(adjWrap);
 
     metrics.forEach(function (m, i) {
       var b = document.createElement('button');
@@ -399,7 +436,7 @@
       b.setAttribute('role', 'tab');
       b.setAttribute('aria-selected', i === 0 ? 'true' : 'false');
       b.tabIndex = i === 0 ? 0 : -1;
-      b.addEventListener('click', function () { select(i); });
+      b.addEventListener('click', function () { cur = i; select(i); });
       // 键盘可访问：左右方向键 / Home / End 切换
       b.addEventListener('keydown', function (e) {
         var n = null;
@@ -407,7 +444,7 @@
         else if (e.key === 'ArrowLeft') n = (i - 1 + metrics.length) % metrics.length;
         else if (e.key === 'Home') n = 0;
         else if (e.key === 'End') n = metrics.length - 1;
-        if (n !== null) { e.preventDefault(); select(n); btns[n].focus(); }
+        if (n !== null) { e.preventDefault(); cur = n; select(n); btns[n].focus(); }
       });
       tabs.appendChild(b);
       btns.push(b);
