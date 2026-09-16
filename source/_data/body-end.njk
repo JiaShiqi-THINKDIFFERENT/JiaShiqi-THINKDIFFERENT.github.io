@@ -3,7 +3,8 @@
   - 经 _config.next.yml 的 custom_file_path.bodyEnd 注入到每个页面。
   - 逻辑：页面存在 #Comments 挂载点 && 当前是单篇内容页(post/page 布局)
          → 动态注入 Artalk.css / Artalk.js 并初始化一次。
-  - 文章页挂载点来自 post-body-end.njk；独立页面(如个股页)在其 md 末尾手写 <div id="Comments"></div>。
+  - 文章页挂载点来自 post-body-end.njk；个股等独立页面默认不带评论，
+    如需开启在该页 md 末尾手写 <div id="Comments"></div> 即可。
   - ★部署前必改：下方 server 地址 comments.YOUR-DOMAIN.com 换成你的真实评论域名(HTTPS)。
 #}
 <script>
