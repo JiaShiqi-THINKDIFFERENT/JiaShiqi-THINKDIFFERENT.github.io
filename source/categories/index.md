@@ -9,20 +9,30 @@ comments: false
 ## 食品饮料
 
 - [贵州茅台](/stocks/guizhou-maotai/)
-- [五粮液](/stocks/wuliangye/)
+- [伊利股份](/stocks/yili-gufen/)
+
+## 家用电器
+
+- [美的集团](/stocks/meidi-jituan/)
 
 ## 电力设备
 
 - [宁德时代](/stocks/ningde-shidai/)
 
+## 汽车
+
+- [比亚迪](/stocks/biyadi/)
+
 ## 银行
 
 - [招商银行](/stocks/zhaoshang-yinhang/)
+- [工商银行](/stocks/gongshang-yinhang/)
+- [农业银行](/stocks/nongye-yinhang/)
 
 ## 医药生物
 
 - [恒瑞医药](/stocks/hengru-yiyao/)
 
-## 汽车
+## 电子
 
-- [比亚迪](/stocks/biyadi/)
+- [中芯国际](/stocks/zhongxin-guoji/)

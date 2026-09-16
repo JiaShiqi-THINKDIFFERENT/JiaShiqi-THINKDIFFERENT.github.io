@@ -6,6 +6,7 @@
  * 渲染：快照表（当前/十年最低/中位/最高/分位条）+ 指标标签页图表
  *   标签栏位于图表上方（收盘价 / 市盈率 / 市净率 / 股息率），
  *   切换标签后下方展示对应指标的十年走势图，默认显示收盘价；
+ *   标签按 JSON 中实际有数据的指标生成（如从未分红的个股不显示「股息率」）；
  *   支持键盘左右方向键 / Home / End 切换。
  *   图表为时间轴（横轴）+ 数值轴（纵轴），横竖网格线均为实色可见，
  *   绘图区四周绘制完整边框，坐标轴线与刻度一并显示；
@@ -289,12 +290,23 @@
     var chart = echarts.init(holder);
     var btns = [];
 
+    // 只展示 JSON 中确实有该指标数据的标签页（如从未分红的个股不显示「股息率」）
+    var metrics = METRICS.filter(function (m) {
+      return !!(data.stats && data.stats[m.key]);
+    });
+    if (!metrics.length) {
+      tabs.style.display = 'none';
+      cap.style.display = 'none';
+      holder.innerHTML = '<div class="sviz-empty">暂无估值数据</div>';
+      return;
+    }
+
     function select(i) {
       btns.forEach(function (b, j) {
         b.setAttribute('aria-selected', j === i ? 'true' : 'false');
         b.tabIndex = j === i ? 0 : -1;
       });
-      var m = METRICS[i];
+      var m = metrics[i];
       var st = data.stats[m.key] || {};
       cap.innerHTML = '<span class="sviz-cur">' + m.label + ' ' + fmt(st.current, m.digits) + ' ' + m.unit + '</span>' +
         '<span class="sviz-muted">十年最低 ' + fmt(st.min, m.digits) + ' · 中位 ' +
@@ -304,7 +316,7 @@
       chart.setOption(metricOption(data, m, dark, text, gridLine, border), true);
     }
 
-    METRICS.forEach(function (m, i) {
+    metrics.forEach(function (m, i) {
       var b = document.createElement('button');
       b.type = 'button';
       b.className = 'sviz-tab';
@@ -316,10 +328,10 @@
       // 键盘可访问：左右方向键 / Home / End 切换
       b.addEventListener('keydown', function (e) {
         var n = null;
-        if (e.key === 'ArrowRight') n = (i + 1) % METRICS.length;
-        else if (e.key === 'ArrowLeft') n = (i - 1 + METRICS.length) % METRICS.length;
+        if (e.key === 'ArrowRight') n = (i + 1) % metrics.length;
+        else if (e.key === 'ArrowLeft') n = (i - 1 + metrics.length) % metrics.length;
         else if (e.key === 'Home') n = 0;
-        else if (e.key === 'End') n = METRICS.length - 1;
+        else if (e.key === 'End') n = metrics.length - 1;
         if (n !== null) { e.preventDefault(); select(n); btns[n].focus(); }
       });
       tabs.appendChild(b);

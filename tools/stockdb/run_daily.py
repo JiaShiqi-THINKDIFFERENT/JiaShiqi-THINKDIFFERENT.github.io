@@ -30,11 +30,15 @@ PY = sys.executable
 # 股票池：symbol -> (名称, slug, 申万一级行业)。后续新股票在此追加即可。
 STOCKS = {
     "600519": ("贵州茅台", "guizhou-maotai", "食品饮料"),
-    "000858": ("五粮液", "wuliangye", "食品饮料"),
+    "600887": ("伊利股份", "yili-gufen", "食品饮料"),
+    "000333": ("美的集团", "meidi-jituan", "家用电器"),
     "300750": ("宁德时代", "ningde-shidai", "电力设备"),
-    "600036": ("招商银行", "zhaoshang-yinhang", "银行"),
-    "600276": ("恒瑞医药", "hengru-yiyao", "医药生物"),
     "002594": ("比亚迪", "biyadi", "汽车"),
+    "600036": ("招商银行", "zhaoshang-yinhang", "银行"),
+    "601398": ("工商银行", "gongshang-yinhang", "银行"),
+    "601288": ("农业银行", "nongye-yinhang", "银行"),
+    "600276": ("恒瑞医药", "hengru-yiyao", "医药生物"),
+    "688981": ("中芯国际", "zhongxin-guoji", "电子"),
 }
 
 # 本机访问 GitHub 的 HTTPS 443 会被网络策略间歇性阻断（DNS 指向被屏蔽 IP）。
@@ -99,6 +103,16 @@ def sh(cmd: list[str], cwd: Path = REPO, retry: int = 1, timeout: int = 300) -> 
     raise SystemExit(f"命令失败: {cmd}")
 
 
+def _default_node_bin() -> str:
+    """自动定位受管 node 目录（取版本号最大者）。计划任务以裸环境运行，node 不在系统 PATH。"""
+    root = Path(os.environ.get("WORKBUDDY_NODE_ROOT", r"C:\Users\jiashiqi\.workbuddy\binaries\node\versions"))
+    if root.is_dir():
+        cands = [p for p in root.iterdir() if p.is_dir() and (p / "node.exe").exists()]
+        if cands:
+            return str(sorted(cands, key=lambda p: p.name)[-1])
+    return str(root)
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--only", default=None, help="仅处理指定代码")
@@ -115,13 +129,13 @@ def main() -> None:
         sh([PY, str(HERE / "export_json.py"), "--symbol", symbol, "--slug", slug, "--name", name], retry=1, timeout=120)
 
     print("\n===== hexo 构建 =====")
-    node_bin = os.environ.get(
-        "NODE_BIN",
-        r"C:\Users\jiashiqi\.workbuddy\binaries\node\versions\22.22.2-2" if os.name == "nt" else "",
-    )
+    node_bin = os.environ.get("NODE_BIN") or _default_node_bin()
     if node_bin and os.path.isdir(node_bin):
         # 计划任务以裸环境运行，node 不在系统 PATH，需显式注入
         os.environ["PATH"] = node_bin + os.pathsep + os.environ["PATH"]
+        print(f"[env] node 目录已注入 PATH: {node_bin}")
+    else:
+        print(f"[warn] node 目录不存在: {node_bin}")
     sh([os.environ.get("HEXO", str(REPO / "node_modules/.bin/hexo" if os.name != "nt" else REPO / "node_modules/.bin/hexo.cmd")), "generate"], timeout=300)
 
     if args.no_push:

@@ -27,9 +27,12 @@ WINDOW_YEARS = 10
 
 
 def _stats(vals: list[float | None]) -> dict | None:
-    """vals 为升序日线某指标序列（允许 None）。返回 最新值 + 十年窗口 min/max/median/pct。"""
+    """vals 为升序日线某指标序列（允许 None）。返回 最新值 + 十年窗口 min/max/median/pct。
+    全为 0 的序列视为「无该指标数据」（如从未分红的个股股息率），返回 None 让前端隐藏该指标。"""
     window = [v for v in vals if v is not None]
     if not window:
+        return None
+    if all(v == 0 for v in window):
         return None
     current = window[-1]                      # 最新非空值
     below = sum(1 for v in window if v < current)
