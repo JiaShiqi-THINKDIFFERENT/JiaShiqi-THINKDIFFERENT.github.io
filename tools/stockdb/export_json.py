@@ -120,13 +120,22 @@ def _build_bands(dates: list[str],
         levels = [round(vmin + k * step, digits) for k in range(BAND_DIVISIONS + 1)]
 
         # 每条线：按财报区间生成阶梯段 [起始日, 结束日, 价格]
+        # 注意：段起止必须对齐到实际交易日——若用固定日历日（如 05-01 假期），
+        # 前端 idxMap 查不到该日期会整段丢弃，导致档位线出现长斜线缺口。
         lines: list[list] = [[] for _ in levels]
         for seg_start, seg_end in segs:
-            # 段内第一个「指标与价格都有效」的交易日
-            si = next((i for i, d in enumerate(dates)
-                       if seg_start <= d <= seg_end
-                       and vals[i] is not None and vals[i] > 0
-                       and series["close_qfq"][i] not in (None, 0)), None)
+            # 段内第一个/最后一个「指标与价格都有效」的交易日
+            si = ei = None
+            for i, d in enumerate(dates):
+                if d > seg_end:
+                    break
+                if d < seg_start:
+                    continue
+                if (vals[i] is not None and vals[i] > 0
+                        and series["close_qfq"][i] not in (None, 0)):
+                    if si is None:
+                        si = i
+                    ei = i
             if si is None:
                 continue
             if key == "pe_ttm":
@@ -140,7 +149,7 @@ def _build_bands(dates: list[str],
             for j, lv in enumerate(levels):
                 # dv_ttm 以百分数存储：价格 = 每股股息 / (档位/100)；其余 = 基本面 × 档位
                 price = (f * 100.0 / lv) if inverse else (f * lv)
-                lines[j].append([seg_start, seg_end, round(price, 2)])
+                lines[j].append([dates[si], dates[ei], round(price, 2)])
         if not any(lines):
             continue
         out[key] = {

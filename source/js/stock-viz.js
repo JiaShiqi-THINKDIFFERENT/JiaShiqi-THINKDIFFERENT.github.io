@@ -217,6 +217,9 @@
       series.push({
         name: '估值档位' + j, type: 'line', data: lineData,
         showSymbol: false, smooth: false, connectNulls: false,
+        // 阶梯绘制：财报季度内保持水平，切换财报区间处垂直跳变，
+        // 避免相邻季度档位价格不同被连成斜线（同花顺式画法）
+        step: 'end',
         lineStyle: {
           width: edge ? 1.6 : 1,
           type: edge ? 'solid' : 'dashed',
