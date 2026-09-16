@@ -117,10 +117,24 @@
     return 'rgba(' + ((n >> 16) & 255) + ',' + ((n >> 8) & 255) + ',' + (n & 255) + ',' + alpha + ')';
   }
 
+  // 计算「近一年」窗口在整段序列中的起始百分比（ISO 日期可直接字典序比较）
+  function oneYearStartPct(dates) {
+    var n = dates.length;
+    if (n < 2) return 0;
+    var last = String(dates[n - 1]);
+    var y = Number(last.slice(0, 4));
+    if (isNaN(y)) return 0;
+    var cutoff = String(y - 1) + last.slice(4);
+    var i = 0;
+    while (i < n && String(dates[i]) < cutoff) i++;
+    return (i / (n - 1)) * 100;
+  }
+
   // 单个指标的完整图表配置（一屏一图，含中位参考线）
   function metricOption(data, m, dark, text, axis) {
     var color = dark ? m.dark : m.light;
     var st = data.stats[m.key] || {};
+    var startPct = oneYearStartPct(data.series.dates);
     var markData = [];
     if (st.median !== undefined && st.median !== null) {
       markData.push({
@@ -128,18 +142,18 @@
         lineStyle: { color: axis, type: 'dashed', width: 1 },
         label: {
           formatter: '十年中位 ' + fmt(st.median, m.digits),
-          position: 'insideEndTop', color: text, fontSize: 10
+          position: 'insideEndTop', color: text, fontSize: 12
         }
       });
     }
     return {
       animation: false,
       backgroundColor: 'transparent',
-      textStyle: { color: text },
+      textStyle: { color: text, fontSize: 12 },
       tooltip: {
         trigger: 'axis',
         axisPointer: { type: 'line', lineStyle: { color: color, width: 1 } },
-        textStyle: { fontSize: 12 },
+        textStyle: { fontSize: 13 },
         formatter: function (ps) {
           if (!ps || !ps.length) return '';
           var v = ps[0].value;
@@ -147,18 +161,23 @@
           return ps[0].axisValue + '<br/>' + m.label + '：<b>' + shown + '</b> ' + m.unit;
         }
       },
-      grid: { left: 72, right: 26, top: 26, bottom: 60 },
+      // 左右留足空间：左侧容纳数值+单位，右侧避免最后一个日期被裁切
+      grid: { left: 88, right: 52, top: 34, bottom: 82 },
       xAxis: {
         type: 'category', data: data.series.dates, boundaryGap: false,
-        axisLabel: { color: text, fontSize: 10, hideOverlap: true },
+        axisLabel: {
+          color: text, fontSize: 12, hideOverlap: true, margin: 10,
+          // 轴标签只显示到月份（YYYY-MM），避免日期过长互相挤压/超出绘图区
+          formatter: function (v) { return String(v).slice(0, 7); }
+        },
         axisLine: { lineStyle: { color: axis } },
         axisTick: { show: false }
       },
       yAxis: {
         type: 'value', scale: true,
         name: m.unit,
-        nameTextStyle: { color: text, fontSize: 10, align: 'right' },
-        axisLabel: { color: text, fontSize: 10 },
+        nameTextStyle: { color: text, fontSize: 12, align: 'right', padding: [0, 4, 0, 0] },
+        axisLabel: { color: text, fontSize: 12, margin: 10 },
         splitLine: { lineStyle: { color: axis, type: 'dashed' } }
       },
       series: [{
@@ -175,14 +194,17 @@
         emphasis: { disabled: true },
         markLine: { silent: true, symbol: 'none', animation: false, data: markData }
       }],
+      // 默认只展示近一年，可拖动下方时间轴回溯十年
       dataZoom: [
-        { type: 'inside', start: 0, end: 100 },
+        { type: 'inside', start: startPct, end: 100 },
         {
-          type: 'slider', bottom: 8, height: 18,
+          type: 'slider', bottom: 12, height: 22, left: 88, right: 52,
+          start: startPct, end: 100,
           borderColor: 'transparent', backgroundColor: 'transparent',
           fillerColor: hexToRgba(dark ? '#7fbf9e' : '#1b4d3e', 0.14),
-          handleStyle: { color: color },
-          textStyle: { color: text, fontSize: 10 }
+          handleStyle: { color: color, borderColor: color },
+          labelFormatter: function (v) { return String(v).slice(0, 7); },
+          textStyle: { color: text, fontSize: 12 }
         }
       ]
     };
@@ -223,7 +245,8 @@
       cap.innerHTML = '<span class="sviz-cur">' + m.label + ' ' + fmt(st.current, m.digits) + ' ' + m.unit + '</span>' +
         '<span class="sviz-muted">十年最低 ' + fmt(st.min, m.digits) + ' · 中位 ' +
         fmt(st.median, m.digits) + ' · 最高 ' + fmt(st.max, m.digits) + ' ' + m.unit + '</span>' +
-        '<span class="sviz-muted">当前分位 ' + fmt(st.pct, 1) + '%</span>';
+        '<span class="sviz-muted">当前分位 ' + fmt(st.pct, 1) + '%</span>' +
+        '<span class="sviz-muted">默认显示近一年，拖动下方时间轴可回溯十年</span>';
       chart.setOption(metricOption(data, m, dark, text, axis), true);
     }
 
