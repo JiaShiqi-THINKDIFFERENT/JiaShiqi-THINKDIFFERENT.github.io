@@ -6,16 +6,18 @@
 输出: source/stocks/<slug>/valuation-data.json（供页面 echarts 读取）
 
 估值带（bands）说明——同花顺风格：
-  图中展示前复权收盘价，并按财报区间叠加估值分档横线：
+  图中展示收盘价，并按财报区间叠加估值分档横线：
   - 档位 = 近十年该指标最高/最低值之间四等分（共 5 档：min, +1/4, ..., max）
   - 每条横线价格 = 区间内每股基本面 × 档位估值；基本面按财报披露区间阶梯更新
     （区间边界取 A 股披露截止：05-01 一季报后、09-01 半年报后、11-01 三季报后）
-  - 每股基本面由日频数据反推（前复权价口径，与展示价格同一复权空间）：
-      PE: qfq_close / pe_ttm ≈ 每股收益(TTM)
-      PB: qfq_close / pb     ≈ 每股净资产
-      PS: qfq_close / ps_ttm ≈ 每股营收(TTM)
-      DY: dv_ttm/100 × qfq_close ≈ 每股股息(TTM)，横线 = dps / 股息率档位
-  - 线为阶梯横线：区间内保持不变，财报更新后跳变
+  - 每股基本面由日频数据反推（与展示价格同一复权空间）：
+      PE: close / pe_ttm ≈ 每股收益(TTM)
+      PB: close / pb     ≈ 每股净资产
+      PS: close / ps_ttm ≈ 每股营收(TTM)
+  - 股息率（dv_ttm）不用档位线：改为 mode="points"，在分红除权除息日打圆点，
+    点值 = 该日收盘价（落在价格线上），并附每股派息与本次股息率
+    （股息率 = 每股派息 / 除权前一交易日不复权收盘价 × 100%）
+  - 档位段同时导出两套口径：segments（前复权价口径）、segments_raw（不复权价口径）
 """
 from __future__ import annotations
 
@@ -45,6 +47,8 @@ BAND_METRICS = {
     "ps_ttm": ("市销率TTM", 2, False),
     "dv_ttm": ("股息率TTM", 2, True),
 }
+# 不打档位线、改为「分红日打点」的指标（股息率：分红次数少且离散，画档位线无意义）
+POINT_MODE_METRICS = {"dv_ttm"}
 # 财报披露区间起点（月, 日）：一季报后 / 半年报后 / 三季报·年报后
 REPORT_BOUNDARIES = ((5, 1), (9, 1), (11, 1))
 
@@ -89,8 +93,38 @@ def _report_intervals(start_iso: str, end_iso: str) -> list[tuple[str, str]]:
     return segs
 
 
+def _dividend_points(dates: list[str],
+                     series: dict[str, list[float | None]],
+                     date_idx: dict[str, int],
+                     dividends: list[dict]) -> list[list]:
+    """分红除权日打点。返回 [[日期, 每股派息(元), 本次股息率(%)], ...]（按日期升序）。
+
+    - 日期取除权除息日；若非交易日（极少），前向对齐到最近交易日
+    - 本次股息率 = 每股派息 ÷ 除权前一交易日不复权收盘价 × 100%
+      （除权日收盘价已不含本次分红，用前收盘价才是该次分红的实际收益率口径）
+    """
+    pts: list[list] = []
+    for dv in dividends:
+        ex = dv["ex_date"].isoformat()
+        if ex < dates[0] or ex > dates[-1]:
+            continue
+        i = date_idx.get(ex)
+        if i is None:
+            prev = [k for k, d in enumerate(dates) if d <= ex]
+            if not prev:
+                continue
+            i = prev[-1]
+        per = float(dv["per_share"])
+        base = series["close"][i - 1] if i > 0 else series["close"][i]
+        rate = round(per / base * 100, 3) if base else None
+        pts.append([dates[i], round(per, 4), rate])
+    pts.sort(key=lambda x: x[0])
+    return pts
+
+
 def _build_bands(dates: list[str],
-                 series: dict[str, list[float | None]]) -> dict | None:
+                 series: dict[str, list[float | None]],
+                 dividends: list[dict] | None = None) -> dict | None:
     """生成同花顺式估值带。dates/series 为近十年窗口。返回 None 表示无法生成。"""
     if not dates:
         return None
@@ -112,6 +146,19 @@ def _build_bands(dates: list[str],
             continue
         window = [v for v in vals[lo_i:] if v is not None and v > 0]
         if not window:
+            continue
+        # 股息率：不打档位线，只在分红除权除息日打点
+        if key in POINT_MODE_METRICS:
+            pts = _dividend_points(dates, series, date_idx, dividends or [])
+            if not pts:
+                continue
+            out[key] = {
+                "label": label,
+                "digits": digits,
+                "inverse": inverse,
+                "mode": "points",
+                "points": pts,
+            }
             continue
         vmin, vmax = min(window), max(window)
         if vmax <= 0 or vmax <= vmin:
@@ -147,7 +194,7 @@ def _build_bands(dates: list[str],
                     f = close_arr[si] / vals[si]        # 每股净资产
                 elif key == "ps_ttm":
                     f = close_arr[si] / vals[si]        # 每股营收(TTM)
-                else:  # dv_ttm
+                else:  # 倒数型指标的兜底分支（当前仅股息率，已改走 points 模式）
                     f = vals[si] / 100.0 * close_arr[si]  # 每股股息(TTM)
                 for j, lv in enumerate(levels):
                     # dv_ttm 以百分数存储：价格 = 每股股息 / (档位/100)；其余 = 基本面 × 档位
@@ -183,6 +230,7 @@ def main() -> None:
     conn = db.connect()
     try:
         rows = db.query_daily(conn, args.symbol)
+        dividends = db.query_dividends(conn, args.symbol)
     finally:
         conn.close()
     if not rows:
@@ -204,7 +252,7 @@ def main() -> None:
         if s:
             stats[f] = s
 
-    bands = _build_bands(dates, series)
+    bands = _build_bands(dates, series, dividends)
 
     latest_row = wrows[-1]
     def _num(x):
@@ -223,7 +271,8 @@ def main() -> None:
                 "pe_ttm/pb:百度股市通(周采样,日频前向填充); ps_ttm:东财数据中心估值分析; "
                 "dv_ttm:近12月每股现金分红/收盘价 自算近似(东财分红配送); "
                 "bands:近十年估值四等分五档横线,按财报区间阶梯更新(同花顺估值带风格); "
-                "bands.metrics.*.segments按前复权价计算,segments_raw按不复权价计算",
+                "bands.metrics.*.segments按前复权价计算,segments_raw按不复权价计算; "
+                "股息率(dv_ttm)不用档位线,mode=points在分红除权除息日打点",
         "latest": {
             "date": latest.isoformat(),
             "close": _num(latest_row["close"]),

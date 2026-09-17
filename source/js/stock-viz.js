@@ -8,7 +8,9 @@
  *   每张图不直接画指标曲线，而是展示收盘价（默认前复权，标签栏右侧可切换不复权），
  *   并按财报区间叠加该指标的估值分档横线（档位随口径同步切换，历史完全对齐）：
  *   横线为近十年最高/最低估值对应上下沿，中间四等分共 5 条阶梯线
- *   （价格 = 财报区间每股基本面 × 档位估值；股息率为倒数：价格 = 每股股息 ÷ 档位）；
+ *   （价格 = 财报区间每股基本面 × 档位估值）；
+ *   股息率例外（JSON 中 mode="points"）：不画档位线，只在分红除权除息日打圆点，
+ *   点落在价格线上，悬浮显示每股派息与本次股息率；
  *   默认显示市盈率，默认视窗近一年，可拖动底部时间轴回溯十年；
  *   支持键盘左右方向键 / Home / End 切换。
  * JSON 由 tools/stockdb/export_json.py 从 PostgreSQL 导出（bands 字段）。
@@ -182,7 +184,8 @@
   var GRID = { left: 88, right: 52, top: 34, bottom: 82 };
 
   // 同花顺式估值带图：收盘价（adj='qfq'前复权 / 'raw'不复权）+ 该指标近十年四等分
-  // 估值档位横线（五档），档位段按同口径计算（segments / segments_raw），历史完全对齐
+  // 估值档位横线（五档），档位段按同口径计算（segments / segments_raw），历史完全对齐。
+  // 股息率为 points 模式：不画档位线，仅在分红除权除息日打圆点（点落在价格线上）。
   function bandOption(data, key, m, dark, text, gridLine, border, adj) {
     var color = dark ? m.dark : m.light;
     // 档位线颜色（从下到上）：绿 / 蓝 / 黄 / 橙 / 红
@@ -218,32 +221,56 @@
     }];
 
     var bm = data.bands.metrics[key];
-    // 档位段按所选口径取：segments=前复权口径，segments_raw=不复权口径（导出端同源计算）
-    var bandSegs = (adj === 'raw' && bm.segments_raw) ? bm.segments_raw : bm.segments;
-    var n = bm.levels.length;
-    for (var j = 0; j < n; j++) {
-      var vals = expandBand(dates, idxMap, bandSegs[j]);
-      var lineData = [];
-      for (var k = 0; k < dates.length; k++) {
-        if (vals[k] !== null) lineData.push([dates[k], vals[k]]);
-      }
-      var bandColor = bandColors[j % bandColors.length];
-      series.push({
-        name: '估值档位' + j, type: 'line', data: lineData,
-        showSymbol: false, smooth: false, connectNulls: false,
-        // 阶梯绘制：财报季度内保持水平，切换财报区间处垂直跳变，
-        // 避免相邻季度档位价格不同被连成斜线（同花顺式画法）
-        step: 'end',
-        lineStyle: {
-          width: 2,
-          type: 'solid',
-          color: bandColor,
-          opacity: 0.95
-        },
-        itemStyle: { color: bandColor },
-        emphasis: { disabled: true },
-        silent: true, z: 5
+    var pointsMode = (bm.mode === 'points');   // 股息率：分红日打点，不画档位线
+    var divMap = {};                           // 分红日 -> [每股派息(元), 本次股息率(%)]
+    var n = 0;                                 // 档位数（points 模式无档位）
+
+    if (pointsMode) {
+      var divPts = [];
+      (bm.points || []).forEach(function (p) {
+        var i0 = idxMap[p[0]];
+        if (i0 === undefined) return;
+        var pv = qfq[i0];
+        if (pv === null || pv === undefined || isNaN(pv)) return;
+        divPts.push([p[0], pv]);               // 点落在价格线上
+        divMap[p[0]] = [p[1], p[2]];
       });
+      if (divPts.length) {
+        series.push({
+          name: '分红除权日', type: 'scatter', data: divPts,
+          symbol: 'circle', symbolSize: 9, z: 12,
+          itemStyle: { color: '#d93636', borderColor: dark ? '#12201a' : '#ffffff', borderWidth: 1.5 },
+          emphasis: { disabled: true }
+        });
+      }
+    } else {
+      // 档位段按所选口径取：segments=前复权口径，segments_raw=不复权口径（导出端同源计算）
+      var bandSegs = (adj === 'raw' && bm.segments_raw) ? bm.segments_raw : bm.segments;
+      n = (bm.levels || []).length;
+      for (var j = 0; j < n; j++) {
+        var vals = expandBand(dates, idxMap, bandSegs[j]);
+        var lineData = [];
+        for (var k = 0; k < dates.length; k++) {
+          if (vals[k] !== null) lineData.push([dates[k], vals[k]]);
+        }
+        var bandColor = bandColors[j % bandColors.length];
+        series.push({
+          name: '估值档位' + j, type: 'line', data: lineData,
+          showSymbol: false, smooth: false, connectNulls: false,
+          // 阶梯绘制：财报季度内保持水平，切换财报区间处垂直跳变，
+          // 避免相邻季度档位价格不同被连成斜线（同花顺式画法）
+          step: 'end',
+          lineStyle: {
+            width: 2,
+            type: 'solid',
+            color: bandColor,
+            opacity: 0.95
+          },
+          itemStyle: { color: bandColor },
+          emphasis: { disabled: true },
+          silent: true, z: 5
+        });
+      }
     }
 
     function levelOf(val) {
@@ -281,6 +308,9 @@
         formatter: function (ps) {
           if (!ps || !ps.length) return '';
           var p = ps[0];
+          ps.forEach(function (q) {          // 取价格线参数（points 模式下还有分红散点）
+            if (q.seriesName === priceLabel) p = q;
+          });
           var price = p.value;
           if (price && typeof price === 'object' && price.length) price = price[1];
           var iso = itemDate(p);
@@ -289,9 +319,18 @@
           var lines = [iso,
             priceLabel + '：<b>' + fmt(price, 2) + '</b> 元'];
           if (mv !== null && mv !== undefined && !isNaN(mv)) {
-            var lv = levelOf(mv);
-            var lvDesc = (lv === null) ? '' : '（近十年第 ' + (lv + 1) + ' 低档 / 共 ' + n + ' 档）';
+            var lvDesc = '';
+            if (!pointsMode) {
+              var lv = levelOf(mv);
+              lvDesc = (lv === null) ? '' : '（近十年第 ' + (lv + 1) + ' 低档 / 共 ' + n + ' 档）';
+            }
             lines.push(m.label + '：<b>' + fmt(mv, m.digits) + '</b> ' + m.unit + lvDesc);
+          }
+          var dvInfo = divMap[iso];
+          if (dvInfo) {
+            lines.push('分红除权日：每股派息 <b>' + fmt(dvInfo[0], 1) + '</b> 元' +
+              (dvInfo[1] === null || dvInfo[1] === undefined
+                ? '' : ' · 本次股息率 <b>' + fmt(dvInfo[1], 2) + '</b>%'));
           }
           return lines.join('<br/>');
         }
@@ -394,13 +433,22 @@
       var st = data.stats[m.key] || {};
       var bm = data.bands.metrics[m.key];
       var inv = bm.inverse;
-      var lo = inv ? bm.levels[bm.levels.length - 1] : bm.levels[0];
-      var hi = inv ? bm.levels[0] : bm.levels[bm.levels.length - 1];
-      cap.innerHTML = '<span class="sviz-cur">' + m.label + ' ' + fmt(st.current, m.digits) + ' ' + m.unit + '</span>' +
-        '<span class="sviz-muted">近十年最低 ' + fmt(st.bmin, m.digits) + ' · 最高 ' + fmt(st.bmax, m.digits) + ' ' + m.unit + '</span>' +
-        '<span class="sviz-muted">当前分位 ' + fmt(st.pct, 1) + '%</span>' +
-        '<span class="sviz-muted">横线 = 近十年' + m.label + (inv ? '最高→最低' : '最低→最高') +
-        '（' + fmt(lo, m.digits) + ' ~ ' + fmt(hi, m.digits) + ' ' + m.unit + '）四等分五档，按财报区间阶梯更新</span>';
+      if (bm.mode === 'points') {
+        // 股息率：不画档位线，只在分红除权除息日打点
+        cap.innerHTML = '<span class="sviz-cur">' + m.label + ' ' + fmt(st.current, m.digits) + ' ' + m.unit + '</span>' +
+          '<span class="sviz-muted">近十年最低 ' + fmt(st.min, m.digits) + ' · 最高 ' + fmt(st.max, m.digits) + ' ' + m.unit + '</span>' +
+          '<span class="sviz-muted">当前分位 ' + fmt(st.pct, 1) + '%</span>' +
+          '<span class="sviz-muted">圆点 = 分红除权除息日（每股派息 · 本次股息率），近十年共 ' +
+          (bm.points || []).length + ' 次</span>';
+      } else {
+        var lo = inv ? bm.levels[bm.levels.length - 1] : bm.levels[0];
+        var hi = inv ? bm.levels[0] : bm.levels[bm.levels.length - 1];
+        cap.innerHTML = '<span class="sviz-cur">' + m.label + ' ' + fmt(st.current, m.digits) + ' ' + m.unit + '</span>' +
+          '<span class="sviz-muted">近十年最低 ' + fmt(st.bmin, m.digits) + ' · 最高 ' + fmt(st.bmax, m.digits) + ' ' + m.unit + '</span>' +
+          '<span class="sviz-muted">当前分位 ' + fmt(st.pct, 1) + '%</span>' +
+          '<span class="sviz-muted">横线 = 近十年' + m.label + (inv ? '最高→最低' : '最低→最高') +
+          '（' + fmt(lo, m.digits) + ' ~ ' + fmt(hi, m.digits) + ' ' + m.unit + '）四等分五档，按财报区间阶梯更新</span>';
+      }
       chart.setOption(bandOption(data, m.key, m, dark, text, gridLine, border, adj), true);
     }
 
@@ -474,14 +522,18 @@
         var idxMap = {};
         data.series.dates.forEach(function (d, i) { idxMap[d] = i; });
         data.__dateIdx = idxMap;
-        // 近十年最低/最高（估值带口径），供摘要行使用
+        // 近十年最低/最高（估值带口径），供摘要行使用；points 模式（股息率）取序列统计值
         if (data.bands && data.bands.metrics) {
           Object.keys(data.bands.metrics).forEach(function (k) {
             var bm = data.bands.metrics[k];
             var st = data.stats[k];
-            if (st) {
+            if (!st) return;
+            if (bm.levels && bm.levels.length) {
               st.bmin = bm.inverse ? bm.levels[bm.levels.length - 1] : bm.levels[0];
               st.bmax = bm.inverse ? bm.levels[0] : bm.levels[bm.levels.length - 1];
+            } else {
+              st.bmin = st.min;
+              st.bmax = st.max;
             }
           });
         }
