@@ -539,6 +539,60 @@
           "进入壁垒": 25
         }
       }
+    ],
+    "wuxi-apptec": [
+      {
+        "date": "2026-09-18",
+        "symbol": "603259",
+        "slug": "wuxi-apptec",
+        "name": "药明康德",
+        "close": null,
+        "pe_pct": 32.9,
+        "pb_pct": 49.6,
+        "dv_pct": 82.4,
+        "scores": {
+          "industry": 68,
+          "company": 64.2,
+          "price": 67.1,
+          "total": 59.6
+        },
+        "verdict": "观望",
+        "vetoes": [],
+        "degraded": false,
+        "detail": {
+          "fin": {
+            "f_score": 3,
+            "f_available": 5,
+            "f_part": 7.2,
+            "f_note": "F-Score 3/5(可得项归一)",
+            "roe_mean": 15.6,
+            "roe_part": 8,
+            "roe_note": "ROE均值 15.6%，显著创造价值",
+            "cash_conv": 0.9,
+            "q_part": 8,
+            "q_note": "现金含量 0.90，良",
+            "total": 23.2
+          },
+          "ts_adj": 3.0,
+          "ts_note": "ROE 均值 15.6%，一致性中等",
+          "price_notes": [
+            "股息率分位 82%",
+            "PE-TTM 22.4 倍"
+          ],
+          "moat": 22,
+          "management": 16,
+          "pricing_power_adj": 0,
+          "roe_mean": 15.6,
+          "revenue_cagr": 25.0
+        },
+        "qual_rationale": "全球小分子 CDMO 龙头、CRDMO 一体化平台（药物发现→临床→商业化生产全程承接），长尾客户+follow 服务模式带来高复购与订单粘性，工程师红利构成成本优势；但 CXO 行业整体对大药企客户议价权有限，海外收入占比高使地缘政治（美国生物安全法案类立法）成为持续悬顶风险；需求与全球生物医药投融资景气度强相关，周期波动明显；管理层创始人专业背景强、回购分红积极。",
+        "industry_detail": {
+          "格局": 20,
+          "定价权": 12,
+          "需求稳定性": 18,
+          "进入壁垒": 18
+        }
+      }
     ]
   },
   "updated": "2026-09-18",
@@ -582,6 +636,10 @@
     "zhongxin-guoji": {
       "name": "中芯国际",
       "symbol": "688981"
+    },
+    "wuxi-apptec": {
+      "name": "药明康德",
+      "symbol": "603259"
     }
   }
 }

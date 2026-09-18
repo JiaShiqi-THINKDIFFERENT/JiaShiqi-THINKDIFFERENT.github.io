@@ -39,6 +39,7 @@ STOCKS = {
     "601288": ("农业银行", "nongye-yinhang", "银行"),
     "600276": ("恒瑞医药", "hengru-yiyao", "医药生物"),
     "688981": ("中芯国际", "zhongxin-guoji", "电子"),
+    "603259": ("药明康德", "wuxi-apptec", "医药生物"),
 }
 
 # 本机访问 GitHub 的 HTTPS 443 会被网络策略间歇性阻断（DNS 指向被屏蔽 IP）。

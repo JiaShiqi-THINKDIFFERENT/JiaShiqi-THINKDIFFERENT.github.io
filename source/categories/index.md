@@ -32,6 +32,7 @@ comments: false
 ## 医药生物
 
 - [恒瑞医药](/stocks/hengru-yiyao/)
+- [药明康德](/stocks/wuxi-apptec/)
 
 ## 电子
 

@@ -60,6 +60,7 @@ STOCKS = [
     ("601288", "nongye-yinhang", "农业银行"),
     ("600276", "hengru-yiyao", "恒瑞医药"),
     ("688981", "zhongxin-guoji", "中芯国际"),
+    ("603259", "wuxi-apptec", "药明康德"),
 ]
 
 SCORES_PATH = SRC / "three-good" / "data" / "scores.json"
