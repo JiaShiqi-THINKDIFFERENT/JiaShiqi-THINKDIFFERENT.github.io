@@ -24,6 +24,12 @@ date: 2026-09-08 09:14:00
 
 > 自由记录区：可写调研纪要、观点变化、买卖计划等。
 
+### 三好投资法则分析
+
+<div id="three-good" data-slug="ningde-shidai"></div>
+
+<script src="/js/three-good.js" defer></script>
+
 ## 十年估值纵览
 
 <div id="stock-viz" data-json="valuation-data.json"></div>
