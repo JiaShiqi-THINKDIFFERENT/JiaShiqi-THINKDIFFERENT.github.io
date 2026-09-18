@@ -20,18 +20,13 @@ date: 2026-09-16 09:18:00
 - 核心竞争力：大陆产能规模与技术代际领先、本土客户深度绑定、产业政策与基金支持
 - 主要风险：资本开支与折旧压力大、设备与材料供应受限、成熟制程价格竞争
 
-## 研究笔记
-
-> 自由记录区：可写调研纪要、观点变化、买卖计划等。
-
-### 三好投资法则分析
-
-<div id="three-good" data-slug="zhongxin-guoji"></div>
-
-<script src="/js/three-good.js" defer></script>
-
 ## 十年估值纵览
 
 <div id="stock-viz" data-json="valuation-data.json"></div>
 
 <script src="/js/stock-viz.js" defer></script>
+
+## 研究
+<div id="three-good" data-slug="zhongxin-guoji"></div>
+
+<script src="/js/three-good.js" defer></script>

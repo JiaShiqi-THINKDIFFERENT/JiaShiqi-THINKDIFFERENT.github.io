@@ -20,19 +20,13 @@ date: 2026-09-08 09:18:00
 - 核心竞争力：研发管线厚度大、销售体系覆盖广、创新药占比持续提升
 - 主要风险：集采与医保谈判降价压力、研发失败或进度不及预期
 
-## 研究笔记
-
-> 自由记录区：可写调研纪要、观点变化、买卖计划等。
-
-### 三好投资法则分析
-
-<div id="three-good" data-slug="hengru-yiyao"></div>
-
-<script src="/js/three-good.js" defer></script>
-
 ## 十年估值纵览
 
 <div id="stock-viz" data-json="valuation-data.json"></div>
 
 <script src="/js/stock-viz.js" defer></script>
 
+## 研究
+<div id="three-good" data-slug="hengru-yiyao"></div>
+
+<script src="/js/three-good.js" defer></script>

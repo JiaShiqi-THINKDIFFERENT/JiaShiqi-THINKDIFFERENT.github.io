@@ -20,18 +20,13 @@ date: 2026-09-16 09:12:00
 - 核心竞争力：全品类规模与渠道效率领先、全球产能与品牌布局完善、现金流与分红稳定
 - 主要风险：地产后周期与家电需求疲弱、原材料价格波动、海外贸易与汇率风险
 
-## 研究笔记
-
-> 自由记录区：可写调研纪要、观点变化、买卖计划等。
-
-### 三好投资法则分析
-
-<div id="three-good" data-slug="meidi-jituan"></div>
-
-<script src="/js/three-good.js" defer></script>
-
 ## 十年估值纵览
 
 <div id="stock-viz" data-json="valuation-data.json"></div>
 
 <script src="/js/stock-viz.js" defer></script>
+
+## 研究
+<div id="three-good" data-slug="meidi-jituan"></div>
+
+<script src="/js/three-good.js" defer></script>

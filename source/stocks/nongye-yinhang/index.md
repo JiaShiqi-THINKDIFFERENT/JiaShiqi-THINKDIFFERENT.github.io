@@ -20,18 +20,13 @@ date: 2026-09-16 09:16:00
 - 核心竞争力：县域金融渠道下沉优势、存款基础扎实、资产质量稳健
 - 主要风险：净息差持续收窄、涉农及房地产相关资产质量、让利实体政策压力
 
-## 研究笔记
-
-> 自由记录区：可写调研纪要、观点变化、买卖计划等。
-
-### 三好投资法则分析
-
-<div id="three-good" data-slug="nongye-yinhang"></div>
-
-<script src="/js/three-good.js" defer></script>
-
 ## 十年估值纵览
 
 <div id="stock-viz" data-json="valuation-data.json"></div>
 
 <script src="/js/stock-viz.js" defer></script>
+
+## 研究
+<div id="three-good" data-slug="nongye-yinhang"></div>
+
+<script src="/js/three-good.js" defer></script>

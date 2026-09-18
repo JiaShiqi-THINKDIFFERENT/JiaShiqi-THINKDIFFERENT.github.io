@@ -20,19 +20,13 @@ date: 2026-09-08 09:16:00
 - 核心竞争力：零售客户基础庞大、资产质量行业领先、金融科技投入早
 - 主要风险：息差收窄、零售信贷资产质量波动、财富管理费率变化
 
-## 研究笔记
-
-> 自由记录区：可写调研纪要、观点变化、买卖计划等。
-
-### 三好投资法则分析
-
-<div id="three-good" data-slug="zhaoshang-yinhang"></div>
-
-<script src="/js/three-good.js" defer></script>
-
 ## 十年估值纵览
 
 <div id="stock-viz" data-json="valuation-data.json"></div>
 
 <script src="/js/stock-viz.js" defer></script>
 
+## 研究
+<div id="three-good" data-slug="zhaoshang-yinhang"></div>
+
+<script src="/js/three-good.js" defer></script>

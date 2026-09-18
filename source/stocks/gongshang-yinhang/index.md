@@ -20,18 +20,13 @@ date: 2026-09-16 09:14:00
 - 核心竞争力：规模与网点优势显著、存款成本低、高分红比例与稳定的 ROE
 - 主要风险：净息差持续收窄、地方债务与房地产相关敞口、资产扩张增速放缓
 
-## 研究笔记
-
-> 自由记录区：可写调研纪要、观点变化、买卖计划等。
-
-### 三好投资法则分析
-
-<div id="three-good" data-slug="gongshang-yinhang"></div>
-
-<script src="/js/three-good.js" defer></script>
-
 ## 十年估值纵览
 
 <div id="stock-viz" data-json="valuation-data.json"></div>
 
 <script src="/js/stock-viz.js" defer></script>
+
+## 研究
+<div id="three-good" data-slug="gongshang-yinhang"></div>
+
+<script src="/js/three-good.js" defer></script>

@@ -20,18 +20,13 @@ date: 2026-09-16 09:10:00
 - 核心竞争力：渠道下沉与终端掌控力强、产品结构持续升级、上游奶源布局完整
 - 主要风险：原奶价格与终端需求波动、行业竞争加剧、销售费用率上行
 
-## 研究笔记
-
-> 自由记录区：可写调研纪要、观点变化、买卖计划等。
-
-### 三好投资法则分析
-
-<div id="three-good" data-slug="yili-gufen"></div>
-
-<script src="/js/three-good.js" defer></script>
-
 ## 十年估值纵览
 
 <div id="stock-viz" data-json="valuation-data.json"></div>
 
 <script src="/js/stock-viz.js" defer></script>
+
+## 研究
+<div id="three-good" data-slug="yili-gufen"></div>
+
+<script src="/js/three-good.js" defer></script>

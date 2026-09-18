@@ -20,19 +20,13 @@ date: 2026-09-08 09:20:00
 - 核心竞争力：刀片电池等自研自供体系、车型矩阵完整、规模效应显著
 - 主要风险：价格战侵蚀利润、海外贸易壁垒、行业需求增速放缓
 
-## 研究笔记
-
-> 自由记录区：可写调研纪要、观点变化、买卖计划等。
-
-### 三好投资法则分析
-
-<div id="three-good" data-slug="biyadi"></div>
-
-<script src="/js/three-good.js" defer></script>
-
 ## 十年估值纵览
 
 <div id="stock-viz" data-json="valuation-data.json"></div>
 
 <script src="/js/stock-viz.js" defer></script>
 
+## 研究
+<div id="three-good" data-slug="biyadi"></div>
+
+<script src="/js/three-good.js" defer></script>
