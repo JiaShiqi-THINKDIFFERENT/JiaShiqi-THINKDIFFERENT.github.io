@@ -1386,7 +1386,7 @@ pre code {
     transition: all 0.2s ease-in-out;
   }
   .links-of-author a::before {
-    background: #b133f5;
+    background: #af09ff;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -3009,9 +3009,6 @@ html.sidebar-collapsed .clivia-sidebar-reopen svg {
   transform: rotate(180deg);
 }
 @media (min-width: 992px) {
-  header.header {
-    position: relative;
-  }
   .main > .column {
     transition: margin-left 0.3s ease, opacity 0.25s ease;
   }
@@ -3024,6 +3021,11 @@ html.sidebar-collapsed .clivia-sidebar-reopen svg {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
+  }
+  html.sidebar-collapsed .clivia-navbar {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
   }
   html.sidebar-collapsed .main-inner {
     width: 100%;
@@ -3040,15 +3042,12 @@ html.sidebar-collapsed .clivia-sidebar-reopen svg {
   color: #fff;
   cursor: pointer;
   display: none;
-  height: 26px;
+  flex: 0 0 auto;
+  height: 28px;
   justify-content: center;
   padding: 0;
-  position: absolute;
-  right: 10px;
-  top: 10px;
   transition: background 0.2s ease, color 0.2s ease;
-  width: 26px;
-  z-index: 5;
+  width: 28px;
 }
 .clivia-sidebar-toggle:hover {
   background: rgba(255,255,255,0.3);
@@ -3137,76 +3136,20 @@ html.sidebar-collapsed .clivia-sidebar-reopen svg {
 .clivia-navbar-inner {
   display: flex;
   align-items: center;
-  gap: 26px;
+  gap: 10px;
   height: 100%;
-  padding: 0 20px;
+  padding: 0 16px;
 }
 .clivia-navbar-brand {
-  display: none;
-  font-size: 1.15em;
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.2em;
   font-weight: 700;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
   color: #fff;
 }
 .clivia-navbar-brand:hover {
   color: #fff;
-}
-.clivia-navbar-menu {
-  display: flex;
-  align-items: center;
-  gap: 22px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.clivia-navbar-menu > li {
-  position: relative;
-}
-.clivia-navbar-menu > li > a {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  padding: 4px 0;
-  font-size: 15px;
-  color: #fff;
-  border-bottom: 2px solid transparent;
-}
-.clivia-navbar-menu > li > a:hover {
-  color: #cfe2d7;
-}
-.clivia-navbar-menu > li.is-active > a {
-  color: #fff;
-  border-bottom-color: #cfe2d7;
-}
-.clivia-dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: -10px;
-  z-index: 1001;
-  margin: 0;
-  padding: 10px 14px;
-  list-style: none;
-  min-width: 230px;
-  columns: 2;
-  column-gap: 16px;
-  background: var(--content-bg-color);
-  border: 1px solid var(--table-row-hover-bg-color);
-  border-radius: 8px;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.12);
-}
-.clivia-dropdown:hover .clivia-dropdown-menu {
-  display: block;
-}
-.clivia-dropdown-menu a {
-  display: block;
-  padding: 3px 0;
-  font-size: 14px;
-  color: var(--text-color);
-  white-space: nowrap;
-}
-.clivia-dropdown-menu a:hover {
-  color: var(--link-hover-color);
 }
 @media (min-width: 992px) {
   body {
@@ -3215,10 +3158,10 @@ html.sidebar-collapsed .clivia-sidebar-reopen svg {
   .clivia-navbar {
     display: block;
   }
-  .site-nav {
+  .site-brand-container {
     display: none;
   }
-  html.sidebar-collapsed .clivia-navbar-brand {
-    display: inline-flex;
+  .site-nav {
+    padding-top: 18px;
   }
 }
