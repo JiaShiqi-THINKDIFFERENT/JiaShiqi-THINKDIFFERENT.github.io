@@ -128,9 +128,9 @@ header.header {
 @media (min-width: 992px) {
   .main > .column {
     position: sticky;
-    top: 0;
+    top: 48px; // 让位给吸顶导航条（收窄态高度 48px）
     align-self: flex-start; // 抵消 .main 的 align-items: stretch 拉伸
-    height: 100vh;
+    height: calc(100vh - 48px);
     overflow-y: auto;
     overflow-x: hidden;
     // 注意：不要加 overscroll-behavior: contain
@@ -328,6 +328,132 @@ html.sidebar-collapsed .clivia-sidebar-reopen svg {
 @media (max-width: 991px) {
   .site-nav-toggle .toggle-line {
     background: #ffffff;
+  }
+}
+
+// ==============================================================
+// 顶部导航条（P0-1 · 对标 CSDN 常驻导航）
+// 重要：Gemini 布局下 header（品牌+菜单）位于左栏列内而非全宽横幅，
+// 因此导航条用 fixed 置顶全宽；body 顶部留出 48px，左栏 sticky 同步让位。
+// 桌面端(>=992px)显示导航条并隐藏 NexT 原生菜单；移动端保留汉堡菜单。
+// 收窄逻辑不再需要：左栏本身 sticky，品牌大标题始终可见；
+// 仅当左栏被折叠时，导航条左侧显示 CLIVIA 字标补位。
+// ==============================================================
+.clivia-navbar {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: 48px;
+  background: #1b4d3e;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.18);
+}
+
+.clivia-navbar-inner {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  height: 100%;
+  padding: 0 20px;
+}
+
+.clivia-navbar-brand {
+  display: none;
+  font-size: 1.15em;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+}
+
+.clivia-navbar-brand:hover {
+  color: #ffffff;
+}
+
+.clivia-navbar-menu {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.clivia-navbar-menu > li {
+  position: relative;
+}
+
+.clivia-navbar-menu > li > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 0;
+  font-size: 15px;
+  color: #ffffff;
+  border-bottom: 2px solid transparent;
+}
+
+.clivia-navbar-menu > li > a:hover {
+  color: #cfe2d7;
+}
+
+.clivia-navbar-menu > li.is-active > a {
+  color: #ffffff;
+  border-bottom-color: #cfe2d7;
+}
+
+.clivia-dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: -10px;
+  z-index: 1001;
+  margin: 0;
+  padding: 10px 14px;
+  list-style: none;
+  min-width: 230px;
+  columns: 2;
+  column-gap: 16px;
+  background: var(--content-bg-color);
+  border: 1px solid var(--table-row-hover-bg-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+}
+
+.clivia-dropdown:hover .clivia-dropdown-menu {
+  display: block;
+}
+
+.clivia-dropdown-menu a {
+  display: block;
+  padding: 3px 0;
+  font-size: 14px;
+  color: var(--text-color);
+  white-space: nowrap;
+}
+
+.clivia-dropdown-menu a:hover {
+  color: var(--link-hover-color);
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 48px; // 给 fixed 导航条让位
+  }
+
+  .clivia-navbar {
+    display: block;
+  }
+
+  // 导航条已覆盖全部入口，原生菜单在桌面端隐藏（移动端仍走汉堡菜单）
+  .site-nav {
+    display: none;
+  }
+
+  // 左栏折叠后品牌区随之隐藏，导航条显示 CLIVIA 字标补位
+  html.sidebar-collapsed .clivia-navbar-brand {
+    display: inline-flex;
   }
 }
 

@@ -22,6 +22,7 @@ theme_color:
 custom_file_path:
   style: source/_data/styles.styl
   head: source/_data/head.njk                  # 首屏恢复侧栏折叠态，避免闪烁
+  header: source/_data/header.njk              # 顶部吸顶导航条（P0-1）
   postBodyEnd: source/_data/post-body-end.njk   # Artalk 评论区占位（文章页）
   bodyEnd: source/_data/body-end.njk            # Artalk 统一加载与初始化
 

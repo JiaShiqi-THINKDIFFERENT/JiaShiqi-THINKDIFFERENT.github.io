@@ -1,0 +1,27 @@
+---
+title: 三好评分
+date: 2026-09-20 02:30:00
+comments: false
+---
+
+**三好** = 好行业 × 好公司 × 好价格。综合评分 = 行业 30% + 公司 35% + 价格 25% + 定价权调整，定性层人工评估（每季度复核），量化层每周四收盘后由脚本重算。
+
+<div id="three-good-index"></div>
+
+## 全部报告
+
+| 个股 | 报告 | 个股页 |
+| ---- | ---- | ------ |
+| 贵州茅台 | [三好分析](/three-good/guizhou-maotai/) | [估值纵览](/stocks/guizhou-maotai/) |
+| 伊利股份 | [三好分析](/three-good/yili-gufen/) | [估值纵览](/stocks/yili-gufen/) |
+| 美的集团 | [三好分析](/three-good/meidi-jituan/) | [估值纵览](/stocks/meidi-jituan/) |
+| 宁德时代 | [三好分析](/three-good/ningde-shidai/) | [估值纵览](/stocks/ningde-shidai/) |
+| 比亚迪 | [三好分析](/three-good/biyadi/) | [估值纵览](/stocks/biyadi/) |
+| 招商银行 | [三好分析](/three-good/zhaoshang-yinhang/) | [估值纵览](/stocks/zhaoshang-yinhang/) |
+| 工商银行 | [三好分析](/three-good/gongshang-yinhang/) | [估值纵览](/stocks/gongshang-yinhang/) |
+| 农业银行 | [三好分析](/three-good/nongye-yinhang/) | [估值纵览](/stocks/nongye-yinhang/) |
+| 恒瑞医药 | [三好分析](/three-good/hengru-yiyao/) | [估值纵览](/stocks/hengru-yiyao/) |
+| 中芯国际 | [三好分析](/three-good/zhongxin-guoji/) | [估值纵览](/stocks/zhongxin-guoji/) |
+| 药明康德 | [三好分析](/three-good/wuxi-apptec/) | [估值纵览](/stocks/wuxi-apptec/) |
+
+<script src="/js/three-good-index.js" defer></script>
