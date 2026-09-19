@@ -190,10 +190,6 @@ html.sidebar-collapsed .clivia-sidebar-reopen svg {
 }
 
 @media (min-width: 992px) {
-  header.header {
-    position: relative; // 折叠按钮的定位参照
-  }
-
   .main > .column {
     transition: margin-left 0.3s ease, opacity 0.25s ease;
   }
@@ -211,6 +207,14 @@ html.sidebar-collapsed .clivia-sidebar-reopen svg {
     pointer-events: none;
   }
 
+  // 侧栏隐藏时导航条必须保留——折叠按钮就在条上，否则无法展开侧栏。
+  // visibility 可被子元素重置，故在此单独恢复。
+  html.sidebar-collapsed .clivia-navbar {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
   html.sidebar-collapsed .main-inner {
     width: 100%;
   }
@@ -220,7 +224,7 @@ html.sidebar-collapsed .clivia-sidebar-reopen svg {
   }
 }
 
-// 折叠按钮：位于品牌区右上角（深墨绿底上白字）
+// 折叠按钮：位于顶部导航条最左侧（深墨绿底上白字）
 .clivia-sidebar-toggle {
   align-items: center;
   background: rgba(255, 255, 255, 0.14);
@@ -228,16 +232,13 @@ html.sidebar-collapsed .clivia-sidebar-reopen svg {
   border-radius: 6px;
   color: #ffffff;
   cursor: pointer;
-  display: none; // 仅桌面端显示
-  height: 26px;
+  display: none; // 仅桌面端显示（导航条本身在移动端也是隐藏的）
+  flex: 0 0 auto;
+  height: 28px;
   justify-content: center;
   padding: 0;
-  position: absolute;
-  right: 10px;
-  top: 10px;
   transition: background 0.2s ease, color 0.2s ease;
-  width: 26px;
-  z-index: 5;
+  width: 28px;
 }
 
 .clivia-sidebar-toggle:hover {
@@ -332,12 +333,11 @@ html.sidebar-collapsed .clivia-sidebar-reopen svg {
 }
 
 // ==============================================================
-// 顶部导航条（P0-1 · 对标 CSDN 常驻导航）
+// 顶部导航条（P0-1）
 // 重要：Gemini 布局下 header（品牌+菜单）位于左栏列内而非全宽横幅，
 // 因此导航条用 fixed 置顶全宽；body 顶部留出 48px，左栏 sticky 同步让位。
-// 桌面端(>=992px)显示导航条并隐藏 NexT 原生菜单；移动端保留汉堡菜单。
-// 收窄逻辑不再需要：左栏本身 sticky，品牌大标题始终可见；
-// 仅当左栏被折叠时，导航条左侧显示 CLIVIA 字标补位。
+// 条上仅两个元素：侧栏折叠按钮 + 品牌字标 CLIVIA。
+// 站点导航项仍由侧栏 .site-nav 承担，此处不重复。
 // ==============================================================
 .clivia-navbar {
   display: none;
@@ -354,87 +354,23 @@ html.sidebar-collapsed .clivia-sidebar-reopen svg {
 .clivia-navbar-inner {
   display: flex;
   align-items: center;
-  gap: 26px;
+  gap: 10px;
   height: 100%;
-  padding: 0 20px;
+  padding: 0 16px;
 }
 
+// 品牌字标：桌面端常驻（CLIVIA 的唯一展示位）
 .clivia-navbar-brand {
-  display: none;
-  font-size: 1.15em;
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.2em;
   font-weight: 700;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
   color: #ffffff;
 }
 
 .clivia-navbar-brand:hover {
   color: #ffffff;
-}
-
-.clivia-navbar-menu {
-  display: flex;
-  align-items: center;
-  gap: 22px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.clivia-navbar-menu > li {
-  position: relative;
-}
-
-.clivia-navbar-menu > li > a {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  padding: 4px 0;
-  font-size: 15px;
-  color: #ffffff;
-  border-bottom: 2px solid transparent;
-}
-
-.clivia-navbar-menu > li > a:hover {
-  color: #cfe2d7;
-}
-
-.clivia-navbar-menu > li.is-active > a {
-  color: #ffffff;
-  border-bottom-color: #cfe2d7;
-}
-
-.clivia-dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: -10px;
-  z-index: 1001;
-  margin: 0;
-  padding: 10px 14px;
-  list-style: none;
-  min-width: 230px;
-  columns: 2;
-  column-gap: 16px;
-  background: var(--content-bg-color);
-  border: 1px solid var(--table-row-hover-bg-color);
-  border-radius: 8px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
-}
-
-.clivia-dropdown:hover .clivia-dropdown-menu {
-  display: block;
-}
-
-.clivia-dropdown-menu a {
-  display: block;
-  padding: 3px 0;
-  font-size: 14px;
-  color: var(--text-color);
-  white-space: nowrap;
-}
-
-.clivia-dropdown-menu a:hover {
-  color: var(--link-hover-color);
 }
 
 @media (min-width: 992px) {
@@ -446,14 +382,15 @@ html.sidebar-collapsed .clivia-sidebar-reopen svg {
     display: block;
   }
 
-  // 导航条已覆盖全部入口，原生菜单在桌面端隐藏（移动端仍走汉堡菜单）
-  .site-nav {
+  // 品牌大标题已上移到顶部导航条，左栏内不再重复显示
+  // （仅移动端保留，因为那里导航条是隐藏的）
+  .site-brand-container {
     display: none;
   }
 
-  // 左栏折叠后品牌区随之隐藏，导航条显示 CLIVIA 字标补位
-  html.sidebar-collapsed .clivia-navbar-brand {
-    display: inline-flex;
+  // 顶部留出与品牌横幅相当的空间，让菜单不至于贴顶
+  .site-nav {
+    padding-top: 18px;
   }
 }
 

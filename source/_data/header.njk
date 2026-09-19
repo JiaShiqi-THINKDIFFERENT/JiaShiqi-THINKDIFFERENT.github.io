@@ -1,39 +1,23 @@
 {#
-  顶部导航条（P0-1 · 对标 CSDN 常驻导航）
+  顶部导航条（P0-1）
   - 经 _config.next.yml 的 custom_file_path.header 注入到 header 内部末尾。
-  - 桌面端(≥992px)显示本导航条并隐藏 NexT 原生菜单，避免两套导航重复；
-    移动端(<992px)隐藏本条，继续用 NexT 的汉堡菜单。
-  - 个股下拉先输出静态兜底列表（无 JS / fetch 失败时仍可导航），
-    navbar.js 拉取 /three-good/data/scores.json 成功后覆盖为最新股票池，
-    因此新增股票不必改这里。
-  - 搜索框属二期(P1-1)内容，开启本地搜索后可在此处补一个输入框。
+  - 本条只承载两个元素（自左向右）：
+      1. 侧栏折叠按钮 —— 控制左侧菜单栏收起 / 展开，状态由 sidebar-toggle.js 维护；
+      2. 品牌字标 CLIVIA —— 点击回首頁。
+    站点导航项（首页 / 个股研究 / 三好评分 / 分类 / 标签 / 归档 / 关于）
+    保持在侧栏菜单（主题 menu 配置），此处不重复放置。
+  - 移动端(<992px)由 CSS 隐藏本条，沿用 NexT 自带的品牌横幅与汉堡菜单。
+  - 折叠按钮的事件绑定、箭头翻转、localStorage 持久化均在 sidebar-toggle.js，
+    这里只输出静态结构；模板中已带 aria-controls / label，无 JS 时也不报错。
 #}
-<nav class="clivia-navbar" aria-label="站点主导航">
+<nav class="clivia-navbar" aria-label="站点顶部栏">
   <div class="clivia-navbar-inner">
+    <button class="clivia-sidebar-toggle" type="button"
+            aria-controls="clivia-sidebar" aria-label="折叠侧边栏" title="折叠侧边栏">
+      <svg viewBox="0 0 24 24" width="15" height="15" fill="none"
+           stroke="currentColor" stroke-width="2.4" stroke-linecap="round"
+           stroke-linejoin="round" aria-hidden="true"><polyline points="15 5 8 12 15 19"></polyline></svg>
+    </button>
     <a class="clivia-navbar-brand" href="/">CLIVIA</a>
-    <ul class="clivia-navbar-menu">
-      <li><a href="/">首页</a></li>
-      <li class="clivia-dropdown">
-        <a href="/stocks/">个股研究<i class="fa fa-caret-down" aria-hidden="true"></i></a>
-        <ul class="clivia-dropdown-menu">
-          <li><a href="/stocks/guizhou-maotai/">贵州茅台</a></li>
-          <li><a href="/stocks/yili-gufen/">伊利股份</a></li>
-          <li><a href="/stocks/meidi-jituan/">美的集团</a></li>
-          <li><a href="/stocks/ningde-shidai/">宁德时代</a></li>
-          <li><a href="/stocks/biyadi/">比亚迪</a></li>
-          <li><a href="/stocks/zhaoshang-yinhang/">招商银行</a></li>
-          <li><a href="/stocks/gongshang-yinhang/">工商银行</a></li>
-          <li><a href="/stocks/nongye-yinhang/">农业银行</a></li>
-          <li><a href="/stocks/hengru-yiyao/">恒瑞医药</a></li>
-          <li><a href="/stocks/zhongxin-guoji/">中芯国际</a></li>
-          <li><a href="/stocks/wuxi-apptec/">药明康德</a></li>
-        </ul>
-      </li>
-      <li><a href="/three-good/">三好评分</a></li>
-      <li><a href="/categories/">分类</a></li>
-      <li><a href="/tags/">标签</a></li>
-      <li><a href="/archives/">归档</a></li>
-      <li><a href="/about/">关于</a></li>
-    </ul>
   </div>
 </nav>

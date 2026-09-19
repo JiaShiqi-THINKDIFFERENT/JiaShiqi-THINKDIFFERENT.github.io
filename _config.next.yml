@@ -29,12 +29,15 @@ custom_file_path:
 # ---------------------------------------------------------------
 # 菜单设置
 # ---------------------------------------------------------------
+# 站点导航项全部放在侧栏菜单；顶部导航条只放折叠按钮 + CLIVIA 字标
 menu:
   home: / || fa fa-home
-  about: /about/ || fa fa-user
-  tags: /tags/ || fa fa-tags
+  stocks: /stocks/ || fa fa-line-chart
+  three-good: /three-good/ || fa fa-star
   categories: /categories/ || fa fa-th
+  tags: /tags/ || fa fa-tags
   archives: /archives/ || fa fa-archive
+  about: /about/ || fa fa-user
 
 menu_settings:
   icons: true
