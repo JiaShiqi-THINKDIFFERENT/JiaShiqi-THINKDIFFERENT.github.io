@@ -1386,7 +1386,7 @@ pre code {
     transition: all 0.2s ease-in-out;
   }
   .links-of-author a::before {
-    background: #ff4ea8;
+    background: #b133f5;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -2969,9 +2969,9 @@ header.header {
 @media (min-width: 992px) {
   .main > .column {
     position: sticky;
-    top: 0;
+    top: 48px;
     align-self: flex-start;
-    height: 100vh;
+    height: calc(100vh - 48px);
     overflow-y: auto;
     overflow-x: hidden;
     scrollbar-width: thin;
@@ -3121,5 +3121,104 @@ html.sidebar-collapsed .clivia-sidebar-reopen svg {
 @media (max-width: 991px) {
   .site-nav-toggle .toggle-line {
     background: #fff;
+  }
+}
+.clivia-navbar {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: 48px;
+  background: #1b4d3e;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.18);
+}
+.clivia-navbar-inner {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  height: 100%;
+  padding: 0 20px;
+}
+.clivia-navbar-brand {
+  display: none;
+  font-size: 1.15em;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: #fff;
+}
+.clivia-navbar-brand:hover {
+  color: #fff;
+}
+.clivia-navbar-menu {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.clivia-navbar-menu > li {
+  position: relative;
+}
+.clivia-navbar-menu > li > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 0;
+  font-size: 15px;
+  color: #fff;
+  border-bottom: 2px solid transparent;
+}
+.clivia-navbar-menu > li > a:hover {
+  color: #cfe2d7;
+}
+.clivia-navbar-menu > li.is-active > a {
+  color: #fff;
+  border-bottom-color: #cfe2d7;
+}
+.clivia-dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: -10px;
+  z-index: 1001;
+  margin: 0;
+  padding: 10px 14px;
+  list-style: none;
+  min-width: 230px;
+  columns: 2;
+  column-gap: 16px;
+  background: var(--content-bg-color);
+  border: 1px solid var(--table-row-hover-bg-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+}
+.clivia-dropdown:hover .clivia-dropdown-menu {
+  display: block;
+}
+.clivia-dropdown-menu a {
+  display: block;
+  padding: 3px 0;
+  font-size: 14px;
+  color: var(--text-color);
+  white-space: nowrap;
+}
+.clivia-dropdown-menu a:hover {
+  color: var(--link-hover-color);
+}
+@media (min-width: 992px) {
+  body {
+    padding-top: 48px;
+  }
+  .clivia-navbar {
+    display: block;
+  }
+  .site-nav {
+    display: none;
+  }
+  html.sidebar-collapsed .clivia-navbar-brand {
+    display: inline-flex;
   }
 }
