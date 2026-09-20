@@ -392,10 +392,11 @@ html.sidebar-collapsed .clivia-sidebar-reopen svg {
 
 // ==============================================================
 // 首页右侧数据栏（P0-2 · home-rail.js 注入）
-// ≥1200px：.main-inner 变两列网格（正文 | 300px 右栏），右栏 sticky 吸顶；
+// ≥1200px：.main-inner 右侧留出 300px 列，rail 绝对定位填充；
+// rail 不参与 grid/行高计算——否则右栏总高会把正文第一行撑高，
+// 在卡片下方留下大段空白（grid-row: 1/-1 在未定义行模板时只跨第一行）。
+// sticky 吸顶由内层 .clivia-rail-sticky 承担（外层 absolute 后 sticky 失效）。
 // <1200px：右栏不显示（正文回到单列，不影响阅读）。
-// 网格注意：正文卡片与分页必须显式落到第 1 列，否则 grid 自动放置会
-// 把第二张卡片塞进右栏位置；右栏跨全部行占据第 2 列。
 // ==============================================================
 .clivia-rail {
   display: none;
@@ -403,38 +404,34 @@ html.sidebar-collapsed .clivia-sidebar-reopen svg {
 
 @media (min-width: 1200px) {
   .main-inner.index {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) 300px;
-    column-gap: 20px;
-    align-items: start;
+    position: relative;
+    padding-right: 320px; // 给右栏留位（300px 列 + 20px 间距）
   }
 
-  .main-inner.index > * {
-    grid-column: 1;
-  }
-
-  // 选择器必须比上面的 `.main-inner.index > *` 更具体，否则右栏会被强制到第 1 列
   .main-inner.index > .clivia-rail {
     display: block;
-    grid-column: 2;
-    grid-row: 1 / -1;
-    align-self: start; // 不被正文高度拉伸，卡片整体吸顶跟随滚动
-    position: sticky;
-    top: 60px; // 让位给 48px 吸顶导航条
-    // 两个模块总高超过一屏（11 只股票清单），限高后内部滚动，
-    // 保证评分榜在任意视口都能看到（与 CSDN 右栏热榜同款交互）
-    max-height: calc(100vh - 72px);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 300px;
+  }
+
+  .clivia-rail-sticky {
+    max-height: calc(100vh - 72px); // 48px 导航条 + 呼吸位
     overflow-y: auto;
     overflow-x: hidden;
+    position: sticky;
+    top: 60px;
     scrollbar-width: thin;
     padding-right: 2px;
   }
 
-  .main-inner.index > .clivia-rail::-webkit-scrollbar {
+  .clivia-rail-sticky::-webkit-scrollbar {
     width: 4px;
   }
 
-  .main-inner.index > .clivia-rail::-webkit-scrollbar-thumb {
+  .clivia-rail-sticky::-webkit-scrollbar-thumb {
     background: var(--link-decoration-color);
     border-radius: 2px;
   }
@@ -684,6 +681,149 @@ html.sidebar-collapsed .clivia-sidebar-reopen svg {
   .v-avoid {
     background: #3d2325;
     color: #ef8a8a;
+  }
+}
+
+// ==============================================================
+// 卡片信息密度（P0-3 · post-meta-extra.js 注入标签/时长/封面）
+// 目标：列表页卡片从"标题 + 200 字大段摘要"变成紧凑信息流——
+// 标题 → 两行摘要(+右侧缩略图) → 元信息行(日期/分类/标签/时长/字数)。
+// 作用域限定在列表页容器，文章页正文不受影响。
+// ==============================================================
+.main-inner.index,
+.main-inner.archive,
+.main-inner.category,
+.main-inner.tag {
+  .post-block {
+    border-bottom: 1px solid var(--table-row-hover-bg-color);
+    margin-bottom: 0;
+    padding: 18px 0;
+  }
+
+  .post-block:last-of-type {
+    border-bottom: none;
+  }
+
+  .post-header {
+    margin-bottom: 6px;
+  }
+
+  .post-title {
+    font-size: 1.35em; // 卡片标题略收，让密度更高
+    line-height: 1.4;
+  }
+
+  .post-meta {
+    font-size: 12px;
+    margin-top: 4px;
+  }
+
+  // 摘要区：只留纯文字段落，引用块/标题/列表/代码块在卡片里只会撑高且无信息量
+  .post-body {
+    blockquote,
+    h1, h2, h3, h4, h5, h6,
+    pre,
+    table,
+    ul, ol,
+    .highlight {
+      display: none;
+    }
+
+    // 摘要里的正文图片隐藏，但脚本注入的封面缩略图除外
+    img:not(.clivia-card-thumb) {
+      display: none;
+    }
+
+    p {
+      display: -webkit-box;
+      -webkit-line-clamp: 2; // 摘要最多两行（与 CSDN 卡片一致）
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      margin-bottom: 4px;
+    }
+
+    // 多段摘要只保留第一段，卡片高度整齐（完整摘要进文章页看）
+    p:not(:first-of-type) {
+      display: none;
+    }
+  }
+
+  // 有封面：摘要与缩略图并排（grid 双列），标签行与"阅读全文"占满整行。
+  // 不用 float 环绕——浮动的图会被 p 的 -webkit-box 截断区遮住文字。
+  .post-block.has-cover .post-body {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 150px;
+    column-gap: 16px;
+  }
+
+  .post-block.has-cover .clivia-card-thumb {
+    float: none;
+    grid-column: 2;
+    grid-row: 1;
+    margin: 0;
+  }
+
+  .post-block.has-cover .clivia-card-tags,
+  .post-block.has-cover .post-button {
+    grid-column: 1 / -1;
+  }
+
+  .post-button {
+    clear: both;
+    margin-top: 6px;
+  }
+}
+
+// 元信息行补充项：阅读时长 / 字数（由脚本追加）
+.clivia-meta-extra {
+  color: var(--blockquote-color);
+}
+
+// 卡片标签 chip
+.clivia-card-tags {
+  clear: both;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 8px 0 2px;
+}
+
+.clivia-tag-chip {
+  background: var(--table-row-hover-bg-color);
+  border: 0;
+  border-radius: 10px;
+  color: var(--text-color);
+  font-size: 12px;
+  line-height: 1.6;
+  padding: 1px 9px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.clivia-tag-chip:hover {
+  background: var(--brand-color);
+  color: #ffffff;
+}
+
+// 卡片封面缩略图：右侧浮动，正文环绕（无 front-matter cover 时完全不出现）
+.clivia-card-thumb {
+  border-radius: 6px;
+  float: right;
+  height: 94px;
+  margin: 4px 0 8px 14px;
+  object-fit: cover;
+  width: 150px;
+}
+
+@media (max-width: 767px) {
+  .clivia-card-thumb {
+    height: 70px;
+    width: 110px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .clivia-tag-chip:hover {
+    background: var(--brand-color);
   }
 }
 
