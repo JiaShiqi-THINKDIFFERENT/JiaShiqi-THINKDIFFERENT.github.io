@@ -403,17 +403,24 @@ html.sidebar-collapsed .clivia-sidebar-reopen svg {
 }
 
 @media (min-width: 1200px) {
+  // 三栏并列：左栏(240) | 12px | 正文卡 | 12px | 右栏(300)
+  // 右栏是 .main 的第三个 flex 子项（home-rail.js 挂到 .main 而非 .main-inner 内部），
+  // 不再用「绝对定位 + 正文让 padding」的老做法：那样白卡背景会铺到右栏底下，
+  // 视觉上两者连成一片（且让位用的 padding-right 会被后面的 padding 简写覆盖）。
+  // 间距由来：.main 为 justify-content: space-between，三项总宽 = 100% - 24px，
+  // 剩余 24px 被均分到两个间隙，正好各 12px —— 与左侧菜单栏到正文的距离一致。
   .main-inner.index {
-    position: relative;
-    padding-right: 320px; // 给右栏留位（300px 列 + 20px 间距）
+    width: calc(100% - 564px); // 252(左栏+间隙) + 300(右栏) + 12(右侧间隙)
   }
 
-  .main-inner.index > .clivia-rail {
+  // 左栏折叠后占位变负，正文补宽：仍是 12px 间隙 + 300px 右栏
+  html.sidebar-collapsed .main-inner.index {
+    width: calc(100% - 312px);
+  }
+
+  .main > .clivia-rail {
     display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
+    flex: 0 0 300px;
     width: 300px;
   }
 

@@ -15,6 +15,12 @@
   var inner = document.querySelector('.main-inner.index');
   if (!inner) return; // 仅首页
 
+  // 挂载点必须是 .main（.main-inner 的父级），右栏作为正文卡片的兄弟节点参与 flex 三栏。
+  // 早前挂在 .main-inner 内部并用绝对定位，结果：①白卡背景铺到右栏底下，两者视觉连成一片；
+  // ②留位用的 padding-right:320px 被后面的 `padding: 4px 20px 10px` 覆盖，右栏直接压住正文。
+  var host = inner.parentNode;
+  if (!host) return;
+
   var OVERVIEW = '/stocks/data/overview.json';
   var SCORES = '/three-good/data/scores.json';
 
@@ -52,10 +58,9 @@
   }
 
   // ---------- 骨架 ----------
-  // 结构：aside.clivia-rail（绝对定位于右侧列，不参与行高）
+  // 结构：aside.clivia-rail（.main 的第三个 flex 子项，与正文卡片之间留 12px 间隙）
   //        └─ div.clivia-rail-sticky（sticky 吸顶 + 限高内滚）
   //           └─ 两个卡片 section
-  // rail 不能直接 sticky：它绝对定位后 sticky 失效，需内层包裹。
   var rail = document.createElement('aside');
   rail.className = 'clivia-rail';
   rail.setAttribute('aria-label', '股票数据速览');
@@ -70,7 +75,7 @@
         '<div class="clivia-rail-body"><p class="clivia-rail-empty">加载中…</p></div>' +
       '</section>' +
     '</div>';
-  inner.appendChild(rail);
+  host.appendChild(rail);
 
   var poolBody = rail.querySelector('[data-card="pool"] .clivia-rail-body');
   var poolMeta = rail.querySelector('[data-card="pool"] .clivia-rail-meta');
