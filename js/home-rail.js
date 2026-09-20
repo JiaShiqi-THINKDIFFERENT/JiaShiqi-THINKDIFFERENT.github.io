@@ -52,18 +52,24 @@
   }
 
   // ---------- 骨架 ----------
+  // 结构：aside.clivia-rail（绝对定位于右侧列，不参与行高）
+  //        └─ div.clivia-rail-sticky（sticky 吸顶 + 限高内滚）
+  //           └─ 两个卡片 section
+  // rail 不能直接 sticky：它绝对定位后 sticky 失效，需内层包裹。
   var rail = document.createElement('aside');
   rail.className = 'clivia-rail';
   rail.setAttribute('aria-label', '股票数据速览');
   rail.innerHTML =
-    '<section class="clivia-rail-card" data-card="pool">' +
-      '<h3 class="clivia-rail-title">股票池速览<span class="clivia-rail-meta">加载中…</span></h3>' +
-      '<div class="clivia-rail-body"><p class="clivia-rail-empty">加载中…</p></div>' +
-    '</section>' +
-    '<section class="clivia-rail-card" data-card="rank">' +
-      '<h3 class="clivia-rail-title">三好评分榜<span class="clivia-rail-meta">加载中…</span></h3>' +
-      '<div class="clivia-rail-body"><p class="clivia-rail-empty">加载中…</p></div>' +
-    '</section>';
+    '<div class="clivia-rail-sticky">' +
+      '<section class="clivia-rail-card" data-card="pool">' +
+        '<h3 class="clivia-rail-title">股票池速览<span class="clivia-rail-meta">加载中…</span></h3>' +
+        '<div class="clivia-rail-body"><p class="clivia-rail-empty">加载中…</p></div>' +
+      '</section>' +
+      '<section class="clivia-rail-card" data-card="rank">' +
+        '<h3 class="clivia-rail-title">三好评分榜<span class="clivia-rail-meta">加载中…</span></h3>' +
+        '<div class="clivia-rail-body"><p class="clivia-rail-empty">加载中…</p></div>' +
+      '</section>' +
+    '</div>';
   inner.appendChild(rail);
 
   var poolBody = rail.querySelector('[data-card="pool"] .clivia-rail-body');
