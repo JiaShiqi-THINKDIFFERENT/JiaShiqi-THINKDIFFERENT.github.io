@@ -55,8 +55,6 @@
         var meta = key && (map[key] || map[key.replace(/\/$/, '')]);
         if (!meta) return;
 
-        var article = block.querySelector('article.post-content') || block;
-
         // ---------- 1. 元信息行：阅读时长 + 字数 ----------
         var metaRow = block.querySelector('.post-meta');
         if (metaRow && meta.minutes) {
@@ -98,15 +96,18 @@
         }
 
         // ---------- 3. 封面缩略图 ----------
-        if (meta.cover && body) {
-          var img = document.createElement('img');
-          img.className = 'clivia-card-thumb';
-          img.src = meta.cover;
-          img.alt = meta.title || '';
-          img.loading = 'lazy';
-          body.insertBefore(img, body.firstChild);
-          block.classList.add('has-cover'); // 供 CSS 的 grid 布局选择器使用
-        }
+        // 已停用：列表页不再展示封面图（用户要求只留纯文字条目）。
+        // 若日后想恢复，取消下面注释并把 styles.styl 里 .clivia-card-thumb /
+        // .post-block.has-cover 的布局规则一起加回来。
+        // if (meta.cover && body) {
+        //   var img = document.createElement('img');
+        //   img.className = 'clivia-card-thumb';
+        //   img.src = meta.cover;
+        //   img.alt = meta.title || '';
+        //   img.loading = 'lazy';
+        //   body.insertBefore(img, body.firstChild);
+        //   block.classList.add('has-cover');
+        // }
       });
     })
     .catch(function () { /* 静默降级 */ });
