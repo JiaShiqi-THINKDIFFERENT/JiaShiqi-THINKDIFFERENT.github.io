@@ -138,6 +138,9 @@ def main() -> None:
         sh([PY, str(HERE / "update.py"), "--symbol", symbol, "--name", name, "--slug", slug, "--industry", industry], retry=1, timeout=420)
         sh([PY, str(HERE / "export_json.py"), "--symbol", symbol, "--slug", slug, "--name", name], retry=1, timeout=120)
 
+    # 全池速览：供首页右栏 / 个股导航复用（一次生成，多处消费）
+    sh([PY, str(HERE / "export_overview.py")], retry=1, timeout=120)
+
     print("\n===== hexo 构建 =====")
     node_bin = os.environ.get("NODE_BIN") or _default_node_bin()
     if node_bin and os.path.isdir(node_bin):
