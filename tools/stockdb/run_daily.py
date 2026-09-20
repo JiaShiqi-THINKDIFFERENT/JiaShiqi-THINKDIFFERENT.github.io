@@ -40,6 +40,10 @@ STOCKS = {
     "600276": ("恒瑞医药", "hengru-yiyao", "医药生物"),
     "688981": ("中芯国际", "zhongxin-guoji", "电子"),
     "603259": ("药明康德", "wuxi-apptec", "医药生物"),
+    "300308": ("中际旭创", "zhongji-xuchuang", "通信"),
+    "002371": ("北方华创", "beifang-huachuang", "电子"),
+    "601899": ("紫金矿业", "zijin-kuangye", "有色金属"),
+    "600900": ("长江电力", "changjiang-dianli", "公用事业"),
 }
 
 # 本机访问 GitHub 的 HTTPS 443 会被网络策略间歇性阻断（DNS 指向被屏蔽 IP）。

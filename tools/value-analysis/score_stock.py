@@ -61,6 +61,10 @@ STOCKS = [
     ("600276", "hengru-yiyao", "恒瑞医药"),
     ("688981", "zhongxin-guoji", "中芯国际"),
     ("603259", "wuxi-apptec", "药明康德"),
+    ("300308", "zhongji-xuchuang", "中际旭创"),
+    ("002371", "beifang-huachuang", "北方华创"),
+    ("601899", "zijin-kuangye", "紫金矿业"),
+    ("600900", "changjiang-dianli", "长江电力"),
 ]
 
 SCORES_PATH = SRC / "three-good" / "data" / "scores.json"

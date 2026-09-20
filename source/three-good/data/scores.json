@@ -593,9 +593,225 @@
           "进入壁垒": 18
         }
       }
+    ],
+    "zhongji-xuchuang": [
+      {
+        "date": "2026-09-20",
+        "symbol": "300308",
+        "slug": "zhongji-xuchuang",
+        "name": "中际旭创",
+        "close": 926.43,
+        "pe_pct": 48.2,
+        "pb_pct": 92.1,
+        "dv_pct": 39.2,
+        "scores": {
+          "industry": 61,
+          "company": 60.0,
+          "price": 35.7,
+          "total": 48.2
+        },
+        "verdict": "不推荐",
+        "vetoes": [],
+        "degraded": false,
+        "detail": {
+          "fin": {
+            "f_score": 5,
+            "f_available": 5,
+            "f_part": 12.0,
+            "f_note": "F-Score 5/5(可得项归一)",
+            "roe_mean": 12.9,
+            "roe_part": 6,
+            "roe_note": "ROE均值 12.9%，创造价值",
+            "cash_conv": 1.01,
+            "q_part": 10,
+            "q_note": "现金含量 1.01，优",
+            "total": 28.0
+          },
+          "ts_adj": 0.0,
+          "ts_note": "时序趋势中性",
+          "price_notes": [
+            "股息率分位 39%",
+            "PE-TTM 50.3 倍"
+          ],
+          "moat": 18,
+          "management": 14,
+          "pricing_power_adj": 0,
+          "roe_mean": 12.9,
+          "revenue_cagr": 87.8
+        },
+        "qual_rationale": "全球高速光模块第一梯队（800G/1.6T 批量交付领先），绑定北美头部云厂商，AI 算力资本开支是最强需求驱动；研发节奏与硅光/CPO 技术路线构成壁垒，客户认证周期长约 1-2 年。隐忧在于下游客户高度集中（大客户占营收比重高）导致议价权偏弱、技术迭代（速率升级）快带来产品生命周期风险，且需求随云厂商资本开支周期大幅波动。管理层专注主业、海外产能布局积极。",
+        "industry_detail": {
+          "格局": 18,
+          "定价权": 10,
+          "需求稳定性": 15,
+          "进入壁垒": 18
+        }
+      }
+    ],
+    "beifang-huachuang": [
+      {
+        "date": "2026-09-20",
+        "symbol": "002371",
+        "slug": "beifang-huachuang",
+        "name": "北方华创",
+        "close": 686.51,
+        "pe_pct": 35.7,
+        "pb_pct": 73.4,
+        "dv_pct": 67.1,
+        "scores": {
+          "industry": 78,
+          "company": 53.6,
+          "price": 50.6,
+          "total": 56.8
+        },
+        "verdict": "观望",
+        "vetoes": [],
+        "degraded": false,
+        "detail": {
+          "fin": {
+            "f_score": 4,
+            "f_available": 5,
+            "f_part": 9.6,
+            "f_note": "F-Score 4/5(可得项归一)",
+            "roe_mean": 8.9,
+            "roe_part": 4,
+            "roe_note": "ROE均值 8.9%，一般",
+            "cash_conv": 0.39,
+            "q_part": 2,
+            "q_note": "现金含量 0.39，差",
+            "total": 15.6
+          },
+          "ts_adj": 0.0,
+          "ts_note": "时序趋势中性",
+          "price_notes": [
+            "股息率分位 67%",
+            "PE-TTM 79.9 倍"
+          ],
+          "moat": 24,
+          "management": 14,
+          "pricing_power_adj": 2,
+          "roe_mean": 8.9,
+          "revenue_cagr": 42.5
+        },
+        "qual_rationale": "国内半导体设备平台化龙头（刻蚀/薄膜沉积/清洗/炉管/量测全覆盖），是国产替代最核心受益标的；设备验证周期长、工艺 Know-how 与客户产线深度绑定构成极高壁垒，国内稀缺供给带来一定议价能力。风险为晶圆厂扩产节奏的周期性、美国出口管制对零部件与先进制程设备的约束、以及高研发投入对利润的阶段性压制。管理层国资背景、研发投入坚定。",
+        "industry_detail": {
+          "格局": 20,
+          "定价权": 16,
+          "需求稳定性": 18,
+          "进入壁垒": 24
+        }
+      }
+    ],
+    "zijin-kuangye": [
+      {
+        "date": "2026-09-20",
+        "symbol": "601899",
+        "slug": "zijin-kuangye",
+        "name": "紫金矿业",
+        "close": 31.41,
+        "pe_pct": 6.0,
+        "pb_pct": 79.4,
+        "dv_pct": 98.2,
+        "scores": {
+          "industry": 53,
+          "company": 59.6,
+          "price": 74.5,
+          "total": 51.4
+        },
+        "verdict": "观望",
+        "vetoes": [],
+        "degraded": false,
+        "detail": {
+          "fin": {
+            "f_score": 4,
+            "f_available": 5,
+            "f_part": 9.6,
+            "f_note": "F-Score 4/5(可得项归一)",
+            "roe_mean": 12.7,
+            "roe_part": 6,
+            "roe_note": "ROE均值 12.7%，创造价值",
+            "cash_conv": 1.46,
+            "q_part": 10,
+            "q_note": "现金含量 1.46，优",
+            "total": 25.6
+          },
+          "ts_adj": 0.0,
+          "ts_note": "时序趋势中性",
+          "price_notes": [
+            "股息率分位 98%",
+            "PE-TTM 12.7 倍"
+          ],
+          "moat": 18,
+          "management": 16,
+          "pricing_power_adj": -4,
+          "roe_mean": 12.7,
+          "revenue_cagr": 18.0
+        },
+        "qual_rationale": "全球化矿产龙头（铜、金、锂多品种），卡莫阿-卡库拉、巨龙、Timok 等世界级矿山资源禀赋稀缺，逆周期并购+低成本运营能力是真正护城河。但铜金为全球定价大宗商品，公司是纯粹的价格接受者、毫无定价权；盈利随全球宏观、美元利率与商品周期剧烈波动，需求稳定性差，海外矿权还面临地缘政治与资源国政策风险。管理层海外并购眼光与执行力突出，分红稳步提升。",
+        "industry_detail": {
+          "格局": 17,
+          "定价权": 4,
+          "需求稳定性": 12,
+          "进入壁垒": 20
+        }
+      }
+    ],
+    "changjiang-dianli": [
+      {
+        "date": "2026-09-20",
+        "symbol": "600900",
+        "slug": "changjiang-dianli",
+        "name": "长江电力",
+        "close": 28.27,
+        "pe_pct": 59.4,
+        "pb_pct": 89.2,
+        "dv_pct": 49.3,
+        "scores": {
+          "industry": 85,
+          "company": 71.6,
+          "price": 39.7,
+          "total": 60.5
+        },
+        "verdict": "可关注",
+        "vetoes": [],
+        "degraded": false,
+        "detail": {
+          "fin": {
+            "f_score": 4,
+            "f_available": 5,
+            "f_part": 9.6,
+            "f_note": "F-Score 4/5(可得项归一)",
+            "roe_mean": 14.3,
+            "roe_part": 6,
+            "roe_note": "ROE均值 14.3%，创造价值",
+            "cash_conv": 1.76,
+            "q_part": 10,
+            "q_note": "现金含量 1.76，优",
+            "total": 25.6
+          },
+          "ts_adj": 0.0,
+          "ts_note": "时序趋势中性",
+          "price_notes": [
+            "股息率分位 49%",
+            "PE-TTM 19.4 倍"
+          ],
+          "moat": 30,
+          "management": 16,
+          "pricing_power_adj": 0,
+          "roe_mean": 14.3,
+          "revenue_cagr": 6.5
+        },
+        "qual_rationale": "全球最大水电上市公司，独家运营三峡、溪洛渡、向家坝、乌东德、白鹤滩六座巨型梯级电站，优质大型水电资源不可复制、几乎不存在新建竞争，护城河是 A 股最宽的一类；电力需求刚性、水电优先消纳，来水波动是唯一主要变量。定价端上网电价受管制（无自主提价权），成长只能靠资产注入与财务费用下降。管理层稳健、分红承诺明确（类债券属性）。",
+        "industry_detail": {
+          "格局": 24,
+          "定价权": 12,
+          "需求稳定性": 24,
+          "进入壁垒": 25
+        }
+      }
     ]
   },
-  "updated": "2026-09-18",
+  "updated": "2026-09-20",
   "stocks": {
     "guizhou-maotai": {
       "name": "贵州茅台",
@@ -640,6 +856,22 @@
     "wuxi-apptec": {
       "name": "药明康德",
       "symbol": "603259"
+    },
+    "zhongji-xuchuang": {
+      "name": "中际旭创",
+      "symbol": "300308"
+    },
+    "beifang-huachuang": {
+      "name": "北方华创",
+      "symbol": "002371"
+    },
+    "zijin-kuangye": {
+      "name": "紫金矿业",
+      "symbol": "601899"
+    },
+    "changjiang-dianli": {
+      "name": "长江电力",
+      "symbol": "600900"
     }
   }
 }

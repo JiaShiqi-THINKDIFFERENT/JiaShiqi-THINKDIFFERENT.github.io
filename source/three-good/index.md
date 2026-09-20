@@ -23,5 +23,9 @@ comments: false
 | 恒瑞医药 | [三好分析](/three-good/hengru-yiyao/) | [估值纵览](/stocks/hengru-yiyao/) |
 | 中芯国际 | [三好分析](/three-good/zhongxin-guoji/) | [估值纵览](/stocks/zhongxin-guoji/) |
 | 药明康德 | [三好分析](/three-good/wuxi-apptec/) | [估值纵览](/stocks/wuxi-apptec/) |
+| 中际旭创 | [三好分析](/three-good/zhongji-xuchuang/) | [估值纵览](/stocks/zhongji-xuchuang/) |
+| 北方华创 | [三好分析](/three-good/beifang-huachuang/) | [估值纵览](/stocks/beifang-huachuang/) |
+| 紫金矿业 | [三好分析](/three-good/zijin-kuangye/) | [估值纵览](/stocks/zijin-kuangye/) |
+| 长江电力 | [三好分析](/three-good/changjiang-dianli/) | [估值纵览](/stocks/changjiang-dianli/) |
 
 <script src="/js/three-good-index.js" defer></script>
