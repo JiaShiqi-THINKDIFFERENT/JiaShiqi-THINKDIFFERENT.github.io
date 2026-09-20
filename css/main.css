@@ -1386,7 +1386,7 @@ pre code {
     transition: all 0.2s ease-in-out;
   }
   .links-of-author a::before {
-    background: #c9e421;
+    background: #6c30cd;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -3167,15 +3167,14 @@ html.sidebar-collapsed .clivia-sidebar-reopen svg {
 }
 @media (min-width: 1200px) {
   .main-inner.index {
-    position: relative;
-    padding-right: 320px;
+    width: calc(100% - 564px);
   }
-  .main-inner.index > .clivia-rail {
+  html.sidebar-collapsed .main-inner.index {
+    width: calc(100% - 312px);
+  }
+  .main > .clivia-rail {
     display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
+    flex: 0 0 300px;
     width: 300px;
   }
   .clivia-rail-sticky {
