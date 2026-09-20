@@ -1386,7 +1386,7 @@ pre code {
     transition: all 0.2s ease-in-out;
   }
   .links-of-author a::before {
-    background: #4d6e58;
+    background: #582890;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -3161,6 +3161,242 @@ html.sidebar-collapsed .clivia-sidebar-reopen svg {
 }
 .clivia-navbar-brand:hover {
   color: #fff;
+}
+.clivia-rail {
+  display: none;
+}
+@media (min-width: 1200px) {
+  .main-inner.index {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 300px;
+    column-gap: 20px;
+    align-items: start;
+  }
+  .main-inner.index > * {
+    grid-column: 1;
+  }
+  .main-inner.index > .clivia-rail {
+    display: block;
+    grid-column: 2;
+    grid-row: 1/-1;
+    align-self: start;
+    position: sticky;
+    top: 60px;
+    max-height: calc(100vh - 72px);
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    padding-right: 2px;
+  }
+  .main-inner.index > .clivia-rail::-webkit-scrollbar {
+    width: 4px;
+  }
+  .main-inner.index > .clivia-rail::-webkit-scrollbar-thumb {
+    background: var(--link-decoration-color);
+    border-radius: 2px;
+  }
+}
+.clivia-rail-card {
+  background: var(--content-bg-color);
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  margin-bottom: 16px;
+  padding: 14px 14px 10px;
+}
+.clivia-rail-title {
+  align-items: baseline;
+  border-left: 3px solid var(--brand-color);
+  display: flex;
+  font-size: 15px;
+  font-weight: 700;
+  justify-content: space-between;
+  line-height: 1.2;
+  margin: 0 0 10px;
+  padding-left: 8px;
+}
+.clivia-rail-meta {
+  color: var(--blockquote-color);
+  font-size: 12px;
+  font-weight: 400;
+}
+.clivia-rail-empty {
+  color: var(--blockquote-color);
+  font-size: 13px;
+  margin: 0;
+}
+.clivia-pool {
+  border-collapse: collapse;
+  width: 100%;
+}
+.clivia-pool-row td {
+  border-bottom: 1px solid var(--table-row-hover-bg-color);
+  padding: 4px 0;
+  vertical-align: middle;
+}
+.clivia-pool-row:last-child td {
+  border-bottom: none;
+}
+.pool-main {
+  display: block;
+}
+.pool-name {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+}
+.pool-sub {
+  color: var(--blockquote-color);
+  display: block;
+  font-size: 11px;
+  line-height: 1.5;
+  margin-top: 1px;
+}
+.pool-num {
+  text-align: right;
+  white-space: nowrap;
+}
+.pool-close {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+}
+.pool-chg {
+  display: block;
+  font-size: 12px;
+  margin-top: 2px;
+}
+.pool-chg.up {
+  color: #d93636;
+}
+.pool-chg.down {
+  color: #1f9e44;
+}
+.pool-sub em {
+  border-radius: 3px;
+  font-size: 11px;
+  font-style: normal;
+  margin-left: 2px;
+  padding: 0 4px;
+}
+.tag-low {
+  background: #e6f4ea;
+  color: #1f9e44;
+}
+.tag-high {
+  background: #fdeaea;
+  color: #d93636;
+}
+.tag-mid {
+  background: var(--table-row-hover-bg-color);
+  color: var(--blockquote-color);
+}
+.clivia-rank {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.clivia-rank-item {
+  align-items: center;
+  border-bottom: 1px solid var(--table-row-hover-bg-color);
+  display: flex;
+  gap: 6px;
+  padding: 5px 0;
+}
+.clivia-rank-item:last-child {
+  border-bottom: none;
+}
+.rank-no {
+  background: var(--table-row-hover-bg-color);
+  border-radius: 50%;
+  color: var(--blockquote-color);
+  flex: 0 0 18px;
+  font-size: 11px;
+  height: 18px;
+  line-height: 18px;
+  text-align: center;
+  width: 18px;
+}
+.rank-no.top {
+  background: var(--brand-color);
+  color: #fff;
+}
+.rank-name {
+  flex: 1 1 auto;
+  font-size: 13px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.rank-score {
+  font-size: 14px;
+  font-weight: 700;
+}
+.rank-verdict {
+  border-radius: 3px;
+  flex: 0 0 auto;
+  font-size: 11px;
+  padding: 1px 5px;
+}
+.v-strong {
+  background: #1b4d3e;
+  color: #fff;
+}
+.v-buy {
+  background: #2f7d5f;
+  color: #fff;
+}
+.v-watch {
+  background: #e4efe8;
+  color: #1b4d3e;
+}
+.v-hold {
+  background: #fdf0dc;
+  color: #a9702a;
+}
+.v-avoid {
+  background: #fdeaea;
+  color: #d93636;
+}
+.v-na {
+  background: var(--table-row-hover-bg-color);
+  color: var(--blockquote-color);
+}
+.clivia-rail-foot {
+  align-items: center;
+  border-top: 1px solid var(--table-row-hover-bg-color);
+  display: flex;
+  font-size: 12px;
+  justify-content: space-between;
+  margin: 8px 0 0;
+  padding-top: 8px;
+}
+.rail-tip {
+  color: var(--blockquote-color);
+}
+@media (prefers-color-scheme: dark) {
+  .clivia-rail-card {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+  }
+  .tag-low {
+    background: #1f3d2b;
+    color: #7fd39c;
+  }
+  .tag-high {
+    background: #3d2325;
+    color: #ef8a8a;
+  }
+  .v-watch {
+    background: #2a4437;
+    color: #a9dcc0;
+  }
+  .v-hold {
+    background: #443520;
+    color: #e0b878;
+  }
+  .v-avoid {
+    background: #3d2325;
+    color: #ef8a8a;
+  }
 }
 @media (min-width: 992px) {
   body {
