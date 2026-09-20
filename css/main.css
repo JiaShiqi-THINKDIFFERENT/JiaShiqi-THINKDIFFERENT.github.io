@@ -1386,7 +1386,7 @@ pre code {
     transition: all 0.2s ease-in-out;
   }
   .links-of-author a::before {
-    background: #af09ff;
+    background: #4d6e58;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -2940,19 +2940,19 @@ header.header {
   color: #cfe2d7;
 }
 .menu .menu-item a {
-  color: #fff;
+  color: var(--text-color);
 }
 .menu .menu-item a:hover {
-  color: #cfe2d7;
+  color: var(--brand-hover-color);
 }
 .menu .menu-item-active a,
 .menu li.active a {
-  color: #fff;
-  border-bottom-color: #cfe2d7;
+  color: var(--text-color);
+  border-bottom-color: var(--link-decoration-color);
 }
 .menu .menu-item a:hover,
 .menu .menu-item a.menu-item-active {
-  color: #1b4d3e;
+  color: var(--brand-color);
   background: var(--menu-item-bg-color);
 }
 .menu .search-popout,
@@ -2962,8 +2962,9 @@ header.header {
 @media (min-width: 1200px) {
   .main,
   .footer-inner {
-    width: calc(100% - 20px);
+    width: calc(100% - 10px);
     max-width: none;
+    margin-left: 0;
   }
 }
 @media (min-width: 992px) {
@@ -3113,6 +3114,16 @@ html.sidebar-collapsed .clivia-sidebar-reopen svg {
   }
 }
 @media (prefers-color-scheme: dark) {
+  header.header {
+    background: #14352b;
+  }
+}
+@media (min-width: 992px) {
+  header.header {
+    background: #fff;
+  }
+}
+@media (prefers-color-scheme: dark) and (min-width: 992px) {
   header.header {
     background: #14352b;
   }
