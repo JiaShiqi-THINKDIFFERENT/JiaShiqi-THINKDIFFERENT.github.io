@@ -52,6 +52,8 @@
 // ==============================================================
 // 站点品牌横幅（首页顶部大标题 CLIVIA）
 // 深墨绿底 + 白色加粗大标题，亮/暗模式均适用
+// 移动端保留墨绿横幅；桌面端品牌上移导航条后，header 仅承载
+// 菜单，改为白底（菜单栏白色主题），见下方媒体查询。
 // ==============================================================
 header.header {
   background: #1b4d3e;
@@ -76,47 +78,48 @@ header.header {
   color: #cfe2d7;
 }
 
-// 横幅内导航菜单：深绿底上必须用白字（默认继承 --link-color 与背景同色，不可读）
+// 菜单：白底黑字（亮色模式）；暗色模式变量自动切换为浅字深底
 .menu {
   .menu-item a {
-    color: #ffffff;
+    color: var(--text-color);
   }
 
   .menu-item a:hover {
-    color: #cfe2d7; // 悬停淡墨绿，保持可读
+    color: var(--brand-hover-color); // 亮: 深绿 / 暗: 亮绿
   }
 
   // 当前页对应菜单项：NexT 用 .menu-item-active 标记
   .menu-item-active a,
   li.active a {
-    color: #ffffff;
-    border-bottom-color: #cfe2d7; // NexT 给激活项加下划线，同步调亮
+    color: var(--text-color);
+    border-bottom-color: var(--link-decoration-color);
   }
 
-  // NexT 的 hover/active 类加在 a 元素上且会加浅色背景，此时需深色字保证对比
+  // hover/active 加浅色背景，字用品牌色保证对比（变量自动适配暗色）
   .menu-item a:hover,
   .menu-item a.menu-item-active {
-    color: #1b4d3e;
+    color: var(--brand-color);
     background: var(--menu-item-bg-color);
   }
 
-  // 搜索/图标按钮同样提亮
+  // 搜索/图标按钮弹层在白底上，恢复深色字
   .search-popout,
   .popup {
-    color: #2e3b34; // 弹层在白底上，恢复深色字
+    color: #2e3b34;
   }
 }
 
 // ==============================================================
-// 全宽版面：内容区铺满视口，消除两侧大留白
-// 主题默认在 ≥1200px 固定 1160px、≥1600px 固定 73%，
-// 大屏上两侧留白严重；此处统一放开为全宽（仅保留 10px 安全边距）
+// 全宽版面：内容区铺满视口，且整体靠左（菜单栏贴住左缘不留缝隙，
+// 仅右侧保留 10px 呼吸位）；主题默认在 ≥1200px 固定 1160px、
+// ≥1600px 固定 73% 并水平居中，此处一并放开。
 // ==============================================================
 @media (min-width: 1200px) {
   .main,
   .footer-inner {
-    width: calc(100% - 20px);
+    width: calc(100% - 10px);
     max-width: none;
+    margin-left: 0;
   }
 }
 
@@ -320,6 +323,20 @@ html.sidebar-collapsed .clivia-sidebar-reopen svg {
 
 // 暗色模式：横幅用更深的墨绿，避免过亮
 @media (prefers-color-scheme: dark) {
+  header.header {
+    background: #14352b;
+  }
+}
+
+// 桌面端：菜单栏白色主题——品牌大标题已上移到顶部导航条（墨绿），
+// header 里只剩菜单，改为白底；暗色模式恢复深底（浅字由变量保证）。
+@media (min-width: 992px) {
+  header.header {
+    background: #ffffff;
+  }
+}
+
+@media (prefers-color-scheme: dark) and (min-width: 992px) {
   header.header {
     background: #14352b;
   }

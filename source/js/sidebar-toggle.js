@@ -52,14 +52,16 @@
     if (!column) return;
     column.id = 'clivia-sidebar';
 
-    // 已存在（例如脚本重复执行）则不重复注入
-    if (!document.querySelector('.clivia-sidebar-toggle')) {
-      var toggle = makeButton('clivia-sidebar-toggle', '折叠侧边栏');
-      toggle.addEventListener('click', function () {
-        setCollapsed(!isCollapsed(), true);
-      });
+    // 按钮可能来自 header.njk 静态模板（导航条内），也可能由此脚本注入；
+    // 无论哪种来源，都必须在此绑定事件——静态按钮此前因此从未生效。
+    var toggle = document.querySelector('.clivia-sidebar-toggle');
+    if (!toggle) {
+      toggle = makeButton('clivia-sidebar-toggle', '折叠侧边栏');
       (brand || column).appendChild(toggle);
     }
+    toggle.addEventListener('click', function () {
+      setCollapsed(!isCollapsed(), true);
+    });
 
     if (!document.querySelector('.clivia-sidebar-reopen')) {
       var reopen = makeButton('clivia-sidebar-reopen', '展开侧边栏');
