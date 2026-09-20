@@ -1386,7 +1386,7 @@ pre code {
     transition: all 0.2s ease-in-out;
   }
   .links-of-author a::before {
-    background: #dbffff;
+    background: #ff5bff;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -3179,7 +3179,7 @@ html.sidebar-collapsed .clivia-sidebar-reopen svg {
     width: 300px;
   }
   .clivia-rail-sticky {
-    max-height: calc(100vh - 72px);
+    max-height: min(100%, calc(100vh - 72px));
     overflow-y: auto;
     overflow-x: hidden;
     position: sticky;
@@ -3397,38 +3397,56 @@ html.sidebar-collapsed .clivia-sidebar-reopen svg {
     color: #ef8a8a;
   }
 }
-.main-inner.index .post-block,
-.main-inner.archive .post-block,
-.main-inner.category .post-block,
-.main-inner.tag .post-block {
-  border-bottom: 1px solid var(--table-row-hover-bg-color);
-  margin-bottom: 0;
-  padding: 18px 0;
+.main-inner.index,
+.main-inner.archive,
+.main-inner.category,
+.main-inner.tag {
+  background: var(--content-bg-color);
+  border-radius: 6px;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.08), 0 1px 5px 0 rgba(0,0,0,0.06);
+  padding: 4px 20px 10px;
 }
-.main-inner.index .post-block:last-of-type,
-.main-inner.archive .post-block:last-of-type,
-.main-inner.category .post-block:last-of-type,
-.main-inner.tag .post-block:last-of-type {
+.main-inner.index .post-block:not(#_),
+.main-inner.archive .post-block:not(#_),
+.main-inner.category .post-block:not(#_),
+.main-inner.tag .post-block:not(#_) {
+  background: transparent;
+  border-bottom: 1px solid var(--table-row-hover-bg-color);
+  border-radius: 0;
+  box-shadow: none;
+  margin: 0;
+  padding: 13px 0;
+}
+.main-inner.index .post-block:not(#_):last-of-type,
+.main-inner.archive .post-block:not(#_):last-of-type,
+.main-inner.category .post-block:not(#_):last-of-type,
+.main-inner.tag .post-block:not(#_):last-of-type {
   border-bottom: none;
 }
 .main-inner.index .post-header,
 .main-inner.archive .post-header,
 .main-inner.category .post-header,
 .main-inner.tag .post-header {
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 .main-inner.index .post-title,
 .main-inner.archive .post-title,
 .main-inner.category .post-title,
 .main-inner.tag .post-title {
-  font-size: 1.35em;
-  line-height: 1.4;
+  font-size: 1.1em;
+  line-height: 1.45;
 }
 .main-inner.index .post-meta,
 .main-inner.archive .post-meta,
 .main-inner.category .post-meta,
 .main-inner.tag .post-meta {
-  font-size: 12px;
+  font-size: 11.5px;
+  margin-top: 2px;
+}
+.main-inner.index .post-body,
+.main-inner.archive .post-body,
+.main-inner.category .post-body,
+.main-inner.tag .post-body {
   margin-top: 4px;
 }
 .main-inner.index .post-body blockquote,
@@ -3475,16 +3493,14 @@ html.sidebar-collapsed .clivia-sidebar-reopen svg {
 .main-inner.archive .post-body ol,
 .main-inner.category .post-body ol,
 .main-inner.tag .post-body ol,
+.main-inner.index .post-body img,
+.main-inner.archive .post-body img,
+.main-inner.category .post-body img,
+.main-inner.tag .post-body img,
 .main-inner.index .post-body .highlight,
 .main-inner.archive .post-body .highlight,
 .main-inner.category .post-body .highlight,
 .main-inner.tag .post-body .highlight {
-  display: none;
-}
-.main-inner.index .post-body img:not(.clivia-card-thumb),
-.main-inner.archive .post-body img:not(.clivia-card-thumb),
-.main-inner.category .post-body img:not(.clivia-card-thumb),
-.main-inner.tag .post-body img:not(.clivia-card-thumb) {
   display: none;
 }
 .main-inner.index .post-body p,
@@ -3494,8 +3510,11 @@ html.sidebar-collapsed .clivia-sidebar-reopen svg {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+  color: var(--blockquote-color);
+  font-size: 14.5px;
+  line-height: 1.75;
   overflow: hidden;
-  margin-bottom: 4px;
+  margin-bottom: 0;
 }
 .main-inner.index .post-body p:not(:first-of-type),
 .main-inner.archive .post-body p:not(:first-of-type),
@@ -3503,39 +3522,11 @@ html.sidebar-collapsed .clivia-sidebar-reopen svg {
 .main-inner.tag .post-body p:not(:first-of-type) {
   display: none;
 }
-.main-inner.index .post-block.has-cover .post-body,
-.main-inner.archive .post-block.has-cover .post-body,
-.main-inner.category .post-block.has-cover .post-body,
-.main-inner.tag .post-block.has-cover .post-body {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 150px;
-  column-gap: 16px;
-}
-.main-inner.index .post-block.has-cover .clivia-card-thumb,
-.main-inner.archive .post-block.has-cover .clivia-card-thumb,
-.main-inner.category .post-block.has-cover .clivia-card-thumb,
-.main-inner.tag .post-block.has-cover .clivia-card-thumb {
-  float: none;
-  grid-column: 2;
-  grid-row: 1;
-  margin: 0;
-}
-.main-inner.index .post-block.has-cover .clivia-card-tags,
-.main-inner.archive .post-block.has-cover .clivia-card-tags,
-.main-inner.category .post-block.has-cover .clivia-card-tags,
-.main-inner.tag .post-block.has-cover .clivia-card-tags,
-.main-inner.index .post-block.has-cover .post-button,
-.main-inner.archive .post-block.has-cover .post-button,
-.main-inner.category .post-block.has-cover .post-button,
-.main-inner.tag .post-block.has-cover .post-button {
-  grid-column: 1/-1;
-}
 .main-inner.index .post-button,
 .main-inner.archive .post-button,
 .main-inner.category .post-button,
 .main-inner.tag .post-button {
-  clear: both;
-  margin-top: 6px;
+  display: none;
 }
 .clivia-meta-extra {
   color: var(--blockquote-color);
@@ -3546,36 +3537,22 @@ html.sidebar-collapsed .clivia-sidebar-reopen svg {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 6px;
-  margin: 8px 0 2px;
+  gap: 5px;
+  margin: 6px 0 0;
 }
 .clivia-tag-chip {
   background: var(--table-row-hover-bg-color);
   border: 0;
-  border-radius: 10px;
-  color: var(--text-color);
-  font-size: 12px;
+  border-radius: 9px;
+  color: var(--blockquote-color);
+  font-size: 11px;
   line-height: 1.6;
-  padding: 1px 9px;
+  padding: 0 8px;
   transition: background 0.2s ease, color 0.2s ease;
 }
 .clivia-tag-chip:hover {
   background: var(--brand-color);
   color: #fff;
-}
-.clivia-card-thumb {
-  border-radius: 6px;
-  float: right;
-  height: 94px;
-  margin: 4px 0 8px 14px;
-  object-fit: cover;
-  width: 150px;
-}
-@media (max-width: 767px) {
-  .clivia-card-thumb {
-    height: 70px;
-    width: 110px;
-  }
 }
 @media (prefers-color-scheme: dark) {
   .clivia-tag-chip:hover {
