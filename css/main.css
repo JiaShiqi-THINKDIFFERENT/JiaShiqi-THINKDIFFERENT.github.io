@@ -1386,7 +1386,7 @@ pre code {
     transition: all 0.2s ease-in-out;
   }
   .links-of-author a::before {
-    background: #6c30cd;
+    background: #ff8cbd;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -3568,7 +3568,14 @@ html.sidebar-collapsed .clivia-sidebar-reopen svg {
   .site-brand-container {
     display: none;
   }
+  .headband {
+    display: none;
+  }
   .site-nav {
-    padding-top: 18px;
+    padding-top: 4px;
+  }
+  .menu {
+    padding-top: 8px;
+    padding-bottom: 8px;
   }
 }
