@@ -127,19 +127,42 @@ header.header {
 // 左栏独立滚动：菜单栏固定在视口内，与正文分别滚动
 // 左栏（品牌 + 菜单 + 作者卡）高度锁定 100vh，内容超高时
 // 自身出现滚动条；正文仍走页面滚动，互不影响。
+// 三者互不通气的关键：overscroll-behavior: contain —— 滚轮停留在某个
+// 面板时只滚那个面板，到顶/到底后也不把剩余滚动量甩给外层页面。
 // ==============================================================
 @media (min-width: 992px) {
+  // ★必须用 fixed 而非 sticky：sticky 会被钳制在包含块 .main 内，
+  //   而 .main 下方还挂着 footer —— 滚到页脚时 .main 底部只剩 (视口高 - footer)
+  //   的空间，放不下整条侧栏，浏览器就会把侧栏上推，菜单被吸顶导航条压住
+  //   （实测给 .main 加 padding-bottom 无效）。fixed 彻底不受包含块约束。
   .main > .column {
-    position: sticky;
-    top: 48px; // 让位给吸顶导航条（收窄态高度 48px）
-    align-self: flex-start; // 抵消 .main 的 align-items: stretch 拉伸
+    position: fixed;
+    // ★必须 !important：NexT 的 motion.js 在入场动画结束后会执行
+    //   Object.assign(column.style, { opacity: 1, top: '0px' })，
+    //   把内联 top:0 写死；不提权会被它覆盖，菜单滚到吸顶导航条底下被压住。
+    top: 48px !important; // 让位给吸顶导航条（收窄态高度 48px）
+    left: 0;
+    width: 240px;
     height: calc(100vh - 48px);
     overflow-y: auto;
     overflow-x: hidden;
-    // 注意：不要加 overscroll-behavior: contain
-    // 左栏内容通常不足一屏（无溢出）时，contain 会阻断滚轮向页面传递，
-    // 导致鼠标停在菜单上滚不动正文。
+    overscroll-behavior: contain; // 鼠标在菜单上滚时，只滚菜单，不带动正文
     scrollbar-width: thin; // Firefox 细滚动条
+    z-index: 5; // 低于吸顶导航条(1000)，高于正文
+  }
+
+  // ★fixed 让 .column 脱离文档流，会让 .main 的 flex 分布全变。
+  //   用伪元素顶替它的 240px 占位，space-between 的分配结果与原布局逐像素一致
+  //   （240 + 12 + 正文 + 12 + 右栏），现有所有 calc 宽度公式都不必改。
+  .main::before {
+    align-self: stretch;
+    content: '';
+    flex: 0 0 240px;
+  }
+
+  // 折叠态：占位的外尺寸要等于原先 .column 的 (240 - 252) = -12px
+  html.sidebar-collapsed .main::before {
+    margin-left: -252px;
   }
 
   // WebKit 细滚动条：浅色，不抢视觉
@@ -435,6 +458,7 @@ html.sidebar-collapsed .clivia-sidebar-reopen svg {
     overflow-x: hidden;
     position: sticky;
     top: 60px;
+    overscroll-behavior: contain; // 与左栏一致：鼠标在数据栏上滚时只滚它自己
     scrollbar-width: thin;
     padding-right: 2px;
   }
