@@ -9,8 +9,9 @@
  *   并按财报区间叠加该指标的估值分档横线（档位随口径同步切换，历史完全对齐）：
  *   横线为近十年最高/最低估值对应上下沿，中间四等分共 5 条阶梯线
  *   （价格 = 财报区间每股基本面 × 档位估值）；
- *   股息率例外（JSON 中 mode="points"）：不画档位线，只在分红除权除息日打圆点，
- *   点落在价格线上，悬浮显示每股派息与本次股息率；
+ *   股息率例外（JSON 中 mode="points"）：不画档位线，改用双轴——
+ *   左轴收盘价曲线 + 右轴股息率(TTM)曲线，分红除权除息日以圆点标在股息率曲线上，
+ *   悬浮显示每股派息与本次股息率；
  *   默认显示市盈率，默认视窗近一年，可拖动底部时间轴回溯十年；
  *   支持键盘左右方向键 / Home / End 切换。
  * JSON 由 tools/stockdb/export_json.py 从 PostgreSQL 导出（bands 字段）。
@@ -47,8 +48,9 @@
     '.sviz-cap{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 14px;margin:10px 0 2px;font-size:.92em}',
     '.sviz-cap .sviz-cur{font-weight:700;font-size:1.05em}',
     '#stock-chart{width:100%;height:460px;position:relative}',
-    // 绘图区四周完整边框：与 ECharts grid 的像素偏移严格一致（left/right/top/bottom）
-    '#stock-chart::after{content:\'\';position:absolute;left:88px;right:52px;top:34px;bottom:82px;border:1px solid #7f938a;border-radius:3px;pointer-events:none}',
+    // 绘图区四周完整边框：与 ECharts grid 的像素偏移严格一致（left/right/top/bottom）。
+    // 右边距用 CSS 变量——股息率图多一条右轴，需要更宽的右侧留白，由 JS 按模式设置。
+    '#stock-chart::after{content:\'\';position:absolute;left:88px;right:var(--sviz-right,52px);top:34px;bottom:82px;border:1px solid #7f938a;border-radius:3px;pointer-events:none}',
     '@media (max-width:767px){#stock-chart{height:380px}}',
     '.sviz-note{margin-top:10px;font-size:.8em;opacity:.62;line-height:1.6}',
     '.sviz-empty{padding:18px;border:1px dashed #9aa8a0;border-radius:6px;color:#77857d;font-size:.95em}',
@@ -146,6 +148,12 @@
     { key: 'dv_ttm', label: '股息率', unit: '%',  digits: 2, light: '#4c9e6b', dark: '#7fd0a0' }
   ];
 
+  // 股息率图（双轴）配色：收盘价沿用指标色（绿），股息率曲线用橙，分红点用红
+  var DV_LINE = { light: '#e87d1e', dark: '#f0a04b' };
+  var DV_DOT = '#d93636';
+  // 双轴模式下右侧要留给股息率轴（比单轴多 22px）
+  var GRID_RIGHT_DUAL = 74;
+
   function hexToRgba(hex, alpha) {
     var h = String(hex).replace('#', '');
     if (h.length === 3) h = h[0] + h[0] + h[1] + h[1] + h[2] + h[2];
@@ -185,7 +193,8 @@
 
   // 同花顺式估值带图：收盘价（adj='qfq'前复权 / 'raw'不复权）+ 该指标近十年四等分
   // 估值档位横线（五档），档位段按同口径计算（segments / segments_raw），历史完全对齐。
-  // 股息率为 points 模式：不画档位线，仅在分红除权除息日打圆点（点落在价格线上）。
+  // 股息率为 points 模式：不画档位线，改画双轴——左轴收盘价 + 右轴股息率(TTM)曲线，
+  // 分红除权除息日以圆点标在股息率曲线上（y = 当日股息率，而不是价格）。
   function bandOption(data, key, m, dark, text, gridLine, border, adj) {
     var color = dark ? m.dark : m.light;
     // 档位线颜色（从下到上）：绿 / 蓝 / 黄 / 橙 / 红
@@ -226,20 +235,38 @@
     var n = 0;                                 // 档位数（points 模式无档位）
 
     if (pointsMode) {
+      var dvColor = dark ? DV_LINE.dark : DV_LINE.light;
+
+      // 股息率(TTM)曲线：右轴，单位 %
+      var dvLine = [];
+      for (var t = 0; t < dates.length; t++) {
+        var dv = metricVals[t];
+        dvLine.push([dates[t], (dv === null || dv === undefined || isNaN(dv)) ? null : dv]);
+      }
+      series.push({
+        name: '股息率TTM', type: 'line', data: dvLine, yAxisIndex: 1,
+        showSymbol: false, smooth: false, connectNulls: true,
+        lineStyle: { width: 1.8, color: dvColor },
+        itemStyle: { color: dvColor },
+        emphasis: { disabled: true },
+        z: 11
+      });
+
+      // 分红除权日打点：y 取当日股息率，圆点正好落在股息率曲线上
       var divPts = [];
       (bm.points || []).forEach(function (p) {
         var i0 = idxMap[p[0]];
         if (i0 === undefined) return;
-        var pv = qfq[i0];
+        var pv = metricVals[i0];
         if (pv === null || pv === undefined || isNaN(pv)) return;
-        divPts.push([p[0], pv]);               // 点落在价格线上
+        divPts.push([p[0], pv]);
         divMap[p[0]] = [p[1], p[2]];
       });
       if (divPts.length) {
         series.push({
-          name: '分红除权日', type: 'scatter', data: divPts,
+          name: '分红除权日', type: 'scatter', data: divPts, yAxisIndex: 1,
           symbol: 'circle', symbolSize: 9, z: 12,
-          itemStyle: { color: '#d93636', borderColor: dark ? '#12201a' : '#ffffff', borderWidth: 1.5 },
+          itemStyle: { color: DV_DOT, borderColor: dark ? '#12201a' : '#ffffff', borderWidth: 1.5 },
           emphasis: { disabled: true }
         });
       }
@@ -335,8 +362,14 @@
           return lines.join('<br/>');
         }
       },
-      // 左右留足空间：左侧容纳数值+单位，右侧避免最后一个日期被裁切
-      grid: { left: GRID.left, right: GRID.right, top: GRID.top, bottom: GRID.bottom },
+      // 左右留足空间：左侧容纳数值+单位，右侧避免最后一个日期被裁切；
+      // 双轴（股息率）时右侧还要额外容纳股息率轴标签
+      grid: {
+        left: GRID.left,
+        right: pointsMode ? GRID_RIGHT_DUAL : GRID.right,
+        top: GRID.top,
+        bottom: GRID.bottom
+      },
       xAxis: {
         type: 'time',
         axisLabel: {
@@ -348,21 +381,37 @@
         // 竖线：随缩放自动选取合适的年月间隔
         splitLine: { show: true, lineStyle: { color: gridLine, type: 'dashed', width: 1 } }
       },
-      yAxis: {
-        type: 'value', scale: true,
-        name: adj === 'raw' ? '元(不复权)' : '元(前复权)',
-        nameTextStyle: { color: text, fontSize: 12, align: 'right', padding: [0, 4, 0, 0] },
-        axisLabel: { color: text, fontSize: 12, margin: 12 },
-        axisLine: { show: true, lineStyle: { color: border, width: 1 } },
-        axisTick: { show: true, length: 5, lineStyle: { color: border, width: 1 } },
-        splitLine: { show: true, lineStyle: { color: gridLine, type: 'dashed', width: 1 } }
-      },
+      yAxis: (function () {
+        var left = {
+          type: 'value', scale: true,
+          name: adj === 'raw' ? '元(不复权)' : '元(前复权)',
+          nameTextStyle: { color: text, fontSize: 12, align: 'right', padding: [0, 4, 0, 0] },
+          axisLabel: { color: text, fontSize: 12, margin: 12 },
+          axisLine: { show: true, lineStyle: { color: border, width: 1 } },
+          axisTick: { show: true, length: 5, lineStyle: { color: border, width: 1 } },
+          splitLine: { show: true, lineStyle: { color: gridLine, type: 'dashed', width: 1 } }
+        };
+        if (!pointsMode) return left;
+        // 股息率图：右轴单独承载股息率曲线与分红点（网格线仍只由左轴提供，避免双份虚线）
+        var dvColor = dark ? DV_LINE.dark : DV_LINE.light;
+        var right = {
+          type: 'value', scale: true, min: 0, position: 'right',
+          name: '股息率(%)',
+          nameTextStyle: { color: dvColor, fontSize: 12, align: 'left', padding: [0, 0, 0, 4] },
+          axisLabel: { color: dvColor, fontSize: 12, margin: 12, formatter: '{value}' },
+          axisLine: { show: true, lineStyle: { color: dvColor, width: 1 } },
+          axisTick: { show: true, length: 5, lineStyle: { color: dvColor, width: 1 } },
+          splitLine: { show: false }
+        };
+        return [left, right];
+      })(),
       series: series,
       // 默认只展示近一年，可拖动下方时间轴回溯十年
       dataZoom: [
         { type: 'inside', start: oneYearStartPct(dates), end: 100 },
         {
-          type: 'slider', bottom: 12, height: 22, left: GRID.left, right: GRID.right,
+          type: 'slider', bottom: 12, height: 22, left: GRID.left,
+          right: pointsMode ? GRID_RIGHT_DUAL : GRID.right,
           start: oneYearStartPct(dates), end: 100,
           borderColor: 'transparent', backgroundColor: 'transparent',
           fillerColor: hexToRgba(dark ? '#7fbf9e' : '#1b4d3e', 0.14),
@@ -434,11 +483,16 @@
       var bm = data.bands.metrics[m.key];
       var inv = bm.inverse;
       if (bm.mode === 'points') {
-        // 股息率：不画档位线，只在分红除权除息日打点
+        // 股息率：双轴——左轴收盘价曲线 + 右轴股息率曲线，分红点落在股息率曲线上
+        var priceColor = dark ? m.dark : m.light;
+        var dvColor = dark ? DV_LINE.dark : DV_LINE.light;
         cap.innerHTML = '<span class="sviz-cur">' + m.label + ' ' + fmt(st.current, m.digits) + ' ' + m.unit + '</span>' +
           '<span class="sviz-muted">近十年最低 ' + fmt(st.min, m.digits) + ' · 最高 ' + fmt(st.max, m.digits) + ' ' + m.unit + '</span>' +
           '<span class="sviz-muted">当前分位 ' + fmt(st.pct, 1) + '%</span>' +
-          '<span class="sviz-muted">圆点 = 分红除权除息日（每股派息 · 本次股息率），近十年共 ' +
+          // 内联图例：两条曲线 + 分红点，避免再加 legend 挤压绘图区
+          '<span class="sviz-muted">' + chip(priceColor) + '收盘价(左轴)</span>' +
+          '<span class="sviz-muted">' + chip(dvColor) + '股息率TTM(右轴)</span>' +
+          '<span class="sviz-muted">' + dotChip(DV_DOT) + '分红除权日 ' +
           (bm.points || []).length + ' 次</span>';
       } else {
         var lo = inv ? bm.levels[bm.levels.length - 1] : bm.levels[0];
@@ -449,7 +503,21 @@
           '<span class="sviz-muted">横线 = 近十年' + m.label + (inv ? '最高→最低' : '最低→最高') +
           '（' + fmt(lo, m.digits) + ' ~ ' + fmt(hi, m.digits) + ' ' + m.unit + '）四等分五档，按财报区间阶梯更新</span>';
       }
+      // 边框（CSS ::after）右边距跟随 grid：股息率图多一条右轴，需更宽留白
+      holder.style.setProperty('--sviz-right',
+        (bm.mode === 'points' ? GRID_RIGHT_DUAL : GRID.right) + 'px');
       chart.setOption(bandOption(data, m.key, m, dark, text, gridLine, border, adj), true);
+    }
+
+    // 摘要行内联图例：线条色块 / 圆点色块
+    function chip(color) {
+      return '<i style="display:inline-block;width:12px;height:3px;background:' + color +
+        ';vertical-align:middle;margin-right:5px"></i>';
+    }
+
+    function dotChip(color) {
+      return '<i style="display:inline-block;width:9px;height:9px;border-radius:50%;background:' +
+        color + ';vertical-align:middle;margin-right:5px"></i>';
     }
 
     // 复权方式切换按钮组（前复权 / 不复权），贴在标签栏右侧
