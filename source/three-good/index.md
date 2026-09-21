@@ -33,5 +33,9 @@ comments: false
 | 片仔癀 | [三好分析](/three-good/pianzaihuang/) | [估值纵览](/stocks/pianzaihuang/) |
 | 兴业银行 | [三好分析](/three-good/xingye-yinhang/) | [估值纵览](/stocks/xingye-yinhang/) |
 | 新华保险 | [三好分析](/three-good/xinhua-baoxian/) | [估值纵览](/stocks/xinhua-baoxian/) |
+| 中国平安 | [三好分析](/three-good/zhongguo-pingan/) | [估值纵览](/stocks/zhongguo-pingan/) |
+| 平安银行 | [三好分析](/three-good/pingan-yinhang/) | [估值纵览](/stocks/pingan-yinhang/) |
+| 中国人寿 | [三好分析](/three-good/zhongguo-renshou/) | [估值纵览](/stocks/zhongguo-renshou/) |
+| 格力电器 | [三好分析](/three-good/geli-dianqi/) | [估值纵览](/stocks/geli-dianqi/) |
 
 <script src="/js/three-good-index.js" defer></script>

@@ -4,7 +4,7 @@ date: 2026-09-20 02:30:00
 comments: false
 ---
 
-本站长期跟踪的 21 只个股。每只都有独立的**估值纵览页**（十年收盘价 / 市盈率 / 市净率 / 股息率，支持前复权与不复权切换）和一份**三好评分报告**。
+本站长期跟踪的 25 只个股。每只都有独立的**估值纵览页**（十年收盘价 / 市盈率 / 市净率 / 股息率，支持前复权与不复权切换）和一份**三好评分报告**。
 
 行情与估值数据每日收盘后自动更新，评分每周四收盘后重算。
 
@@ -16,6 +16,7 @@ comments: false
 ## 家用电器
 
 - [美的集团](/stocks/meidi-jituan/)（000333）
+- [格力电器](/stocks/geli-dianqi/)（000651）
 
 ## 电力设备
 
@@ -33,9 +34,12 @@ comments: false
 - [中国银行](/stocks/zhongguo-yinhang/)（601988）
 - [建设银行](/stocks/jianshe-yinhang/)（601939）
 - [兴业银行](/stocks/xingye-yinhang/)（601166）
+- [平安银行](/stocks/pingan-yinhang/)（000001）
 
 ## 非银金融
 
+- [中国平安](/stocks/zhongguo-pingan/)（601318）
+- [中国人寿](/stocks/zhongguo-renshou/)（601628）
 - [新华保险](/stocks/xinhua-baoxian/)（601336）
 
 ## 医药生物

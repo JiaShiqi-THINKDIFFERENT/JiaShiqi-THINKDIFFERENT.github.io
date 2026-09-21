@@ -50,6 +50,10 @@ STOCKS = {
     "600436": ("片仔癀", "pianzaihuang", "医药生物"),
     "601166": ("兴业银行", "xingye-yinhang", "银行"),
     "601336": ("新华保险", "xinhua-baoxian", "非银金融"),
+    "601318": ("中国平安", "zhongguo-pingan", "非银金融"),
+    "000001": ("平安银行", "pingan-yinhang", "银行"),
+    "601628": ("中国人寿", "zhongguo-renshou", "非银金融"),
+    "000651": ("格力电器", "geli-dianqi", "家用电器"),
 }
 
 YEAR_DAYS = 365.25

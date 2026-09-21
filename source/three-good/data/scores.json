@@ -1133,6 +1133,222 @@
           "进入壁垒": 19
         }
       }
+    ],
+    "zhongguo-pingan": [
+      {
+        "date": "2026-09-21",
+        "symbol": "601318",
+        "slug": "zhongguo-pingan",
+        "name": "中国平安",
+        "close": 53.37,
+        "pe_pct": 0.2,
+        "pb_pct": 15.9,
+        "dv_pct": 98.3,
+        "scores": {
+          "industry": 76,
+          "company": 66.0,
+          "price": 94.9,
+          "total": 70.6
+        },
+        "verdict": "推荐",
+        "vetoes": [],
+        "degraded": false,
+        "detail": {
+          "fin": {
+            "f_score": 2,
+            "f_available": 2,
+            "f_part": 6.0,
+            "f_note": "F-Score 数据不足，取中性 6",
+            "roe_mean": 12.1,
+            "roe_part": 6,
+            "roe_note": "ROE均值 12.1%，创造价值",
+            "cash_conv": 4.89,
+            "q_part": 10,
+            "q_note": "现金含量 4.89，优",
+            "total": 22.0
+          },
+          "ts_adj": 0.0,
+          "ts_note": "时序趋势中性",
+          "price_notes": [
+            "股息率分位 98%",
+            "PE-TTM 6.1 倍"
+          ],
+          "moat": 28,
+          "management": 16,
+          "pricing_power_adj": 1,
+          "roe_mean": 12.1,
+          "revenue_cagr": 4.4
+        },
+        "qual_rationale": "国内唯一拿到全牌照的综合金融集团（寿险+财险+银行+资管+科技），寿险代理人渠道与百万寿险大军曾是核心资产，目前正在进行最深的一轮渠道改革（高质量代理人 + 医养生态赋能新业务价值）；交叉销售与集团客户迁徙构成差异化护城河，科技板块虽已止血但不再是估值加分项。核心变量是地产敞口（华夏幸福等债权减值已充分计提但仍有尾部风险）、新业务价值能否重回双位数增长、以及长端利率下行对利差与内含价值的侵蚀。管理层战略清晰但处改革中途，分红连续多年增长。",
+        "industry_detail": {
+          "格局": 22,
+          "定价权": 14,
+          "需求稳定性": 18,
+          "进入壁垒": 22
+        }
+      }
+    ],
+    "pingan-yinhang": [
+      {
+        "date": "2026-09-21",
+        "symbol": "000001",
+        "slug": "pingan-yinhang",
+        "name": "平安银行",
+        "close": 11.7,
+        "pe_pct": 30.8,
+        "pb_pct": 11.6,
+        "dv_pct": 80.1,
+        "scores": {
+          "industry": 70,
+          "company": 57.0,
+          "price": 80.1,
+          "total": 61.0
+        },
+        "verdict": "可关注",
+        "vetoes": [],
+        "degraded": false,
+        "detail": {
+          "fin": {
+            "f_score": 2,
+            "f_available": 2,
+            "f_part": 6.0,
+            "f_note": "F-Score 数据不足，取中性 6",
+            "roe_mean": 9.5,
+            "roe_part": 4,
+            "roe_note": "ROE均值 9.5%，一般",
+            "cash_conv": 7.41,
+            "q_part": 10,
+            "q_note": "现金含量 7.41，优",
+            "total": 20.0
+          },
+          "ts_adj": 0.0,
+          "ts_note": "时序趋势中性",
+          "price_notes": [
+            "股息率分位 80%",
+            "PE-TTM 5.3 倍"
+          ],
+          "moat": 22,
+          "management": 15,
+          "pricing_power_adj": 0,
+          "roe_mean": 9.5,
+          "revenue_cagr": 2.2
+        },
+        "qual_rationale": "股份行中零售转型最彻底的一只，依托平安集团 2 亿+个人客户与综拓渠道获客，私行财富与消费金融（新一贷、信用卡）形成收入特色，AUM 与财富管理手续费是其区别于同业的标签。代价是零售端资产质量对居民就业与收入最敏感，近年主动压降高风险消费贷后业绩增速明显放缓；负债端存款成本偏高、对高成本存款依赖较重，息差压力大于国有大行。地产表内外敞口曾是最大隐忧，目前已大幅压降。",
+        "industry_detail": {
+          "格局": 19,
+          "定价权": 12,
+          "需求稳定性": 19,
+          "进入壁垒": 20
+        }
+      }
+    ],
+    "zhongguo-renshou": [
+      {
+        "date": "2026-09-21",
+        "symbol": "601628",
+        "slug": "zhongguo-renshou",
+        "name": "中国人寿",
+        "close": null,
+        "pe_pct": 0.1,
+        "pb_pct": 3.4,
+        "dv_pct": 92.4,
+        "scores": {
+          "industry": 73,
+          "company": 63.0,
+          "price": 100,
+          "total": 68.9
+        },
+        "verdict": "可关注",
+        "vetoes": [],
+        "degraded": false,
+        "detail": {
+          "fin": {
+            "f_score": 2,
+            "f_available": 2,
+            "f_part": 6.0,
+            "f_note": "F-Score 数据不足，取中性 6",
+            "roe_mean": 12.4,
+            "roe_part": 6,
+            "roe_note": "ROE均值 12.4%，创造价值",
+            "cash_conv": 2.99,
+            "q_part": 10,
+            "q_note": "现金含量 2.99，优",
+            "total": 22.0
+          },
+          "ts_adj": 0.0,
+          "ts_note": "时序趋势中性",
+          "price_notes": [
+            "股息率分位 92%",
+            "PE-TTM 4.3 倍"
+          ],
+          "moat": 27,
+          "management": 14,
+          "pricing_power_adj": 0,
+          "roe_mean": 12.4,
+          "revenue_cagr": 1.3
+        },
+        "qual_rationale": "寿险行业绝对龙头（市场份额常年第一），县域下沉网络与百万代理人队伍是最难复制的渠道壁垒，品牌与国资背景使其在银保与政保业务中具备天然优势；内含价值体量最大、偿付能力充足。变量在于代理人规模持续脱落、产品结构向分红险转型带来的新业务价值率下降，以及利率下行久期错配下的再投资风险；权益市场波动对其利润弹性的放大效应显著。管理层为国资委派、经营风格稳健但市场化激励弱于平安。",
+        "industry_detail": {
+          "格局": 21,
+          "定价权": 13,
+          "需求稳定性": 18,
+          "进入壁垒": 21
+        }
+      }
+    ],
+    "geli-dianqi": [
+      {
+        "date": "2026-09-21",
+        "symbol": "000651",
+        "slug": "geli-dianqi",
+        "name": "格力电器",
+        "close": 38.56,
+        "pe_pct": 21.9,
+        "pb_pct": 1.6,
+        "dv_pct": 77.6,
+        "scores": {
+          "industry": 78,
+          "company": 68.2,
+          "price": 90.2,
+          "total": 70.8
+        },
+        "verdict": "推荐",
+        "vetoes": [],
+        "degraded": false,
+        "detail": {
+          "fin": {
+            "f_score": 3,
+            "f_available": 5,
+            "f_part": 7.2,
+            "f_note": "F-Score 3/5(可得项归一)",
+            "roe_mean": 24.3,
+            "roe_part": 8,
+            "roe_note": "ROE均值 24.3%，显著创造价值",
+            "cash_conv": 1.6,
+            "q_part": 10,
+            "q_note": "现金含量 1.60，优",
+            "total": 25.2
+          },
+          "ts_adj": 5.0,
+          "ts_note": "ROE 均值 24.3% 且一致性高，长期盈利质量强",
+          "price_notes": [
+            "股息率分位 78%",
+            "PE-TTM 7.7 倍"
+          ],
+          "moat": 26,
+          "management": 12,
+          "pricing_power_adj": 1,
+          "roe_mean": 24.3,
+          "revenue_cagr": 5.0
+        },
+        "qual_rationale": "空调行业双寡头之一，家用空调市占率长期第一，压缩机与核心零部件自研自产的垂直一体化使其在成本与品质上拥有强议价权，独一无二的经销商返利模式曾是行业最强渠道（但也正因如此，渠道去层级改革耗时且痛苦）；账上现金充沛、分红慷慨（多年分红率超 50%，近期股权激励绑定长期增长）。隐忧是单一品类依赖度过高（空调占比七成以上）、多元化（手机、新能源、预制菜装备）屡次受挫、以及渠道改革与接班人不确定性导致治理折价。管理层强势但分红政策积极。",
+        "industry_detail": {
+          "格局": 21,
+          "定价权": 20,
+          "需求稳定性": 17,
+          "进入壁垒": 20
+        }
+      }
     ]
   },
   "updated": "2026-09-21",
@@ -1220,6 +1436,22 @@
     "xinhua-baoxian": {
       "name": "新华保险",
       "symbol": "601336"
+    },
+    "zhongguo-pingan": {
+      "name": "中国平安",
+      "symbol": "601318"
+    },
+    "pingan-yinhang": {
+      "name": "平安银行",
+      "symbol": "000001"
+    },
+    "zhongguo-renshou": {
+      "name": "中国人寿",
+      "symbol": "601628"
+    },
+    "geli-dianqi": {
+      "name": "格力电器",
+      "symbol": "000651"
     }
   }
 }
