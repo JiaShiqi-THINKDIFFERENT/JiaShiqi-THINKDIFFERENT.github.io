@@ -1386,7 +1386,7 @@ pre code {
     transition: all 0.2s ease-in-out;
   }
   .links-of-author a::before {
-    background: #936eff;
+    background: #41cdf6;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -2969,13 +2969,24 @@ header.header {
 }
 @media (min-width: 992px) {
   .main > .column {
-    position: sticky;
-    top: 48px;
-    align-self: flex-start;
+    position: fixed;
+    top: 48px !important;
+    left: 0;
+    width: 240px;
     height: calc(100vh - 48px);
     overflow-y: auto;
     overflow-x: hidden;
+    overscroll-behavior: contain;
     scrollbar-width: thin;
+    z-index: 5;
+  }
+  .main::before {
+    align-self: stretch;
+    content: '';
+    flex: 0 0 240px;
+  }
+  html.sidebar-collapsed .main::before {
+    margin-left: -252px;
   }
   .main > .column::-webkit-scrollbar {
     width: 5px;
@@ -3183,6 +3194,7 @@ html.sidebar-collapsed .clivia-sidebar-reopen svg {
     overflow-x: hidden;
     position: sticky;
     top: 60px;
+    overscroll-behavior: contain;
     scrollbar-width: thin;
     padding-right: 2px;
   }
