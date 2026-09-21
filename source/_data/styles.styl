@@ -831,9 +831,22 @@ html.sidebar-collapsed .clivia-sidebar-reopen svg {
     display: none;
   }
 
-  // 顶部留出与品牌横幅相当的空间，让菜单不至于贴顶
+  // 顶部留白收紧：导航条(48px) 与首个菜单项之间只保留 12px。
+  // 原来这里叠了三层间距——headband 3px + .site-nav 18px + .menu 1em(16px) = 37px，
+  // 菜单整体被推得很低。headband 是 NexT 顶部装饰条，加了吸顶导航条后它是多余的
+  // （被 body 的 padding-top 顶到导航条正下方，只剩一条 3px 细线）。
+  .headband {
+    display: none;
+  }
+
   .site-nav {
-    padding-top: 18px;
+    padding-top: 4px;
+  }
+
+  // 主题默认 .menu{padding:1em 0}（上下各 16px），上下一并收窄
+  .menu {
+    padding-top: 8px;
+    padding-bottom: 8px;
   }
 }
 
