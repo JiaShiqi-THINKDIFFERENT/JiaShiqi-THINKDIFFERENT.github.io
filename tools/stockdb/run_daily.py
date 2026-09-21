@@ -44,6 +44,12 @@ STOCKS = {
     "002371": ("北方华创", "beifang-huachuang", "电子"),
     "601899": ("紫金矿业", "zijin-kuangye", "有色金属"),
     "600900": ("长江电力", "changjiang-dianli", "公用事业"),
+    "601988": ("中国银行", "zhongguo-yinhang", "银行"),
+    "601939": ("建设银行", "jianshe-yinhang", "银行"),
+    "600941": ("中国移动", "zhongguo-yidong", "通信"),
+    "600436": ("片仔癀", "pianzaihuang", "医药生物"),
+    "601166": ("兴业银行", "xingye-yinhang", "银行"),
+    "601336": ("新华保险", "xinhua-baoxian", "非银金融"),
 }
 
 # 本机访问 GitHub 的 HTTPS 443 会被网络策略间歇性阻断（DNS 指向被屏蔽 IP）。

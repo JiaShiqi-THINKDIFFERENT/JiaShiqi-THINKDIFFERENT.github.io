@@ -809,9 +809,333 @@
           "进入壁垒": 25
         }
       }
+    ],
+    "zhongguo-yinhang": [
+      {
+        "date": "2026-09-21",
+        "symbol": "601988",
+        "slug": "zhongguo-yinhang",
+        "name": "中国银行",
+        "close": null,
+        "pe_pct": 99.9,
+        "pb_pct": 81.9,
+        "dv_pct": 5.3,
+        "scores": {
+          "industry": 81,
+          "company": 61.0,
+          "price": 26.5,
+          "total": 52.3
+        },
+        "verdict": "观望",
+        "vetoes": [],
+        "degraded": false,
+        "detail": {
+          "fin": {
+            "f_score": 2,
+            "f_available": 2,
+            "f_part": 6.0,
+            "f_note": "F-Score 数据不足，取中性 6",
+            "roe_mean": 9.3,
+            "roe_part": 4,
+            "roe_note": "ROE均值 9.3%，一般",
+            "cash_conv": 3.34,
+            "q_part": 10,
+            "q_note": "现金含量 3.34，优",
+            "total": 20.0
+          },
+          "ts_adj": 0.0,
+          "ts_note": "时序趋势中性",
+          "price_notes": [
+            "股息率分位 5%",
+            "PE-TTM 8.5 倍"
+          ],
+          "moat": 26,
+          "management": 15,
+          "pricing_power_adj": 0,
+          "roe_mean": 9.3,
+          "revenue_cagr": 3.5
+        },
+        "qual_rationale": "国有六大行之一，国际化程度最高（境外机构覆盖港澳及数十个国家），外币资产与跨境结算、贸易金融是其区别于同业的核心标签；存款基础扎实、负债成本低于股份行，分红比例长期稳定在 30% 以上。隐忧在于息差受 LPR 与存量房贷重定价持续挤压、外币业务受海外利率与汇率扰动，且 ROE 已降至个位数、规模增速依赖投放而非定价。管理层稳健合规，资本充足率充裕。",
+        "industry_detail": {
+          "格局": 22,
+          "定价权": 14,
+          "需求稳定性": 22,
+          "进入壁垒": 23
+        }
+      }
+    ],
+    "jianshe-yinhang": [
+      {
+        "date": "2026-09-21",
+        "symbol": "601939",
+        "slug": "jianshe-yinhang",
+        "name": "建设银行",
+        "close": 10.81,
+        "pe_pct": 97.7,
+        "pb_pct": 63.2,
+        "dv_pct": 5.5,
+        "scores": {
+          "industry": 83,
+          "company": 63.0,
+          "price": 33.4,
+          "total": 55.3
+        },
+        "verdict": "观望",
+        "vetoes": [],
+        "degraded": false,
+        "detail": {
+          "fin": {
+            "f_score": 2,
+            "f_available": 2,
+            "f_part": 6.0,
+            "f_note": "F-Score 数据不足，取中性 6",
+            "roe_mean": 11.7,
+            "roe_part": 4,
+            "roe_note": "ROE均值 11.7%，一般",
+            "cash_conv": 6.2,
+            "q_part": 10,
+            "q_note": "现金含量 6.20，优",
+            "total": 20.0
+          },
+          "ts_adj": 0.0,
+          "ts_note": "时序趋势中性",
+          "price_notes": [
+            "股息率分位 6%",
+            "PE-TTM 8.4 倍"
+          ],
+          "moat": 28,
+          "management": 15,
+          "pricing_power_adj": 0,
+          "roe_mean": 11.7,
+          "revenue_cagr": 2.6
+        },
+        "qual_rationale": "国有大行中基建与住房金融的传统强者，对公端深度绑定中央与地方重大项目、按揭市场份额领先，低成本存款与长期客户关系构成稳健护城河；资产质量在大型银行中处于较优水平、拨备厚实。风险为房地产链敞口与地方融资平台化债带来的拨备消耗、按揭需求随地产销售中枢下台阶、以及息差长期下行趋势。管理层风控文化偏保守，分红率高且稳定。",
+        "industry_detail": {
+          "格局": 23,
+          "定价权": 15,
+          "需求稳定性": 22,
+          "进入壁垒": 23
+        }
+      }
+    ],
+    "zhongguo-yidong": [
+      {
+        "date": "2026-09-21",
+        "symbol": "600941",
+        "slug": "zhongguo-yidong",
+        "name": "中国移动",
+        "close": 96.63,
+        "pe_pct": 50.9,
+        "pb_pct": 30.6,
+        "dv_pct": 9.9,
+        "scores": {
+          "industry": 88,
+          "company": 74.0,
+          "price": 47.1,
+          "total": 65.1
+        },
+        "verdict": "可关注",
+        "vetoes": [],
+        "degraded": false,
+        "detail": {
+          "fin": {
+            "f_score": 5,
+            "f_available": 5,
+            "f_part": 12.0,
+            "f_note": "F-Score 5/5(可得项归一)",
+            "roe_mean": 11.1,
+            "roe_part": 4,
+            "roe_note": "ROE均值 11.1%，一般",
+            "cash_conv": 1.7,
+            "q_part": 10,
+            "q_note": "现金含量 1.70，优",
+            "total": 26.0
+          },
+          "ts_adj": 0.0,
+          "ts_note": "时序趋势中性",
+          "price_notes": [
+            "股息率分位 10%",
+            "PE-TTM 15.9 倍"
+          ],
+          "moat": 32,
+          "management": 16,
+          "pricing_power_adj": 1,
+          "roe_mean": 11.1,
+          "revenue_cagr": 9.0
+        },
+        "qual_rationale": "国内移动用户与宽带用户双第一（移动用户近 10 亿），基础电信牌照 + 频段资源构成近乎不可逾越的行政壁垒，行业从恶性价格战转向理性竞争后 ARPU 企稳回升；现金流极强、资本开支高峰已过，分红率提升至 70% 以上。变量在于 5G 投资回报周期长、携号转网与广电入场带来小幅分流、政企与算力等新业务尚需验证成长性；提速降费等政策导向削弱了自主提价空间。管理层执行力强、数字化转型（算力网络）投入明确。",
+        "industry_detail": {
+          "格局": 24,
+          "定价权": 16,
+          "需求稳定性": 24,
+          "进入壁垒": 24
+        }
+      }
+    ],
+    "pianzaihuang": [
+      {
+        "date": "2026-09-21",
+        "symbol": "600436",
+        "slug": "pianzaihuang",
+        "name": "片仔癀",
+        "close": 118.31,
+        "pe_pct": 2.6,
+        "pb_pct": 1.2,
+        "dv_pct": 98.3,
+        "scores": {
+          "industry": 89,
+          "company": 71.6,
+          "price": 89,
+          "total": 77.0
+        },
+        "verdict": "推荐",
+        "vetoes": [],
+        "degraded": false,
+        "detail": {
+          "fin": {
+            "f_score": 4,
+            "f_available": 5,
+            "f_part": 9.6,
+            "f_note": "F-Score 4/5(可得项归一)",
+            "roe_mean": 19.3,
+            "roe_part": 8,
+            "roe_note": "ROE均值 19.3%，显著创造价值",
+            "cash_conv": 0.04,
+            "q_part": 2,
+            "q_note": "现金含量 0.04，差",
+            "total": 19.6
+          },
+          "ts_adj": 5.0,
+          "ts_note": "ROE 均值 19.3% 且一致性高，长期盈利质量强",
+          "price_notes": [
+            "股息率分位 98%",
+            "PE-TTM 39.1 倍"
+          ],
+          "moat": 33,
+          "management": 14,
+          "pricing_power_adj": 3,
+          "roe_mean": 19.3,
+          "revenue_cagr": 16.3
+        },
+        "qual_rationale": "拥有国家绝密级中药配方（仅两家之一）与天然麝香使用资格，配方+稀缺原料双壁垒使其在中药涨价周期里表现出极强的自主提价能力，几乎不受集采约束，品牌心智（护肝、礼品属性）稳固。风险为原料端天然麝香与牛黄价格长期上涨挤压毛利、单品依赖度高且安宫牛黄丸等二线品种尚未放量、以及高价策略在消费疲弱时对销量的反噬。管理层资源投放偏保守，日化化妆品子公司是潜在增量但体量仍小。",
+        "industry_detail": {
+          "格局": 21,
+          "定价权": 24,
+          "需求稳定性": 20,
+          "进入壁垒": 24
+        }
+      }
+    ],
+    "xingye-yinhang": [
+      {
+        "date": "2026-09-21",
+        "symbol": "601166",
+        "slug": "xingye-yinhang",
+        "name": "兴业银行",
+        "close": 17.78,
+        "pe_pct": 32.7,
+        "pb_pct": 4.0,
+        "dv_pct": 76.2,
+        "scores": {
+          "industry": 69,
+          "company": 55.0,
+          "price": 82.2,
+          "total": 59.5
+        },
+        "verdict": "观望",
+        "vetoes": [],
+        "degraded": false,
+        "detail": {
+          "fin": {
+            "f_score": 2,
+            "f_available": 2,
+            "f_part": 6.0,
+            "f_note": "F-Score 数据不足，取中性 6",
+            "roe_mean": 11.5,
+            "roe_part": 4,
+            "roe_note": "ROE均值 11.5%，一般",
+            "cash_conv": 8.44,
+            "q_part": 10,
+            "q_note": "现金含量 8.44，优",
+            "total": 20.0
+          },
+          "ts_adj": 0.0,
+          "ts_note": "时序趋势中性",
+          "price_notes": [
+            "股息率分位 76%",
+            "PE-TTM 5.0 倍"
+          ],
+          "moat": 21,
+          "management": 14,
+          "pricing_power_adj": -1,
+          "roe_mean": 11.5,
+          "revenue_cagr": 3.4
+        },
+        "qual_rationale": "股份行中对公与同业业务最具特色的一只——银银平台连接中小金融机构、绿色融资与投行化经营领先，F 端（同业）客户黏性是其差异化来源。但相较招行，零售基础薄弱导致存款成本偏高，息差承压更明显；资产端地产与城投敞口曾持续扰动资产质量，不良包袱消化慢于同业，ROE 已滑至两位数以下且仍在下行。央行监管对同业业务的约束是长期变量。管理层战略摇摆较多、资本补充压力较大。",
+        "industry_detail": {
+          "格局": 19,
+          "定价权": 11,
+          "需求稳定性": 19,
+          "进入壁垒": 20
+        }
+      }
+    ],
+    "xinhua-baoxian": [
+      {
+        "date": "2026-09-21",
+        "symbol": "601336",
+        "slug": "xinhua-baoxian",
+        "name": "新华保险",
+        "close": null,
+        "pe_pct": 0.1,
+        "pb_pct": 33.3,
+        "dv_pct": 92.6,
+        "scores": {
+          "industry": 62,
+          "company": 57.0,
+          "price": 88.9,
+          "total": 58.8
+        },
+        "verdict": "观望",
+        "vetoes": [],
+        "degraded": false,
+        "detail": {
+          "fin": {
+            "f_score": 2,
+            "f_available": 2,
+            "f_part": 6.0,
+            "f_note": "F-Score 数据不足，取中性 6",
+            "roe_mean": 16.4,
+            "roe_part": 8,
+            "roe_note": "ROE均值 16.4%，显著创造价值",
+            "cash_conv": 3.06,
+            "q_part": 10,
+            "q_note": "现金含量 3.06，优",
+            "total": 24.0
+          },
+          "ts_adj": 3.0,
+          "ts_note": "ROE 均值 16.4%，一致性中等",
+          "price_notes": [
+            "股息率分位 93%",
+            "PE-TTM 4.1 倍"
+          ],
+          "moat": 17,
+          "management": 13,
+          "pricing_power_adj": -2,
+          "roe_mean": 16.4,
+          "revenue_cagr": 0.9
+        },
+        "qual_rationale": "中型寿险公司，银保渠道占比高、万能险与分红险结构使其对资本市场极为敏感，新准则下利润与净资产的权益弹性在上市险企中最大（牛市弹性品种，熊市回撤也最大）。寿险牌照有壁垒但头部集中度高（国寿、平安占据大头），中小险企在渠道议价与品牌上处于劣势，产品同质化严重、定价受预定利率下调政策直接约束。核心变量是长端利率下行带来的利差损风险、以及新业务价值增速与代理人转型进度。管理层近年频繁更迭、战略连续性偏弱。",
+        "industry_detail": {
+          "格局": 18,
+          "定价权": 8,
+          "需求稳定性": 17,
+          "进入壁垒": 19
+        }
+      }
     ]
   },
-  "updated": "2026-09-20",
+  "updated": "2026-09-21",
   "stocks": {
     "guizhou-maotai": {
       "name": "贵州茅台",
@@ -872,6 +1196,30 @@
     "changjiang-dianli": {
       "name": "长江电力",
       "symbol": "600900"
+    },
+    "zhongguo-yinhang": {
+      "name": "中国银行",
+      "symbol": "601988"
+    },
+    "jianshe-yinhang": {
+      "name": "建设银行",
+      "symbol": "601939"
+    },
+    "zhongguo-yidong": {
+      "name": "中国移动",
+      "symbol": "600941"
+    },
+    "pianzaihuang": {
+      "name": "片仔癀",
+      "symbol": "600436"
+    },
+    "xingye-yinhang": {
+      "name": "兴业银行",
+      "symbol": "601166"
+    },
+    "xinhua-baoxian": {
+      "name": "新华保险",
+      "symbol": "601336"
     }
   }
 }

@@ -27,5 +27,11 @@ comments: false
 | 北方华创 | [三好分析](/three-good/beifang-huachuang/) | [估值纵览](/stocks/beifang-huachuang/) |
 | 紫金矿业 | [三好分析](/three-good/zijin-kuangye/) | [估值纵览](/stocks/zijin-kuangye/) |
 | 长江电力 | [三好分析](/three-good/changjiang-dianli/) | [估值纵览](/stocks/changjiang-dianli/) |
+| 中国银行 | [三好分析](/three-good/zhongguo-yinhang/) | [估值纵览](/stocks/zhongguo-yinhang/) |
+| 建设银行 | [三好分析](/three-good/jianshe-yinhang/) | [估值纵览](/stocks/jianshe-yinhang/) |
+| 中国移动 | [三好分析](/three-good/zhongguo-yidong/) | [估值纵览](/stocks/zhongguo-yidong/) |
+| 片仔癀 | [三好分析](/three-good/pianzaihuang/) | [估值纵览](/stocks/pianzaihuang/) |
+| 兴业银行 | [三好分析](/three-good/xingye-yinhang/) | [估值纵览](/stocks/xingye-yinhang/) |
+| 新华保险 | [三好分析](/three-good/xinhua-baoxian/) | [估值纵览](/stocks/xinhua-baoxian/) |
 
 <script src="/js/three-good-index.js" defer></script>
