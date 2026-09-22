@@ -884,3 +884,25 @@ html.sidebar-collapsed .clivia-sidebar-reopen svg {
   }
 }
 
+// ---------------------------------------------------------------------------
+// 个股页「研究」章节：三好分析 + 四维度分析 两卡并列
+// ---------------------------------------------------------------------------
+.research-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  align-items: start;
+  margin: 1em 0 1.4em;
+}
+
+.research-pair .tgood,
+.research-pair .fdim {
+  margin: 0;
+}
+
+@media (max-width: 1199px) {
+  .research-pair {
+    grid-template-columns: 1fr;
+  }
+}
+

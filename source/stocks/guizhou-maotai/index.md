@@ -27,12 +27,11 @@ date: 2026-09-08 09:10:00
 <script src="/js/stock-viz.js" defer></script>
 
 ## 研究
+
+<div class="research-pair">
 <div id="three-good" data-slug="guizhou-maotai"></div>
+<div id="four-dim" data-slug="guizhou-maotai"></div>
+</div>
 
 <script src="/js/three-good.js" defer></script>
-
-## 四维度分析
-
-<div id="four-dim" data-slug="guizhou-maotai"></div>
-
 <script src="/js/four-dim.js" defer></script>

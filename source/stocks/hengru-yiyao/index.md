@@ -27,12 +27,11 @@ date: 2026-09-08 09:18:00
 <script src="/js/stock-viz.js" defer></script>
 
 ## 研究
+
+<div class="research-pair">
 <div id="three-good" data-slug="hengru-yiyao"></div>
+<div id="four-dim" data-slug="hengru-yiyao"></div>
+</div>
 
 <script src="/js/three-good.js" defer></script>
-
-## 四维度分析
-
-<div id="four-dim" data-slug="hengru-yiyao"></div>
-
 <script src="/js/four-dim.js" defer></script>

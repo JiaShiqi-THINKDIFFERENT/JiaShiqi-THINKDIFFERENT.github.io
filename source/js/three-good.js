@@ -72,7 +72,7 @@
           '不推荐': '🔴', '远离': '❌' };
         var vt = (cls[latest.verdict] || '') + ' ' + latest.verdict;
 
-        var h = '<div class="tgood-head">' +
+        var h = '<div class="tgood"><div class="tgood-head">' +
           '<span class="tgood-title">三好投资法则分析</span>' +
           '<span class="tgood-badge">综合 <span class="tv">' + fmt(latest.scores.total) + '</span> / 100 · ' + esc(vt) + '</span>' +
           '<span class="tgood-date">更新于 ' + esc(latest.date) + '</span>' +
@@ -97,7 +97,7 @@
         }
         h += '<div class="tgood-note">三好 = 好行业×好公司×好价格（邱国鹭《投资中最简单的事》），' +
           '综合分 = 行业×30% + 公司×35% + 价格×25% + 定价权调整，每周四收盘后自动评分。</div>';
-        el.innerHTML = h;
+        el.innerHTML = h + '</div>';
       })
       .catch(function () {
         el.innerHTML = '<div class="tgood-note">三好分析数据加载失败。</div>';

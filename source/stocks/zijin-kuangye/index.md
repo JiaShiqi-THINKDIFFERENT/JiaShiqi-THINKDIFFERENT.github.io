@@ -27,12 +27,11 @@ date: 2026-09-20 14:20:00
 <script src="/js/stock-viz.js" defer></script>
 
 ## 研究
+
+<div class="research-pair">
 <div id="three-good" data-slug="zijin-kuangye"></div>
+<div id="four-dim" data-slug="zijin-kuangye"></div>
+</div>
 
 <script src="/js/three-good.js" defer></script>
-
-## 四维度分析
-
-<div id="four-dim" data-slug="zijin-kuangye"></div>
-
 <script src="/js/four-dim.js" defer></script>

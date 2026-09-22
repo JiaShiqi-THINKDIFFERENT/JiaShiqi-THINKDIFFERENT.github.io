@@ -48,6 +48,7 @@ menu:
   home: / || fa fa-home
   stocks: /stocks/ || fa fa-line-chart
   three-good: /three-good/ || fa fa-star
+  four-dim: /four-dim/ || fa fa-cubes
   categories: /categories/ || fa fa-th
   tags: /tags/ || fa fa-tags
   archives: /archives/ || fa fa-archive

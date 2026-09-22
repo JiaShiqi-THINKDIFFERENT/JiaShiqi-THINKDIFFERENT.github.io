@@ -1,8 +1,11 @@
 """
 四维度个股分析 · 批量生成器（源自《雪球股票投资 24 章》四篇框架）
 
-对股票池内全部个股生成四维评分卡 + 报告数据，输出到 source/four-dim/data/<slug>.json，
-供个股页 /js/four-dim.js 渲染。
+对股票池内全部个股生成：
+  1) source/four-dim/data/<slug>.json  —— 个股页「研究」章节四维度摘要卡的数据源
+  2) source/four-dim/<slug>/index.md   —— 独立完整报告页（个股页摘要卡链接进入）
+  3) source/four-dim/index.md          —— 四维度总览索引页
+  4) source/four-dim/data/summary.json —— 全池汇总（总览页 JS 用）
 
 评分口径：
   宏观 25 = A1 估值周期位置 15（十年分位线性映射）+ A2 流动性与政策 6（宏观基准 + 行业利率敏感度）+ A3 风格与资金 4
@@ -32,6 +35,22 @@ SKILL_SCRIPTS = Path(os.environ.get(
     "FD_SCRIPTS", r"C:/Users/jiashiqi/.workbuddy/skills/stock-four-dim-analysis/scripts"))
 CACHE = HERE / ".cache"
 OUT_DIR = REPO / "source" / "four-dim" / "data"
+PAGE_DIR = REPO / "source" / "four-dim"
+
+VERDICT_ICON = {"强烈推荐": "⭐", "推荐": "🟢", "可关注": "🟡",
+                "观望": "🟠", "不推荐": "🔴", "远离": "❌"}
+DIM_LABEL = {
+    "macro": "宏观 · 周期定位与流动性",
+    "industry": "中观 · 行业供需与定价权",
+    "company": "微观 · 商业模式与质地",
+    "action": "实操 · 风格匹配与买卖规则",
+}
+SEC_TITLE = {
+    "macro": "一、宏观：周期定位与流动性",
+    "industry": "二、中观：行业周期与定价权",
+    "company": "三、微观：公司质地",
+    "action": "四、实操：风格匹配与买卖规则",
+}
 
 sys.path.insert(0, str(SKILL_SCRIPTS))
 import collect_brief as cb  # noqa: E402
@@ -365,10 +384,160 @@ def analyze(code: str, slug: str, name: str, industry: str, cfg: dict, qual: dic
 
 
 # --------------------------------------------------------------------------- #
+# 报告页输出
+# --------------------------------------------------------------------------- #
+def render_page(r: dict) -> str:
+    """把单只分析结果渲染成独立报告页 Markdown（source/four-dim/<slug>/index.md）"""
+    now = time.strftime("%Y-%m-%d %H:%M")
+    icon = VERDICT_ICON.get(r["verdict"], "")
+    v = r["valuation"]
+    basis_note = "（不复权口径，不含分红）" if r.get("price_basis") == "raw" else "（前复权口径）"
+
+    dim_rows = "\n".join(
+        f"| {DIM_LABEL.get(k, k)} | {d['score']} | {d['max']} |"
+        for k, d in r["dims"].items())
+
+    sub_blocks = []
+    for k in ("macro", "industry", "company", "action"):
+        d = r["dims"][k]
+        items = "\n".join(
+            f"| {it['k']} | {it['s']} | {it['m']} | {it['ev']} |" for it in d["items"])
+        sub_blocks.append(
+            f"**{DIM_LABEL.get(k, k)}：{d['score']} / {d['max']}**\n\n"
+            f"| 子项 | 得分 | 满分 | 依据 |\n| ---- | ---- | ---- | ---- |\n{items}\n")
+
+    secs = []
+    for k in ("macro", "industry", "company", "action"):
+        body = "\n".join(f"- {s}" for s in r["sections"][k])
+        secs.append(f"## {SEC_TITLE[k]}\n\n{body}\n")
+
+    act_rows = "\n".join(
+        f"| {a['action']} | {a['trigger']} | {a['ratio']} |" for a in r["action_rows"])
+    risks = "\n".join(f"- {x}" for x in r["risks"])
+    track = "\n".join(f"- {x}" for x in r["track"])
+
+    return f"""---
+title: 四维度分析 · {r['name']}
+date: {now}
+---
+
+# 四维度分析 · {r['name']}（{r['symbol']}）
+
+> 依据《雪球股票投资 24 章》四篇框架——宏观（周期定位）／中观（行业供需）／微观（公司质地）／实操（风格与规则），
+> 每维度 25 分，满分 100。定性层人工评估（每季度复核），量化层由脚本按行情与财报重算。
+
+[← 返回个股页](/stocks/{r['slug']}/) ｜ [三好分析报告](/three-good/{r['slug']}/) ｜ [四维度总览](/four-dim/)
+
+## 综合评分 **{r['total']} / 100** — {icon} {r['verdict']}
+
+> {r['conclusion']}
+
+| 项目 | 值 |
+| ---- | ---- |
+| 现价 | {r['price']} 元 {basis_note} |
+| 估值指标 | {r['metric']} {v['current']}（十年区间 {v['min']}–{v['max']}，中位 {v['median']}） |
+| 十年分位 | {v['pct']}% |
+| 股息率 TTM | {v['dv_ttm'] if v['dv_ttm'] else '—'}% |
+| 行业 / 风格 | {r['industry']} ／ {r['style']} |
+| 数据截至 | 行情 {r['as_of']}；宏观 {r['macro_as_of']} |
+
+## 评分卡
+
+| 维度 | 得分 | 满分 |
+| ---- | ---- | ---- |
+{dim_rows}
+
+{sub_blocks[0]}
+{sub_blocks[1]}
+{sub_blocks[2]}
+{sub_blocks[3]}
+{secs[0]}
+{secs[1]}
+{secs[2]}
+{secs[3]}
+## 操作计划
+
+| 动作 | 触发条件 | 仓位 |
+| ---- | -------- | ---- |
+{act_rows}
+
+> 投资者画像（默认）：{r['profile']}
+
+## 主要风险
+
+{risks}
+
+## 跟踪清单
+
+{track}
+
+---
+
+本文由脚本 `tools/value-analysis/four_dim.py` 依据公开行情与财报数据自动生成，为方法论演示与学习记录，不构成任何投资建议。
+"""
+
+
+def save_page(r: dict) -> Path:
+    d = PAGE_DIR / r["slug"]
+    d.mkdir(parents=True, exist_ok=True)
+    p = d / "index.md"
+    io.open(p, "w", encoding="utf-8").write(render_page(r))
+    return p
+
+
+def save_index(rows: list[dict], macro_as_of: str) -> Path:
+    """四维度总览索引页（按综合分降序）"""
+    now = time.strftime("%Y-%m-%d %H:%M")
+    order = [x for x in rows]
+    order.sort(key=lambda x: -x["total"])
+    lines = "\n".join(
+        f"| {x['name']}（{x['symbol']}） | {x['industry']} | "
+        f"{x['total']} | {VERDICT_ICON.get(x['verdict'], '')} {x['verdict']} | "
+        f"[四维度](/four-dim/{x['slug']}/) | [三好](/three-good/{x['slug']}/) | "
+        f"[个股页](/stocks/{x['slug']}/) |"
+        for x in order)
+    top = "\n".join(
+        f"{i}. **{x['name']}** {x['total']}（{x['industry']}，{x['metric']} 十年分位 {x['valuation']['pct']}%）"
+        for i, x in enumerate(order[:5], 1))
+
+    md = f"""---
+title: 四维度分析
+date: {now}
+---
+
+**四维度** = 宏观（周期定位与流动性）× 中观（行业供需与定价权）× 微观（公司质地）× 实操（风格匹配与买卖规则），
+源自《雪球股票投资 24 章》四篇框架。每维度 25 分，满分 100：≥75 推荐｜65–74 可关注｜50–64 观望｜<50 不推荐。
+
+宏观基准：{macro_as_of}。共 {len(order)} 只。
+
+## 综合分 TOP5
+
+{top}
+
+## 全部报告
+
+| 个股 | 行业 | 综合分 | 结论 | 四维度 | 三好 | 个股页 |
+| ---- | ---- | ------ | ---- | ------ | ---- | ------ |
+{lines}
+
+> 三好（邱国鹭《投资中最简单的事》）与四维度（《雪球股票投资 24 章》）是两套独立方法论，
+> 结论不一致时以差异说明为准，不混算。
+
+---
+
+本文由脚本自动生成，为方法论演示与学习记录，不构成任何投资建议。
+"""
+    p = PAGE_DIR / "index.md"
+    io.open(p, "w", encoding="utf-8").write(md)
+    return p
+
+
+# --------------------------------------------------------------------------- #
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--slug", help="只跑指定 slug")
     ap.add_argument("--no-fin", action="store_true", help="跳过联网财务抓取（财务按中性分）")
+    ap.add_argument("--no-pages", action="store_true", help="只写 JSON，不生成报告页")
     args = ap.parse_args()
 
     cfg = json.loads(io.open(HERE / "four_dim_config.json", encoding="utf-8").read())
@@ -393,6 +562,8 @@ def main() -> None:
             continue
         io.open(OUT_DIR / f"{slug}.json", "w", encoding="utf-8").write(
             json.dumps(r, ensure_ascii=False, indent=2))
+        if not args.no_pages:
+            save_page(r)
         out.append(r)
         print(f"  → {r['total']} {r['verdict']}（{r['metric']} 分位 {r['valuation']['pct']}%）", flush=True)
         time.sleep(0.2)
@@ -405,6 +576,9 @@ def main() -> None:
                            "metric": r["metric"], "pct": r["valuation"]["pct"]} for r in out]}
     io.open(OUT_DIR / "summary.json", "w", encoding="utf-8").write(
         json.dumps(summary, ensure_ascii=False, indent=2))
+    if not args.no_pages and not args.slug:
+        p = save_index(out, cfg["macro"]["as_of"])
+        print(f"索引页 → {p}")
     print(f"\n完成 {len(out)} 只 → {OUT_DIR}")
     for r in out:
         print(f"  {r['total']:>5}  {r['verdict']:<4} {r['name']:<8} {r['industry']:<6} "
