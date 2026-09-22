@@ -887,22 +887,23 @@ html.sidebar-collapsed .clivia-sidebar-reopen svg {
 // ---------------------------------------------------------------------------
 // 个股页「研究」章节：三好分析 + 四维度分析 两卡并列
 // ---------------------------------------------------------------------------
+// 「研究」章节：各分析方法卡片从上到下依次排列（三好 → 四维度 → 后续新方法）
+// 新增方法只需往 .research-pair 里加一个 <div id="xxx" data-slug="...">，间距自动生效
 .research-pair {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 16px;
   align-items: start;
   margin: 1em 0 1.4em;
 }
 
-.research-pair .tgood,
-.research-pair .fdim {
+.research-pair > div {
   margin: 0;
 }
 
-@media (max-width: 1199px) {
-  .research-pair {
-    grid-template-columns: 1fr;
-  }
+// 卡片内层自带外边距会与 grid gap 叠加，统一清零（新增方法的卡片类名需在此登记一行）
+.research-pair .tgood,
+.research-pair .fdim {
+  margin: 0;
 }
 

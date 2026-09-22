@@ -1,10 +1,16 @@
 /**
  * CLIVIA 三好投资法则分析展示组件
  * 数据：/three-good/data/scores.json（由 tools/value-analysis/score_stock.py 每周四收盘后更新）
- * 用法：在股票页「研究笔记」章节内放置
- *   <div id="three-good" data-slug="guizhou-maotai"></div>
+ * 用法：在股票页「研究」章节的 .research-pair 容器内，与四维度卡等新方法上下依次排列
+ *   <div class="research-pair">
+ *     <div id="three-good" data-slug="guizhou-maotai"></div>
+ *     <div id="four-dim" data-slug="guizhou-maotai"></div>
+ *   </div>
  *   <script src="/js/three-good.js" defer></script>
+ *   <script src="/js/four-dim.js" defer></script>
  * 展示：最新综合评分徽章 + 报告链接 + 近三个月每周打分表
+ *   ★个股页摘要卡不放结论长文，结论只在 /three-good/<slug>/ 报告页；
+ *   ★新增方法挂进 .research-pair（单列堆叠），由 tools/value-analysis/attach_research.py 统一挂载。
  */
 (function () {
   'use strict';
