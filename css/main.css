@@ -1386,7 +1386,7 @@ pre code {
     transition: all 0.2s ease-in-out;
   }
   .links-of-author a::before {
-    background: #41cdf6;
+    background: #2afff1;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -3248,6 +3248,14 @@ html.sidebar-collapsed .clivia-sidebar-reopen svg {
 }
 .pool-main {
   display: block;
+}
+.pool-no {
+  color: var(--blockquote-color);
+  font-size: 12px;
+  font-weight: 600;
+  padding-right: 8px !important;
+  vertical-align: middle;
+  width: 18px;
 }
 .pool-name {
   display: block;

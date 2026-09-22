@@ -3,8 +3,9 @@
  * ------------------------------------------------------------------
  * 仅在首页（.main-inner.index）注入右栏，含两个模块：
  *   1. 股票池速览：读 /stocks/data/overview.json（由 export_overview.py 每日生成）
- *      ——最新价、当日涨跌（红涨绿跌）、PE 十年分位、三好综合分，按 PE 分位升序
- *      （越靠前越接近十年低位），整行点击进个股页。
+ *      ——只取「低估」（PE 十年分位 ≤20%，不足 5 只时逐级放宽到 30%/40%，仍不足则
+ *      全池兜底）里三好综合分最高的 5 只；行内显示最新价、当日涨跌（红涨绿跌）、
+ *      评分与 PE 分位，整行点击进个股页。
  *   2. 三好评分榜：读 /three-good/data/scores.json 的 history，取各股最新一期
  *      综合分 TOP5 + 评级徽章。
  * 数据取不到时不渲染（右栏消失，正文回到单栏，不影响阅读）。
@@ -67,7 +68,7 @@
   rail.innerHTML =
     '<div class="clivia-rail-sticky">' +
       '<section class="clivia-rail-card" data-card="pool">' +
-        '<h3 class="clivia-rail-title">股票池速览<span class="clivia-rail-meta">加载中…</span></h3>' +
+        '<h3 class="clivia-rail-title">低估优选 TOP5<span class="clivia-rail-meta">加载中…</span></h3>' +
         '<div class="clivia-rail-body"><p class="clivia-rail-empty">加载中…</p></div>' +
       '</section>' +
       '<section class="clivia-rail-card" data-card="rank">' +
@@ -91,29 +92,58 @@
       .then(function (r) { return r.ok ? r.json() : Promise.reject(new Error(r.status)); });
   }
 
-  // ---------- 模块 1：股票池速览 ----------
+  // ---------- 模块 1：股票池速览（低估 + 高分 TOP5） ----------
+  var TOP_N = 5;
+  var LOW_STEPS = [20, 30, 40]; // 低估阈值：PE 十年分位，逐级放宽兜底
+
+  function hasNum(v) { return v !== null && v !== undefined; }
+
+  /**
+   * 先按 PE 十年分位筛出低估股，再按三好综合分降序取前 5。
+   * 低估不足 5 只时阈值逐级放宽（20→30→40），仍不足则用全池评分前 5 兜底。
+   * 返回 { list, threshold }，threshold 为 null 表示走了兜底。
+   */
+  function pickLowHighScore(stocks) {
+    var scored = stocks.filter(function (s) { return hasNum(s.score); });
+    var byScore = function (a, b) { return b.score - a.score; };
+
+    for (var i = 0; i < LOW_STEPS.length; i++) {
+      var th = LOW_STEPS[i];
+      var cand = scored.filter(function (s) { return hasNum(s.pe_pct) && s.pe_pct <= th; });
+      cand.sort(byScore);
+      if (cand.length >= TOP_N) return { list: cand.slice(0, TOP_N), threshold: th };
+      if (i === LOW_STEPS.length - 1 && cand.length > 0) {
+        return { list: cand.slice(0, TOP_N), threshold: th };
+      }
+    }
+    return { list: scored.slice().sort(byScore).slice(0, TOP_N), threshold: null };
+  }
+
   function renderPool(data) {
     var stocks = (data && data.stocks) || [];
     if (!stocks.length) { fail(poolBody, '暂无数据'); return; }
 
     poolMeta.textContent = '更新 ' + (data.updated || '—');
 
-    var rows = stocks.slice().sort(function (a, b) {
-      var pa = (a.pe_pct === null || a.pe_pct === undefined) ? 999 : a.pe_pct;
-      var pb = (b.pe_pct === null || b.pe_pct === undefined) ? 999 : b.pe_pct;
-      return pa - pb;
-    });
+    var picked = pickLowHighScore(stocks);
+    var rows = picked.list;
+    if (!rows.length) { fail(poolBody, '暂无数据'); return; }
+
+    var tip = picked.threshold === null
+      ? '评分最高 5 只'
+      : '低估（PE 分位 ≤' + picked.threshold + '%）中评分最高 ' + rows.length + ' 只';
 
     var html = '<table class="clivia-pool"><tbody>';
-    rows.forEach(function (s) {
+    rows.forEach(function (s, i) {
       var chg = s.change_pct;
       var cls = (chg === null || chg === undefined) ? '' : (chg > 0 ? 'up' : (chg < 0 ? 'down' : ''));
       var sign = (chg !== null && chg !== undefined && chg > 0) ? '+' : '';
       html += '<tr class="clivia-pool-row">' +
+        '<td class="pool-no">' + (i + 1) + '</td>' +
         '<td class="pool-main">' +
           '<a class="pool-name" href="/stocks/' + esc(s.slug) + '/">' + esc(s.name) + '</a>' +
-          '<span class="pool-sub">PE 分位 ' + pctText(s.pe_pct) + ' ' + valuationTag(s.pe_pct) +
-            (s.score ? ' · 评分 ' + fmt(s.score, 1) : '') + '</span>' +
+          '<span class="pool-sub">评分 ' + fmt(s.score, 1) + ' · PE 分位 ' +
+            pctText(s.pe_pct) + ' ' + valuationTag(s.pe_pct) + '</span>' +
         '</td>' +
         '<td class="pool-num">' +
           '<span class="pool-close">' + fmt(s.close) + '</span>' +
@@ -124,7 +154,7 @@
     html += '</tbody></table>';
     html += '<p class="clivia-rail-foot">' +
       '<a href="/stocks/">股票池总览 →</a>' +
-      '<span class="rail-tip">按 PE 十年分位升序</span></p>';
+      '<span class="rail-tip">' + esc(tip) + '</span></p>';
     poolBody.innerHTML = html;
   }
 
