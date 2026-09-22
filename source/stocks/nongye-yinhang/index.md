@@ -30,3 +30,9 @@ date: 2026-09-16 09:16:00
 <div id="three-good" data-slug="nongye-yinhang"></div>
 
 <script src="/js/three-good.js" defer></script>
+
+## 四维度分析
+
+<div id="four-dim" data-slug="nongye-yinhang"></div>
+
+<script src="/js/four-dim.js" defer></script>

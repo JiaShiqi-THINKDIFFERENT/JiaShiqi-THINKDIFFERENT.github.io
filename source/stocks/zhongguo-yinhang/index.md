@@ -30,3 +30,9 @@ date: 2026-09-21 09:00:00
 <div id="three-good" data-slug="zhongguo-yinhang"></div>
 
 <script src="/js/three-good.js" defer></script>
+
+## 四维度分析
+
+<div id="four-dim" data-slug="zhongguo-yinhang"></div>
+
+<script src="/js/four-dim.js" defer></script>
