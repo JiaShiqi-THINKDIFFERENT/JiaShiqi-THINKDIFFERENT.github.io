@@ -1,14 +1,16 @@
 /**
  * CLIVIA 四维度分析摘要卡（《雪球股票投资 24 章》框架：宏观 / 中观 / 微观 / 实操）
  * 数据：/four-dim/data/<slug>.json（由 tools/value-analysis/four_dim.py 生成）
- * 用法：在股票页「研究」章节内与三好卡并列放置
+ * 用法：在股票页「研究」章节的 .research-pair 容器内，与三好卡上下依次排列
  *   <div class="research-pair">
  *     <div id="three-good" data-slug="guizhou-maotai"></div>
  *     <div id="four-dim" data-slug="guizhou-maotai"></div>
  *   </div>
  *   <script src="/js/three-good.js" defer></script>
  *   <script src="/js/four-dim.js" defer></script>
- * 展示：综合评分徽章 + 四维得分 + 一句话结论 + 完整报告链接（报告页 /four-dim/<slug>/）
+ * 展示（个股页摘要卡规范）：标题 + 综合分徽章 + 更新日期 + 报告链接 + 维度得分表 + 一行方法论注脚。
+ *   ★不展示结论长文（估值层面/行业层面/… 那段），结论只在完整报告页 /four-dim/<slug>/ 出现；
+ *   ★新增方法时同样挂进 .research-pair 容器（单列堆叠），由 tools/value-analysis/attach_research.py 统一挂载。
  */
 (function () {
   'use strict';
@@ -35,7 +37,6 @@
     '.fdim-table th:first-child,.fdim-table td:first-child{text-align:left}',
     '.fdim-table thead th{font-weight:600;opacity:.75;font-size:.92em}',
     '.fdim-total{font-weight:700;color:#1b4d3e}',
-    '.fdim-lead{margin:.6em 0 0;font-size:.88em;line-height:1.7;opacity:.9}',
     '.fdim-note{margin-top:8px;font-size:.8em;opacity:.62;line-height:1.5}',
     '@media (prefers-color-scheme:dark){.fdim-badge{background:#7fbf9e;color:#12201a}.fdim-total{color:#7fbf9e}}'
   ].join('');
@@ -107,9 +108,7 @@
           fmt(d.valuation && d.valuation.pct, 0) + '%</td></tr>';
         h += '</tbody></table>';
 
-        if (d.conclusion) {
-          h += '<p class="fdim-lead">' + esc(d.conclusion) + '</p>';
-        }
+        // ★约定：个股页摘要卡不放结论长文（估值层面/行业层面/… 那段），结论只在 /four-dim/<slug>/ 报告页
         h += '<div class="fdim-note">四维度 = 宏观（周期定位）× 中观（行业供需）× 微观（公司质地）× ' +
           '实操（风格与规则），各 25 分（源自《雪球股票投资 24 章》）。' +
           '画像默认「' + esc(d.profile) + '」。' +

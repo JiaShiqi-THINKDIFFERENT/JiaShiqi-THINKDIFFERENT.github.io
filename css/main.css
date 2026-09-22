@@ -1386,7 +1386,7 @@ pre code {
     transition: all 0.2s ease-in-out;
   }
   .links-of-author a::before {
-    background: #ffbaff;
+    background: #86aac8;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -3601,17 +3601,15 @@ html.sidebar-collapsed .clivia-sidebar-reopen svg {
 }
 .research-pair {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 16px;
   align-items: start;
   margin: 1em 0 1.4em;
 }
+.research-pair > div {
+  margin: 0;
+}
 .research-pair .tgood,
 .research-pair .fdim {
   margin: 0;
-}
-@media (max-width: 1199px) {
-  .research-pair {
-    grid-template-columns: 1fr;
-  }
 }
