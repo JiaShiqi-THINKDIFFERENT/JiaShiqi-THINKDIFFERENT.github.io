@@ -75,6 +75,13 @@ STOCKS = [
     ("000001", "pingan-yinhang", "平安银行"),
     ("601628", "zhongguo-renshou", "中国人寿"),
     ("000651", "geli-dianqi", "格力电器"),
+    ("600415", "xiaoshangpin-cheng", "小商品城"),
+    ("000617", "zhongyou-ziben", "中油资本"),
+    ("000725", "jingdongfang", "京东方A"),
+    ("002475", "lixun-jingmi", "立讯精密"),
+    ("002230", "keda-xunfei", "科大讯飞"),
+    ("600019", "baogang-gufen", "宝钢股份"),
+    ("600030", "zhongxin-zhengquan", "中信证券"),
 ]
 
 SCORES_PATH = SRC / "three-good" / "data" / "scores.json"

@@ -37,5 +37,12 @@ comments: false
 | 平安银行 | [三好分析](/three-good/pingan-yinhang/) | [估值纵览](/stocks/pingan-yinhang/) |
 | 中国人寿 | [三好分析](/three-good/zhongguo-renshou/) | [估值纵览](/stocks/zhongguo-renshou/) |
 | 格力电器 | [三好分析](/three-good/geli-dianqi/) | [估值纵览](/stocks/geli-dianqi/) |
+| 小商品城 | [三好分析](/three-good/xiaoshangpin-cheng/) | [估值纵览](/stocks/xiaoshangpin-cheng/) |
+| 中油资本 | [三好分析](/three-good/zhongyou-ziben/) | [估值纵览](/stocks/zhongyou-ziben/) |
+| 京东方A | [三好分析](/three-good/jingdongfang/) | [估值纵览](/stocks/jingdongfang/) |
+| 立讯精密 | [三好分析](/three-good/lixun-jingmi/) | [估值纵览](/stocks/lixun-jingmi/) |
+| 科大讯飞 | [三好分析](/three-good/keda-xunfei/) | [估值纵览](/stocks/keda-xunfei/) |
+| 宝钢股份 | [三好分析](/three-good/baogang-gufen/) | [估值纵览](/stocks/baogang-gufen/) |
+| 中信证券 | [三好分析](/three-good/zhongxin-zhengquan/) | [估值纵览](/stocks/zhongxin-zhengquan/) |
 
 <script src="/js/three-good-index.js" defer></script>
