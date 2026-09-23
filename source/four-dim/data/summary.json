@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-22 15:39",
+  "updated": "2026-09-23 16:57",
   "count": 32,
   "macro_as_of": "2026-08",
   "stocks": [
@@ -11,97 +11,97 @@
       "total": 80.0,
       "verdict": "推荐",
       "metric": "PE",
-      "pct": 2.0
+      "pct": 1.8
     },
     {
       "slug": "zhongguo-renshou",
       "name": "中国人寿",
       "symbol": "601628",
       "industry": "非银金融",
-      "total": 78.7,
+      "total": 78.0,
       "verdict": "推荐",
       "metric": "PB",
-      "pct": 3.4
+      "pct": 4.7
     },
     {
       "slug": "pianzaihuang",
       "name": "片仔癀",
       "symbol": "600436",
       "industry": "医药生物",
-      "total": 78.4,
+      "total": 77.6,
       "verdict": "推荐",
       "metric": "PE",
-      "pct": 2.6
-    },
-    {
-      "slug": "zhongguo-pingan",
-      "name": "中国平安",
-      "symbol": "601318",
-      "industry": "非银金融",
-      "total": 75.8,
-      "verdict": "推荐",
-      "metric": "PB",
-      "pct": 15.9
-    },
-    {
-      "slug": "ningde-shidai",
-      "name": "宁德时代",
-      "symbol": "300750",
-      "industry": "电力设备",
-      "total": 75.3,
-      "verdict": "推荐",
-      "metric": "PE",
-      "pct": 3.4
-    },
-    {
-      "slug": "xingye-yinhang",
-      "name": "兴业银行",
-      "symbol": "601166",
-      "industry": "银行",
-      "total": 75.2,
-      "verdict": "推荐",
-      "metric": "PB",
-      "pct": 4.0
+      "pct": 4.8
     },
     {
       "slug": "xiaoshangpin-cheng",
       "name": "小商品城",
       "symbol": "600415",
       "industry": "商贸零售",
-      "total": 75.0,
+      "total": 76.2,
       "verdict": "推荐",
       "metric": "PE",
-      "pct": 8.6
+      "pct": 3.7
+    },
+    {
+      "slug": "zhongguo-pingan",
+      "name": "中国平安",
+      "symbol": "601318",
+      "industry": "非银金融",
+      "total": 75.6,
+      "verdict": "推荐",
+      "metric": "PB",
+      "pct": 17.2
+    },
+    {
+      "slug": "xingye-yinhang",
+      "name": "兴业银行",
+      "symbol": "601166",
+      "industry": "银行",
+      "total": 75.3,
+      "verdict": "推荐",
+      "metric": "PB",
+      "pct": 3.5
+    },
+    {
+      "slug": "ningde-shidai",
+      "name": "宁德时代",
+      "symbol": "300750",
+      "industry": "电力设备",
+      "total": 75.2,
+      "verdict": "推荐",
+      "metric": "PE",
+      "pct": 3.9
     },
     {
       "slug": "zhaoshang-yinhang",
       "name": "招商银行",
       "symbol": "600036",
       "industry": "银行",
-      "total": 74.7,
+      "total": 74.3,
       "verdict": "可关注",
       "metric": "PB",
-      "pct": 9.7
+      "pct": 12.4
     },
     {
       "slug": "pingan-yinhang",
       "name": "平安银行",
       "symbol": "000001",
       "industry": "银行",
-      "total": 74.3,
+      "total": 74.2,
       "verdict": "可关注",
       "metric": "PB",
-      "pct": 11.6
+      "pct": 12.2
     },
     {
-      "slug": "hengru-yiyao",
-      "name": "恒瑞医药",
-      "symbol": "600276",
-      "industry": "医药生物",
-      "total": 71.9,
+      "slug": "geli-dianqi",
+      "name": "格力电器",
+      "symbol": "000651",
+      "industry": "家用电器",
+      "total": 72.8,
       "verdict": "可关注",
       "metric": "PE",
-      "pct": 1.2
+      "pct": 22.2
     },
     {
       "slug": "keda-xunfei",
@@ -114,164 +114,164 @@
       "pct": 0.1
     },
     {
+      "slug": "hengru-yiyao",
+      "name": "恒瑞医药",
+      "symbol": "600276",
+      "industry": "医药生物",
+      "total": 71.8,
+      "verdict": "可关注",
+      "metric": "PE",
+      "pct": 2.1
+    },
+    {
       "slug": "yili-gufen",
       "name": "伊利股份",
       "symbol": "600887",
       "industry": "食品饮料",
-      "total": 71.5,
+      "total": 71.4,
       "verdict": "可关注",
       "metric": "PE",
-      "pct": 17.0
+      "pct": 18.1
     },
     {
       "slug": "baogang-gufen",
       "name": "宝钢股份",
       "symbol": "600019",
       "industry": "钢铁",
-      "total": 71.0,
+      "total": 71.1,
       "verdict": "可关注",
       "metric": "PB",
-      "pct": 6.3
+      "pct": 5.2
     },
     {
       "slug": "lixun-jingmi",
       "name": "立讯精密",
       "symbol": "002475",
       "industry": "电子",
-      "total": 70.9,
-      "verdict": "可关注",
-      "metric": "PE",
-      "pct": 20.5
-    },
-    {
-      "slug": "geli-dianqi",
-      "name": "格力电器",
-      "symbol": "000651",
-      "industry": "家用电器",
       "total": 70.8,
       "verdict": "可关注",
       "metric": "PE",
-      "pct": 21.9
+      "pct": 21.5
     },
     {
       "slug": "changjiang-dianli",
       "name": "长江电力",
       "symbol": "600900",
       "industry": "公用事业",
-      "total": 69.3,
+      "total": 70.1,
       "verdict": "可关注",
       "metric": "PE",
-      "pct": 59.4
-    },
-    {
-      "slug": "zhongxin-zhengquan",
-      "name": "中信证券",
-      "symbol": "600030",
-      "industry": "非银金融",
-      "total": 68.9,
-      "verdict": "可关注",
-      "metric": "PB",
-      "pct": 36.6
-    },
-    {
-      "slug": "wuxi-apptec",
-      "name": "药明康德",
-      "symbol": "603259",
-      "industry": "医药生物",
-      "total": 68.8,
-      "verdict": "可关注",
-      "metric": "PE",
-      "pct": 32.9
-    },
-    {
-      "slug": "zhongguo-yidong",
-      "name": "中国移动",
-      "symbol": "600941",
-      "industry": "通信",
-      "total": 67.9,
-      "verdict": "可关注",
-      "metric": "PE",
-      "pct": 50.9
+      "pct": 54.2
     },
     {
       "slug": "zhongyou-ziben",
       "name": "中油资本",
       "symbol": "000617",
       "industry": "非银金融",
-      "total": 67.4,
+      "total": 69.8,
       "verdict": "可关注",
       "metric": "PB",
-      "pct": 28.9
+      "pct": 26.1
+    },
+    {
+      "slug": "zhongxin-zhengquan",
+      "name": "中信证券",
+      "symbol": "600030",
+      "industry": "非银金融",
+      "total": 69.3,
+      "verdict": "可关注",
+      "metric": "PB",
+      "pct": 34.0
+    },
+    {
+      "slug": "wuxi-apptec",
+      "name": "药明康德",
+      "symbol": "603259",
+      "industry": "医药生物",
+      "total": 68.3,
+      "verdict": "可关注",
+      "metric": "PE",
+      "pct": 36.3
+    },
+    {
+      "slug": "zhongguo-yidong",
+      "name": "中国移动",
+      "symbol": "600941",
+      "industry": "通信",
+      "total": 67.8,
+      "verdict": "可关注",
+      "metric": "PE",
+      "pct": 51.2
     },
     {
       "slug": "xinhua-baoxian",
       "name": "新华保险",
       "symbol": "601336",
       "industry": "非银金融",
-      "total": 67.0,
+      "total": 66.9,
       "verdict": "可关注",
       "metric": "PB",
-      "pct": 33.3
-    },
-    {
-      "slug": "biyadi",
-      "name": "比亚迪",
-      "symbol": "002594",
-      "industry": "汽车",
-      "total": 66.0,
-      "verdict": "可关注",
-      "metric": "PE",
-      "pct": 20.2
-    },
-    {
-      "slug": "jianshe-yinhang",
-      "name": "建设银行",
-      "symbol": "601939",
-      "industry": "银行",
-      "total": 65.8,
-      "verdict": "可关注",
-      "metric": "PB",
-      "pct": 63.2
+      "pct": 34.3
     },
     {
       "slug": "meidi-jituan",
       "name": "美的集团",
       "symbol": "000333",
       "industry": "家用电器",
-      "total": 65.6,
+      "total": 66.3,
       "verdict": "可关注",
       "metric": "PE",
-      "pct": 50.3
+      "pct": 45.1
+    },
+    {
+      "slug": "jianshe-yinhang",
+      "name": "建设银行",
+      "symbol": "601939",
+      "industry": "银行",
+      "total": 65.9,
+      "verdict": "可关注",
+      "metric": "PB",
+      "pct": 62.6
+    },
+    {
+      "slug": "biyadi",
+      "name": "比亚迪",
+      "symbol": "002594",
+      "industry": "汽车",
+      "total": 65.8,
+      "verdict": "可关注",
+      "metric": "PE",
+      "pct": 21.6
     },
     {
       "slug": "beifang-huachuang",
       "name": "北方华创",
       "symbol": "002371",
       "industry": "电子",
-      "total": 65.1,
-      "verdict": "可关注",
+      "total": 63.7,
+      "verdict": "观望",
       "metric": "PE",
-      "pct": 35.7
+      "pct": 38.5
     },
     {
       "slug": "zhongji-xuchuang",
       "name": "中际旭创",
       "symbol": "300308",
       "industry": "通信",
-      "total": 62.8,
+      "total": 62.1,
       "verdict": "观望",
       "metric": "PE",
-      "pct": 48.2
+      "pct": 52.6
     },
     {
       "slug": "gongshang-yinhang",
       "name": "工商银行",
       "symbol": "601398",
       "industry": "银行",
-      "total": 61.3,
+      "total": 61.5,
       "verdict": "观望",
       "metric": "PB",
-      "pct": 59.1
+      "pct": 58.2
     },
     {
       "slug": "zhongguo-yinhang",
@@ -281,47 +281,47 @@
       "total": 60.5,
       "verdict": "观望",
       "metric": "PB",
-      "pct": 81.9
+      "pct": 81.7
     },
     {
       "slug": "nongye-yinhang",
       "name": "农业银行",
       "symbol": "601288",
       "industry": "银行",
-      "total": 59.4,
+      "total": 59.3,
       "verdict": "观望",
       "metric": "PB",
-      "pct": 71.6
+      "pct": 72.3
     },
     {
       "slug": "zijin-kuangye",
       "name": "紫金矿业",
       "symbol": "601899",
       "industry": "有色金属",
-      "total": 58.5,
+      "total": 58.7,
       "verdict": "观望",
       "metric": "PB",
-      "pct": 79.4
+      "pct": 77.8
     },
     {
       "slug": "zhongxin-guoji",
       "name": "中芯国际",
       "symbol": "688981",
       "industry": "电子",
-      "total": 57.0,
+      "total": 56.8,
       "verdict": "观望",
       "metric": "PE",
-      "pct": 63.5
+      "pct": 64.4
     },
     {
       "slug": "jingdongfang",
       "name": "京东方A",
       "symbol": "000725",
       "industry": "电子",
-      "total": 55.6,
+      "total": 55.7,
       "verdict": "观望",
       "metric": "PB",
-      "pct": 71.9
+      "pct": 71.5
     }
   ]
 }

@@ -337,7 +337,8 @@ def analyze(code: str, slug: str, name: str, industry: str, cfg: dict, qual: dic
         f"财务与现金流：{c2_ev}。",
         f"分红：近 12 个月每股派息 {brief['dividend']['per_share_last_12m']} 元，"
         f"连续派息 {brief['dividend']['consecutive_years']} 年"
-        + (f"，股息率 TTM {dv}%（十年分位 {(brief['valuation'].get('dv_ttm') or {}).get('pct')}%）" if dv else "，暂无股息率数据"),
+        + (f"，股息率 TTM {dv}%（十年分位 {(brief['valuation'].get('dv_ttm') or {}).get('pct')}%"
+           f"，股息率分位越高代表越便宜）" if dv else "，暂无股息率数据"),
         f"价格轨迹：近 1 年 {p['ret_1y']}%、近 3 年 {p['ret_3y']}%、近 5 年 {p['ret_5y']}%"
         + ("（不复权口径，不含分红）" if p.get("basis") == "raw" else "")
         + f"；十年窗口最大回撤 {mdd}%。",

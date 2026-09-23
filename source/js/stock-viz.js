@@ -29,11 +29,17 @@
     '.sviz-table th:first-child,.sviz-table td:first-child{text-align:left}',
     '.sviz-table thead th{font-weight:600}',
     '.sviz-pctcell{display:flex;align-items:center;gap:8px;justify-content:flex-end;min-width:150px}',
+    // 默认：左端(低分位)=便宜绿 → 右端(高分位)=贵红；
+    // .inv 反向（股息率：右侧高分位才是便宜）；.pos 中性（收盘价位置不代表贵贱）
     '.sviz-bar{position:relative;width:96px;height:8px;border-radius:4px;overflow:hidden;background:linear-gradient(90deg,#69b98b 0%,#69b98b 20%,#c9d6cd 20%,#c9d6cd 80%,#d98c7c 80%,#d98c7c 100%);opacity:.9}',
+    '.sviz-bar.inv{background:linear-gradient(90deg,#d98c7c 0%,#d98c7c 20%,#c9d6cd 20%,#c9d6cd 80%,#69b98b 80%,#69b98b 100%)}',
+    '.sviz-bar.pos{background:linear-gradient(90deg,#9fb0ad 0%,#cfd8d5 50%,#7f9195 100%)}',
     '.sviz-bar i{position:absolute;top:-3px;width:2px;height:14px;background:#1b4d3e;border-radius:1px}',
     '@media (prefers-color-scheme: dark){.sviz-bar i{background:#7fbf9e}.sviz-table td,.sviz-table th{border-color:#2a4437}}',
-    '.sviz-tag{display:inline-block;min-width:66px;text-align:center;padding:0 6px;border-radius:9px;font-size:.8em;line-height:20px;color:#fff}',
+    // low=便宜(绿) / high=贵(红) / mid=中性(灰)；pos-* 仅表示价格位置、不表达贵贱，用低饱和中性色
+    '.sviz-tag{display:inline-block;min-width:66px;text-align:center;padding:0 6px;border-radius:9px;font-size:.8em;line-height:20px;color:#fff;white-space:nowrap}',
     '.sviz-tag.low{background:#3e9e6b}.sviz-tag.mid{background:#9aa8a0}.sviz-tag.high{background:#c96a4f}',
+    '.sviz-tag.pos-low{background:#6f8a94}.sviz-tag.pos-high{background:#9b7f6d}',
     '.sviz-tabs{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 0}',
     '.sviz-tab{-webkit-appearance:none;appearance:none;cursor:pointer;font-size:.9em;line-height:1;padding:7px 16px;border-radius:16px;border:1px solid var(--link-decoration-color,#9dbcae);background:transparent;color:var(--text-color);transition:background .18s ease,color .18s ease,border-color .18s ease}',
     '.sviz-tab:hover{background:var(--menu-item-bg-color,#edf3ef);border-color:#1b4d3e}',
@@ -120,18 +126,35 @@
     defs.forEach(function (d) {
       var st = data.stats[d.key];
       if (!st) return;
-      var tag, tagCls;
-      if (st.pct <= 20) { tag = '低估值'; tagCls = 'low'; }
-      else if (st.pct >= 80) { tag = '高估值'; tagCls = 'high'; }
-      else { tag = '中位区'; tagCls = 'mid'; }
+      // ★方向敏感：PE/PB/PS 是「越高越贵」(dir=-1)，股息率是「越高越便宜」(dir=+1)，
+      //   收盘价只是价格位置、不代表贵贱(dir=0)，不能用同一套「分位低=低估值」。
+      var tag, tagCls, tip;
+      if (d.dir === 0) {
+        if (st.pct <= 20) { tag = '低位区'; tagCls = 'pos-low'; }
+        else if (st.pct >= 80) { tag = '高位区'; tagCls = 'pos-high'; }
+        else { tag = '中位区'; tagCls = 'mid'; }
+        tip = '价格在十年区间的相对位置，不代表贵贱';
+      } else if (d.dir > 0) {
+        // 股息率：分位高＝股息率高＝股价便宜
+        if (st.pct >= 80) { tag = '高股息 · 低估'; tagCls = 'low'; }
+        else if (st.pct <= 20) { tag = '低股息 · 高估'; tagCls = 'high'; }
+        else { tag = '中位区'; tagCls = 'mid'; }
+        tip = '股息率越高＝分红回报越高、股价相对越便宜，故分位越高越指向低估';
+      } else {
+        if (st.pct <= 20) { tag = '低估值'; tagCls = 'low'; }
+        else if (st.pct >= 80) { tag = '高估值'; tagCls = 'high'; }
+        else { tag = '中位区'; tagCls = 'mid'; }
+        tip = '估值指标越高越贵，分位越高越指向高估';
+      }
+      var barCls = d.dir > 0 ? ' inv' : (d.dir === 0 ? ' pos' : '');
       h += '<tr><td>' + d.label + '</td>' +
         '<td><b>' + fmt(st.current, d.digits) + '</b> <span class="sviz-muted">' + d.unit + '</span></td>' +
         '<td>' + fmt(st.min, d.digits) + '</td>' +
         '<td>' + fmt(st.median, d.digits) + '</td>' +
         '<td>' + fmt(st.max, d.digits) + '</td>' +
         '<td><div class="sviz-pctcell">' +
-        '<span class="sviz-tag ' + tagCls + '">' + tag + '</span>' +
-        '<span class="sviz-bar"><i style="left:' + st.pct + '%"></i></span>' +
+        '<span class="sviz-tag ' + tagCls + '" title="' + tip + '">' + tag + '</span>' +
+        '<span class="sviz-bar' + barCls + '"><i style="left:' + st.pct + '%"></i></span>' +
         '<b>' + fmt(st.pct, 1) + '%</b></div></td></tr>';
     });
     h += '</tbody></table>';

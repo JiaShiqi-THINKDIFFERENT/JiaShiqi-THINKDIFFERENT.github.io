@@ -7,7 +7,8 @@
 字段说明：
   close      前复权收盘价（与个股页默认口径一致）
   change_pct 相对上一交易日的涨跌幅(%)，基于前复权价
-  pe/pb/dv   最新值；*_pct 为近十年分位(0~100，越小越便宜/越高)
+  pe/pb/dv   最新值；pe_pct/pb_pct 近十年分位(0~100，越小越便宜)，
+             ★dv_pct 方向相反：股息率越高越便宜，故 dv_pct 越大越便宜（勿当作 pe_pct 用）
   score/verdict/score_date 来自三好评分 scores.json 的最新一期（无则 null）
 
 用法:
