@@ -1386,7 +1386,7 @@ pre code {
     transition: all 0.2s ease-in-out;
   }
   .links-of-author a::before {
-    background: #3dff3b;
+    background: #ffd2da;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -3612,4 +3612,144 @@ html.sidebar-collapsed .clivia-sidebar-reopen svg {
 .research-pair .tgood,
 .research-pair .fdim {
   margin: 0;
+}
+.st-block {
+  margin: 0 0 18px;
+}
+.st-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+.st-head h2 {
+  margin: 0;
+  font-size: 1.15em;
+}
+.st-head .st-updated {
+  font-size: 12px;
+  opacity: 0.6;
+}
+.st-scroll {
+  overflow-x: auto;
+}
+table.st-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+table.st-table th,
+table.st-table td {
+  border: 1px solid #e6e6e6;
+  padding: 8px 10px;
+  text-align: left;
+  vertical-align: middle;
+}
+table.st-table thead th {
+  background: #fafafa;
+  font-weight: 600;
+  white-space: nowrap;
+}
+table.st-table tbody tr:hover {
+  background: #fcfdfc;
+}
+.st-name a {
+  text-decoration: none;
+  font-weight: 600;
+}
+.st-code {
+  font-weight: 400;
+  font-size: 12px;
+  opacity: 0.65;
+}
+.st-ind {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 10px;
+  background: #f1f5f2;
+  color: #42584c;
+  font-size: 12px;
+  white-space: nowrap;
+}
+.st-series {
+  display: flex;
+  gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline;
+}
+.st-val {
+  font-size: 13px;
+  color: #666;
+  white-space: nowrap;
+}
+.st-now {
+  font-weight: 700;
+  font-size: 14px;
+  color: #222;
+}
+.st-up {
+  color: #c62828;
+}
+.st-down {
+  color: #1e8e3e;
+}
+.st-arrow {
+  font-style: normal;
+  font-size: 9px;
+  margin-left: 2px;
+}
+.st-spark-wrap {
+  margin-top: 4px;
+}
+.st-spark {
+  display: block;
+}
+.st-verdict {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 12.5px;
+  white-space: nowrap;
+}
+.v-good {
+  background: #e9f6ec;
+  color: #0a7d3f;
+}
+.v-hold {
+  background: #fff6e2;
+  color: #8a6100;
+}
+.v-watch {
+  background: #ffeede;
+  color: #9a4a00;
+}
+.v-bad {
+  background: #fdeceb;
+  color: #b3261e;
+}
+.v-none {
+  background: #f2f2f2;
+  color: #666;
+}
+.st-archive {
+  margin: 6px 0 14px;
+}
+.st-archive summary {
+  cursor: pointer;
+  font-size: 13.5px;
+  padding: 6px 0;
+  color: #4a6b58;
+}
+.st-archive[open] summary {
+  margin-bottom: 8px;
+}
+.st-note {
+  font-size: 12.5px;
+  opacity: 0.7;
+  margin: 6px 0 0;
+}
+.st-empty {
+  opacity: 0.5;
 }
