@@ -1,0 +1,294 @@
+{
+  "stocks": {
+    "guizhou-maotai": [
+      {
+        "date": "2026-09-23",
+        "total": 80.0,
+        "verdict": "推荐",
+        "metric": "PE",
+        "pct": 1.8
+      }
+    ],
+    "zhongguo-renshou": [
+      {
+        "date": "2026-09-23",
+        "total": 78.0,
+        "verdict": "推荐",
+        "metric": "PB",
+        "pct": 4.7
+      }
+    ],
+    "pianzaihuang": [
+      {
+        "date": "2026-09-23",
+        "total": 77.6,
+        "verdict": "推荐",
+        "metric": "PE",
+        "pct": 4.8
+      }
+    ],
+    "xiaoshangpin-cheng": [
+      {
+        "date": "2026-09-23",
+        "total": 76.2,
+        "verdict": "推荐",
+        "metric": "PE",
+        "pct": 3.7
+      }
+    ],
+    "zhongguo-pingan": [
+      {
+        "date": "2026-09-23",
+        "total": 75.6,
+        "verdict": "推荐",
+        "metric": "PB",
+        "pct": 17.2
+      }
+    ],
+    "xingye-yinhang": [
+      {
+        "date": "2026-09-23",
+        "total": 75.3,
+        "verdict": "推荐",
+        "metric": "PB",
+        "pct": 3.5
+      }
+    ],
+    "ningde-shidai": [
+      {
+        "date": "2026-09-23",
+        "total": 75.2,
+        "verdict": "推荐",
+        "metric": "PE",
+        "pct": 3.9
+      }
+    ],
+    "zhaoshang-yinhang": [
+      {
+        "date": "2026-09-23",
+        "total": 74.3,
+        "verdict": "可关注",
+        "metric": "PB",
+        "pct": 12.4
+      }
+    ],
+    "pingan-yinhang": [
+      {
+        "date": "2026-09-23",
+        "total": 74.2,
+        "verdict": "可关注",
+        "metric": "PB",
+        "pct": 12.2
+      }
+    ],
+    "geli-dianqi": [
+      {
+        "date": "2026-09-23",
+        "total": 72.8,
+        "verdict": "可关注",
+        "metric": "PE",
+        "pct": 22.2
+      }
+    ],
+    "keda-xunfei": [
+      {
+        "date": "2026-09-23",
+        "total": 71.9,
+        "verdict": "可关注",
+        "metric": "PS",
+        "pct": 0.1
+      }
+    ],
+    "hengru-yiyao": [
+      {
+        "date": "2026-09-23",
+        "total": 71.8,
+        "verdict": "可关注",
+        "metric": "PE",
+        "pct": 2.1
+      }
+    ],
+    "yili-gufen": [
+      {
+        "date": "2026-09-23",
+        "total": 71.4,
+        "verdict": "可关注",
+        "metric": "PE",
+        "pct": 18.1
+      }
+    ],
+    "baogang-gufen": [
+      {
+        "date": "2026-09-23",
+        "total": 71.1,
+        "verdict": "可关注",
+        "metric": "PB",
+        "pct": 5.2
+      }
+    ],
+    "lixun-jingmi": [
+      {
+        "date": "2026-09-23",
+        "total": 70.8,
+        "verdict": "可关注",
+        "metric": "PE",
+        "pct": 21.5
+      }
+    ],
+    "changjiang-dianli": [
+      {
+        "date": "2026-09-23",
+        "total": 70.1,
+        "verdict": "可关注",
+        "metric": "PE",
+        "pct": 54.2
+      }
+    ],
+    "zhongyou-ziben": [
+      {
+        "date": "2026-09-23",
+        "total": 69.8,
+        "verdict": "可关注",
+        "metric": "PB",
+        "pct": 26.1
+      }
+    ],
+    "zhongxin-zhengquan": [
+      {
+        "date": "2026-09-23",
+        "total": 69.3,
+        "verdict": "可关注",
+        "metric": "PB",
+        "pct": 34.0
+      }
+    ],
+    "wuxi-apptec": [
+      {
+        "date": "2026-09-23",
+        "total": 68.3,
+        "verdict": "可关注",
+        "metric": "PE",
+        "pct": 36.3
+      }
+    ],
+    "zhongguo-yidong": [
+      {
+        "date": "2026-09-23",
+        "total": 67.8,
+        "verdict": "可关注",
+        "metric": "PE",
+        "pct": 51.2
+      }
+    ],
+    "xinhua-baoxian": [
+      {
+        "date": "2026-09-23",
+        "total": 66.9,
+        "verdict": "可关注",
+        "metric": "PB",
+        "pct": 34.3
+      }
+    ],
+    "meidi-jituan": [
+      {
+        "date": "2026-09-23",
+        "total": 66.3,
+        "verdict": "可关注",
+        "metric": "PE",
+        "pct": 45.1
+      }
+    ],
+    "jianshe-yinhang": [
+      {
+        "date": "2026-09-23",
+        "total": 65.9,
+        "verdict": "可关注",
+        "metric": "PB",
+        "pct": 62.6
+      }
+    ],
+    "biyadi": [
+      {
+        "date": "2026-09-23",
+        "total": 65.8,
+        "verdict": "可关注",
+        "metric": "PE",
+        "pct": 21.6
+      }
+    ],
+    "beifang-huachuang": [
+      {
+        "date": "2026-09-23",
+        "total": 63.7,
+        "verdict": "观望",
+        "metric": "PE",
+        "pct": 38.5
+      }
+    ],
+    "zhongji-xuchuang": [
+      {
+        "date": "2026-09-23",
+        "total": 62.1,
+        "verdict": "观望",
+        "metric": "PE",
+        "pct": 52.6
+      }
+    ],
+    "gongshang-yinhang": [
+      {
+        "date": "2026-09-23",
+        "total": 61.5,
+        "verdict": "观望",
+        "metric": "PB",
+        "pct": 58.2
+      }
+    ],
+    "zhongguo-yinhang": [
+      {
+        "date": "2026-09-23",
+        "total": 60.5,
+        "verdict": "观望",
+        "metric": "PB",
+        "pct": 81.7
+      }
+    ],
+    "nongye-yinhang": [
+      {
+        "date": "2026-09-23",
+        "total": 59.3,
+        "verdict": "观望",
+        "metric": "PB",
+        "pct": 72.3
+      }
+    ],
+    "zijin-kuangye": [
+      {
+        "date": "2026-09-23",
+        "total": 58.7,
+        "verdict": "观望",
+        "metric": "PB",
+        "pct": 77.8
+      }
+    ],
+    "zhongxin-guoji": [
+      {
+        "date": "2026-09-23",
+        "total": 56.8,
+        "verdict": "观望",
+        "metric": "PE",
+        "pct": 64.4
+      }
+    ],
+    "jingdongfang": [
+      {
+        "date": "2026-09-23",
+        "total": 55.7,
+        "verdict": "观望",
+        "metric": "PB",
+        "pct": 71.5
+      }
+    ]
+  },
+  "updated": "2026-09-23",
+  "built": "2026-09-24 10:25"
+}

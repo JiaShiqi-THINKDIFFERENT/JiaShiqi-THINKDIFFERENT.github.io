@@ -4,45 +4,20 @@ date: 2026-09-20 02:30:00
 comments: false
 ---
 
-**三好** = 好行业 × 好公司 × 好价格。综合评分 = 行业 30% + 公司 35% + 价格 25% + 定价权调整，定性层人工评估（每季度复核），量化层每周四收盘后由脚本重算。
+**三好** = 好行业 × 好公司 × 好价格。综合评分 = 行业 30% + 公司 35% + 价格 25% + 定价权调整，
+定性层人工评估（每季度复核），量化层每周四收盘后由脚本重算。
 
-<div id="three-good-index"></div>
+下表按报告更新日期排序，**仅展示最新 5 篇**；更早的报告统一收纳在页面下方「历史归档」中，
+仍可点击股票名进入查看完整评分报告。
 
-## 全部报告
+<div class="score-table" data-src="/three-good/data/index.json" data-base="/three-good/"></div>
 
-| 个股 | 报告 | 个股页 |
-| ---- | ---- | ------ |
-| 贵州茅台 | [三好分析](/three-good/guizhou-maotai/) | [估值纵览](/stocks/guizhou-maotai/) |
-| 伊利股份 | [三好分析](/three-good/yili-gufen/) | [估值纵览](/stocks/yili-gufen/) |
-| 美的集团 | [三好分析](/three-good/meidi-jituan/) | [估值纵览](/stocks/meidi-jituan/) |
-| 宁德时代 | [三好分析](/three-good/ningde-shidai/) | [估值纵览](/stocks/ningde-shidai/) |
-| 比亚迪 | [三好分析](/three-good/biyadi/) | [估值纵览](/stocks/biyadi/) |
-| 招商银行 | [三好分析](/three-good/zhaoshang-yinhang/) | [估值纵览](/stocks/zhaoshang-yinhang/) |
-| 工商银行 | [三好分析](/three-good/gongshang-yinhang/) | [估值纵览](/stocks/gongshang-yinhang/) |
-| 农业银行 | [三好分析](/three-good/nongye-yinhang/) | [估值纵览](/stocks/nongye-yinhang/) |
-| 恒瑞医药 | [三好分析](/three-good/hengru-yiyao/) | [估值纵览](/stocks/hengru-yiyao/) |
-| 中芯国际 | [三好分析](/three-good/zhongxin-guoji/) | [估值纵览](/stocks/zhongxin-guoji/) |
-| 药明康德 | [三好分析](/three-good/wuxi-apptec/) | [估值纵览](/stocks/wuxi-apptec/) |
-| 中际旭创 | [三好分析](/three-good/zhongji-xuchuang/) | [估值纵览](/stocks/zhongji-xuchuang/) |
-| 北方华创 | [三好分析](/three-good/beifang-huachuang/) | [估值纵览](/stocks/beifang-huachuang/) |
-| 紫金矿业 | [三好分析](/three-good/zijin-kuangye/) | [估值纵览](/stocks/zijin-kuangye/) |
-| 长江电力 | [三好分析](/three-good/changjiang-dianli/) | [估值纵览](/stocks/changjiang-dianli/) |
-| 中国银行 | [三好分析](/three-good/zhongguo-yinhang/) | [估值纵览](/stocks/zhongguo-yinhang/) |
-| 建设银行 | [三好分析](/three-good/jianshe-yinhang/) | [估值纵览](/stocks/jianshe-yinhang/) |
-| 中国移动 | [三好分析](/three-good/zhongguo-yidong/) | [估值纵览](/stocks/zhongguo-yidong/) |
-| 片仔癀 | [三好分析](/three-good/pianzaihuang/) | [估值纵览](/stocks/pianzaihuang/) |
-| 兴业银行 | [三好分析](/three-good/xingye-yinhang/) | [估值纵览](/stocks/xingye-yinhang/) |
-| 新华保险 | [三好分析](/three-good/xinhua-baoxian/) | [估值纵览](/stocks/xinhua-baoxian/) |
-| 中国平安 | [三好分析](/three-good/zhongguo-pingan/) | [估值纵览](/stocks/zhongguo-pingan/) |
-| 平安银行 | [三好分析](/three-good/pingan-yinhang/) | [估值纵览](/stocks/pingan-yinhang/) |
-| 中国人寿 | [三好分析](/three-good/zhongguo-renshou/) | [估值纵览](/stocks/zhongguo-renshou/) |
-| 格力电器 | [三好分析](/three-good/geli-dianqi/) | [估值纵览](/stocks/geli-dianqi/) |
-| 小商品城 | [三好分析](/three-good/xiaoshangpin-cheng/) | [估值纵览](/stocks/xiaoshangpin-cheng/) |
-| 中油资本 | [三好分析](/three-good/zhongyou-ziben/) | [估值纵览](/stocks/zhongyou-ziben/) |
-| 京东方A | [三好分析](/three-good/jingdongfang/) | [估值纵览](/stocks/jingdongfang/) |
-| 立讯精密 | [三好分析](/three-good/lixun-jingmi/) | [估值纵览](/stocks/lixun-jingmi/) |
-| 科大讯飞 | [三好分析](/three-good/keda-xunfei/) | [估值纵览](/stocks/keda-xunfei/) |
-| 宝钢股份 | [三好分析](/three-good/baogang-gufen/) | [估值纵览](/stocks/baogang-gufen/) |
-| 中信证券 | [三好分析](/three-good/zhongxin-zhengquan/) | [估值纵览](/stocks/zhongxin-zhengquan/) |
+> 行业分类口径为申万一级；「近五次综合评分」按旧 → 新排列，▲ 红为环比上升、▼ 绿为环比下降。
+> 三好（邱国鹭《投资中最简单的事》）与四维度（《雪球股票投资 24 章》）是两套独立方法论，
+> 结论不一致时以差异说明为准，不混算。
 
-<script src="/js/three-good-index.js" defer></script>
+---
+
+本文由脚本自动生成，为方法论演示与学习记录，不构成任何投资建议。
+
+<script src="/js/score-table.js" defer></script>

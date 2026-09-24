@@ -487,19 +487,13 @@ def save_page(r: dict) -> Path:
 
 
 def save_index(rows: list[dict], macro_as_of: str) -> Path:
-    """四维度总览索引页（按综合分降序）"""
+    """四维度总览索引页
+
+    表格由 /js/score-table.js 读取 /four-dim/data/index.json 渲染：
+    股票名（代码，点击进入报告）｜申万一级行业｜近五次综合评分｜结论。
+    只展示最新 5 篇，其余进页面下方「历史归档」折叠区。
+    """
     now = time.strftime("%Y-%m-%d %H:%M")
-    order = [x for x in rows]
-    order.sort(key=lambda x: -x["total"])
-    lines = "\n".join(
-        f"| {x['name']}（{x['symbol']}） | {x['industry']} | "
-        f"{x['total']} | {VERDICT_ICON.get(x['verdict'], '')} {x['verdict']} | "
-        f"[四维度](/four-dim/{x['slug']}/) | [三好](/three-good/{x['slug']}/) | "
-        f"[个股页](/stocks/{x['slug']}/) |"
-        for x in order)
-    top = "\n".join(
-        f"{i}. **{x['name']}** {x['total']}（{x['industry']}，{x['metric']} 十年分位 {x['valuation']['pct']}%）"
-        for i, x in enumerate(order[:5], 1))
 
     md = f"""---
 title: 四维度分析
@@ -509,24 +503,22 @@ date: {now}
 **四维度** = 宏观（周期定位与流动性）× 中观（行业供需与定价权）× 微观（公司质地）× 实操（风格匹配与买卖规则），
 源自《雪球股票投资 24 章》四篇框架。每维度 25 分，满分 100：≥75 推荐｜65–74 可关注｜50–64 观望｜<50 不推荐。
 
-宏观基准：{macro_as_of}。共 {len(order)} 只。
+宏观基准：{macro_as_of}。共 {len(rows)} 只。
 
-## 综合分 TOP5
+下表按报告更新日期排序，**仅展示最新 5 篇**；更早的报告统一收纳在页面下方「历史归档」中，
+仍可点击股票名进入查看完整评分报告。
 
-{top}
+<div class="score-table" data-src="/four-dim/data/index.json" data-base="/four-dim/"></div>
 
-## 全部报告
-
-| 个股 | 行业 | 综合分 | 结论 | 四维度 | 三好 | 个股页 |
-| ---- | ---- | ------ | ---- | ------ | ---- | ------ |
-{lines}
-
+> 行业分类口径为申万一级；「近五次综合评分」按旧 → 新排列，▲ 红为环比上升、▼ 绿为环比下降。
 > 三好（邱国鹭《投资中最简单的事》）与四维度（《雪球股票投资 24 章》）是两套独立方法论，
 > 结论不一致时以差异说明为准，不混算。
 
 ---
 
 本文由脚本自动生成，为方法论演示与学习记录，不构成任何投资建议。
+
+<script src="/js/score-table.js" defer></script>
 """
     p = PAGE_DIR / "index.md"
     io.open(p, "w", encoding="utf-8").write(md)
