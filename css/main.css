@@ -1386,7 +1386,7 @@ pre code {
     transition: all 0.2s ease-in-out;
   }
   .links-of-author a::before {
-    background: #ffd2da;
+    background: #7e26ff;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -3688,6 +3688,11 @@ table.st-table tbody tr:hover {
   font-weight: 700;
   font-size: 14px;
   color: #222;
+}
+.st-void {
+  color: #c4c4c4;
+  min-width: 34px;
+  display: inline-block;
 }
 .st-up {
   color: #c62828;

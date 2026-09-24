@@ -49,12 +49,15 @@
       'stroke-linejoin="round" stroke-linecap="round"/></svg>';
   }
 
-  /** 近 N 期评分序列：数值 + 环比箭头 + 迷你走势 */
+  /** 近 N 期评分序列：固定 N 格，不足的空着（最新一期永远在最右） */
   function seriesCell(series, n) {
     var s = (series || []).slice(-n);
     if (!s.length) return '<span class="st-empty">—</span>';
     var vals = s.map(function (x) { return x.total; });
     var html = '<div class="st-series">';
+    for (var k = 0; k < n - s.length; k++) {
+      html += '<span class="st-val st-void" title="暂无该期报告">—</span>';
+    }
     s.forEach(function (x, i) {
       var prev = i > 0 ? s[i - 1].total : null;
       var cls = '', arrow = '';
@@ -134,22 +137,51 @@
 
         if (!rows.length) return;
 
-        var fresh = rows.slice(0, RECENT_N);
-        var rest = rows.slice(RECENT_N);
+        // 主表：每只股票一行，按最新一期综合分降序
+        rows.sort(function (a, b) {
+          return (b.latest.total || 0) - (a.latest.total || 0);
+        });
         var updated = data.updated || data.built || '';
 
         var html = '<div class="st-block">' +
-          '<div class="st-head"><h2>最新 ' + fresh.length + ' 篇报告</h2>' +
+          '<div class="st-head"><h2>评分总览（' + rows.length + ' 只）</h2>' +
           '<span class="st-updated">更新于 ' + esc(String(updated).slice(0, 10)) + '</span></div>' +
-          tableHtml(fresh, base, RECENT_N) + '</div>';
+          tableHtml(rows, base, RECENT_N) + '</div>';
 
-        if (rest.length) {
-          html += '<details class="st-archive"><summary>历史归档 · ' + rest.length +
-            ' 篇（点击展开，报告仍可查看）</summary>' + tableHtml(rest, base, RECENT_N) + '</details>';
+        // 后台归档：每只股票第 6 篇及更早的往期报告（超出「近五次」的部分）
+        var arch = [];
+        rows.forEach(function (r) {
+          (r.history || []).slice(RECENT_N).forEach(function (x) {
+            arch.push({ slug: r.slug, name: r.name, symbol: r.symbol,
+                        date: x.date, total: x.total, verdict: x.verdict });
+          });
+        });
+        arch.sort(function (a, b) {
+          return a.date < b.date ? 1 : (a.date > b.date ? -1 : (b.total || 0) - (a.total || 0));
+        });
+
+        html += '<details class="st-archive"><summary>历史归档 · 第 6 篇及更早的往期报告（' +
+          arch.length + ' 条）</summary>';
+        if (arch.length) {
+          html += '<div class="st-scroll"><table class="st-table"><thead><tr>' +
+            '<th>报告日期</th><th>股票（代码）</th><th>综合分</th><th>结论</th>' +
+            '</tr></thead><tbody>';
+          arch.forEach(function (x) {
+            html += '<tr><td>' + esc(x.date) + '</td>' +
+              '<td class="st-name"><a href="' + base + x.slug + '/">' + esc(x.name) +
+              ' <span class="st-code">(' + esc(x.symbol) + ')</span></a></td>' +
+              '<td><strong>' + fmt(x.total) + '</strong></td>' +
+              '<td>' + esc(x.verdict) + '</td></tr>';
+          });
+          html += '</tbody></table></div>';
+        } else {
+          html += '<p class="st-note">暂无：每只股票目前都只有 5 篇以内的报告，' +
+            '随着每周更新，超出近五次的往期记录会自动归档到这里。</p>';
         }
+        html += '</details>';
 
-        html += '<p class="st-note">点击股票名进入完整评分报告；「近五次综合评分」按旧 → 新排列，' +
-          '▲ 红为环比上升、▼ 绿为环比下降。</p>';
+        html += '<p class="st-note">点击股票名进入完整评分报告；「近五次综合评分」为该股最近 5 篇报告，' +
+          '按旧 → 新排列、不足 5 篇的留空，▲ 红为环比上升、▼ 绿为环比下降。</p>';
         el.innerHTML = html;
       })
       .catch(function () {
