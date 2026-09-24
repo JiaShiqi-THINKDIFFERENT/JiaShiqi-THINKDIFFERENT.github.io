@@ -29,7 +29,8 @@ date: 2026-09-08 09:20:00
 ## 研究
 
 <div class="research-pair">
-<div id="three-good" data-slug="biyadi"></div>
+<div id="three-good" data-slug="biyadi">
+<div id="four-dim" data-slug="biyadi"></div></div>
 <div id="four-dim" data-slug="biyadi"></div>
 </div>
 

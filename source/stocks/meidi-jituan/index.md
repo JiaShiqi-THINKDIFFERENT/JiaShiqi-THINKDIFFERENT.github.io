@@ -29,7 +29,8 @@ date: 2026-09-16 09:12:00
 ## 研究
 
 <div class="research-pair">
-<div id="three-good" data-slug="meidi-jituan"></div>
+<div id="three-good" data-slug="meidi-jituan">
+<div id="four-dim" data-slug="meidi-jituan"></div></div>
 <div id="four-dim" data-slug="meidi-jituan"></div>
 </div>
 

@@ -29,7 +29,8 @@ date: 2026-09-16 09:10:00
 ## 研究
 
 <div class="research-pair">
-<div id="three-good" data-slug="yili-gufen"></div>
+<div id="three-good" data-slug="yili-gufen">
+<div id="four-dim" data-slug="yili-gufen"></div></div>
 <div id="four-dim" data-slug="yili-gufen"></div>
 </div>
 

@@ -29,7 +29,8 @@ date: 2026-09-08 09:16:00
 ## 研究
 
 <div class="research-pair">
-<div id="three-good" data-slug="zhaoshang-yinhang"></div>
+<div id="three-good" data-slug="zhaoshang-yinhang">
+<div id="four-dim" data-slug="zhaoshang-yinhang"></div></div>
 <div id="four-dim" data-slug="zhaoshang-yinhang"></div>
 </div>
 

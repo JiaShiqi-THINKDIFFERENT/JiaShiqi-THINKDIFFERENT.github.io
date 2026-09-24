@@ -29,7 +29,8 @@ date: 2026-09-21 09:00:00
 ## 研究
 
 <div class="research-pair">
-<div id="three-good" data-slug="pianzaihuang"></div>
+<div id="three-good" data-slug="pianzaihuang">
+<div id="four-dim" data-slug="pianzaihuang"></div></div>
 <div id="four-dim" data-slug="pianzaihuang"></div>
 </div>
 

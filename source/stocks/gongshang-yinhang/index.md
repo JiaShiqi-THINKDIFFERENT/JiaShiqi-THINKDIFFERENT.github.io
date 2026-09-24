@@ -29,7 +29,8 @@ date: 2026-09-16 09:14:00
 ## 研究
 
 <div class="research-pair">
-<div id="three-good" data-slug="gongshang-yinhang"></div>
+<div id="three-good" data-slug="gongshang-yinhang">
+<div id="four-dim" data-slug="gongshang-yinhang"></div></div>
 <div id="four-dim" data-slug="gongshang-yinhang"></div>
 </div>
 

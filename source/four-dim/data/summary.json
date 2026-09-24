@@ -1,6 +1,6 @@
 {
-  "updated": "2026-09-23 16:57",
-  "count": 32,
+  "updated": "2026-09-24 17:28",
+  "count": 59,
   "macro_as_of": "2026-08",
   "stocks": [
     {
@@ -12,6 +12,16 @@
       "verdict": "推荐",
       "metric": "PE",
       "pct": 1.8
+    },
+    {
+      "slug": "jinghu-gaotie",
+      "name": "京沪高铁",
+      "symbol": "601816",
+      "industry": "交通运输",
+      "total": 78.1,
+      "verdict": "推荐",
+      "metric": "PE",
+      "pct": 0.3
     },
     {
       "slug": "zhongguo-renshou",
@@ -32,6 +42,16 @@
       "verdict": "推荐",
       "metric": "PE",
       "pct": 4.8
+    },
+    {
+      "slug": "mairui-yiliao",
+      "name": "迈瑞医疗",
+      "symbol": "300760",
+      "industry": "医药生物",
+      "total": 76.8,
+      "verdict": "推荐",
+      "metric": "PE",
+      "pct": 7.5
     },
     {
       "slug": "xiaoshangpin-cheng",
@@ -84,6 +104,16 @@
       "pct": 12.4
     },
     {
+      "slug": "huichuan-jishu",
+      "name": "汇川技术",
+      "symbol": "300124",
+      "industry": "机械设备",
+      "total": 74.3,
+      "verdict": "可关注",
+      "metric": "PE",
+      "pct": 2.7
+    },
+    {
       "slug": "pingan-yinhang",
       "name": "平安银行",
       "symbol": "000001",
@@ -94,6 +124,26 @@
       "pct": 12.2
     },
     {
+      "slug": "aier-yanke",
+      "name": "爱尔眼科",
+      "symbol": "300015",
+      "industry": "医药生物",
+      "total": 74.0,
+      "verdict": "可关注",
+      "metric": "PE",
+      "pct": 6.3
+    },
+    {
+      "slug": "dongpeng-yinliao",
+      "name": "东鹏饮料",
+      "symbol": "605499",
+      "industry": "食品饮料",
+      "total": 73.5,
+      "verdict": "可关注",
+      "metric": "PE",
+      "pct": 0.0
+    },
+    {
       "slug": "geli-dianqi",
       "name": "格力电器",
       "symbol": "000651",
@@ -102,6 +152,16 @@
       "verdict": "可关注",
       "metric": "PE",
       "pct": 22.2
+    },
+    {
+      "slug": "wanhua-huaxue",
+      "name": "万华化学",
+      "symbol": "600309",
+      "industry": "基础化工",
+      "total": 72.2,
+      "verdict": "可关注",
+      "metric": "PB",
+      "pct": 5.3
     },
     {
       "slug": "keda-xunfei",
@@ -134,6 +194,26 @@
       "pct": 18.1
     },
     {
+      "slug": "fuyao-boli",
+      "name": "福耀玻璃",
+      "symbol": "600660",
+      "industry": "汽车",
+      "total": 71.4,
+      "verdict": "可关注",
+      "metric": "PE",
+      "pct": 16.7
+    },
+    {
+      "slug": "guodian-nanrui",
+      "name": "国电南瑞",
+      "symbol": "600406",
+      "industry": "电力设备",
+      "total": 71.3,
+      "verdict": "可关注",
+      "metric": "PE",
+      "pct": 15.5
+    },
+    {
       "slug": "baogang-gufen",
       "name": "宝钢股份",
       "symbol": "600019",
@@ -144,6 +224,16 @@
       "pct": 5.2
     },
     {
+      "slug": "guangqi-jishu",
+      "name": "光启技术",
+      "symbol": "002625",
+      "industry": "国防军工",
+      "total": 70.9,
+      "verdict": "可关注",
+      "metric": "PE",
+      "pct": 20.8
+    },
+    {
       "slug": "lixun-jingmi",
       "name": "立讯精密",
       "symbol": "002475",
@@ -152,6 +242,16 @@
       "verdict": "可关注",
       "metric": "PE",
       "pct": 21.5
+    },
+    {
+      "slug": "zhongguo-zhongmian",
+      "name": "中国中免",
+      "symbol": "601888",
+      "industry": "社会服务",
+      "total": 70.4,
+      "verdict": "可关注",
+      "metric": "PE",
+      "pct": 8.9
     },
     {
       "slug": "changjiang-dianli",
@@ -204,6 +304,26 @@
       "pct": 51.2
     },
     {
+      "slug": "zhongguo-chuanbo",
+      "name": "中国船舶",
+      "symbol": "600150",
+      "industry": "国防军工",
+      "total": 67.2,
+      "verdict": "可关注",
+      "metric": "PE",
+      "pct": 21.4
+    },
+    {
+      "slug": "yangguang-dianyuan",
+      "name": "阳光电源",
+      "symbol": "300274",
+      "industry": "电力设备",
+      "total": 67.0,
+      "verdict": "可关注",
+      "metric": "PE",
+      "pct": 21.0
+    },
+    {
       "slug": "xinhua-baoxian",
       "name": "新华保险",
       "symbol": "601336",
@@ -244,6 +364,46 @@
       "pct": 21.6
     },
     {
+      "slug": "muyuan-gufen",
+      "name": "牧原股份",
+      "symbol": "002714",
+      "industry": "农林牧渔",
+      "total": 65.8,
+      "verdict": "可关注",
+      "metric": "PB",
+      "pct": 6.7
+    },
+    {
+      "slug": "hailuo-shuini",
+      "name": "海螺水泥",
+      "symbol": "600585",
+      "industry": "建筑材料",
+      "total": 65.4,
+      "verdict": "可关注",
+      "metric": "PB",
+      "pct": 0.3
+    },
+    {
+      "slug": "zhongguo-jianzhu",
+      "name": "中国建筑",
+      "symbol": "601668",
+      "industry": "建筑装饰",
+      "total": 64.7,
+      "verdict": "观望",
+      "metric": "PB",
+      "pct": 0.5
+    },
+    {
+      "slug": "sanyi-zhonggong",
+      "name": "三一重工",
+      "symbol": "600031",
+      "industry": "机械设备",
+      "total": 63.8,
+      "verdict": "观望",
+      "metric": "PE",
+      "pct": 33.7
+    },
+    {
       "slug": "beifang-huachuang",
       "name": "北方华创",
       "symbol": "002371",
@@ -252,6 +412,26 @@
       "verdict": "观望",
       "metric": "PE",
       "pct": 38.5
+    },
+    {
+      "slug": "fenzhong-chuanmei",
+      "name": "分众传媒",
+      "symbol": "002027",
+      "industry": "传媒",
+      "total": 63.0,
+      "verdict": "观望",
+      "metric": "PE",
+      "pct": 35.5
+    },
+    {
+      "slug": "baoli-fazhan",
+      "name": "保利发展",
+      "symbol": "600048",
+      "industry": "房地产",
+      "total": 63.0,
+      "verdict": "观望",
+      "metric": "PB",
+      "pct": 3.2
     },
     {
       "slug": "zhongji-xuchuang",
@@ -264,6 +444,26 @@
       "pct": 52.6
     },
     {
+      "slug": "beifang-xitu",
+      "name": "北方稀土",
+      "symbol": "600111",
+      "industry": "有色金属",
+      "total": 61.8,
+      "verdict": "观望",
+      "metric": "PB",
+      "pct": 51.4
+    },
+    {
+      "slug": "zhongguo-shenhua",
+      "name": "中国神华",
+      "symbol": "601088",
+      "industry": "煤炭",
+      "total": 61.6,
+      "verdict": "观望",
+      "metric": "PE",
+      "pct": 91.2
+    },
+    {
       "slug": "gongshang-yinhang",
       "name": "工商银行",
       "symbol": "601398",
@@ -272,6 +472,16 @@
       "verdict": "观望",
       "metric": "PB",
       "pct": 58.2
+    },
+    {
+      "slug": "shiji-huatong",
+      "name": "世纪华通",
+      "symbol": "002602",
+      "industry": "传媒",
+      "total": 60.7,
+      "verdict": "观望",
+      "metric": "PE",
+      "pct": 12.4
     },
     {
       "slug": "zhongguo-yinhang",
@@ -284,6 +494,16 @@
       "pct": 81.7
     },
     {
+      "slug": "zhongguo-shiyou",
+      "name": "中国石油",
+      "symbol": "601857",
+      "industry": "石油石化",
+      "total": 59.7,
+      "verdict": "观望",
+      "metric": "PB",
+      "pct": 80.7
+    },
+    {
       "slug": "nongye-yinhang",
       "name": "农业银行",
       "symbol": "601288",
@@ -294,6 +514,26 @@
       "pct": 72.3
     },
     {
+      "slug": "hangfa-dongli",
+      "name": "航发动力",
+      "symbol": "600893",
+      "industry": "国防军工",
+      "total": 59.3,
+      "verdict": "观望",
+      "metric": "PE",
+      "pct": 88.1
+    },
+    {
+      "slug": "yanhu-gufen",
+      "name": "盐湖股份",
+      "symbol": "000792",
+      "industry": "基础化工",
+      "total": 58.9,
+      "verdict": "观望",
+      "metric": "PB",
+      "pct": 50.4
+    },
+    {
       "slug": "zijin-kuangye",
       "name": "紫金矿业",
       "symbol": "601899",
@@ -302,6 +542,16 @@
       "verdict": "观望",
       "metric": "PB",
       "pct": 77.8
+    },
+    {
+      "slug": "luoyang-muye",
+      "name": "洛阳钼业",
+      "symbol": "603993",
+      "industry": "有色金属",
+      "total": 57.5,
+      "verdict": "观望",
+      "metric": "PB",
+      "pct": 79.2
     },
     {
       "slug": "zhongxin-guoji",
@@ -322,6 +572,26 @@
       "verdict": "观望",
       "metric": "PB",
       "pct": 71.5
+    },
+    {
+      "slug": "shenghong-keji",
+      "name": "胜宏科技",
+      "symbol": "300476",
+      "industry": "电子",
+      "total": 54.4,
+      "verdict": "观望",
+      "metric": "PE",
+      "pct": 80.2
+    },
+    {
+      "slug": "huagong-keji",
+      "name": "华工科技",
+      "symbol": "000988",
+      "industry": "机械设备",
+      "total": 53.5,
+      "verdict": "观望",
+      "metric": "PE",
+      "pct": 87.8
     }
   ]
 }

@@ -29,7 +29,8 @@ date: 2026-09-08 09:10:00
 ## 研究
 
 <div class="research-pair">
-<div id="three-good" data-slug="guizhou-maotai"></div>
+<div id="three-good" data-slug="guizhou-maotai">
+<div id="four-dim" data-slug="guizhou-maotai"></div></div>
 <div id="four-dim" data-slug="guizhou-maotai"></div>
 </div>
 

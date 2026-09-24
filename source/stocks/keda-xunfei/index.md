@@ -29,7 +29,8 @@ date: 2026-09-22 10:20:00
 ## 研究
 
 <div class="research-pair">
-<div id="three-good" data-slug="keda-xunfei"></div>
+<div id="three-good" data-slug="keda-xunfei">
+<div id="four-dim" data-slug="keda-xunfei"></div></div>
 <div id="four-dim" data-slug="keda-xunfei"></div>
 </div>
 

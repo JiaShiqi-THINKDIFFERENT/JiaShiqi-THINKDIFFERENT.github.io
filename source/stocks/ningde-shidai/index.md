@@ -29,7 +29,8 @@ date: 2026-09-08 09:14:00
 ## 研究
 
 <div class="research-pair">
-<div id="three-good" data-slug="ningde-shidai"></div>
+<div id="three-good" data-slug="ningde-shidai">
+<div id="four-dim" data-slug="ningde-shidai"></div></div>
 <div id="four-dim" data-slug="ningde-shidai"></div>
 </div>
 

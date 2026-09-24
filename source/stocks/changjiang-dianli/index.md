@@ -29,7 +29,8 @@ date: 2026-09-20 14:20:00
 ## 研究
 
 <div class="research-pair">
-<div id="three-good" data-slug="changjiang-dianli"></div>
+<div id="three-good" data-slug="changjiang-dianli">
+<div id="four-dim" data-slug="changjiang-dianli"></div></div>
 <div id="four-dim" data-slug="changjiang-dianli"></div>
 </div>
 

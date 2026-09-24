@@ -29,7 +29,8 @@ date: 2026-09-18 10:35:00
 ## 研究
 
 <div class="research-pair">
-<div id="three-good" data-slug="wuxi-apptec"></div>
+<div id="three-good" data-slug="wuxi-apptec">
+<div id="four-dim" data-slug="wuxi-apptec"></div></div>
 <div id="four-dim" data-slug="wuxi-apptec"></div>
 </div>
 

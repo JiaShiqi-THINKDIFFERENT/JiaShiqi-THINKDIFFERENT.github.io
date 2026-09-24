@@ -29,7 +29,8 @@ date: 2026-09-16 09:18:00
 ## 研究
 
 <div class="research-pair">
-<div id="three-good" data-slug="zhongxin-guoji"></div>
+<div id="three-good" data-slug="zhongxin-guoji">
+<div id="four-dim" data-slug="zhongxin-guoji"></div></div>
 <div id="four-dim" data-slug="zhongxin-guoji"></div>
 </div>
 

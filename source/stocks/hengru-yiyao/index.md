@@ -29,7 +29,8 @@ date: 2026-09-08 09:18:00
 ## 研究
 
 <div class="research-pair">
-<div id="three-good" data-slug="hengru-yiyao"></div>
+<div id="three-good" data-slug="hengru-yiyao">
+<div id="four-dim" data-slug="hengru-yiyao"></div></div>
 <div id="four-dim" data-slug="hengru-yiyao"></div>
 </div>
 

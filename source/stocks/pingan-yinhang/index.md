@@ -29,7 +29,8 @@ date: 2026-09-21 14:30:00
 ## 研究
 
 <div class="research-pair">
-<div id="three-good" data-slug="pingan-yinhang"></div>
+<div id="three-good" data-slug="pingan-yinhang">
+<div id="four-dim" data-slug="pingan-yinhang"></div></div>
 <div id="four-dim" data-slug="pingan-yinhang"></div>
 </div>
 

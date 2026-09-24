@@ -52,6 +52,58 @@
           "需求稳定性": 23,
           "进入壁垒": 22
         }
+      },
+      {
+        "date": "2026-09-24",
+        "symbol": "600519",
+        "slug": "guizhou-maotai",
+        "name": "贵州茅台",
+        "close": 1253.8,
+        "pe_pct": 1.8,
+        "pb_pct": 5.1,
+        "dv_pct": 98.7,
+        "scores": {
+          "industry": 92,
+          "company": 71.6,
+          "price": 97,
+          "total": 80.9
+        },
+        "verdict": "强烈推荐",
+        "vetoes": [],
+        "degraded": false,
+        "detail": {
+          "fin": {
+            "f_score": 4,
+            "f_available": 5,
+            "f_part": 9.6,
+            "f_note": "F-Score 4/5(可得项归一)",
+            "roe_mean": 29.6,
+            "roe_part": 8,
+            "roe_note": "ROE均值 29.6%，显著创造价值",
+            "cash_conv": 0.75,
+            "q_part": 5,
+            "q_note": "现金含量 0.75，一般",
+            "total": 22.6
+          },
+          "ts_adj": 5.0,
+          "ts_note": "ROE 均值 29.6% 且一致性高，长期盈利质量强",
+          "price_notes": [
+            "股息率分位 99%",
+            "PE-TTM 19.2 倍"
+          ],
+          "moat": 26,
+          "management": 18,
+          "pricing_power_adj": 4,
+          "roe_mean": 29.6,
+          "revenue_cagr": 17.5
+        },
+        "qual_rationale": "高端酱香白酒双寡头之一；品牌稀缺性为最强护城河（产区+工艺+时间构成供给刚性），历史上多次顺利提价；需求具社交与收藏属性，长期稳定但受政策与消费景气扰动；管理层国企背景下分红承诺明确（75%分红率+特别分红）。风险：消费税改革、年轻一代饮酒习惯变化。",
+        "industry_detail": {
+          "格局": 24,
+          "定价权": 23,
+          "需求稳定性": 23,
+          "进入壁垒": 22
+        }
       }
     ],
     "yili-gufen": [
@@ -92,6 +144,58 @@
           "price_notes": [
             "股息率分位 93%",
             "PE-TTM 16.3 倍"
+          ],
+          "moat": 18,
+          "management": 14,
+          "pricing_power_adj": 2,
+          "roe_mean": 20.9,
+          "revenue_cagr": 7.5
+        },
+        "qual_rationale": "乳制品双寡头（与蒙牛合计份额约七成），常温奶格局稳固但行业整体增长放缓；成本（原奶价格）波动向下游传导能力中等；品牌+渠道下沉构成主要壁垒；管理层激励充分但存在多元化并购摊薄回报的争议。",
+        "industry_detail": {
+          "格局": 19,
+          "定价权": 14,
+          "需求稳定性": 20,
+          "进入壁垒": 15
+        }
+      },
+      {
+        "date": "2026-09-24",
+        "symbol": "600887",
+        "slug": "yili-gufen",
+        "name": "伊利股份",
+        "close": null,
+        "pe_pct": 18.1,
+        "pb_pct": 15.7,
+        "dv_pct": 91.5,
+        "scores": {
+          "industry": 68,
+          "company": 64.6,
+          "price": 85.1,
+          "total": 66.3
+        },
+        "verdict": "可关注",
+        "vetoes": [],
+        "degraded": false,
+        "detail": {
+          "fin": {
+            "f_score": 4,
+            "f_available": 5,
+            "f_part": 9.6,
+            "f_note": "F-Score 4/5(可得项归一)",
+            "roe_mean": 20.9,
+            "roe_part": 8,
+            "roe_note": "ROE均值 20.9%，显著创造价值",
+            "cash_conv": 1.24,
+            "q_part": 10,
+            "q_note": "现金含量 1.24，优",
+            "total": 27.6
+          },
+          "ts_adj": 5.0,
+          "ts_note": "ROE 均值 20.9% 且一致性高，长期盈利质量强",
+          "price_notes": [
+            "股息率分位 92%",
+            "PE-TTM 16.8 倍"
           ],
           "moat": 18,
           "management": 14,
@@ -160,6 +264,58 @@
           "需求稳定性": 15,
           "进入壁垒": 18
         }
+      },
+      {
+        "date": "2026-09-24",
+        "symbol": "000333",
+        "slug": "meidi-jituan",
+        "name": "美的集团",
+        "close": null,
+        "pe_pct": 45.1,
+        "pb_pct": 41.2,
+        "dv_pct": 97.7,
+        "scores": {
+          "industry": 68,
+          "company": 71.0,
+          "price": 74.1,
+          "total": 65.8
+        },
+        "verdict": "可关注",
+        "vetoes": [],
+        "degraded": false,
+        "detail": {
+          "fin": {
+            "f_score": 5,
+            "f_available": 5,
+            "f_part": 12.0,
+            "f_note": "F-Score 5/5(可得项归一)",
+            "roe_mean": 20.4,
+            "roe_part": 8,
+            "roe_note": "ROE均值 20.4%，显著创造价值",
+            "cash_conv": 1.21,
+            "q_part": 10,
+            "q_note": "现金含量 1.21，优",
+            "total": 30.0
+          },
+          "ts_adj": 5.0,
+          "ts_note": "ROE 均值 20.4% 且一致性高，长期盈利质量强",
+          "price_notes": [
+            "股息率分位 98%",
+            "PE-TTM 14.2 倍"
+          ],
+          "moat": 19,
+          "management": 17,
+          "pricing_power_adj": 2,
+          "roe_mean": 20.4,
+          "revenue_cagr": 12.4
+        },
+        "qual_rationale": "白电三强之一，全品类+全球化布局，规模与供应链效率构成成本优势；家电需求与地产/更新周期相关，稳定性中等；职业经理人治理优秀，回购分红积极，资本配置业内领先（库卡/TOT 收购理性）。风险：海外需求波动、原材料成本。",
+        "industry_detail": {
+          "格局": 20,
+          "定价权": 15,
+          "需求稳定性": 15,
+          "进入壁垒": 18
+        }
       }
     ],
     "ningde-shidai": [
@@ -172,6 +328,58 @@
         "pe_pct": 4.1,
         "pb_pct": 0.8,
         "dv_pct": 73.0,
+        "scores": {
+          "industry": 75,
+          "company": 70.6,
+          "price": 94,
+          "total": 72.7
+        },
+        "verdict": "推荐",
+        "vetoes": [],
+        "degraded": false,
+        "detail": {
+          "fin": {
+            "f_score": 4,
+            "f_available": 5,
+            "f_part": 9.6,
+            "f_note": "F-Score 4/5(可得项归一)",
+            "roe_mean": 15.4,
+            "roe_part": 8,
+            "roe_note": "ROE均值 15.4%，显著创造价值",
+            "cash_conv": 1.85,
+            "q_part": 10,
+            "q_note": "现金含量 1.85，优",
+            "total": 27.6
+          },
+          "ts_adj": 3.0,
+          "ts_note": "ROE 均值 15.4%，一致性中等",
+          "price_notes": [
+            "股息率分位 73%",
+            "PE-TTM 16.6 倍"
+          ],
+          "moat": 24,
+          "management": 16,
+          "pricing_power_adj": 2,
+          "roe_mean": 15.4,
+          "revenue_cagr": 45.1
+        },
+        "qual_rationale": "动力电池全球市占率约三分之一、连续多年第一；技术迭代（麒麟/神行电池）+产能规模+客户绑定构成壁垒；但下游车企强势、碳酸锂价格波动使议价地位承压；需求受益电动化长趋势但行业价格战激烈。管理层技术出身、战略聚焦。",
+        "industry_detail": {
+          "格局": 22,
+          "定价权": 13,
+          "需求稳定性": 20,
+          "进入壁垒": 20
+        }
+      },
+      {
+        "date": "2026-09-24",
+        "symbol": "300750",
+        "slug": "ningde-shidai",
+        "name": "宁德时代",
+        "close": null,
+        "pe_pct": 3.9,
+        "pb_pct": 0.9,
+        "dv_pct": 73.4,
         "scores": {
           "industry": 75,
           "company": 70.6,
@@ -268,6 +476,58 @@
           "需求稳定性": 20,
           "进入壁垒": 16
         }
+      },
+      {
+        "date": "2026-09-24",
+        "symbol": "002594",
+        "slug": "biyadi",
+        "name": "比亚迪",
+        "close": 85.85,
+        "pe_pct": 21.6,
+        "pb_pct": 31.4,
+        "dv_pct": 55.8,
+        "scores": {
+          "industry": 64,
+          "company": 57.0,
+          "price": 68.1,
+          "total": 56.2
+        },
+        "verdict": "观望",
+        "vetoes": [],
+        "degraded": false,
+        "detail": {
+          "fin": {
+            "f_score": 5,
+            "f_available": 5,
+            "f_part": 12.0,
+            "f_note": "F-Score 5/5(可得项归一)",
+            "roe_mean": 9.9,
+            "roe_part": 4,
+            "roe_note": "ROE均值 9.9%，一般",
+            "cash_conv": 1.81,
+            "q_part": 10,
+            "q_note": "现金含量 1.81，优",
+            "total": 26.0
+          },
+          "ts_adj": 0.0,
+          "ts_note": "时序趋势中性",
+          "price_notes": [
+            "股息率分位 56%",
+            "PE-TTM 26.8 倍"
+          ],
+          "moat": 17,
+          "management": 14,
+          "pricing_power_adj": 0,
+          "roe_mean": 9.9,
+          "revenue_cagr": 25.6
+        },
+        "qual_rationale": "新能源车渗透率提升长逻辑明确，但整车环节竞争极其激烈、价格战常态化；垂直整合（电池-半导体-整车）带来成本优势，品牌溢价有限；管理层技术激进派（王传福），垂直一体化战略执行强，但多元化资本开支大、股东回报偏少。",
+        "industry_detail": {
+          "格局": 18,
+          "定价权": 10,
+          "需求稳定性": 20,
+          "进入壁垒": 16
+        }
       }
     ],
     "zhaoshang-yinhang": [
@@ -280,6 +540,58 @@
         "pe_pct": 28.1,
         "pb_pct": 12.8,
         "dv_pct": 76.9,
+        "scores": {
+          "industry": 78,
+          "company": 58.0,
+          "price": 77.1,
+          "total": 65.0
+        },
+        "verdict": "可关注",
+        "vetoes": [],
+        "degraded": false,
+        "detail": {
+          "fin": {
+            "f_score": 2,
+            "f_available": 2,
+            "f_part": 6.0,
+            "f_note": "F-Score 数据不足，取中性 6",
+            "roe_mean": 13.9,
+            "roe_part": 6,
+            "roe_note": "ROE均值 13.9%，创造价值",
+            "cash_conv": 3.01,
+            "q_part": 10,
+            "q_note": "现金含量 3.01，优",
+            "total": 22.0
+          },
+          "ts_adj": 0.0,
+          "ts_note": "时序趋势中性",
+          "price_notes": [
+            "股息率分位 77%",
+            "PE-TTM 6.8 倍"
+          ],
+          "moat": 21,
+          "management": 15,
+          "pricing_power_adj": 2,
+          "roe_mean": 13.9,
+          "revenue_cagr": 5.4
+        },
+        "qual_rationale": "零售银行标杆，AUM 规模与财富管理业务领先，负债端低成本存款优势显著（净息差高于同业）；银行牌照壁垒高；金融需求永续；零售客户粘性（App+金葵花体系）构成转换成本。风险：息差收窄、地产敞口、财富管理费率下行。管理层经历波动后恢复稳定，分红率约 35%。",
+        "industry_detail": {
+          "格局": 20,
+          "定价权": 14,
+          "需求稳定性": 22,
+          "进入壁垒": 22
+        }
+      },
+      {
+        "date": "2026-09-24",
+        "symbol": "600036",
+        "slug": "zhaoshang-yinhang",
+        "name": "招商银行",
+        "close": null,
+        "pe_pct": 27.8,
+        "pb_pct": 12.4,
+        "dv_pct": 77.4,
         "scores": {
           "industry": 78,
           "company": 58.0,
@@ -376,6 +688,58 @@
           "需求稳定性": 24,
           "进入壁垒": 24
         }
+      },
+      {
+        "date": "2026-09-24",
+        "symbol": "601398",
+        "slug": "gongshang-yinhang",
+        "name": "工商银行",
+        "close": 8.09,
+        "pe_pct": 97.8,
+        "pb_pct": 58.2,
+        "dv_pct": 5.2,
+        "scores": {
+          "industry": 78,
+          "company": 53.0,
+          "price": 33.4,
+          "total": 50.3
+        },
+        "verdict": "观望",
+        "vetoes": [],
+        "degraded": false,
+        "detail": {
+          "fin": {
+            "f_score": 2,
+            "f_available": 2,
+            "f_part": 6.0,
+            "f_note": "F-Score 数据不足，取中性 6",
+            "roe_mean": 11.1,
+            "roe_part": 4,
+            "roe_note": "ROE均值 11.1%，一般",
+            "cash_conv": 5.13,
+            "q_part": 10,
+            "q_note": "现金含量 5.13，优",
+            "total": 20.0
+          },
+          "ts_adj": 0.0,
+          "ts_note": "时序趋势中性",
+          "price_notes": [
+            "股息率分位 5%",
+            "PE-TTM 8.0 倍"
+          ],
+          "moat": 20,
+          "management": 13,
+          "pricing_power_adj": 0,
+          "roe_mean": 11.1,
+          "revenue_cagr": 2.4
+        },
+        "qual_rationale": "宇宙行：规模第一、网点覆盖最广、存款基础雄厚；牌照+规模构成极高进入壁垒；信贷需求与经济总量同步、永续；但利率管制下定价权弱、让利政策周期性压缩息差；经营稳健、分红率 30% 持续多年。成长性有限，属类债券收息资产。",
+        "industry_detail": {
+          "格局": 20,
+          "定价权": 10,
+          "需求稳定性": 24,
+          "进入壁垒": 24
+        }
       }
     ],
     "nongye-yinhang": [
@@ -416,6 +780,58 @@
           "price_notes": [
             "股息率分位 9%",
             "PE-TTM 8.1 倍"
+          ],
+          "moat": 19,
+          "management": 12,
+          "pricing_power_adj": 0,
+          "roe_mean": 10.7,
+          "revenue_cagr": 4.1
+        },
+        "qual_rationale": "县域金融龙头，网点下沉最广，受益县域信贷需求增长；同工商银行类似属牌照+规模壁垒型资产，定价权弱、息差承压；分红率 30% 左右，县域战略带来相对更高的规模增速；资产质量受涉农与地方政府敞口影响。",
+        "industry_detail": {
+          "格局": 19,
+          "定价权": 10,
+          "需求稳定性": 24,
+          "进入壁垒": 24
+        }
+      },
+      {
+        "date": "2026-09-24",
+        "symbol": "601288",
+        "slug": "nongye-yinhang",
+        "name": "农业银行",
+        "close": null,
+        "pe_pct": 92.3,
+        "pb_pct": 72.3,
+        "dv_pct": 9.7,
+        "scores": {
+          "industry": 77,
+          "company": 51.0,
+          "price": 33.4,
+          "total": 49.3
+        },
+        "verdict": "不推荐",
+        "vetoes": [],
+        "degraded": false,
+        "detail": {
+          "fin": {
+            "f_score": 2,
+            "f_available": 2,
+            "f_part": 6.0,
+            "f_note": "F-Score 数据不足，取中性 6",
+            "roe_mean": 10.7,
+            "roe_part": 4,
+            "roe_note": "ROE均值 10.7%，一般",
+            "cash_conv": 7.26,
+            "q_part": 10,
+            "q_note": "现金含量 7.26，优",
+            "total": 20.0
+          },
+          "ts_adj": 0.0,
+          "ts_note": "时序趋势中性",
+          "price_notes": [
+            "股息率分位 10%",
+            "PE-TTM 8.0 倍"
           ],
           "moat": 19,
           "management": 12,
@@ -484,6 +900,58 @@
           "需求稳定性": 22,
           "进入壁垒": 18
         }
+      },
+      {
+        "date": "2026-09-24",
+        "symbol": "600276",
+        "slug": "hengru-yiyao",
+        "name": "恒瑞医药",
+        "close": null,
+        "pe_pct": 2.1,
+        "pb_pct": 0.1,
+        "dv_pct": 86.1,
+        "scores": {
+          "industry": 66,
+          "company": 60.0,
+          "price": 89,
+          "total": 59.0
+        },
+        "verdict": "观望",
+        "vetoes": [],
+        "degraded": false,
+        "detail": {
+          "fin": {
+            "f_score": 5,
+            "f_available": 5,
+            "f_part": 12.0,
+            "f_note": "F-Score 5/5(可得项归一)",
+            "roe_mean": 16.2,
+            "roe_part": 8,
+            "roe_note": "ROE均值 16.2%，显著创造价值",
+            "cash_conv": 1.46,
+            "q_part": 10,
+            "q_note": "现金含量 1.46，优",
+            "total": 30.0
+          },
+          "ts_adj": 3.0,
+          "ts_note": "ROE 均值 16.2%，一致性中等",
+          "price_notes": [
+            "股息率分位 86%",
+            "PE-TTM 39.1 倍"
+          ],
+          "moat": 14,
+          "management": 13,
+          "pricing_power_adj": -4,
+          "roe_mean": 16.2,
+          "revenue_cagr": 12.3
+        },
+        "qual_rationale": "老龄化驱动医药长期刚需，创新药管线国内最厚（ 多款 ADC/GLP-1 在研）；但集采+医保谈判系统性剥夺了仿制药/创新药定价权，行业格局受政策重塑；药品批文与临床数据构成壁垒，销售体系改革中；管理层交接后创新转型坚定但业绩弹性尚待验证。定价权为短板（无定价权扣分）。",
+        "industry_detail": {
+          "格局": 18,
+          "定价权": 8,
+          "需求稳定性": 22,
+          "进入壁垒": 18
+        }
       }
     ],
     "zhongxin-guoji": [
@@ -524,6 +992,58 @@
           "price_notes": [
             "无股息数据",
             "PE-TTM 143.6 倍"
+          ],
+          "moat": 18,
+          "management": 12,
+          "pricing_power_adj": 0,
+          "roe_mean": 3.5,
+          "revenue_cagr": 14.3
+        },
+        "qual_rationale": "大陆晶圆代工绝对龙头、全球前三，成熟制程产能规模+国产替代政策构成强壁垒；设备与先进制程受出口管制约束是核心风险；下游需求（消费电子/工业/汽车）周期波动；重资产模式资本开支巨大、折旧压制利润；国资治理下股东回报弱（从未分红）。",
+        "industry_detail": {
+          "格局": 20,
+          "定价权": 12,
+          "需求稳定性": 21,
+          "进入壁垒": 25
+        }
+      },
+      {
+        "date": "2026-09-24",
+        "symbol": "688981",
+        "slug": "zhongxin-guoji",
+        "name": "中芯国际",
+        "close": 121.39,
+        "pe_pct": 64.4,
+        "pb_pct": 82.9,
+        "dv_pct": null,
+        "scores": {
+          "industry": 78,
+          "company": 51.6,
+          "price": 21.7,
+          "total": 46.9
+        },
+        "verdict": "不推荐",
+        "vetoes": [],
+        "degraded": false,
+        "detail": {
+          "fin": {
+            "f_score": 4,
+            "f_available": 5,
+            "f_part": 9.6,
+            "f_note": "F-Score 4/5(可得项归一)",
+            "roe_mean": 3.5,
+            "roe_part": 2,
+            "roe_note": "ROE均值 3.5%，偏低",
+            "cash_conv": 3.98,
+            "q_part": 10,
+            "q_note": "现金含量 3.98，优",
+            "total": 21.6
+          },
+          "ts_adj": 0.0,
+          "ts_note": "时序趋势中性",
+          "price_notes": [
+            "无股息数据",
+            "PE-TTM 145.4 倍"
           ],
           "moat": 18,
           "management": 12,
@@ -592,6 +1112,58 @@
           "需求稳定性": 18,
           "进入壁垒": 18
         }
+      },
+      {
+        "date": "2026-09-24",
+        "symbol": "603259",
+        "slug": "wuxi-apptec",
+        "name": "药明康德",
+        "close": null,
+        "pe_pct": 36.3,
+        "pb_pct": 51.8,
+        "dv_pct": 80.2,
+        "scores": {
+          "industry": 68,
+          "company": 64.2,
+          "price": 59.6,
+          "total": 57.8
+        },
+        "verdict": "观望",
+        "vetoes": [],
+        "degraded": false,
+        "detail": {
+          "fin": {
+            "f_score": 3,
+            "f_available": 5,
+            "f_part": 7.2,
+            "f_note": "F-Score 3/5(可得项归一)",
+            "roe_mean": 15.6,
+            "roe_part": 8,
+            "roe_note": "ROE均值 15.6%，显著创造价值",
+            "cash_conv": 0.9,
+            "q_part": 8,
+            "q_note": "现金含量 0.90，良",
+            "total": 23.2
+          },
+          "ts_adj": 3.0,
+          "ts_note": "ROE 均值 15.6%，一致性中等",
+          "price_notes": [
+            "股息率分位 80%",
+            "PE-TTM 23.5 倍"
+          ],
+          "moat": 22,
+          "management": 16,
+          "pricing_power_adj": 0,
+          "roe_mean": 15.6,
+          "revenue_cagr": 25.0
+        },
+        "qual_rationale": "全球小分子 CDMO 龙头、CRDMO 一体化平台（药物发现→临床→商业化生产全程承接），长尾客户+follow 服务模式带来高复购与订单粘性，工程师红利构成成本优势；但 CXO 行业整体对大药企客户议价权有限，海外收入占比高使地缘政治（美国生物安全法案类立法）成为持续悬顶风险；需求与全球生物医药投融资景气度强相关，周期波动明显；管理层创始人专业背景强、回购分红积极。",
+        "industry_detail": {
+          "格局": 20,
+          "定价权": 12,
+          "需求稳定性": 18,
+          "进入壁垒": 18
+        }
       }
     ],
     "zhongji-xuchuang": [
@@ -632,6 +1204,58 @@
           "price_notes": [
             "股息率分位 39%",
             "PE-TTM 50.3 倍"
+          ],
+          "moat": 18,
+          "management": 14,
+          "pricing_power_adj": 0,
+          "roe_mean": 12.9,
+          "revenue_cagr": 87.8
+        },
+        "qual_rationale": "全球高速光模块第一梯队（800G/1.6T 批量交付领先），绑定北美头部云厂商，AI 算力资本开支是最强需求驱动；研发节奏与硅光/CPO 技术路线构成壁垒，客户认证周期长约 1-2 年。隐忧在于下游客户高度集中（大客户占营收比重高）导致议价权偏弱、技术迭代（速率升级）快带来产品生命周期风险，且需求随云厂商资本开支周期大幅波动。管理层专注主业、海外产能布局积极。",
+        "industry_detail": {
+          "格局": 18,
+          "定价权": 10,
+          "需求稳定性": 15,
+          "进入壁垒": 18
+        }
+      },
+      {
+        "date": "2026-09-24",
+        "symbol": "300308",
+        "slug": "zhongji-xuchuang",
+        "name": "中际旭创",
+        "close": 922.5,
+        "pe_pct": 52.6,
+        "pb_pct": 93.8,
+        "dv_pct": 39.3,
+        "scores": {
+          "industry": 61,
+          "company": 60.0,
+          "price": 25.7,
+          "total": 45.7
+        },
+        "verdict": "不推荐",
+        "vetoes": [],
+        "degraded": false,
+        "detail": {
+          "fin": {
+            "f_score": 5,
+            "f_available": 5,
+            "f_part": 12.0,
+            "f_note": "F-Score 5/5(可得项归一)",
+            "roe_mean": 12.9,
+            "roe_part": 6,
+            "roe_note": "ROE均值 12.9%，创造价值",
+            "cash_conv": 1.01,
+            "q_part": 10,
+            "q_note": "现金含量 1.01，优",
+            "total": 28.0
+          },
+          "ts_adj": 0.0,
+          "ts_note": "时序趋势中性",
+          "price_notes": [
+            "股息率分位 39%",
+            "PE-TTM 53.4 倍"
           ],
           "moat": 18,
           "management": 14,
@@ -700,6 +1324,58 @@
           "需求稳定性": 18,
           "进入壁垒": 24
         }
+      },
+      {
+        "date": "2026-09-24",
+        "symbol": "002371",
+        "slug": "beifang-huachuang",
+        "name": "北方华创",
+        "close": null,
+        "pe_pct": 38.5,
+        "pb_pct": 74.7,
+        "dv_pct": 67.9,
+        "scores": {
+          "industry": 78,
+          "company": 53.6,
+          "price": 50.6,
+          "total": 56.8
+        },
+        "verdict": "观望",
+        "vetoes": [],
+        "degraded": false,
+        "detail": {
+          "fin": {
+            "f_score": 4,
+            "f_available": 5,
+            "f_part": 9.6,
+            "f_note": "F-Score 4/5(可得项归一)",
+            "roe_mean": 8.9,
+            "roe_part": 4,
+            "roe_note": "ROE均值 8.9%，一般",
+            "cash_conv": 0.39,
+            "q_part": 2,
+            "q_note": "现金含量 0.39，差",
+            "total": 15.6
+          },
+          "ts_adj": 0.0,
+          "ts_note": "时序趋势中性",
+          "price_notes": [
+            "股息率分位 68%",
+            "PE-TTM 85.9 倍"
+          ],
+          "moat": 24,
+          "management": 14,
+          "pricing_power_adj": 2,
+          "roe_mean": 8.9,
+          "revenue_cagr": 42.5
+        },
+        "qual_rationale": "国内半导体设备平台化龙头（刻蚀/薄膜沉积/清洗/炉管/量测全覆盖），是国产替代最核心受益标的；设备验证周期长、工艺 Know-how 与客户产线深度绑定构成极高壁垒，国内稀缺供给带来一定议价能力。风险为晶圆厂扩产节奏的周期性、美国出口管制对零部件与先进制程设备的约束、以及高研发投入对利润的阶段性压制。管理层国资背景、研发投入坚定。",
+        "industry_detail": {
+          "格局": 20,
+          "定价权": 16,
+          "需求稳定性": 18,
+          "进入壁垒": 24
+        }
       }
     ],
     "zijin-kuangye": [
@@ -740,6 +1416,58 @@
           "price_notes": [
             "股息率分位 98%",
             "PE-TTM 12.7 倍"
+          ],
+          "moat": 18,
+          "management": 16,
+          "pricing_power_adj": -4,
+          "roe_mean": 12.7,
+          "revenue_cagr": 18.0
+        },
+        "qual_rationale": "全球化矿产龙头（铜、金、锂多品种），卡莫阿-卡库拉、巨龙、Timok 等世界级矿山资源禀赋稀缺，逆周期并购+低成本运营能力是真正护城河。但铜金为全球定价大宗商品，公司是纯粹的价格接受者、毫无定价权；盈利随全球宏观、美元利率与商品周期剧烈波动，需求稳定性差，海外矿权还面临地缘政治与资源国政策风险。管理层海外并购眼光与执行力突出，分红稳步提升。",
+        "industry_detail": {
+          "格局": 17,
+          "定价权": 4,
+          "需求稳定性": 12,
+          "进入壁垒": 20
+        }
+      },
+      {
+        "date": "2026-09-24",
+        "symbol": "601899",
+        "slug": "zijin-kuangye",
+        "name": "紫金矿业",
+        "close": 31.41,
+        "pe_pct": 4.8,
+        "pb_pct": 77.8,
+        "dv_pct": 98.2,
+        "scores": {
+          "industry": 53,
+          "company": 59.6,
+          "price": 74.5,
+          "total": 51.4
+        },
+        "verdict": "观望",
+        "vetoes": [],
+        "degraded": false,
+        "detail": {
+          "fin": {
+            "f_score": 4,
+            "f_available": 5,
+            "f_part": 9.6,
+            "f_note": "F-Score 4/5(可得项归一)",
+            "roe_mean": 12.7,
+            "roe_part": 6,
+            "roe_note": "ROE均值 12.7%，创造价值",
+            "cash_conv": 1.46,
+            "q_part": 10,
+            "q_note": "现金含量 1.46，优",
+            "total": 25.6
+          },
+          "ts_adj": 0.0,
+          "ts_note": "时序趋势中性",
+          "price_notes": [
+            "股息率分位 98%",
+            "PE-TTM 12.3 倍"
           ],
           "moat": 18,
           "management": 16,
@@ -808,6 +1536,58 @@
           "需求稳定性": 24,
           "进入壁垒": 25
         }
+      },
+      {
+        "date": "2026-09-24",
+        "symbol": "600900",
+        "slug": "changjiang-dianli",
+        "name": "长江电力",
+        "close": null,
+        "pe_pct": 54.2,
+        "pb_pct": 86.2,
+        "dv_pct": 51.6,
+        "scores": {
+          "industry": 85,
+          "company": 71.6,
+          "price": 39.7,
+          "total": 60.5
+        },
+        "verdict": "可关注",
+        "vetoes": [],
+        "degraded": false,
+        "detail": {
+          "fin": {
+            "f_score": 4,
+            "f_available": 5,
+            "f_part": 9.6,
+            "f_note": "F-Score 4/5(可得项归一)",
+            "roe_mean": 14.3,
+            "roe_part": 6,
+            "roe_note": "ROE均值 14.3%，创造价值",
+            "cash_conv": 1.76,
+            "q_part": 10,
+            "q_note": "现金含量 1.76，优",
+            "total": 25.6
+          },
+          "ts_adj": 0.0,
+          "ts_note": "时序趋势中性",
+          "price_notes": [
+            "股息率分位 52%",
+            "PE-TTM 19.0 倍"
+          ],
+          "moat": 30,
+          "management": 16,
+          "pricing_power_adj": 0,
+          "roe_mean": 14.3,
+          "revenue_cagr": 6.5
+        },
+        "qual_rationale": "全球最大水电上市公司，独家运营三峡、溪洛渡、向家坝、乌东德、白鹤滩六座巨型梯级电站，优质大型水电资源不可复制、几乎不存在新建竞争，护城河是 A 股最宽的一类；电力需求刚性、水电优先消纳，来水波动是唯一主要变量。定价端上网电价受管制（无自主提价权），成长只能靠资产注入与财务费用下降。管理层稳健、分红承诺明确（类债券属性）。",
+        "industry_detail": {
+          "格局": 24,
+          "定价权": 12,
+          "需求稳定性": 24,
+          "进入壁垒": 25
+        }
       }
     ],
     "zhongguo-yinhang": [
@@ -819,6 +1599,58 @@
         "close": null,
         "pe_pct": 99.9,
         "pb_pct": 81.9,
+        "dv_pct": 5.3,
+        "scores": {
+          "industry": 81,
+          "company": 61.0,
+          "price": 26.5,
+          "total": 52.3
+        },
+        "verdict": "观望",
+        "vetoes": [],
+        "degraded": false,
+        "detail": {
+          "fin": {
+            "f_score": 2,
+            "f_available": 2,
+            "f_part": 6.0,
+            "f_note": "F-Score 数据不足，取中性 6",
+            "roe_mean": 9.3,
+            "roe_part": 4,
+            "roe_note": "ROE均值 9.3%，一般",
+            "cash_conv": 3.34,
+            "q_part": 10,
+            "q_note": "现金含量 3.34，优",
+            "total": 20.0
+          },
+          "ts_adj": 0.0,
+          "ts_note": "时序趋势中性",
+          "price_notes": [
+            "股息率分位 5%",
+            "PE-TTM 8.5 倍"
+          ],
+          "moat": 26,
+          "management": 15,
+          "pricing_power_adj": 0,
+          "roe_mean": 9.3,
+          "revenue_cagr": 3.5
+        },
+        "qual_rationale": "国有六大行之一，国际化程度最高（境外机构覆盖港澳及数十个国家），外币资产与跨境结算、贸易金融是其区别于同业的核心标签；存款基础扎实、负债成本低于股份行，分红比例长期稳定在 30% 以上。隐忧在于息差受 LPR 与存量房贷重定价持续挤压、外币业务受海外利率与汇率扰动，且 ROE 已降至个位数、规模增速依赖投放而非定价。管理层稳健合规，资本充足率充裕。",
+        "industry_detail": {
+          "格局": 22,
+          "定价权": 14,
+          "需求稳定性": 22,
+          "进入壁垒": 23
+        }
+      },
+      {
+        "date": "2026-09-24",
+        "symbol": "601988",
+        "slug": "zhongguo-yinhang",
+        "name": "中国银行",
+        "close": null,
+        "pe_pct": 100.0,
+        "pb_pct": 81.7,
         "dv_pct": 5.3,
         "scores": {
           "industry": 81,
@@ -916,6 +1748,58 @@
           "需求稳定性": 22,
           "进入壁垒": 23
         }
+      },
+      {
+        "date": "2026-09-24",
+        "symbol": "601939",
+        "slug": "jianshe-yinhang",
+        "name": "建设银行",
+        "close": null,
+        "pe_pct": 97.9,
+        "pb_pct": 62.6,
+        "dv_pct": 5.5,
+        "scores": {
+          "industry": 83,
+          "company": 63.0,
+          "price": 33.4,
+          "total": 55.3
+        },
+        "verdict": "观望",
+        "vetoes": [],
+        "degraded": false,
+        "detail": {
+          "fin": {
+            "f_score": 2,
+            "f_available": 2,
+            "f_part": 6.0,
+            "f_note": "F-Score 数据不足，取中性 6",
+            "roe_mean": 11.7,
+            "roe_part": 4,
+            "roe_note": "ROE均值 11.7%，一般",
+            "cash_conv": 6.2,
+            "q_part": 10,
+            "q_note": "现金含量 6.20，优",
+            "total": 20.0
+          },
+          "ts_adj": 0.0,
+          "ts_note": "时序趋势中性",
+          "price_notes": [
+            "股息率分位 6%",
+            "PE-TTM 8.3 倍"
+          ],
+          "moat": 28,
+          "management": 15,
+          "pricing_power_adj": 0,
+          "roe_mean": 11.7,
+          "revenue_cagr": 2.6
+        },
+        "qual_rationale": "国有大行中基建与住房金融的传统强者，对公端深度绑定中央与地方重大项目、按揭市场份额领先，低成本存款与长期客户关系构成稳健护城河；资产质量在大型银行中处于较优水平、拨备厚实。风险为房地产链敞口与地方融资平台化债带来的拨备消耗、按揭需求随地产销售中枢下台阶、以及息差长期下行趋势。管理层风控文化偏保守，分红率高且稳定。",
+        "industry_detail": {
+          "格局": 23,
+          "定价权": 15,
+          "需求稳定性": 22,
+          "进入壁垒": 23
+        }
       }
     ],
     "zhongguo-yidong": [
@@ -928,6 +1812,58 @@
         "pe_pct": 50.9,
         "pb_pct": 30.6,
         "dv_pct": 9.9,
+        "scores": {
+          "industry": 88,
+          "company": 74.0,
+          "price": 47.1,
+          "total": 65.1
+        },
+        "verdict": "可关注",
+        "vetoes": [],
+        "degraded": false,
+        "detail": {
+          "fin": {
+            "f_score": 5,
+            "f_available": 5,
+            "f_part": 12.0,
+            "f_note": "F-Score 5/5(可得项归一)",
+            "roe_mean": 11.1,
+            "roe_part": 4,
+            "roe_note": "ROE均值 11.1%，一般",
+            "cash_conv": 1.7,
+            "q_part": 10,
+            "q_note": "现金含量 1.70，优",
+            "total": 26.0
+          },
+          "ts_adj": 0.0,
+          "ts_note": "时序趋势中性",
+          "price_notes": [
+            "股息率分位 10%",
+            "PE-TTM 15.9 倍"
+          ],
+          "moat": 32,
+          "management": 16,
+          "pricing_power_adj": 1,
+          "roe_mean": 11.1,
+          "revenue_cagr": 9.0
+        },
+        "qual_rationale": "国内移动用户与宽带用户双第一（移动用户近 10 亿），基础电信牌照 + 频段资源构成近乎不可逾越的行政壁垒，行业从恶性价格战转向理性竞争后 ARPU 企稳回升；现金流极强、资本开支高峰已过，分红率提升至 70% 以上。变量在于 5G 投资回报周期长、携号转网与广电入场带来小幅分流、政企与算力等新业务尚需验证成长性；提速降费等政策导向削弱了自主提价空间。管理层执行力强、数字化转型（算力网络）投入明确。",
+        "industry_detail": {
+          "格局": 24,
+          "定价权": 16,
+          "需求稳定性": 24,
+          "进入壁垒": 24
+        }
+      },
+      {
+        "date": "2026-09-24",
+        "symbol": "600941",
+        "slug": "zhongguo-yidong",
+        "name": "中国移动",
+        "close": 96.4,
+        "pe_pct": 51.2,
+        "pb_pct": 30.8,
+        "dv_pct": 10.0,
         "scores": {
           "industry": 88,
           "company": 74.0,
@@ -1024,6 +1960,58 @@
           "需求稳定性": 20,
           "进入壁垒": 24
         }
+      },
+      {
+        "date": "2026-09-24",
+        "symbol": "600436",
+        "slug": "pianzaihuang",
+        "name": "片仔癀",
+        "close": 120.1,
+        "pe_pct": 4.8,
+        "pb_pct": 1.9,
+        "dv_pct": 98.0,
+        "scores": {
+          "industry": 89,
+          "company": 71.6,
+          "price": 89,
+          "total": 77.0
+        },
+        "verdict": "推荐",
+        "vetoes": [],
+        "degraded": false,
+        "detail": {
+          "fin": {
+            "f_score": 4,
+            "f_available": 5,
+            "f_part": 9.6,
+            "f_note": "F-Score 4/5(可得项归一)",
+            "roe_mean": 19.3,
+            "roe_part": 8,
+            "roe_note": "ROE均值 19.3%，显著创造价值",
+            "cash_conv": 0.04,
+            "q_part": 2,
+            "q_note": "现金含量 0.04，差",
+            "total": 19.6
+          },
+          "ts_adj": 5.0,
+          "ts_note": "ROE 均值 19.3% 且一致性高，长期盈利质量强",
+          "price_notes": [
+            "股息率分位 98%",
+            "PE-TTM 40.0 倍"
+          ],
+          "moat": 33,
+          "management": 14,
+          "pricing_power_adj": 3,
+          "roe_mean": 19.3,
+          "revenue_cagr": 16.3
+        },
+        "qual_rationale": "拥有国家绝密级中药配方（仅两家之一）与天然麝香使用资格，配方+稀缺原料双壁垒使其在中药涨价周期里表现出极强的自主提价能力，几乎不受集采约束，品牌心智（护肝、礼品属性）稳固。风险为原料端天然麝香与牛黄价格长期上涨挤压毛利、单品依赖度高且安宫牛黄丸等二线品种尚未放量、以及高价策略在消费疲弱时对销量的反噬。管理层资源投放偏保守，日化化妆品子公司是潜在增量但体量仍小。",
+        "industry_detail": {
+          "格局": 21,
+          "定价权": 24,
+          "需求稳定性": 20,
+          "进入壁垒": 24
+        }
       }
     ],
     "xingye-yinhang": [
@@ -1036,6 +2024,58 @@
         "pe_pct": 32.7,
         "pb_pct": 4.0,
         "dv_pct": 76.2,
+        "scores": {
+          "industry": 69,
+          "company": 55.0,
+          "price": 82.2,
+          "total": 59.5
+        },
+        "verdict": "观望",
+        "vetoes": [],
+        "degraded": false,
+        "detail": {
+          "fin": {
+            "f_score": 2,
+            "f_available": 2,
+            "f_part": 6.0,
+            "f_note": "F-Score 数据不足，取中性 6",
+            "roe_mean": 11.5,
+            "roe_part": 4,
+            "roe_note": "ROE均值 11.5%，一般",
+            "cash_conv": 8.44,
+            "q_part": 10,
+            "q_note": "现金含量 8.44，优",
+            "total": 20.0
+          },
+          "ts_adj": 0.0,
+          "ts_note": "时序趋势中性",
+          "price_notes": [
+            "股息率分位 76%",
+            "PE-TTM 5.0 倍"
+          ],
+          "moat": 21,
+          "management": 14,
+          "pricing_power_adj": -1,
+          "roe_mean": 11.5,
+          "revenue_cagr": 3.4
+        },
+        "qual_rationale": "股份行中对公与同业业务最具特色的一只——银银平台连接中小金融机构、绿色融资与投行化经营领先，F 端（同业）客户黏性是其差异化来源。但相较招行，零售基础薄弱导致存款成本偏高，息差承压更明显；资产端地产与城投敞口曾持续扰动资产质量，不良包袱消化慢于同业，ROE 已滑至两位数以下且仍在下行。央行监管对同业业务的约束是长期变量。管理层战略摇摆较多、资本补充压力较大。",
+        "industry_detail": {
+          "格局": 19,
+          "定价权": 11,
+          "需求稳定性": 19,
+          "进入壁垒": 20
+        }
+      },
+      {
+        "date": "2026-09-24",
+        "symbol": "601166",
+        "slug": "xingye-yinhang",
+        "name": "兴业银行",
+        "close": 17.87,
+        "pe_pct": 32.0,
+        "pb_pct": 3.5,
+        "dv_pct": 75.7,
         "scores": {
           "industry": 69,
           "company": 55.0,
@@ -1132,6 +2172,58 @@
           "需求稳定性": 17,
           "进入壁垒": 19
         }
+      },
+      {
+        "date": "2026-09-24",
+        "symbol": "601336",
+        "slug": "xinhua-baoxian",
+        "name": "新华保险",
+        "close": 57.88,
+        "pe_pct": 0.0,
+        "pb_pct": 34.3,
+        "dv_pct": 92.8,
+        "scores": {
+          "industry": 62,
+          "company": 57.0,
+          "price": 88.9,
+          "total": 58.8
+        },
+        "verdict": "观望",
+        "vetoes": [],
+        "degraded": false,
+        "detail": {
+          "fin": {
+            "f_score": 2,
+            "f_available": 2,
+            "f_part": 6.0,
+            "f_note": "F-Score 数据不足，取中性 6",
+            "roe_mean": 16.4,
+            "roe_part": 8,
+            "roe_note": "ROE均值 16.4%，显著创造价值",
+            "cash_conv": 3.06,
+            "q_part": 10,
+            "q_note": "现金含量 3.06，优",
+            "total": 24.0
+          },
+          "ts_adj": 3.0,
+          "ts_note": "ROE 均值 16.4%，一致性中等",
+          "price_notes": [
+            "股息率分位 93%",
+            "PE-TTM 4.1 倍"
+          ],
+          "moat": 17,
+          "management": 13,
+          "pricing_power_adj": -2,
+          "roe_mean": 16.4,
+          "revenue_cagr": 0.9
+        },
+        "qual_rationale": "中型寿险公司，银保渠道占比高、万能险与分红险结构使其对资本市场极为敏感，新准则下利润与净资产的权益弹性在上市险企中最大（牛市弹性品种，熊市回撤也最大）。寿险牌照有壁垒但头部集中度高（国寿、平安占据大头），中小险企在渠道议价与品牌上处于劣势，产品同质化严重、定价受预定利率下调政策直接约束。核心变量是长端利率下行带来的利差损风险、以及新业务价值增速与代理人转型进度。管理层近年频繁更迭、战略连续性偏弱。",
+        "industry_detail": {
+          "格局": 18,
+          "定价权": 8,
+          "需求稳定性": 17,
+          "进入壁垒": 19
+        }
       }
     ],
     "zhongguo-pingan": [
@@ -1172,6 +2264,58 @@
           "price_notes": [
             "股息率分位 98%",
             "PE-TTM 6.1 倍"
+          ],
+          "moat": 28,
+          "management": 16,
+          "pricing_power_adj": 1,
+          "roe_mean": 12.1,
+          "revenue_cagr": 4.4
+        },
+        "qual_rationale": "国内唯一拿到全牌照的综合金融集团（寿险+财险+银行+资管+科技），寿险代理人渠道与百万寿险大军曾是核心资产，目前正在进行最深的一轮渠道改革（高质量代理人 + 医养生态赋能新业务价值）；交叉销售与集团客户迁徙构成差异化护城河，科技板块虽已止血但不再是估值加分项。核心变量是地产敞口（华夏幸福等债权减值已充分计提但仍有尾部风险）、新业务价值能否重回双位数增长、以及长端利率下行对利差与内含价值的侵蚀。管理层战略清晰但处改革中途，分红连续多年增长。",
+        "industry_detail": {
+          "格局": 22,
+          "定价权": 14,
+          "需求稳定性": 18,
+          "进入壁垒": 22
+        }
+      },
+      {
+        "date": "2026-09-24",
+        "symbol": "601318",
+        "slug": "zhongguo-pingan",
+        "name": "中国平安",
+        "close": 54.46,
+        "pe_pct": 0.1,
+        "pb_pct": 17.2,
+        "dv_pct": 98.1,
+        "scores": {
+          "industry": 76,
+          "company": 66.0,
+          "price": 94.9,
+          "total": 70.6
+        },
+        "verdict": "推荐",
+        "vetoes": [],
+        "degraded": false,
+        "detail": {
+          "fin": {
+            "f_score": 2,
+            "f_available": 2,
+            "f_part": 6.0,
+            "f_note": "F-Score 数据不足，取中性 6",
+            "roe_mean": 12.1,
+            "roe_part": 6,
+            "roe_note": "ROE均值 12.1%，创造价值",
+            "cash_conv": 4.89,
+            "q_part": 10,
+            "q_note": "现金含量 4.89，优",
+            "total": 22.0
+          },
+          "ts_adj": 0.0,
+          "ts_note": "时序趋势中性",
+          "price_notes": [
+            "股息率分位 98%",
+            "PE-TTM 6.2 倍"
           ],
           "moat": 28,
           "management": 16,
@@ -1240,6 +2384,58 @@
           "需求稳定性": 19,
           "进入壁垒": 20
         }
+      },
+      {
+        "date": "2026-09-24",
+        "symbol": "000001",
+        "slug": "pingan-yinhang",
+        "name": "平安银行",
+        "close": 11.6,
+        "pe_pct": 27.3,
+        "pb_pct": 12.2,
+        "dv_pct": 81.0,
+        "scores": {
+          "industry": 70,
+          "company": 57.0,
+          "price": 80.1,
+          "total": 61.0
+        },
+        "verdict": "可关注",
+        "vetoes": [],
+        "degraded": false,
+        "detail": {
+          "fin": {
+            "f_score": 2,
+            "f_available": 2,
+            "f_part": 6.0,
+            "f_note": "F-Score 数据不足，取中性 6",
+            "roe_mean": 9.5,
+            "roe_part": 4,
+            "roe_note": "ROE均值 9.5%，一般",
+            "cash_conv": 7.41,
+            "q_part": 10,
+            "q_note": "现金含量 7.41，优",
+            "total": 20.0
+          },
+          "ts_adj": 0.0,
+          "ts_note": "时序趋势中性",
+          "price_notes": [
+            "股息率分位 81%",
+            "PE-TTM 5.2 倍"
+          ],
+          "moat": 22,
+          "management": 15,
+          "pricing_power_adj": 0,
+          "roe_mean": 9.5,
+          "revenue_cagr": 2.2
+        },
+        "qual_rationale": "股份行中零售转型最彻底的一只，依托平安集团 2 亿+个人客户与综拓渠道获客，私行财富与消费金融（新一贷、信用卡）形成收入特色，AUM 与财富管理手续费是其区别于同业的标签。代价是零售端资产质量对居民就业与收入最敏感，近年主动压降高风险消费贷后业绩增速明显放缓；负债端存款成本偏高、对高成本存款依赖较重，息差压力大于国有大行。地产表内外敞口曾是最大隐忧，目前已大幅压降。",
+        "industry_detail": {
+          "格局": 19,
+          "定价权": 12,
+          "需求稳定性": 19,
+          "进入壁垒": 20
+        }
       }
     ],
     "zhongguo-renshou": [
@@ -1294,6 +2490,58 @@
           "需求稳定性": 18,
           "进入壁垒": 21
         }
+      },
+      {
+        "date": "2026-09-24",
+        "symbol": "601628",
+        "slug": "zhongguo-renshou",
+        "name": "中国人寿",
+        "close": 38.6,
+        "pe_pct": 0.7,
+        "pb_pct": 4.7,
+        "dv_pct": 90.6,
+        "scores": {
+          "industry": 73,
+          "company": 63.0,
+          "price": 100,
+          "total": 68.9
+        },
+        "verdict": "可关注",
+        "vetoes": [],
+        "degraded": false,
+        "detail": {
+          "fin": {
+            "f_score": 2,
+            "f_available": 2,
+            "f_part": 6.0,
+            "f_note": "F-Score 数据不足，取中性 6",
+            "roe_mean": 12.4,
+            "roe_part": 6,
+            "roe_note": "ROE均值 12.4%，创造价值",
+            "cash_conv": 2.99,
+            "q_part": 10,
+            "q_note": "现金含量 2.99，优",
+            "total": 22.0
+          },
+          "ts_adj": 0.0,
+          "ts_note": "时序趋势中性",
+          "price_notes": [
+            "股息率分位 91%",
+            "PE-TTM 4.4 倍"
+          ],
+          "moat": 27,
+          "management": 14,
+          "pricing_power_adj": 0,
+          "roe_mean": 12.4,
+          "revenue_cagr": 1.3
+        },
+        "qual_rationale": "寿险行业绝对龙头（市场份额常年第一），县域下沉网络与百万代理人队伍是最难复制的渠道壁垒，品牌与国资背景使其在银保与政保业务中具备天然优势；内含价值体量最大、偿付能力充足。变量在于代理人规模持续脱落、产品结构向分红险转型带来的新业务价值率下降，以及利率下行久期错配下的再投资风险；权益市场波动对其利润弹性的放大效应显著。管理层为国资委派、经营风格稳健但市场化激励弱于平安。",
+        "industry_detail": {
+          "格局": 21,
+          "定价权": 13,
+          "需求稳定性": 18,
+          "进入壁垒": 21
+        }
       }
     ],
     "geli-dianqi": [
@@ -1306,6 +2554,58 @@
         "pe_pct": 21.9,
         "pb_pct": 1.6,
         "dv_pct": 77.6,
+        "scores": {
+          "industry": 78,
+          "company": 68.2,
+          "price": 90.2,
+          "total": 70.8
+        },
+        "verdict": "推荐",
+        "vetoes": [],
+        "degraded": false,
+        "detail": {
+          "fin": {
+            "f_score": 3,
+            "f_available": 5,
+            "f_part": 7.2,
+            "f_note": "F-Score 3/5(可得项归一)",
+            "roe_mean": 24.3,
+            "roe_part": 8,
+            "roe_note": "ROE均值 24.3%，显著创造价值",
+            "cash_conv": 1.6,
+            "q_part": 10,
+            "q_note": "现金含量 1.60，优",
+            "total": 25.2
+          },
+          "ts_adj": 5.0,
+          "ts_note": "ROE 均值 24.3% 且一致性高，长期盈利质量强",
+          "price_notes": [
+            "股息率分位 78%",
+            "PE-TTM 7.7 倍"
+          ],
+          "moat": 26,
+          "management": 12,
+          "pricing_power_adj": 1,
+          "roe_mean": 24.3,
+          "revenue_cagr": 5.0
+        },
+        "qual_rationale": "空调行业双寡头之一，家用空调市占率长期第一，压缩机与核心零部件自研自产的垂直一体化使其在成本与品质上拥有强议价权，独一无二的经销商返利模式曾是行业最强渠道（但也正因如此，渠道去层级改革耗时且痛苦）；账上现金充沛、分红慷慨（多年分红率超 50%，近期股权激励绑定长期增长）。隐忧是单一品类依赖度过高（空调占比七成以上）、多元化（手机、新能源、预制菜装备）屡次受挫、以及渠道改革与接班人不确定性导致治理折价。管理层强势但分红政策积极。",
+        "industry_detail": {
+          "格局": 21,
+          "定价权": 20,
+          "需求稳定性": 17,
+          "进入壁垒": 20
+        }
+      },
+      {
+        "date": "2026-09-24",
+        "symbol": "000651",
+        "slug": "geli-dianqi",
+        "name": "格力电器",
+        "close": null,
+        "pe_pct": 22.2,
+        "pb_pct": 2.1,
+        "dv_pct": 78.0,
         "scores": {
           "industry": 78,
           "company": 68.2,
@@ -1402,6 +2702,58 @@
           "需求稳定性": 15,
           "进入壁垒": 22
         }
+      },
+      {
+        "date": "2026-09-24",
+        "symbol": "600415",
+        "slug": "xiaoshangpin-cheng",
+        "name": "小商品城",
+        "close": null,
+        "pe_pct": 3.7,
+        "pb_pct": 60.7,
+        "dv_pct": 99.2,
+        "scores": {
+          "industry": 73,
+          "company": 68.0,
+          "price": 81.4,
+          "total": 67.0
+        },
+        "verdict": "可关注",
+        "vetoes": [],
+        "degraded": false,
+        "detail": {
+          "fin": {
+            "f_score": 5,
+            "f_available": 5,
+            "f_part": 12.0,
+            "f_note": "F-Score 5/5(可得项归一)",
+            "roe_mean": 11.3,
+            "roe_part": 4,
+            "roe_note": "ROE均值 11.3%，一般",
+            "cash_conv": 2.5,
+            "q_part": 10,
+            "q_note": "现金含量 2.50，优",
+            "total": 26.0
+          },
+          "ts_adj": 0.0,
+          "ts_note": "时序趋势中性",
+          "price_notes": [
+            "股息率分位 99%",
+            "PE-TTM 13.2 倍"
+          ],
+          "moat": 28,
+          "management": 14,
+          "pricing_power_adj": 1,
+          "roe_mean": 11.3,
+          "revenue_cagr": 12.3
+        },
+        "qual_rationale": "全球最大小商品集散地——义乌国际商贸城的唯一运营主体，义乌国资控股，商铺租金+市场服务费构成稳定现金流底盘，近年把线下流量迁移到 Chinagoods 跨境 B2B 平台并拿到跨境人民币支付牌照（义支付 Yiwu Pay），从「收租」延伸出「贸易+支付+数据」的第二曲线。护城河来自区位的不可复制性（全球小商品供应链几十年集聚）与独家市场运营权，租金可随市场景气上调、贸易服务费自主定价，因此定价权好于一般零售。风险在于外贸出口景气与关税环境的强相关、Chinagoods 的货币化仍在早期、以及新市场（迪拜等海外分市场）爬坡不及预期；管理层为国资背景，跨境电商与支付的业务推进节奏偏稳健。",
+        "industry_detail": {
+          "格局": 19,
+          "定价权": 17,
+          "需求稳定性": 15,
+          "进入壁垒": 22
+        }
       }
     ],
     "zhongyou-ziben": [
@@ -1442,6 +2794,58 @@
           "price_notes": [
             "股息率分位 29%",
             "PE-TTM 17.4 倍"
+          ],
+          "moat": 22,
+          "management": 13,
+          "pricing_power_adj": -1,
+          "roe_mean": 3.8,
+          "revenue_cagr": 1.8
+        },
+        "qual_rationale": "中石油集团旗下的金融控股平台，资产端以昆仑银行、昆仑信托、昆仑金融租赁、中油财务与专属保险为主，本质是服务集团产业链的央企产业金融（能源产业链上下游的存贷、租赁、保险需求），股东资源带来低成本负债与稳定项目源，需求受集团资本开支与能源行业景气支撑，波动小于市场化金融机构。但业务高度同质化——息差与费率跟随利率与监管定价，几乎没有自主提价空间，ROE 长期在个位数徘徊，市场化获客能力与股份行/头部券商差距明显。管理层为央企体系，风控稳健、分红稳定，但市场化激励与创新偏保守。",
+        "industry_detail": {
+          "格局": 17,
+          "定价权": 12,
+          "需求稳定性": 16,
+          "进入壁垒": 17
+        }
+      },
+      {
+        "date": "2026-09-24",
+        "symbol": "000617",
+        "slug": "zhongyou-ziben",
+        "name": "中油资本",
+        "close": 6.75,
+        "pe_pct": 71.4,
+        "pb_pct": 26.1,
+        "dv_pct": 30.5,
+        "scores": {
+          "industry": 62,
+          "company": 46.2,
+          "price": 50.1,
+          "total": 46.3
+        },
+        "verdict": "不推荐",
+        "vetoes": [],
+        "degraded": false,
+        "detail": {
+          "fin": {
+            "f_score": 3,
+            "f_available": 5,
+            "f_part": 7.2,
+            "f_note": "F-Score 3/5(可得项归一)",
+            "roe_mean": 3.8,
+            "roe_part": 2,
+            "roe_note": "ROE均值 3.8%，偏低",
+            "cash_conv": -4.25,
+            "q_part": 2,
+            "q_note": "现金含量 -4.25，差",
+            "total": 11.2
+          },
+          "ts_adj": 0.0,
+          "ts_note": "时序趋势中性",
+          "price_notes": [
+            "股息率分位 30%",
+            "PE-TTM 16.9 倍"
           ],
           "moat": 22,
           "management": 13,
@@ -1510,6 +2914,58 @@
           "需求稳定性": 11,
           "进入壁垒": 19
         }
+      },
+      {
+        "date": "2026-09-24",
+        "symbol": "000725",
+        "slug": "jingdongfang",
+        "name": "京东方A",
+        "close": 6.0,
+        "pe_pct": 51.5,
+        "pb_pct": 71.5,
+        "dv_pct": 49.4,
+        "scores": {
+          "industry": 59,
+          "company": 55.2,
+          "price": 42.6,
+          "total": 44.7
+        },
+        "verdict": "不推荐",
+        "vetoes": [],
+        "degraded": false,
+        "detail": {
+          "fin": {
+            "f_score": 3,
+            "f_available": 5,
+            "f_part": 7.2,
+            "f_note": "F-Score 3/5(可得项归一)",
+            "roe_mean": 3.9,
+            "roe_part": 2,
+            "roe_note": "ROE均值 3.9%，偏低",
+            "cash_conv": 8.34,
+            "q_part": 10,
+            "q_note": "现金含量 8.34，优",
+            "total": 19.2
+          },
+          "ts_adj": 0.0,
+          "ts_note": "时序趋势中性",
+          "price_notes": [
+            "股息率分位 49%",
+            "PE-TTM 27.9 倍"
+          ],
+          "moat": 22,
+          "management": 14,
+          "pricing_power_adj": -3,
+          "roe_mean": 3.9,
+          "revenue_cagr": 12.9
+        },
+        "qual_rationale": "全球 LCD 面板出货量第一（与 TCL 华星形成双寡头），在 OLED 领域持续追赶并已进入苹果供应链，产业壁垒来自一条产线数百亿元的资本开支门槛、良率与工艺 know-how 的长期积累，以及国内面板设备与材料的国产化配套。但产品高度标准化、供需错配导致面板价格剧烈周期波动，公司本质是价格接受者——行业景气时利润爆发、下行期全行业亏损，十年 ROE 与自由现金流长期低于资本开支，折旧压力巨大，这是其商业模式最核心的缺陷。逆周期扩产与「屏之物联」转型体现了管理层的战略定力和执行力，但股东回报的可预测性依然很差。",
+        "industry_detail": {
+          "格局": 20,
+          "定价权": 9,
+          "需求稳定性": 11,
+          "进入壁垒": 19
+        }
       }
     ],
     "lixun-jingmi": [
@@ -1550,6 +3006,58 @@
           "price_notes": [
             "股息率分位 86%",
             "PE-TTM 23.7 倍"
+          ],
+          "moat": 23,
+          "management": 17,
+          "pricing_power_adj": -2,
+          "roe_mean": 16.1,
+          "revenue_cagr": 42.4
+        },
+        "qual_rationale": "从连接器起家做到消费电子精密制造龙头，凭借极致的良率、垂直整合与响应速度，深度绑定头部客户（苹果收入占比长期偏高），并成功横向扩张到通信、汽车线束与智能座舱，形成「消费电子+通信+汽车」三轮驱动。护城河是制造端的工程能力与规模化交付，而非品牌：代工模式决定了毛利被品牌客户持续挤压、议价能力弱，单一大客户依赖带来订单与份额波动的集中风险，同业（富士康、立讯之外的新进入者）在越南等地的产能转移也在稀释成本优势。管理层是创始人驱动型团队，历次并购整合与业务切换的执行记录优秀，汽车业务是未来三年的关键增量。",
+        "industry_detail": {
+          "格局": 18,
+          "定价权": 10,
+          "需求稳定性": 13,
+          "进入壁垒": 18
+        }
+      },
+      {
+        "date": "2026-09-24",
+        "symbol": "002475",
+        "slug": "lixun-jingmi",
+        "name": "立讯精密",
+        "close": null,
+        "pe_pct": 21.5,
+        "pb_pct": 19.8,
+        "dv_pct": 86.4,
+        "scores": {
+          "industry": 59,
+          "company": 73.0,
+          "price": 81.1,
+          "total": 61.5
+        },
+        "verdict": "可关注",
+        "vetoes": [],
+        "degraded": false,
+        "detail": {
+          "fin": {
+            "f_score": 5,
+            "f_available": 5,
+            "f_part": 12.0,
+            "f_note": "F-Score 5/5(可得项归一)",
+            "roe_mean": 16.1,
+            "roe_part": 8,
+            "roe_note": "ROE均值 16.1%，显著创造价值",
+            "cash_conv": 1.04,
+            "q_part": 10,
+            "q_note": "现金含量 1.04，优",
+            "total": 30.0
+          },
+          "ts_adj": 3.0,
+          "ts_note": "ROE 均值 16.1%，一致性中等",
+          "price_notes": [
+            "股息率分位 86%",
+            "PE-TTM 23.9 倍"
           ],
           "moat": 23,
           "management": 17,
@@ -1618,6 +3126,58 @@
           "需求稳定性": 12,
           "进入壁垒": 17
         }
+      },
+      {
+        "date": "2026-09-24",
+        "symbol": "002230",
+        "slug": "keda-xunfei",
+        "name": "科大讯飞",
+        "close": null,
+        "pe_pct": 36.0,
+        "pb_pct": 0.1,
+        "dv_pct": 56.1,
+        "scores": {
+          "industry": 55,
+          "company": 53.2,
+          "price": 65.2,
+          "total": 50.4
+        },
+        "verdict": "观望",
+        "vetoes": [],
+        "degraded": false,
+        "detail": {
+          "fin": {
+            "f_score": 3,
+            "f_available": 5,
+            "f_part": 7.2,
+            "f_note": "F-Score 3/5(可得项归一)",
+            "roe_mean": 6.0,
+            "roe_part": 2,
+            "roe_note": "ROE均值 6.0%，偏低",
+            "cash_conv": 3.82,
+            "q_part": 10,
+            "q_note": "现金含量 3.82，优",
+            "total": 19.2
+          },
+          "ts_adj": 0.0,
+          "ts_note": "时序趋势中性",
+          "price_notes": [
+            "股息率分位 56%",
+            "PE-TTM 106.4 倍"
+          ],
+          "moat": 20,
+          "management": 14,
+          "pricing_power_adj": -1,
+          "roe_mean": 6.0,
+          "revenue_cagr": 26.3
+        },
+        "qual_rationale": "中文智能语音与认知智能的长期技术领先者，星火大模型发布后成为国产大模型第一梯队，在智慧教育、智慧医疗、智慧城市等 G 端/B 端场景拥有最深的落地渠道与数据积累，教育业务（考试评测、个性化学习）是少数真正跑通商业模式的 AI 场景。但行业竞争格局极为拥挤：互联网大厂与创业公司在大模型上正面竞争，开源模型把通用能力价格迅速打到地板，定价权弱；收入高度依赖政府与教育财政预算，项目制回款慢、应收账款规模大、盈利质量长期不佳；研发投入（尤其大模型算力）刚性且持续吞噬利润。管理层技术背景深厚、战略投入果断，但资本回报兑现仍是最大问号。",
+        "industry_detail": {
+          "格局": 15,
+          "定价权": 11,
+          "需求稳定性": 12,
+          "进入壁垒": 17
+        }
       }
     ],
     "baogang-gufen": [
@@ -1629,6 +3189,58 @@
         "close": null,
         "pe_pct": 61.0,
         "pb_pct": 6.3,
+        "dv_pct": 77.5,
+        "scores": {
+          "industry": 56,
+          "company": 57.6,
+          "price": 72.2,
+          "total": 52.0
+        },
+        "verdict": "观望",
+        "vetoes": [],
+        "degraded": false,
+        "detail": {
+          "fin": {
+            "f_score": 4,
+            "f_available": 5,
+            "f_part": 9.6,
+            "f_note": "F-Score 4/5(可得项归一)",
+            "roe_mean": 7.1,
+            "roe_part": 2,
+            "roe_note": "ROE均值 7.1%，偏低",
+            "cash_conv": 3.25,
+            "q_part": 10,
+            "q_note": "现金含量 3.25，优",
+            "total": 21.6
+          },
+          "ts_adj": 0.0,
+          "ts_note": "时序趋势中性",
+          "price_notes": [
+            "股息率分位 78%",
+            "PE-TTM 12.5 倍"
+          ],
+          "moat": 21,
+          "management": 15,
+          "pricing_power_adj": -3,
+          "roe_mean": 7.1,
+          "revenue_cagr": 2.9
+        },
+        "qual_rationale": "国内高端板材龙头，汽车板、硅钢、镀锡板等拳头品种在国内份额领先，下游认证周期长达两三年形成一定客户黏性，中国宝武旗下旗舰上市平台的定位带来采购、物流与研发协同。但钢铁底色是典型的大宗商品周期行业：铁矿石与焦煤成本外生、钢价随地产与制造业需求大幅波动，公司整体是价格接受者，仅在高附加值品种上享有小幅溢价；粗钢行业集中度仍低，产能置换与环保限产是近年主要的供给约束，而非公司自身的定价能力。管理层为央企体系，成本控制与分红纪律在行业内属于优等生，但盈利中枢随行业周期起伏，难以自主平滑。",
+        "industry_detail": {
+          "格局": 17,
+          "定价权": 11,
+          "需求稳定性": 11,
+          "进入壁垒": 17
+        }
+      },
+      {
+        "date": "2026-09-24",
+        "symbol": "600019",
+        "slug": "baogang-gufen",
+        "name": "宝钢股份",
+        "close": 5.75,
+        "pe_pct": 56.8,
+        "pb_pct": 5.2,
         "dv_pct": 77.5,
         "scores": {
           "industry": 56,
@@ -1726,10 +3338,1520 @@
           "需求稳定性": 12,
           "进入壁垒": 19
         }
+      },
+      {
+        "date": "2026-09-24",
+        "symbol": "600030",
+        "slug": "zhongxin-zhengquan",
+        "name": "中信证券",
+        "close": 26.89,
+        "pe_pct": 0.1,
+        "pb_pct": 34.0,
+        "dv_pct": 74.7,
+        "scores": {
+          "industry": 65,
+          "company": 61.0,
+          "price": 85.9,
+          "total": 62.3
+        },
+        "verdict": "可关注",
+        "vetoes": [],
+        "degraded": false,
+        "detail": {
+          "fin": {
+            "f_score": 2,
+            "f_available": 2,
+            "f_part": 6.0,
+            "f_note": "F-Score 数据不足，取中性 6",
+            "roe_mean": 7.9,
+            "roe_part": 2,
+            "roe_note": "ROE均值 7.9%，偏低",
+            "cash_conv": 2.46,
+            "q_part": 10,
+            "q_note": "现金含量 2.46，优",
+            "total": 18.0
+          },
+          "ts_adj": 0.0,
+          "ts_note": "时序趋势中性",
+          "price_notes": [
+            "股息率分位 75%",
+            "PE-TTM 10.4 倍"
+          ],
+          "moat": 27,
+          "management": 16,
+          "pricing_power_adj": 0,
+          "roe_mean": 7.9,
+          "revenue_cagr": 7.8
+        },
+        "qual_rationale": "全业务线领先的券商龙头，机构客户覆盖、投行品牌、资本中介与衍生品做市能力均为行业第一梯队，资产负债表规模与杠杆运用效率领先同业，国际化（中信里昂）布局最深，牌照、净资本与客户信任构成三重进入壁垒。但券商商业模式对市场成交量、IPO/再融资节奏和债市行情高度敏感——收入结构随牛熊大幅波动，经纪佣金与承销费率长期下行，定价权弱于消费品公司，行业整体 ROE 中枢受监管杠杆约束。管理层与合规风控体系为行业标杆，分红比例稳定；核心观察变量是并购整合与建设一流投行的政策红利落地节奏。",
+        "industry_detail": {
+          "格局": 21,
+          "定价权": 13,
+          "需求稳定性": 12,
+          "进入壁垒": 19
+        }
+      }
+    ],
+    "yanhu-gufen": [
+      {
+        "date": "2026-09-24",
+        "symbol": "000792",
+        "slug": "yanhu-gufen",
+        "name": "盐湖股份",
+        "close": null,
+        "pe_pct": 47.6,
+        "pb_pct": 50.4,
+        "dv_pct": 40.2,
+        "scores": {
+          "industry": 73,
+          "company": 64.6,
+          "price": 59.6,
+          "total": 57.4
+        },
+        "verdict": "观望",
+        "vetoes": [],
+        "degraded": false,
+        "detail": {
+          "fin": {
+            "f_score": 4,
+            "f_available": 5,
+            "f_part": 9.6,
+            "f_note": "F-Score 4/5(可得项归一)",
+            "roe_mean": 30.5,
+            "roe_part": 8,
+            "roe_note": "ROE均值 30.5%，显著创造价值",
+            "cash_conv": 1.2,
+            "q_part": 10,
+            "q_note": "现金含量 1.20，优",
+            "total": 27.6
+          },
+          "ts_adj": 1.0,
+          "ts_note": "ROE 均值 30.5% 但波动大（周期性）",
+          "price_notes": [
+            "股息率分位 40%",
+            "PE-TTM 10.3 倍"
+          ],
+          "moat": 24,
+          "management": 12,
+          "pricing_power_adj": -2,
+          "roe_mean": 30.5,
+          "revenue_cagr": 4.6
+        },
+        "qual_rationale": "察尔汗盐湖资源不可复制，国内钾肥产能第一，碳酸锂提锂成本处于全球成本曲线左侧，资源禀赋构成天然壁垒；钾肥是国家战略物资，需求刚性但受农业景气小幅扰动。定价端完全跟随国际钾肥与锂价，公司是价格接受者，这也是周期底部盈利大幅波动的根源。历史上公司经历破产重整，现为国企控股，治理稳定性一般。核心看点在于锂盐产能释放带来的第二增长曲线。",
+        "industry_detail": {
+          "格局": 20,
+          "定价权": 14,
+          "需求稳定性": 16,
+          "进入壁垒": 23
+        }
+      }
+    ],
+    "huagong-keji": [
+      {
+        "date": "2026-09-24",
+        "symbol": "000988",
+        "slug": "huagong-keji",
+        "name": "华工科技",
+        "close": null,
+        "pe_pct": 87.8,
+        "pb_pct": 95.8,
+        "dv_pct": 48.0,
+        "scores": {
+          "industry": 62,
+          "company": 49.6,
+          "price": 20.5,
+          "total": 41.1
+        },
+        "verdict": "不推荐",
+        "vetoes": [],
+        "degraded": false,
+        "detail": {
+          "fin": {
+            "f_score": 4,
+            "f_available": 5,
+            "f_part": 9.6,
+            "f_note": "F-Score 4/5(可得项归一)",
+            "roe_mean": 9.2,
+            "roe_part": 4,
+            "roe_note": "ROE均值 9.2%，一般",
+            "cash_conv": 0.83,
+            "q_part": 8,
+            "q_note": "现金含量 0.83，良",
+            "total": 21.6
+          },
+          "ts_adj": 0.0,
+          "ts_note": "时序趋势中性",
+          "price_notes": [
+            "股息率分位 48%",
+            "PE-TTM 59.3 倍"
+          ],
+          "moat": 16,
+          "management": 12,
+          "pricing_power_adj": 0,
+          "roe_mean": 9.2,
+          "revenue_cagr": 17.7
+        },
+        "qual_rationale": "激光加工装备国内第一梯队，客户覆盖钣金、动力电池与电子制造；光模块与传感器业务受益 AI 算力需求。激光设备行业集中度不高、价格竞争常态化，定价权有限；高校背景带来持续技术供给但产业化节奏偏慢。光模块业务的客户集中度较高，业绩随海外资本开支波动明显，是一条弹性大但确定性偏低的主线。",
+        "industry_detail": {
+          "格局": 16,
+          "定价权": 15,
+          "需求稳定性": 15,
+          "进入壁垒": 16
+        }
+      }
+    ],
+    "fenzhong-chuanmei": [
+      {
+        "date": "2026-09-24",
+        "symbol": "002027",
+        "slug": "fenzhong-chuanmei",
+        "name": "分众传媒",
+        "close": null,
+        "pe_pct": 35.5,
+        "pb_pct": 9.2,
+        "dv_pct": 98.0,
+        "scores": {
+          "industry": 72,
+          "company": 66.6,
+          "price": 82.2,
+          "total": 65.5
+        },
+        "verdict": "可关注",
+        "vetoes": [],
+        "degraded": false,
+        "detail": {
+          "fin": {
+            "f_score": 4,
+            "f_available": 5,
+            "f_part": 9.6,
+            "f_note": "F-Score 4/5(可得项归一)",
+            "roe_mean": 31.4,
+            "roe_part": 8,
+            "roe_note": "ROE均值 31.4%，显著创造价值",
+            "cash_conv": 2.45,
+            "q_part": 10,
+            "q_note": "现金含量 2.45，优",
+            "total": 27.6
+          },
+          "ts_adj": 3.0,
+          "ts_note": "ROE 均值 31.4%，一致性中等",
+          "price_notes": [
+            "股息率分位 98%",
+            "PE-TTM 19.7 倍"
+          ],
+          "moat": 22,
+          "management": 14,
+          "pricing_power_adj": 0,
+          "roe_mean": 31.4,
+          "revenue_cagr": 2.5
+        },
+        "qual_rationale": "城市生活圈媒体龙头，覆盖全国数百万电梯点位，点位网络的规模效应与先发优势难以复制，属于典型的注意力稀缺资源；轻资产、高毛利、现金流好，具备很强的类消费属性。但广告预算与宏观景气高度同步，且公司对广告主并无自主提价能力，只能靠点位扩张与刊挂率提升。短视频等线上媒体分流预算，点位租金构成刚性成本，决定了利润的下行弹性大于上行弹性。",
+        "industry_detail": {
+          "格局": 21,
+          "定价权": 17,
+          "需求稳定性": 15,
+          "进入壁垒": 19
+        }
+      }
+    ],
+    "shiji-huatong": [
+      {
+        "date": "2026-09-24",
+        "symbol": "002602",
+        "slug": "shiji-huatong",
+        "name": "世纪华通",
+        "close": 14.23,
+        "pe_pct": 12.4,
+        "pb_pct": 58.7,
+        "dv_pct": 94.3,
+        "scores": {
+          "industry": 54,
+          "company": 44.6,
+          "price": 74.6,
+          "total": 49.5
+        },
+        "verdict": "不推荐",
+        "vetoes": [],
+        "degraded": false,
+        "detail": {
+          "fin": {
+            "f_score": 4,
+            "f_available": 5,
+            "f_part": 9.6,
+            "f_note": "F-Score 4/5(可得项归一)",
+            "roe_mean": 5.4,
+            "roe_part": 2,
+            "roe_note": "ROE均值 5.4%，偏低",
+            "cash_conv": 1.53,
+            "q_part": 10,
+            "q_note": "现金含量 1.53，优",
+            "total": 21.6
+          },
+          "ts_adj": 0.0,
+          "ts_note": "时序趋势中性",
+          "price_notes": [
+            "股息率分位 94%",
+            "PE-TTM 14.1 倍"
+          ],
+          "moat": 13,
+          "management": 10,
+          "pricing_power_adj": -1,
+          "roe_mean": 5.4,
+          "revenue_cagr": 30.5
+        },
+        "qual_rationale": "移动游戏研发发行商，点点互动在海外休闲与 SLG 赛道建立了成熟买量体系，经典 IP 提供流水底盘。游戏行业产品生命周期短、单品命中率不确定，流水衰减快且买量成本持续上行，格局与壁垒都不算牢固。历史上通过大规模并购扩张并留下较大商誉，治理与财务透明度存在折价，管理层过往承诺兑现度一般。",
+        "industry_detail": {
+          "格局": 14,
+          "定价权": 13,
+          "需求稳定性": 13,
+          "进入壁垒": 14
+        }
+      }
+    ],
+    "guangqi-jishu": [
+      {
+        "date": "2026-09-24",
+        "symbol": "002625",
+        "slug": "guangqi-jishu",
+        "name": "光启技术",
+        "close": null,
+        "pe_pct": 20.8,
+        "pb_pct": 59.3,
+        "dv_pct": 77.7,
+        "scores": {
+          "industry": 74,
+          "company": 57.0,
+          "price": 58.6,
+          "total": 57.8
+        },
+        "verdict": "观望",
+        "vetoes": [],
+        "degraded": false,
+        "detail": {
+          "fin": {
+            "f_score": 5,
+            "f_available": 5,
+            "f_part": 12.0,
+            "f_note": "F-Score 5/5(可得项归一)",
+            "roe_mean": 4.5,
+            "roe_part": 2,
+            "roe_note": "ROE均值 4.5%，偏低",
+            "cash_conv": 1.18,
+            "q_part": 10,
+            "q_note": "现金含量 1.18，优",
+            "total": 24.0
+          },
+          "ts_adj": 0.0,
+          "ts_note": "时序趋势中性",
+          "price_notes": [
+            "股息率分位 78%",
+            "PE-TTM 86.8 倍"
+          ],
+          "moat": 22,
+          "management": 11,
+          "pricing_power_adj": 1,
+          "roe_mean": 4.5,
+          "revenue_cagr": 19.2
+        },
+        "qual_rationale": "超材料是少数具备代际技术优势的军用新材料，公司是国内唯一实现规模化量产供应的企业，型号一旦定型即形成长期锁定，进入壁垒极高；军民两用场景（隐身结构件、天线罩等）延展空间大。定价端因军品属性具备一定技术溢价，但最终由审价机制决定；客户高度集中、交付节奏受计划约束，业绩确认存在波动，治理层面需关注控制权与估值对应的预期管理。",
+        "industry_detail": {
+          "格局": 19,
+          "定价权": 16,
+          "需求稳定性": 17,
+          "进入壁垒": 22
+        }
+      }
+    ],
+    "muyuan-gufen": [
+      {
+        "date": "2026-09-24",
+        "symbol": "002714",
+        "slug": "muyuan-gufen",
+        "name": "牧原股份",
+        "close": null,
+        "pe_pct": 12.0,
+        "pb_pct": 6.7,
+        "dv_pct": 92.7,
+        "scores": {
+          "industry": 54,
+          "company": 60.6,
+          "price": 93.2,
+          "total": 57.7
+        },
+        "verdict": "观望",
+        "vetoes": [],
+        "degraded": false,
+        "detail": {
+          "fin": {
+            "f_score": 4,
+            "f_available": 5,
+            "f_part": 9.6,
+            "f_note": "F-Score 4/5(可得项归一)",
+            "roe_mean": 18.6,
+            "roe_part": 8,
+            "roe_note": "ROE均值 18.6%，显著创造价值",
+            "cash_conv": 1.94,
+            "q_part": 10,
+            "q_note": "现金含量 1.94，优",
+            "total": 27.6
+          },
+          "ts_adj": 1.0,
+          "ts_note": "ROE 均值 18.6% 但波动大（周期性）",
+          "price_notes": [
+            "股息率分位 93%",
+            "PE-TTM -208.5 倍"
+          ],
+          "moat": 18,
+          "management": 14,
+          "pricing_power_adj": -3,
+          "roe_mean": 18.6,
+          "revenue_cagr": 43.4
+        },
+        "qual_rationale": "生猪养殖完全同质化，猪肉价格由全国供需决定，公司毫无定价权，是典型的价格接受者；唯一的护城河是自育自繁自养一体化带来的完全成本优势，长期低于行业平均线。需求端刚性但受替代蛋白与消费景气小幅影响，进入壁垒来自资金、土地与环保审批。管理层在周期底部的扩张执行力已被反复验证，但重资产模式使负债与现金流在猪价低谷时承压。",
+        "industry_detail": {
+          "格局": 15,
+          "定价权": 10,
+          "需求稳定性": 14,
+          "进入壁垒": 15
+        }
+      }
+    ],
+    "aier-yanke": [
+      {
+        "date": "2026-09-24",
+        "symbol": "300015",
+        "slug": "aier-yanke",
+        "name": "爱尔眼科",
+        "close": null,
+        "pe_pct": 6.3,
+        "pb_pct": 0.0,
+        "dv_pct": 97.6,
+        "scores": {
+          "industry": 78,
+          "company": 73.0,
+          "price": 93,
+          "total": 73.2
+        },
+        "verdict": "推荐",
+        "vetoes": [],
+        "degraded": false,
+        "detail": {
+          "fin": {
+            "f_score": 5,
+            "f_available": 5,
+            "f_part": 12.0,
+            "f_note": "F-Score 5/5(可得项归一)",
+            "roe_mean": 16.4,
+            "roe_part": 8,
+            "roe_note": "ROE均值 16.4%，显著创造价值",
+            "cash_conv": 1.84,
+            "q_part": 10,
+            "q_note": "现金含量 1.84，优",
+            "total": 30.0
+          },
+          "ts_adj": 5.0,
+          "ts_note": "ROE 均值 16.4% 且一致性高，长期盈利质量强",
+          "price_notes": [
+            "股息率分位 98%",
+            "PE-TTM 28.9 倍"
+          ],
+          "moat": 24,
+          "management": 14,
+          "pricing_power_adj": 1,
+          "roe_mean": 16.4,
+          "revenue_cagr": 21.1
+        },
+        "qual_rationale": "眼科专科连锁龙头，通过「分级连锁 + 体外孵化基金」把医疗服务做成了可复制的标准化扩张路径，品牌、医生培养体系与设备投入共同构成壁垒；眼科需求刚性且随老龄化、近视率上升自然增长。定价端部分项目（屈光、视光）具备自主定价能力，医保覆盖项目则受控费约束。主要变量是扩张节奏下的医疗质量与合规管理，以及消费降级对可选型术式的冲击。",
+        "industry_detail": {
+          "格局": 21,
+          "定价权": 18,
+          "需求稳定性": 19,
+          "进入壁垒": 20
+        }
+      }
+    ],
+    "huichuan-jishu": [
+      {
+        "date": "2026-09-24",
+        "symbol": "300124",
+        "slug": "huichuan-jishu",
+        "name": "汇川技术",
+        "close": 51.88,
+        "pe_pct": 2.7,
+        "pb_pct": 0.0,
+        "dv_pct": 76.5,
+        "scores": {
+          "industry": 70,
+          "company": 72.0,
+          "price": 90,
+          "total": 68.7
+        },
+        "verdict": "可关注",
+        "vetoes": [],
+        "degraded": false,
+        "detail": {
+          "fin": {
+            "f_score": 5,
+            "f_available": 5,
+            "f_part": 12.0,
+            "f_note": "F-Score 5/5(可得项归一)",
+            "roe_mean": 17.6,
+            "roe_part": 8,
+            "roe_note": "ROE均值 17.6%，显著创造价值",
+            "cash_conv": 1.32,
+            "q_part": 10,
+            "q_note": "现金含量 1.32，优",
+            "total": 30.0
+          },
+          "ts_adj": 5.0,
+          "ts_note": "ROE 均值 17.6% 且一致性高，长期盈利质量强",
+          "price_notes": [
+            "股息率分位 76%",
+            "PE-TTM 28.7 倍"
+          ],
+          "moat": 22,
+          "management": 15,
+          "pricing_power_adj": 0,
+          "roe_mean": 17.6,
+          "revenue_cagr": 32.2
+        },
+        "qual_rationale": "国产工业自动化龙头，通用变频器、伺服系统份额持续替代外资，新能源车电驱进入主流车企。行业壁垒来自 Know-how 积累与客户切换成本，但通用产品端价格战激烈，定价权并不强。管理层战略前瞻、研发投入强度长期领先同行，执行力是其最稳固的优势。下游制造业资本开支周期决定短期景气，这是最大的业绩波动来源。",
+        "industry_detail": {
+          "格局": 19,
+          "定价权": 16,
+          "需求稳定性": 16,
+          "进入壁垒": 19
+        }
+      }
+    ],
+    "yangguang-dianyuan": [
+      {
+        "date": "2026-09-24",
+        "symbol": "300274",
+        "slug": "yangguang-dianyuan",
+        "name": "阳光电源",
+        "close": null,
+        "pe_pct": 21.0,
+        "pb_pct": 35.3,
+        "dv_pct": 100.0,
+        "scores": {
+          "industry": 65,
+          "company": 67.0,
+          "price": 79.1,
+          "total": 61.7
+        },
+        "verdict": "可关注",
+        "vetoes": [],
+        "degraded": false,
+        "detail": {
+          "fin": {
+            "f_score": 5,
+            "f_available": 5,
+            "f_part": 12.0,
+            "f_note": "F-Score 5/5(可得项归一)",
+            "roe_mean": 17.7,
+            "roe_part": 8,
+            "roe_note": "ROE均值 17.7%，显著创造价值",
+            "cash_conv": 1.26,
+            "q_part": 10,
+            "q_note": "现金含量 1.26，优",
+            "total": 30.0
+          },
+          "ts_adj": 3.0,
+          "ts_note": "ROE 均值 17.7%，一致性中等",
+          "price_notes": [
+            "股息率分位 100%",
+            "PE-TTM 15.9 倍"
+          ],
+          "moat": 20,
+          "management": 14,
+          "pricing_power_adj": -1,
+          "roe_mean": 17.7,
+          "revenue_cagr": 35.0
+        },
+        "qual_rationale": "光伏逆变器全球出货量领先，储能系统与风电变流器是第二增长曲线，海外渠道布局较早。逆变器环节技术迭代快、竞争者众，本质是电力电子的成本与可靠性竞赛，定价权有限，价格战叠加海外贸易壁垒使毛利率承压；下游装机节奏受各国补贴与电价机制影响。管理层执行力较强，但需在多个新业务线同时投入，资源分散值得留意。",
+        "industry_detail": {
+          "格局": 18,
+          "定价权": 14,
+          "需求稳定性": 15,
+          "进入壁垒": 18
+        }
+      }
+    ],
+    "shenghong-keji": [
+      {
+        "date": "2026-09-24",
+        "symbol": "300476",
+        "slug": "shenghong-keji",
+        "name": "胜宏科技",
+        "close": null,
+        "pe_pct": 80.2,
+        "pb_pct": 76.3,
+        "dv_pct": 50.5,
+        "scores": {
+          "industry": 57,
+          "company": 53.6,
+          "price": 22.5,
+          "total": 41.5
+        },
+        "verdict": "不推荐",
+        "vetoes": [],
+        "degraded": false,
+        "detail": {
+          "fin": {
+            "f_score": 4,
+            "f_available": 5,
+            "f_part": 9.6,
+            "f_note": "F-Score 4/5(可得项归一)",
+            "roe_mean": 13.7,
+            "roe_part": 6,
+            "roe_note": "ROE均值 13.7%，创造价值",
+            "cash_conv": 1.07,
+            "q_part": 10,
+            "q_note": "现金含量 1.07，优",
+            "total": 25.6
+          },
+          "ts_adj": 0.0,
+          "ts_note": "时序趋势中性",
+          "price_notes": [
+            "股息率分位 50%",
+            "PE-TTM 45.5 倍"
+          ],
+          "moat": 16,
+          "management": 12,
+          "pricing_power_adj": 0,
+          "roe_mean": 13.7,
+          "revenue_cagr": 30.0
+        },
+        "qual_rationale": "PCB 制造商，在高多层板与 HDI 领域积累了量产良率优势，AI 服务器与高端显卡打开需求空间。PCB 行业集中度低、进入壁垒中等，对下游云服务厂商与品牌客户议价能力有限，客户集中度高。产能快速扩张带来折旧压力，一旦算力资本开支放缓，产能利用率回落会放大利润波动。公司治理稳健但规模仍属中等偏上，抗风险能力弱于头部 PCB 平台。",
+        "industry_detail": {
+          "格局": 15,
+          "定价权": 13,
+          "需求稳定性": 14,
+          "进入壁垒": 15
+        }
+      }
+    ],
+    "baoli-fazhan": [
+      {
+        "date": "2026-09-24",
+        "symbol": "600048",
+        "slug": "baoli-fazhan",
+        "name": "保利发展",
+        "close": null,
+        "pe_pct": 96.2,
+        "pb_pct": 3.2,
+        "dv_pct": 5.1,
+        "scores": {
+          "industry": 57,
+          "company": 49.6,
+          "price": 39.0,
+          "total": 42.2
+        },
+        "verdict": "不推荐",
+        "vetoes": [],
+        "degraded": false,
+        "detail": {
+          "fin": {
+            "f_score": 4,
+            "f_available": 5,
+            "f_part": 9.6,
+            "f_note": "F-Score 4/5(可得项归一)",
+            "roe_mean": 7.4,
+            "roe_part": 2,
+            "roe_note": "ROE均值 7.4%，偏低",
+            "cash_conv": 14.68,
+            "q_part": 10,
+            "q_note": "现金含量 14.68，优",
+            "total": 21.6
+          },
+          "ts_adj": 0.0,
+          "ts_note": "时序趋势中性",
+          "price_notes": [
+            "股息率分位 5%",
+            "PE-TTM 235.6 倍"
+          ],
+          "moat": 15,
+          "management": 13,
+          "pricing_power_adj": -2,
+          "roe_mean": 7.4,
+          "revenue_cagr": 8.0
+        },
+        "qual_rationale": "央企背景头部房企，一二线土储质量较好、融资成本低于同业，物业与商业资产提供额外现金流。但房地产行业总量已进入长期下行通道，需求端收缩是最大的负向变量，进入壁垒只剩资金与拿地能力。定价端在下行市场中几乎没有提价权，存货减值与结算毛利率下行压力将持续。管理层稳健，但在行业出清阶段，龙头身份带来的更多是生存概率而非超额收益。",
+        "industry_detail": {
+          "格局": 17,
+          "定价权": 13,
+          "需求稳定性": 11,
+          "进入壁垒": 16
+        }
+      }
+    ],
+    "beifang-xitu": [
+      {
+        "date": "2026-09-24",
+        "symbol": "600111",
+        "slug": "beifang-xitu",
+        "name": "北方稀土",
+        "close": 37.06,
+        "pe_pct": 20.6,
+        "pb_pct": 51.4,
+        "dv_pct": 62.8,
+        "scores": {
+          "industry": 79,
+          "company": 51.2,
+          "price": 60.6,
+          "total": 55.8
+        },
+        "verdict": "观望",
+        "vetoes": [],
+        "degraded": false,
+        "detail": {
+          "fin": {
+            "f_score": 3,
+            "f_available": 5,
+            "f_part": 7.2,
+            "f_note": "F-Score 3/5(可得项归一)",
+            "roe_mean": 9.1,
+            "roe_part": 4,
+            "roe_note": "ROE均值 9.1%，一般",
+            "cash_conv": 0.5,
+            "q_part": 2,
+            "q_note": "现金含量 0.50，差",
+            "total": 13.2
+          },
+          "ts_adj": 0.0,
+          "ts_note": "时序趋势中性",
+          "price_notes": [
+            "股息率分位 63%",
+            "PE-TTM 39.7 倍"
+          ],
+          "moat": 26,
+          "management": 12,
+          "pricing_power_adj": -1,
+          "roe_mean": 9.1,
+          "revenue_cagr": 26.5
+        },
+        "qual_rationale": "独家掌握白云鄂博矿资源与绝大部分轻稀土冶炼分离配额，稀土是不可再生的战略资源，政策准入与资源禀赋共同构成近乎不可逾越的进入壁垒；下游覆盖新能源、军工与电子。定价端受配额与市场价格双重影响，比普通大宗商品更有主动权，但仍非自由定价。管理层为国资体系，经营稳健但效率与激励偏弱，业绩开关更多取决于稀土价格周期。",
+        "industry_detail": {
+          "格局": 22,
+          "定价权": 17,
+          "需求稳定性": 16,
+          "进入壁垒": 24
+        }
+      }
+    ],
+    "dongpeng-yinliao": [
+      {
+        "date": "2026-09-24",
+        "symbol": "605499",
+        "slug": "dongpeng-yinliao",
+        "name": "东鹏饮料",
+        "close": 110.83,
+        "pe_pct": 0.0,
+        "pb_pct": 1.0,
+        "dv_pct": 100.0,
+        "scores": {
+          "industry": 73,
+          "company": 70.0,
+          "price": 97,
+          "total": 71.7
+        },
+        "verdict": "推荐",
+        "vetoes": [],
+        "degraded": false,
+        "detail": {
+          "fin": {
+            "f_score": 5,
+            "f_available": 5,
+            "f_part": 12.0,
+            "f_note": "F-Score 5/5(可得项归一)",
+            "roe_mean": 34.5,
+            "roe_part": 8,
+            "roe_note": "ROE均值 34.5%，显著创造价值",
+            "cash_conv": 1.4,
+            "q_part": 10,
+            "q_note": "现金含量 1.40，优",
+            "total": 30.0
+          },
+          "ts_adj": 3.0,
+          "ts_note": "ROE 均值 34.5%，一致性中等",
+          "price_notes": [
+            "股息率分位 100%",
+            "PE-TTM 16.6 倍"
+          ],
+          "moat": 22,
+          "management": 15,
+          "pricing_power_adj": 1,
+          "roe_mean": 34.5,
+          "revenue_cagr": 28.3
+        },
+        "qual_rationale": "能量饮料赛道受益于蓝领与年轻群体的功能需求，行业景气度高且格局清晰（红牛、东鹏、乐虎等少数玩家），公司的护城河是性价比定位 + 密集冰柜渠道网络带来的终端触达能力，县级市场复制空间尚存。自主定价能力较强，成本端 PET 与白糖价格波动可通过提价部分传导。管理层实干、渠道执行到位，但需持续高费用投放维护渠道，竞争加剧会压缩费用投入产出比。",
+        "industry_detail": {
+          "格局": 19,
+          "定价权": 17,
+          "需求稳定性": 19,
+          "进入壁垒": 18
+        }
+      }
+    ],
+    "fuyao-boli": [
+      {
+        "date": "2026-09-24",
+        "symbol": "600660",
+        "slug": "fuyao-boli",
+        "name": "福耀玻璃",
+        "close": 52.47,
+        "pe_pct": 16.7,
+        "pb_pct": 55.2,
+        "dv_pct": 99.3,
+        "scores": {
+          "industry": 79,
+          "company": 76.0,
+          "price": 71.6,
+          "total": 68.2
+        },
+        "verdict": "可关注",
+        "vetoes": [],
+        "degraded": false,
+        "detail": {
+          "fin": {
+            "f_score": 5,
+            "f_available": 5,
+            "f_part": 12.0,
+            "f_note": "F-Score 5/5(可得项归一)",
+            "roe_mean": 17.2,
+            "roe_part": 8,
+            "roe_note": "ROE均值 17.2%，显著创造价值",
+            "cash_conv": 1.29,
+            "q_part": 10,
+            "q_note": "现金含量 1.29，优",
+            "total": 30.0
+          },
+          "ts_adj": 3.0,
+          "ts_note": "ROE 均值 17.2%，一致性中等",
+          "price_notes": [
+            "股息率分位 99%",
+            "PE-TTM 16.1 倍"
+          ],
+          "moat": 27,
+          "management": 16,
+          "pricing_power_adj": 0,
+          "roe_mean": 17.2,
+          "revenue_cagr": 11.9
+        },
+        "qual_rationale": "全球汽车玻璃寡头，市占率约三分之一，垂直一体化（浮法、硅砂、模具）与规模带来成本优势，海外工厂实现本地化交付，天幕玻璃与镀膜等高附加值产品持续提升单车价值量。格局稳定、进入壁垒高（认证周期长、重资产），但下游整车厂议价强，年降压力常态化。管理层专业且家族治理稳定，分红意愿较好；变量在于汽车产销周期与海外产能爬坡。",
+        "industry_detail": {
+          "格局": 22,
+          "定价权": 17,
+          "需求稳定性": 18,
+          "进入壁垒": 22
+        }
+      }
+    ],
+    "guodian-nanrui": [
+      {
+        "date": "2026-09-24",
+        "symbol": "600406",
+        "slug": "guodian-nanrui",
+        "name": "国电南瑞",
+        "close": null,
+        "pe_pct": 15.5,
+        "pb_pct": 18.7,
+        "dv_pct": 93.1,
+        "scores": {
+          "industry": 81,
+          "company": 67.0,
+          "price": 81.1,
+          "total": 69.0
+        },
+        "verdict": "可关注",
+        "vetoes": [],
+        "degraded": false,
+        "detail": {
+          "fin": {
+            "f_score": 5,
+            "f_available": 5,
+            "f_part": 12.0,
+            "f_note": "F-Score 5/5(可得项归一)",
+            "roe_mean": 14.3,
+            "roe_part": 6,
+            "roe_note": "ROE均值 14.3%，创造价值",
+            "cash_conv": 1.54,
+            "q_part": 10,
+            "q_note": "现金含量 1.54，优",
+            "total": 28.0
+          },
+          "ts_adj": 0.0,
+          "ts_note": "时序趋势中性",
+          "price_notes": [
+            "股息率分位 93%",
+            "PE-TTM 21.3 倍"
+          ],
+          "moat": 25,
+          "management": 14,
+          "pricing_power_adj": 1,
+          "roe_mean": 14.3,
+          "revenue_cagr": 9.9
+        },
+        "qual_rationale": "电网自动化与继电保护核心供应商，调度自动化、特高压控保等环节份额领先，国网体系的准入资质与运行业绩构成极高粘性壁垒，需求端由电网投资驱动、稳定性明显强于工业品。客户集中（电网集采）限制了议价能力，但特高压与电网信息化升级带来持续增量。管理层稳健，应收账期偏长是现金流的主要拖累。",
+        "industry_detail": {
+          "格局": 21,
+          "定价权": 17,
+          "需求稳定性": 21,
+          "进入壁垒": 22
+        }
+      }
+    ],
+    "hailuo-shuini": [
+      {
+        "date": "2026-09-24",
+        "symbol": "600585",
+        "slug": "hailuo-shuini",
+        "name": "海螺水泥",
+        "close": 16.93,
+        "pe_pct": 82.6,
+        "pb_pct": 0.3,
+        "dv_pct": 70.8,
+        "scores": {
+          "industry": 63,
+          "company": 59.6,
+          "price": 63.0,
+          "total": 53.5
+        },
+        "verdict": "观望",
+        "vetoes": [],
+        "degraded": false,
+        "detail": {
+          "fin": {
+            "f_score": 4,
+            "f_available": 5,
+            "f_part": 9.6,
+            "f_note": "F-Score 4/5(可得项归一)",
+            "roe_mean": 13.6,
+            "roe_part": 6,
+            "roe_note": "ROE均值 13.6%，创造价值",
+            "cash_conv": 2.05,
+            "q_part": 10,
+            "q_note": "现金含量 2.05，优",
+            "total": 25.6
+          },
+          "ts_adj": 0.0,
+          "ts_note": "时序趋势中性",
+          "price_notes": [
+            "股息率分位 71%",
+            "PE-TTM 14.2 倍"
+          ],
+          "moat": 19,
+          "management": 15,
+          "pricing_power_adj": -2,
+          "roe_mean": 13.6,
+          "revenue_cagr": 4.4
+        },
+        "qual_rationale": "水泥行业成本最低的龙头，沿长江布局的熟料基地与自备矿山构成显著成本优势，账上现金充沛、负债率极低，是行业下行期最能熬的一家。但水泥需求与地产、基建高度绑定，且已进入长期下行通道，错峰停产只能缓解过剩而无法解决需求萎缩，几乎不具备提价能力。进入壁垒来自矿山资源与运输半径。管理层务实，但缺少第二增长曲线。",
+        "industry_detail": {
+          "格局": 19,
+          "定价权": 14,
+          "需求稳定性": 12,
+          "进入壁垒": 18
+        }
+      }
+    ],
+    "hangfa-dongli": [
+      {
+        "date": "2026-09-24",
+        "symbol": "600893",
+        "slug": "hangfa-dongli",
+        "name": "航发动力",
+        "close": 38.29,
+        "pe_pct": 88.1,
+        "pb_pct": 42.9,
+        "dv_pct": 4.6,
+        "scores": {
+          "industry": 82,
+          "company": 49.8,
+          "price": 27.9,
+          "total": 48.0
+        },
+        "verdict": "不推荐",
+        "vetoes": [],
+        "degraded": false,
+        "detail": {
+          "fin": {
+            "f_score": 2,
+            "f_available": 5,
+            "f_part": 4.8,
+            "f_note": "F-Score 2/5(可得项归一)",
+            "roe_mean": 3.0,
+            "roe_part": 2,
+            "roe_note": "ROE均值 3.0%，偏低",
+            "cash_conv": -6.96,
+            "q_part": 2,
+            "q_note": "现金含量 -6.96，差",
+            "total": 8.8
+          },
+          "ts_adj": 0.0,
+          "ts_note": "时序趋势中性",
+          "price_notes": [
+            "股息率分位 5%",
+            "PE-TTM 148.2 倍"
+          ],
+          "moat": 28,
+          "management": 13,
+          "pricing_power_adj": -1,
+          "roe_mean": 3.0,
+          "revenue_cagr": 8.5
+        },
+        "qual_rationale": "国内唯一多型航空发动机整机核心平台，技术门槛与准入壁垒在所有制造业里近乎最高，订单具备长期确定性，需求端由国防建设与装备换代驱动、稳定性强。但军品采用成本加成审价，定价权极低，毛利率长期偏低且提价无望；交付节奏受型号鉴定与计划约束，存货与资金占用大。管理层为国资体系，执行力受计划框架约束。",
+        "industry_detail": {
+          "格局": 24,
+          "定价权": 13,
+          "需求稳定性": 20,
+          "进入壁垒": 25
+        }
+      }
+    ],
+    "jinghu-gaotie": [
+      {
+        "date": "2026-09-24",
+        "symbol": "601816",
+        "slug": "jinghu-gaotie",
+        "name": "京沪高铁",
+        "close": 4.69,
+        "pe_pct": 0.3,
+        "pb_pct": 1.4,
+        "dv_pct": 89.2,
+        "scores": {
+          "industry": 83,
+          "company": 65.0,
+          "price": 97,
+          "total": 70.9
+        },
+        "verdict": "推荐",
+        "vetoes": [],
+        "degraded": false,
+        "detail": {
+          "fin": {
+            "f_score": 5,
+            "f_available": 5,
+            "f_part": 12.0,
+            "f_note": "F-Score 5/5(可得项归一)",
+            "roe_mean": 4.4,
+            "roe_part": 2,
+            "roe_note": "ROE均值 4.4%，偏低",
+            "cash_conv": 1.61,
+            "q_part": 10,
+            "q_note": "现金含量 1.61，优",
+            "total": 24.0
+          },
+          "ts_adj": 0.0,
+          "ts_note": "时序趋势中性",
+          "price_notes": [
+            "股息率分位 89%",
+            "PE-TTM 16.8 倍"
+          ],
+          "moat": 27,
+          "management": 14,
+          "pricing_power_adj": -1,
+          "roe_mean": 4.4,
+          "revenue_cagr": 5.7
+        },
+        "qual_rationale": "独占京沪黄金通道的高铁资产，线位不可复制，客流随商务出行自然增长，属于典型公用事业型资产；成本端刚性低、现金流稳定，需求稳定性极高。但票价浮动仍受管制，公司无完全自主定价权，收入增长只能靠客流与跨线列车使用费。资产证券化属性强，但成长空间受限。管理层为铁路体系，经营稳健；变量是分流线路与商务出行景气。",
+        "industry_detail": {
+          "格局": 23,
+          "定价权": 13,
+          "需求稳定性": 22,
+          "进入壁垒": 25
+        }
+      }
+    ],
+    "luoyang-muye": [
+      {
+        "date": "2026-09-24",
+        "symbol": "603993",
+        "slug": "luoyang-muye",
+        "name": "洛阳钼业",
+        "close": null,
+        "pe_pct": 9.7,
+        "pb_pct": 79.2,
+        "dv_pct": 86.1,
+        "scores": {
+          "industry": 65,
+          "company": 57.6,
+          "price": 74.5,
+          "total": 56.3
+        },
+        "verdict": "观望",
+        "vetoes": [],
+        "degraded": false,
+        "detail": {
+          "fin": {
+            "f_score": 4,
+            "f_available": 5,
+            "f_part": 9.6,
+            "f_note": "F-Score 4/5(可得项归一)",
+            "roe_mean": 9.5,
+            "roe_part": 4,
+            "roe_note": "ROE均值 9.5%，一般",
+            "cash_conv": 1.02,
+            "q_part": 10,
+            "q_note": "现金含量 1.02，优",
+            "total": 23.6
+          },
+          "ts_adj": 0.0,
+          "ts_note": "时序趋势中性",
+          "price_notes": [
+            "股息率分位 86%",
+            "PE-TTM 13.6 倍"
+          ],
+          "moat": 21,
+          "management": 13,
+          "pricing_power_adj": -2,
+          "roe_mean": 9.5,
+          "revenue_cagr": 45.8
+        },
+        "qual_rationale": "国际化矿业平台，刚果金铜钴矿储量大、品位高且位于全球成本曲线左侧，国内钼钨资源配套；民营机制灵活、运营与并购执行力较强。矿业壁垒来自矿权获取周期，但产品（铜钴）完全同质化，价格由全球供需决定，公司毫无定价权。海外资产的国别风险、税收与社区关系是长期变量，这也是同为资源股，其确定性弱于煤电一体化标的的原因。",
+        "industry_detail": {
+          "格局": 18,
+          "定价权": 12,
+          "需求稳定性": 15,
+          "进入壁垒": 20
+        }
+      }
+    ],
+    "mairui-yiliao": [
+      {
+        "date": "2026-09-24",
+        "symbol": "300760",
+        "slug": "mairui-yiliao",
+        "name": "迈瑞医疗",
+        "close": null,
+        "pe_pct": 7.5,
+        "pb_pct": 2.3,
+        "dv_pct": 73.3,
+        "scores": {
+          "industry": 83,
+          "company": 80.0,
+          "price": 90,
+          "total": 77.4
+        },
+        "verdict": "推荐",
+        "vetoes": [],
+        "degraded": false,
+        "detail": {
+          "fin": {
+            "f_score": 5,
+            "f_available": 5,
+            "f_part": 12.0,
+            "f_note": "F-Score 5/5(可得项归一)",
+            "roe_mean": 29.4,
+            "roe_part": 8,
+            "roe_note": "ROE均值 29.4%，显著创造价值",
+            "cash_conv": 1.25,
+            "q_part": 10,
+            "q_note": "现金含量 1.25，优",
+            "total": 30.0
+          },
+          "ts_adj": 5.0,
+          "ts_note": "ROE 均值 29.4% 且一致性高，长期盈利质量强",
+          "price_notes": [
+            "股息率分位 73%",
+            "PE-TTM 23.7 倍"
+          ],
+          "moat": 28,
+          "management": 17,
+          "pricing_power_adj": 2,
+          "roe_mean": 29.4,
+          "revenue_cagr": 15.6
+        },
+        "qual_rationale": "国产医疗器械绝对龙头，生命信息支持、体外诊断、医学影像三条产线均衡且均居国内第一梯队，研发投入强度与产品注册数量远超同行，全球销售网络已成型并贡献近半收入。医疗需求刚性最强，进入壁垒来自注册证、临床与渠道积累；自主产品品牌力支撑较强定价权。管理层专业且稳定、治理结构清晰。主要变量是集采与设备招标控费的价格压力，以及海外拓展面临的地缘与注册壁垒。",
+        "industry_detail": {
+          "格局": 21,
+          "定价权": 19,
+          "需求稳定性": 21,
+          "进入壁垒": 22
+        }
+      }
+    ],
+    "sanyi-zhonggong": [
+      {
+        "date": "2026-09-24",
+        "symbol": "600031",
+        "slug": "sanyi-zhonggong",
+        "name": "三一重工",
+        "close": 17.2,
+        "pe_pct": 33.7,
+        "pb_pct": 2.1,
+        "dv_pct": 84.9,
+        "scores": {
+          "industry": 69,
+          "company": 61.6,
+          "price": 82.2,
+          "total": 61.8
+        },
+        "verdict": "可关注",
+        "vetoes": [],
+        "degraded": false,
+        "detail": {
+          "fin": {
+            "f_score": 4,
+            "f_available": 5,
+            "f_part": 9.6,
+            "f_note": "F-Score 4/5(可得项归一)",
+            "roe_mean": 12.7,
+            "roe_part": 6,
+            "roe_note": "ROE均值 12.7%，创造价值",
+            "cash_conv": 2.38,
+            "q_part": 10,
+            "q_note": "现金含量 2.38，优",
+            "total": 25.6
+          },
+          "ts_adj": 0.0,
+          "ts_note": "时序趋势中性",
+          "price_notes": [
+            "股息率分位 85%",
+            "PE-TTM 17.8 倍"
+          ],
+          "moat": 21,
+          "management": 15,
+          "pricing_power_adj": -1,
+          "roe_mean": 12.7,
+          "revenue_cagr": 16.2
+        },
+        "qual_rationale": "工程机械国内双寡头之一，挖掘机与混凝土机械份额领先，产品谱系完整。行业格局稳定但需求高度依赖地产与基建投资，周期属性强；国内价格战后已转向出口，海外收入占比过半且利润率更高，这是本轮周期的核心增量。定价权受年降与竞争压制。信用销售模式带来应收账款与减值敞口，是下行周期最需跟踪的风险点。",
+        "industry_detail": {
+          "格局": 20,
+          "定价权": 16,
+          "需求稳定性": 14,
+          "进入壁垒": 19
+        }
+      }
+    ],
+    "wanhua-huaxue": [
+      {
+        "date": "2026-09-24",
+        "symbol": "600309",
+        "slug": "wanhua-huaxue",
+        "name": "万华化学",
+        "close": null,
+        "pe_pct": 27.7,
+        "pb_pct": 5.3,
+        "dv_pct": 77.0,
+        "scores": {
+          "industry": 80,
+          "company": 76.0,
+          "price": 82.2,
+          "total": 71.1
+        },
+        "verdict": "推荐",
+        "vetoes": [],
+        "degraded": false,
+        "detail": {
+          "fin": {
+            "f_score": 5,
+            "f_available": 5,
+            "f_part": 12.0,
+            "f_note": "F-Score 5/5(可得项归一)",
+            "roe_mean": 23.3,
+            "roe_part": 8,
+            "roe_note": "ROE均值 23.3%，显著创造价值",
+            "cash_conv": 2.64,
+            "q_part": 10,
+            "q_note": "现金含量 2.64，优",
+            "total": 30.0
+          },
+          "ts_adj": 3.0,
+          "ts_note": "ROE 均值 23.3%，一致性中等",
+          "price_notes": [
+            "股息率分位 77%",
+            "PE-TTM 13.6 倍"
+          ],
+          "moat": 27,
+          "management": 16,
+          "pricing_power_adj": 0,
+          "roe_mean": 23.3,
+          "revenue_cagr": 23.6
+        },
+        "qual_rationale": "全球 MDI 寡头之一，技术与一体化成本優勢使其位于全球成本曲线最左端，寡头格局下具备较强定价能力；聚氨酯、石化与精细化学品三块业务协同，平台化扩张持续。MDI 价格仍有周期波动，但相较普通化工品，其供给侧的寡头结构是抵御周期的关键。管理层执行力强、公开承诺履行度高，海外基地布局同时带来成长空间与地缘、贸易摩擦风险。",
+        "industry_detail": {
+          "格局": 22,
+          "定价权": 19,
+          "需求稳定性": 16,
+          "进入壁垒": 23
+        }
+      }
+    ],
+    "zhongguo-chuanbo": [
+      {
+        "date": "2026-09-24",
+        "symbol": "600150",
+        "slug": "zhongguo-chuanbo",
+        "name": "中国船舶",
+        "close": null,
+        "pe_pct": 21.4,
+        "pb_pct": 35.9,
+        "dv_pct": 96.9,
+        "scores": {
+          "industry": 72,
+          "company": 53.6,
+          "price": 79.1,
+          "total": 60.1
+        },
+        "verdict": "可关注",
+        "vetoes": [],
+        "degraded": false,
+        "detail": {
+          "fin": {
+            "f_score": 4,
+            "f_available": 5,
+            "f_part": 9.6,
+            "f_note": "F-Score 4/5(可得项归一)",
+            "roe_mean": -0.8,
+            "roe_part": 0,
+            "roe_note": "ROE均值 -0.8%，为负",
+            "cash_conv": 0.99,
+            "q_part": 8,
+            "q_note": "现金含量 0.99，良",
+            "total": 17.6
+          },
+          "ts_adj": 0.0,
+          "ts_note": "时序趋势中性",
+          "price_notes": [
+            "股息率分位 97%",
+            "PE-TTM 19.3 倍"
+          ],
+          "moat": 23,
+          "management": 13,
+          "pricing_power_adj": 0,
+          "roe_mean": -0.8,
+          "revenue_cagr": 24.3
+        },
+        "qual_rationale": "中国船舶集团旗下造船核心平台，整合江南造船、外高桥造船等核心船厂，军民船并进。造船属于资金、技术与资质三重壁垒行业，全球产能格局相对清晰，本轮高价订单正逐步进入结算期。定价端由国际船价决定，公司对下游船东议价能力中等；交付周期长使钢价与汇率需跨期消化。国企治理偏稳健，盈利释放节奏与订单周期错配明显。",
+        "industry_detail": {
+          "格局": 21,
+          "定价权": 15,
+          "需求稳定性": 15,
+          "进入壁垒": 21
+        }
+      }
+    ],
+    "zhongguo-jianzhu": [
+      {
+        "date": "2026-09-24",
+        "symbol": "601668",
+        "slug": "zhongguo-jianzhu",
+        "name": "中国建筑",
+        "close": 4.26,
+        "pe_pct": 66.8,
+        "pb_pct": 0.5,
+        "dv_pct": 99.4,
+        "scores": {
+          "industry": 61,
+          "company": 46.6,
+          "price": 75.2,
+          "total": 51.4
+        },
+        "verdict": "观望",
+        "vetoes": [],
+        "degraded": false,
+        "detail": {
+          "fin": {
+            "f_score": 4,
+            "f_available": 5,
+            "f_part": 9.6,
+            "f_note": "F-Score 4/5(可得项归一)",
+            "roe_mean": 7.9,
+            "roe_part": 2,
+            "roe_note": "ROE均值 7.9%，偏低",
+            "cash_conv": 0.53,
+            "q_part": 5,
+            "q_note": "现金含量 0.53，一般",
+            "total": 16.6
+          },
+          "ts_adj": 0.0,
+          "ts_note": "时序趋势中性",
+          "price_notes": [
+            "股息率分位 99%",
+            "PE-TTM 5.6 倍"
+          ],
+          "moat": 16,
+          "management": 14,
+          "pricing_power_adj": -2,
+          "roe_mean": 7.9,
+          "revenue_cagr": 9.0
+        },
+        "qual_rationale": "全球最大的房建与基建承包商，订单规模与央企资质构成实质壁垒，资源获取与融资能力远超同业；业务结构正从纯施工向基建投资与运营倾斜。但施工环节毛利率天然偏低，垫资模式导致应收账款与合同资产规模庞大，减值侵蚀利润；地产链敞口进一步拖累回款。议价能力弱，几乎是价格接受者。管理层稳健，ROE 长期偏低是结构性难题。",
+        "industry_detail": {
+          "格局": 18,
+          "定价权": 12,
+          "需求稳定性": 14,
+          "进入壁垒": 17
+        }
+      }
+    ],
+    "zhongguo-shenhua": [
+      {
+        "date": "2026-09-24",
+        "symbol": "601088",
+        "slug": "zhongguo-shenhua",
+        "name": "中国神华",
+        "close": 48.03,
+        "pe_pct": 91.2,
+        "pb_pct": 98.7,
+        "dv_pct": 16.9,
+        "scores": {
+          "industry": 82,
+          "company": 65.6,
+          "price": 23.5,
+          "total": 53.4
+        },
+        "verdict": "观望",
+        "vetoes": [],
+        "degraded": false,
+        "detail": {
+          "fin": {
+            "f_score": 4,
+            "f_available": 5,
+            "f_part": 9.6,
+            "f_note": "F-Score 4/5(可得项归一)",
+            "roe_mean": 10.7,
+            "roe_part": 4,
+            "roe_note": "ROE均值 10.7%，一般",
+            "cash_conv": 1.42,
+            "q_part": 10,
+            "q_note": "现金含量 1.42，优",
+            "total": 23.6
+          },
+          "ts_adj": 0.0,
+          "ts_note": "时序趋势中性",
+          "price_notes": [
+            "股息率分位 17%",
+            "PE-TTM 18.3 倍"
+          ],
+          "moat": 26,
+          "management": 16,
+          "pricing_power_adj": 0,
+          "roe_mean": 10.7,
+          "revenue_cagr": 5.4
+        },
+        "qual_rationale": "煤电路港航一体化：自产煤成本处于行业低位，自有铁路港口航运压低全链物流成本，长协煤机制使盈利波动远小于纯煤企业，煤电联营进一步平抑周期，现金流稳定、类债券属性明确。煤炭获利佛山，格局由资源禀赋与核准决定，壁垒高但同质化；电煤长协价使其定价权优于普通大宗。管理层稳健，分红政策明确；变量是煤价中枢与电价市场化后的煤电利润波动。",
+        "industry_detail": {
+          "格局": 23,
+          "定价权": 18,
+          "需求稳定性": 18,
+          "进入壁垒": 23
+        }
+      }
+    ],
+    "zhongguo-shiyou": [
+      {
+        "date": "2026-09-24",
+        "symbol": "601857",
+        "slug": "zhongguo-shiyou",
+        "name": "中国石油",
+        "close": null,
+        "pe_pct": 39.1,
+        "pb_pct": 80.7,
+        "dv_pct": 71.0,
+        "scores": {
+          "industry": 79,
+          "company": 63.0,
+          "price": 56.7,
+          "total": 57.9
+        },
+        "verdict": "观望",
+        "vetoes": [],
+        "degraded": false,
+        "detail": {
+          "fin": {
+            "f_score": 5,
+            "f_available": 5,
+            "f_part": 12.0,
+            "f_note": "F-Score 5/5(可得项归一)",
+            "roe_mean": 5.5,
+            "roe_part": 2,
+            "roe_note": "ROE均值 5.5%，偏低",
+            "cash_conv": 2.62,
+            "q_part": 10,
+            "q_note": "现金含量 2.62，优",
+            "total": 24.0
+          },
+          "ts_adj": 0.0,
+          "ts_note": "时序趋势中性",
+          "price_notes": [
+            "股息率分位 71%",
+            "PE-TTM 11.1 倍"
+          ],
+          "moat": 25,
+          "management": 14,
+          "pricing_power_adj": -2,
+          "roe_mean": 5.5,
+          "revenue_cagr": 6.6
+        },
+        "qual_rationale": "上下游一体化：上游储量与产量国内领先，管网、炼化与成品油销售网络完备，一体化结构使其在油价下跌时由炼化端补位、油价上涨时由勘探端受益，穿越周期能力强于纯上游。资源与管网构成长期壁垒，需求端刚性但受新能源替代的长期压制。定价端原油完全外生、成品油受价格机制管制，本质是价格接受者。管理层稳定，税费负担是额外变量。",
+        "industry_detail": {
+          "格局": 22,
+          "定价权": 14,
+          "需求稳定性": 19,
+          "进入壁垒": 24
+        }
+      }
+    ],
+    "zhongguo-zhongmian": [
+      {
+        "date": "2026-09-24",
+        "symbol": "601888",
+        "slug": "zhongguo-zhongmian",
+        "name": "中国中免",
+        "close": null,
+        "pe_pct": 8.9,
+        "pb_pct": 0.6,
+        "dv_pct": 71.0,
+        "scores": {
+          "industry": 74,
+          "company": 68.6,
+          "price": 90,
+          "total": 69.7
+        },
+        "verdict": "可关注",
+        "vetoes": [],
+        "degraded": false,
+        "detail": {
+          "fin": {
+            "f_score": 4,
+            "f_available": 5,
+            "f_part": 9.6,
+            "f_note": "F-Score 4/5(可得项归一)",
+            "roe_mean": 15.2,
+            "roe_part": 8,
+            "roe_note": "ROE均值 15.2%，显著创造价值",
+            "cash_conv": 1.69,
+            "q_part": 10,
+            "q_note": "现金含量 1.69，优",
+            "total": 27.6
+          },
+          "ts_adj": 3.0,
+          "ts_note": "ROE 均值 15.2%，一致性中等",
+          "price_notes": [
+            "股息率分位 71%",
+            "PE-TTM 26.1 倍"
+          ],
+          "moat": 24,
+          "management": 14,
+          "pricing_power_adj": 1,
+          "roe_mean": 15.2,
+          "revenue_cagr": 10.2
+        },
+        "qual_rationale": "免税牌照是全行业最稀缺的准入壁垒，公司具备全牌照（口岸、离岛、市内、机上）运营能力，海南离岛免税份额领先，对国际品牌供应商议价能力强，受益于消费回流的长期趋势。但需求端受出境政策与消费景气影响明显，且牌照存在逐步放开的可能性，竞争格局并非一成不变。定价端有较强主动权，可通过折扣策略调节；管理层稳健，政策变化是最大变量。",
+        "industry_detail": {
+          "格局": 21,
+          "定价权": 16,
+          "需求稳定性": 15,
+          "进入壁垒": 22
+        }
       }
     ]
   },
-  "updated": "2026-09-22",
+  "updated": "2026-09-24",
   "stocks": {
     "guizhou-maotai": {
       "name": "贵州茅台",
@@ -1858,6 +4980,114 @@
     "zhongxin-zhengquan": {
       "name": "中信证券",
       "symbol": "600030"
+    },
+    "yanhu-gufen": {
+      "name": "盐湖股份",
+      "symbol": "000792"
+    },
+    "huagong-keji": {
+      "name": "华工科技",
+      "symbol": "000988"
+    },
+    "fenzhong-chuanmei": {
+      "name": "分众传媒",
+      "symbol": "002027"
+    },
+    "shiji-huatong": {
+      "name": "世纪华通",
+      "symbol": "002602"
+    },
+    "guangqi-jishu": {
+      "name": "光启技术",
+      "symbol": "002625"
+    },
+    "muyuan-gufen": {
+      "name": "牧原股份",
+      "symbol": "002714"
+    },
+    "aier-yanke": {
+      "name": "爱尔眼科",
+      "symbol": "300015"
+    },
+    "huichuan-jishu": {
+      "name": "汇川技术",
+      "symbol": "300124"
+    },
+    "yangguang-dianyuan": {
+      "name": "阳光电源",
+      "symbol": "300274"
+    },
+    "shenghong-keji": {
+      "name": "胜宏科技",
+      "symbol": "300476"
+    },
+    "mairui-yiliao": {
+      "name": "迈瑞医疗",
+      "symbol": "300760"
+    },
+    "sanyi-zhonggong": {
+      "name": "三一重工",
+      "symbol": "600031"
+    },
+    "baoli-fazhan": {
+      "name": "保利发展",
+      "symbol": "600048"
+    },
+    "beifang-xitu": {
+      "name": "北方稀土",
+      "symbol": "600111"
+    },
+    "zhongguo-chuanbo": {
+      "name": "中国船舶",
+      "symbol": "600150"
+    },
+    "wanhua-huaxue": {
+      "name": "万华化学",
+      "symbol": "600309"
+    },
+    "guodian-nanrui": {
+      "name": "国电南瑞",
+      "symbol": "600406"
+    },
+    "hailuo-shuini": {
+      "name": "海螺水泥",
+      "symbol": "600585"
+    },
+    "fuyao-boli": {
+      "name": "福耀玻璃",
+      "symbol": "600660"
+    },
+    "hangfa-dongli": {
+      "name": "航发动力",
+      "symbol": "600893"
+    },
+    "zhongguo-shenhua": {
+      "name": "中国神华",
+      "symbol": "601088"
+    },
+    "zhongguo-jianzhu": {
+      "name": "中国建筑",
+      "symbol": "601668"
+    },
+    "jinghu-gaotie": {
+      "name": "京沪高铁",
+      "symbol": "601816"
+    },
+    "zhongguo-shiyou": {
+      "name": "中国石油",
+      "symbol": "601857"
+    },
+    "zhongguo-zhongmian": {
+      "name": "中国中免",
+      "symbol": "601888"
+    },
+    "luoyang-muye": {
+      "name": "洛阳钼业",
+      "symbol": "603993"
+    },
+    "dongpeng-yinliao": {
+      "name": "东鹏饮料",
+      "symbol": "605499"
     }
   }
 }

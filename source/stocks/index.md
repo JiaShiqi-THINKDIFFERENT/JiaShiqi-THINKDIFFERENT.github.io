@@ -4,7 +4,7 @@ date: 2026-09-20 02:30:00
 comments: false
 ---
 
-本站长期跟踪的 32 只个股。每只都有独立的**估值纵览页**（十年收盘价 / 市盈率 / 市净率 / 股息率，支持前复权与不复权切换）和一份**三好评分报告**。
+本站长期跟踪的 59 只个股。每只都有独立的**估值纵览页**（十年收盘价 / 市盈率 / 市净率 / 股息率，支持前复权与不复权切换）和一份**三好评分报告**。
 
 行情与估值数据每日收盘后自动更新，评分每周四收盘后重算。
 
@@ -12,6 +12,7 @@ comments: false
 
 - [贵州茅台](/stocks/guizhou-maotai/)（600519）
 - [伊利股份](/stocks/yili-gufen/)（600887）
+- [东鹏饮料](/stocks/dongpeng-yinliao/)（605499）
 
 ## 家用电器
 
@@ -21,10 +22,13 @@ comments: false
 ## 电力设备
 
 - [宁德时代](/stocks/ningde-shidai/)（300750）
+- [阳光电源](/stocks/yangguang-dianyuan/)（300274）
+- [国电南瑞](/stocks/guodian-nanrui/)（600406）
 
 ## 汽车
 
 - [比亚迪](/stocks/biyadi/)（002594）
+- [福耀玻璃](/stocks/fuyao-boli/)（600660）
 
 ## 银行
 
@@ -49,6 +53,8 @@ comments: false
 - [恒瑞医药](/stocks/hengru-yiyao/)（600276）
 - [药明康德](/stocks/wuxi-apptec/)（603259）
 - [片仔癀](/stocks/pianzaihuang/)（600436）
+- [爱尔眼科](/stocks/aier-yanke/)（300015）
+- [迈瑞医疗](/stocks/mairui-yiliao/)（300760）
 
 ## 电子
 
@@ -56,6 +62,7 @@ comments: false
 - [北方华创](/stocks/beifang-huachuang/)（002371）
 - [京东方A](/stocks/jingdongfang/)（000725）
 - [立讯精密](/stocks/lixun-jingmi/)（002475）
+- [胜宏科技](/stocks/shenghong-keji/)（300476）
 
 ## 通信
 
@@ -65,6 +72,8 @@ comments: false
 ## 有色金属
 
 - [紫金矿业](/stocks/zijin-kuangye/)（601899）
+- [北方稀土](/stocks/beifang-xitu/)（600111）
+- [洛阳钼业](/stocks/luoyang-muye/)（603993）
 
 ## 计算机
 
@@ -83,3 +92,57 @@ comments: false
 - [长江电力](/stocks/changjiang-dianli/)（600900）
 
 > 估值口径：收盘价三源回退（东财 → 腾讯 → 新浪），PE/PB 取 TTM，分位参照近十年区间。
+
+## 基础化工
+
+- [盐湖股份](/stocks/yanhu-gufen/)（000792）
+- [万华化学](/stocks/wanhua-huaxue/)（600309）
+
+## 机械设备
+
+- [华工科技](/stocks/huagong-keji/)（000988）
+- [汇川技术](/stocks/huichuan-jishu/)（300124）
+- [三一重工](/stocks/sanyi-zhonggong/)（600031）
+
+## 传媒
+
+- [分众传媒](/stocks/fenzhong-chuanmei/)（002027）
+- [世纪华通](/stocks/shiji-huatong/)（002602）
+
+## 国防军工
+
+- [光启技术](/stocks/guangqi-jishu/)（002625）
+- [中国船舶](/stocks/zhongguo-chuanbo/)（600150）
+- [航发动力](/stocks/hangfa-dongli/)（600893）
+
+## 农林牧渔
+
+- [牧原股份](/stocks/muyuan-gufen/)（002714）
+
+## 房地产
+
+- [保利发展](/stocks/baoli-fazhan/)（600048）
+
+## 建筑材料
+
+- [海螺水泥](/stocks/hailuo-shuini/)（600585）
+
+## 煤炭
+
+- [中国神华](/stocks/zhongguo-shenhua/)（601088）
+
+## 建筑装饰
+
+- [中国建筑](/stocks/zhongguo-jianzhu/)（601668）
+
+## 交通运输
+
+- [京沪高铁](/stocks/jinghu-gaotie/)（601816）
+
+## 石油石化
+
+- [中国石油](/stocks/zhongguo-shiyou/)（601857）
+
+## 社会服务
+
+- [中国中免](/stocks/zhongguo-zhongmian/)（601888）
