@@ -15,3 +15,6 @@ tools/stockdb/.cache/
 __pycache__/
 *.pyc
 tools/value-analysis/.cache/
+# 本地工具与记忆（非博客内容，不上公开仓库）
+.workbuddy/
+tools/_oneoff_*.py

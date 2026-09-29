@@ -4,7 +4,7 @@ date: 2026-09-20 02:30:00
 comments: false
 ---
 
-本站长期跟踪的 59 只个股。每只都有独立的**估值纵览页**（十年收盘价 / 市盈率 / 市净率 / 股息率，支持前复权与不复权切换）和一份**三好评分报告**。
+本站长期跟踪的 96 只个股。每只都有独立的**估值纵览页**（十年收盘价 / 市盈率 / 市净率 / 股息率，支持前复权与不复权切换）和一份**三好评分报告**。
 
 行情与估值数据每日收盘后自动更新，评分每周四收盘后重算。
 
@@ -13,11 +13,13 @@ comments: false
 - [贵州茅台](/stocks/guizhou-maotai/)（600519）
 - [伊利股份](/stocks/yili-gufen/)（600887）
 - [东鹏饮料](/stocks/dongpeng-yinliao/)（605499）
+- [海天味业](/stocks/haitian-weiye/)（603288）
 
 ## 家用电器
 
 - [美的集团](/stocks/meidi-jituan/)（000333）
 - [格力电器](/stocks/geli-dianqi/)（000651）
+- [海尔智家](/stocks/haier-zhijia/)（600690）
 
 ## 电力设备
 
@@ -29,6 +31,7 @@ comments: false
 
 - [比亚迪](/stocks/biyadi/)（002594）
 - [福耀玻璃](/stocks/fuyao-boli/)（600660）
+- [长安汽车](/stocks/changan-qiche/)（000625）
 
 ## 银行
 
@@ -39,6 +42,8 @@ comments: false
 - [建设银行](/stocks/jianshe-yinhang/)（601939）
 - [兴业银行](/stocks/xingye-yinhang/)（601166）
 - [平安银行](/stocks/pingan-yinhang/)（000001）
+- [交通银行](/stocks/jiaotong-yinhang/)（601328）
+- [邮储银行](/stocks/youchu-yinhang/)（601658）
 
 ## 非银金融
 
@@ -55,6 +60,17 @@ comments: false
 - [片仔癀](/stocks/pianzaihuang/)（600436）
 - [爱尔眼科](/stocks/aier-yanke/)（300015）
 - [迈瑞医疗](/stocks/mairui-yiliao/)（300760）
+- [东阿阿胶](/stocks/dongeejiao/)（000423）
+- [云南白药](/stocks/yunnan-baiyao/)（000538）
+- [华润三九](/stocks/huaren-sanjiu/)（000999）
+- [华兰生物](/stocks/hualan-shengwu/)（002007）
+- [同仁堂](/stocks/tongrentang/)（600085）
+- [白云山](/stocks/baiyunshan/)（600332）
+- [国药股份](/stocks/guoyao-gufen/)（600511）
+- [山东药玻](/stocks/shandong-yaobo/)（600529）
+- [天士力](/stocks/tianshili/)（600535）
+- [九州通](/stocks/jiuzhoutong/)（600998）
+- [上海医药](/stocks/shanghai-yiyao/)（601607）
 
 ## 电子
 
@@ -68,6 +84,8 @@ comments: false
 
 - [中际旭创](/stocks/zhongji-xuchuang/)（300308）
 - [中国移动](/stocks/zhongguo-yidong/)（600941）
+- [中国联通](/stocks/zhongguo-liantong/)（600050）
+- [中国电信](/stocks/zhongguo-dianxin/)（601728）
 
 ## 有色金属
 
@@ -92,6 +110,11 @@ comments: false
 - [长江电力](/stocks/changjiang-dianli/)（600900）
 
 > 估值口径：收盘价三源回退（东财 → 腾讯 → 新浪），PE/PB 取 TTM，分位参照近十年区间。
+- [中国广核](/stocks/zhongguo-guanghe/)（003816）
+- [川投能源](/stocks/chuantou-nengyuan/)（600674）
+- [国电电力](/stocks/guodian-dianli/)（600795）
+- [国投电力](/stocks/guotou-dianli/)（600886）
+- [中国核电](/stocks/zhongguo-hedian/)（601985）
 
 ## 基础化工
 
@@ -103,6 +126,8 @@ comments: false
 - [华工科技](/stocks/huagong-keji/)（000988）
 - [汇川技术](/stocks/huichuan-jishu/)（300124）
 - [三一重工](/stocks/sanyi-zhonggong/)（600031）
+- [中国中车](/stocks/zhongguo-zhongche/)（601766）
+- [中国通号](/stocks/zhongguo-tonghao/)（688009）
 
 ## 传媒
 
@@ -122,6 +147,7 @@ comments: false
 ## 房地产
 
 - [保利发展](/stocks/baoli-fazhan/)（600048）
+- [南京高科](/stocks/nanjing-gaoke/)（600064）
 
 ## 建筑材料
 
@@ -134,10 +160,19 @@ comments: false
 ## 建筑装饰
 
 - [中国建筑](/stocks/zhongguo-jianzhu/)（601668）
+- [中国铁建](/stocks/zhongguo-tiejian/)（601186）
+- [中国交建](/stocks/zhongguo-jiaojian/)（601800）
 
 ## 交通运输
 
 - [京沪高铁](/stocks/jinghu-gaotie/)（601816）
+- [招商公路](/stocks/zhaoshang-gonglu/)（001965）
+- [顺丰控股](/stocks/shunfeng-konggu/)（002352）
+- [白云机场](/stocks/baiyun-jichang/)（600004）
+- [上港集团](/stocks/shanggang-jituan/)（600018）
+- [唐山港](/stocks/tangshan-gang/)（601000）
+- [大秦铁路](/stocks/daqin-tielu/)（601006）
+- [宁波港](/stocks/ningbo-gang/)（601018）
 
 ## 石油石化
 
@@ -146,3 +181,11 @@ comments: false
 ## 社会服务
 
 - [中国中免](/stocks/zhongguo-zhongmian/)（601888）
+
+## 环保
+
+- [首创环保](/stocks/shouchuang-huanbao/)（600008）
+
+## 纺织服饰
+
+- [雅戈尔](/stocks/yageer/)（600177）
