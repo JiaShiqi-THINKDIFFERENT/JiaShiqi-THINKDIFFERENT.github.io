@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-19",
-  "built": "2026-11-19 23:22",
+  "updated": "2026-11-26",
+  "built": "2026-11-26 19:17",
   "count": 96,
   "recent_n": 5,
   "rows": [
@@ -10,19 +10,14 @@
       "symbol": "600519",
       "industry": "食品饮料",
       "latest": {
-        "date": "2026-11-19",
-        "total": 76.9,
+        "date": "2026-11-26",
+        "total": 75.7,
         "verdict": "推荐",
         "icon": "🟢",
         "metric": "PE",
-        "pct": 18.1
+        "pct": 19.3
       },
       "series": [
-        {
-          "date": "2026-10-22",
-          "total": 79.6,
-          "verdict": "推荐"
-        },
         {
           "date": "2026-10-30",
           "total": 78.6,
@@ -42,9 +37,19 @@
           "date": "2026-11-19",
           "total": 76.9,
           "verdict": "推荐"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 75.7,
+          "verdict": "推荐"
         }
       ],
       "history": [
+        {
+          "date": "2026-11-26",
+          "total": 75.7,
+          "verdict": "推荐"
+        },
         {
           "date": "2026-11-19",
           "total": 76.9,
@@ -83,24 +88,97 @@
       ]
     },
     {
+      "slug": "wanhua-huaxue",
+      "name": "万华化学",
+      "symbol": "600309",
+      "industry": "基础化工",
+      "latest": {
+        "date": "2026-11-26",
+        "total": 73.9,
+        "verdict": "不推荐",
+        "icon": "🔴",
+        "metric": "PE",
+        "pct": 9.5
+      },
+      "series": [
+        {
+          "date": "2026-10-30",
+          "total": 73.0,
+          "verdict": "不推荐"
+        },
+        {
+          "date": "2026-11-05",
+          "total": 72.2,
+          "verdict": "不推荐"
+        },
+        {
+          "date": "2026-11-12",
+          "total": 72.2,
+          "verdict": "不推荐"
+        },
+        {
+          "date": "2026-11-19",
+          "total": 72.2,
+          "verdict": "不推荐"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 73.9,
+          "verdict": "不推荐"
+        }
+      ],
+      "history": [
+        {
+          "date": "2026-11-26",
+          "total": 73.9,
+          "verdict": "不推荐"
+        },
+        {
+          "date": "2026-11-19",
+          "total": 72.2,
+          "verdict": "不推荐"
+        },
+        {
+          "date": "2026-11-12",
+          "total": 72.2,
+          "verdict": "不推荐"
+        },
+        {
+          "date": "2026-11-05",
+          "total": 72.2,
+          "verdict": "不推荐"
+        },
+        {
+          "date": "2026-10-30",
+          "total": 73.0,
+          "verdict": "不推荐"
+        },
+        {
+          "date": "2026-10-22",
+          "total": 72.2,
+          "verdict": "不推荐"
+        },
+        {
+          "date": "2026-09-24",
+          "total": 71.1,
+          "verdict": "推荐"
+        }
+      ]
+    },
+    {
       "slug": "ningde-shidai",
       "name": "宁德时代",
       "symbol": "300750",
       "industry": "电力设备",
       "latest": {
-        "date": "2026-11-19",
+        "date": "2026-11-26",
         "total": 73.7,
         "verdict": "推荐",
         "icon": "🟢",
         "metric": "PE",
-        "pct": 0.4
+        "pct": 0.0
       },
       "series": [
-        {
-          "date": "2026-10-22",
-          "total": 72.2,
-          "verdict": "推荐"
-        },
         {
           "date": "2026-10-30",
           "total": 73.7,
@@ -120,9 +198,19 @@
           "date": "2026-11-19",
           "total": 73.7,
           "verdict": "推荐"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 73.7,
+          "verdict": "推荐"
         }
       ],
       "history": [
+        {
+          "date": "2026-11-26",
+          "total": 73.7,
+          "verdict": "推荐"
+        },
         {
           "date": "2026-11-19",
           "total": 73.7,
@@ -166,19 +254,14 @@
       "symbol": "603288",
       "industry": "食品饮料",
       "latest": {
-        "date": "2026-11-19",
+        "date": "2026-11-26",
         "total": 73.0,
         "verdict": "推荐",
         "icon": "🟢",
         "metric": "PE",
-        "pct": 5.7
+        "pct": 5.0
       },
       "series": [
-        {
-          "date": "2026-09-29",
-          "total": 74.5,
-          "verdict": "推荐"
-        },
         {
           "date": "2026-10-22",
           "total": 73.0,
@@ -196,12 +279,22 @@
         },
         {
           "date": "2026-11-19",
+          "total": 73.0,
+          "verdict": "推荐"
+        },
+        {
+          "date": "2026-11-26",
           "total": 73.0,
           "verdict": "推荐"
         }
       ],
       "history": [
         {
+          "date": "2026-11-26",
+          "total": 73.0,
+          "verdict": "推荐"
+        },
+        {
           "date": "2026-11-19",
           "total": 73.0,
           "verdict": "推荐"
@@ -224,79 +317,6 @@
         {
           "date": "2026-09-29",
           "total": 74.5,
-          "verdict": "推荐"
-        }
-      ]
-    },
-    {
-      "slug": "wanhua-huaxue",
-      "name": "万华化学",
-      "symbol": "600309",
-      "industry": "基础化工",
-      "latest": {
-        "date": "2026-11-19",
-        "total": 72.2,
-        "verdict": "不推荐",
-        "icon": "🔴",
-        "metric": "PE",
-        "pct": 10.7
-      },
-      "series": [
-        {
-          "date": "2026-10-22",
-          "total": 72.2,
-          "verdict": "不推荐"
-        },
-        {
-          "date": "2026-10-30",
-          "total": 73.0,
-          "verdict": "不推荐"
-        },
-        {
-          "date": "2026-11-05",
-          "total": 72.2,
-          "verdict": "不推荐"
-        },
-        {
-          "date": "2026-11-12",
-          "total": 72.2,
-          "verdict": "不推荐"
-        },
-        {
-          "date": "2026-11-19",
-          "total": 72.2,
-          "verdict": "不推荐"
-        }
-      ],
-      "history": [
-        {
-          "date": "2026-11-19",
-          "total": 72.2,
-          "verdict": "不推荐"
-        },
-        {
-          "date": "2026-11-12",
-          "total": 72.2,
-          "verdict": "不推荐"
-        },
-        {
-          "date": "2026-11-05",
-          "total": 72.2,
-          "verdict": "不推荐"
-        },
-        {
-          "date": "2026-10-30",
-          "total": 73.0,
-          "verdict": "不推荐"
-        },
-        {
-          "date": "2026-10-22",
-          "total": 72.2,
-          "verdict": "不推荐"
-        },
-        {
-          "date": "2026-09-24",
-          "total": 71.1,
           "verdict": "推荐"
         }
       ]
@@ -307,19 +327,14 @@
       "symbol": "605499",
       "industry": "食品饮料",
       "latest": {
-        "date": "2026-11-19",
+        "date": "2026-11-26",
         "total": 71.7,
         "verdict": "推荐",
         "icon": "🟢",
         "metric": "PE",
-        "pct": 3.5
+        "pct": 2.2
       },
       "series": [
-        {
-          "date": "2026-10-22",
-          "total": 71.7,
-          "verdict": "推荐"
-        },
         {
           "date": "2026-10-30",
           "total": 71.7,
@@ -339,9 +354,19 @@
           "date": "2026-11-19",
           "total": 71.7,
           "verdict": "推荐"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 71.7,
+          "verdict": "推荐"
         }
       ],
       "history": [
+        {
+          "date": "2026-11-26",
+          "total": 71.7,
+          "verdict": "推荐"
+        },
         {
           "date": "2026-11-19",
           "total": 71.7,
@@ -380,19 +405,14 @@
       "symbol": "300760",
       "industry": "医药生物",
       "latest": {
-        "date": "2026-11-19",
+        "date": "2026-11-26",
         "total": 71.4,
         "verdict": "推荐",
         "icon": "🟢",
         "metric": "PE",
-        "pct": 26.6
+        "pct": 25.2
       },
       "series": [
-        {
-          "date": "2026-10-22",
-          "total": 75.1,
-          "verdict": "推荐"
-        },
         {
           "date": "2026-10-30",
           "total": 73.4,
@@ -412,9 +432,19 @@
           "date": "2026-11-19",
           "total": 71.4,
           "verdict": "推荐"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 71.4,
+          "verdict": "推荐"
         }
       ],
       "history": [
+        {
+          "date": "2026-11-26",
+          "total": 71.4,
+          "verdict": "推荐"
+        },
         {
           "date": "2026-11-19",
           "total": 71.4,
@@ -453,19 +483,14 @@
       "symbol": "600690",
       "industry": "家用电器",
       "latest": {
-        "date": "2026-11-19",
+        "date": "2026-11-26",
         "total": 70.9,
         "verdict": "推荐",
         "icon": "🟢",
         "metric": "PE",
-        "pct": 16.2
+        "pct": 18.2
       },
       "series": [
-        {
-          "date": "2026-09-29",
-          "total": 71.1,
-          "verdict": "推荐"
-        },
         {
           "date": "2026-10-22",
           "total": 72.6,
@@ -483,12 +508,22 @@
         },
         {
           "date": "2026-11-19",
+          "total": 70.9,
+          "verdict": "推荐"
+        },
+        {
+          "date": "2026-11-26",
           "total": 70.9,
           "verdict": "推荐"
         }
       ],
       "history": [
         {
+          "date": "2026-11-26",
+          "total": 70.9,
+          "verdict": "推荐"
+        },
+        {
           "date": "2026-11-19",
           "total": 70.9,
           "verdict": "推荐"
@@ -511,6 +546,84 @@
         {
           "date": "2026-09-29",
           "total": 71.1,
+          "verdict": "推荐"
+        }
+      ]
+    },
+    {
+      "slug": "yunnan-baiyao",
+      "name": "云南白药",
+      "symbol": "000538",
+      "industry": "医药生物",
+      "latest": {
+        "date": "2026-11-26",
+        "total": 70.4,
+        "verdict": "推荐",
+        "icon": "🟢",
+        "metric": "PE",
+        "pct": 9.7
+      },
+      "series": [
+        {
+          "date": "2026-10-30",
+          "total": 70.4,
+          "verdict": "推荐"
+        },
+        {
+          "date": "2026-11-05",
+          "total": 70.4,
+          "verdict": "推荐"
+        },
+        {
+          "date": "2026-11-12",
+          "total": 70.4,
+          "verdict": "推荐"
+        },
+        {
+          "date": "2026-11-19",
+          "total": 68.7,
+          "verdict": "可关注"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 70.4,
+          "verdict": "推荐"
+        }
+      ],
+      "history": [
+        {
+          "date": "2026-11-26",
+          "total": 70.4,
+          "verdict": "推荐"
+        },
+        {
+          "date": "2026-11-19",
+          "total": 68.7,
+          "verdict": "可关注"
+        },
+        {
+          "date": "2026-11-12",
+          "total": 70.4,
+          "verdict": "推荐"
+        },
+        {
+          "date": "2026-11-05",
+          "total": 70.4,
+          "verdict": "推荐"
+        },
+        {
+          "date": "2026-10-30",
+          "total": 70.4,
+          "verdict": "推荐"
+        },
+        {
+          "date": "2026-10-22",
+          "total": 71.7,
+          "verdict": "推荐"
+        },
+        {
+          "date": "2026-09-29",
+          "total": 71.4,
           "verdict": "推荐"
         }
       ]
@@ -521,19 +634,14 @@
       "symbol": "000999",
       "industry": "医药生物",
       "latest": {
-        "date": "2026-11-19",
+        "date": "2026-11-26",
         "total": 70.2,
         "verdict": "推荐",
         "icon": "🟢",
         "metric": "PE",
-        "pct": 15.3
+        "pct": 12.6
       },
       "series": [
-        {
-          "date": "2026-10-22",
-          "total": 73.2,
-          "verdict": "推荐"
-        },
         {
           "date": "2026-10-30",
           "total": 71.9,
@@ -553,9 +661,19 @@
           "date": "2026-11-19",
           "total": 70.2,
           "verdict": "推荐"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 70.2,
+          "verdict": "推荐"
         }
       ],
       "history": [
+        {
+          "date": "2026-11-26",
+          "total": 70.2,
+          "verdict": "推荐"
+        },
         {
           "date": "2026-11-19",
           "total": 70.2,
@@ -589,24 +707,97 @@
       ]
     },
     {
+      "slug": "zhongguo-zhongmian",
+      "name": "中国中免",
+      "symbol": "601888",
+      "industry": "社会服务",
+      "latest": {
+        "date": "2026-11-26",
+        "total": 69.9,
+        "verdict": "可关注",
+        "icon": "🟡",
+        "metric": "PE",
+        "pct": 5.3
+      },
+      "series": [
+        {
+          "date": "2026-10-30",
+          "total": 69.2,
+          "verdict": "可关注"
+        },
+        {
+          "date": "2026-11-05",
+          "total": 69.2,
+          "verdict": "可关注"
+        },
+        {
+          "date": "2026-11-12",
+          "total": 69.2,
+          "verdict": "可关注"
+        },
+        {
+          "date": "2026-11-19",
+          "total": 69.2,
+          "verdict": "可关注"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 69.9,
+          "verdict": "可关注"
+        }
+      ],
+      "history": [
+        {
+          "date": "2026-11-26",
+          "total": 69.9,
+          "verdict": "可关注"
+        },
+        {
+          "date": "2026-11-19",
+          "total": 69.2,
+          "verdict": "可关注"
+        },
+        {
+          "date": "2026-11-12",
+          "total": 69.2,
+          "verdict": "可关注"
+        },
+        {
+          "date": "2026-11-05",
+          "total": 69.2,
+          "verdict": "可关注"
+        },
+        {
+          "date": "2026-10-30",
+          "total": 69.2,
+          "verdict": "可关注"
+        },
+        {
+          "date": "2026-10-22",
+          "total": 69.2,
+          "verdict": "可关注"
+        },
+        {
+          "date": "2026-09-24",
+          "total": 69.7,
+          "verdict": "可关注"
+        }
+      ]
+    },
+    {
       "slug": "pianzaihuang",
       "name": "片仔癀",
       "symbol": "600436",
       "industry": "医药生物",
       "latest": {
-        "date": "2026-11-19",
+        "date": "2026-11-26",
         "total": 69.3,
         "verdict": "可关注",
         "icon": "🟡",
         "metric": "PE",
-        "pct": 59.5
+        "pct": 56.0
       },
       "series": [
-        {
-          "date": "2026-10-22",
-          "total": 76.0,
-          "verdict": "推荐"
-        },
         {
           "date": "2026-10-30",
           "total": 76.0,
@@ -626,9 +817,19 @@
           "date": "2026-11-19",
           "total": 69.3,
           "verdict": "可关注"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 69.3,
+          "verdict": "可关注"
         }
       ],
       "history": [
+        {
+          "date": "2026-11-26",
+          "total": 69.3,
+          "verdict": "可关注"
+        },
         {
           "date": "2026-11-19",
           "total": 69.3,
@@ -672,19 +873,14 @@
       "symbol": "601628",
       "industry": "非银金融",
       "latest": {
-        "date": "2026-11-19",
+        "date": "2026-11-26",
         "total": 69.3,
         "verdict": "可关注",
         "icon": "🟡",
         "metric": "PE",
-        "pct": 20.8
+        "pct": 21.7
       },
       "series": [
-        {
-          "date": "2026-10-22",
-          "total": 71.0,
-          "verdict": "推荐"
-        },
         {
           "date": "2026-10-30",
           "total": 71.0,
@@ -704,9 +900,19 @@
           "date": "2026-11-19",
           "total": 69.3,
           "verdict": "可关注"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 69.3,
+          "verdict": "可关注"
         }
       ],
       "history": [
+        {
+          "date": "2026-11-26",
+          "total": 69.3,
+          "verdict": "可关注"
+        },
         {
           "date": "2026-11-19",
           "total": 69.3,
@@ -745,316 +951,19 @@
       ]
     },
     {
-      "slug": "zhongguo-zhongmian",
-      "name": "中国中免",
-      "symbol": "601888",
-      "industry": "社会服务",
-      "latest": {
-        "date": "2026-11-19",
-        "total": 69.2,
-        "verdict": "可关注",
-        "icon": "🟡",
-        "metric": "PE",
-        "pct": 8.0
-      },
-      "series": [
-        {
-          "date": "2026-10-22",
-          "total": 69.2,
-          "verdict": "可关注"
-        },
-        {
-          "date": "2026-10-30",
-          "total": 69.2,
-          "verdict": "可关注"
-        },
-        {
-          "date": "2026-11-05",
-          "total": 69.2,
-          "verdict": "可关注"
-        },
-        {
-          "date": "2026-11-12",
-          "total": 69.2,
-          "verdict": "可关注"
-        },
-        {
-          "date": "2026-11-19",
-          "total": 69.2,
-          "verdict": "可关注"
-        }
-      ],
-      "history": [
-        {
-          "date": "2026-11-19",
-          "total": 69.2,
-          "verdict": "可关注"
-        },
-        {
-          "date": "2026-11-12",
-          "total": 69.2,
-          "verdict": "可关注"
-        },
-        {
-          "date": "2026-11-05",
-          "total": 69.2,
-          "verdict": "可关注"
-        },
-        {
-          "date": "2026-10-30",
-          "total": 69.2,
-          "verdict": "可关注"
-        },
-        {
-          "date": "2026-10-22",
-          "total": 69.2,
-          "verdict": "可关注"
-        },
-        {
-          "date": "2026-09-24",
-          "total": 69.7,
-          "verdict": "可关注"
-        }
-      ]
-    },
-    {
-      "slug": "yunnan-baiyao",
-      "name": "云南白药",
-      "symbol": "000538",
-      "industry": "医药生物",
-      "latest": {
-        "date": "2026-11-19",
-        "total": 68.7,
-        "verdict": "可关注",
-        "icon": "🟡",
-        "metric": "PE",
-        "pct": 11.9
-      },
-      "series": [
-        {
-          "date": "2026-10-22",
-          "total": 71.7,
-          "verdict": "推荐"
-        },
-        {
-          "date": "2026-10-30",
-          "total": 70.4,
-          "verdict": "推荐"
-        },
-        {
-          "date": "2026-11-05",
-          "total": 70.4,
-          "verdict": "推荐"
-        },
-        {
-          "date": "2026-11-12",
-          "total": 70.4,
-          "verdict": "推荐"
-        },
-        {
-          "date": "2026-11-19",
-          "total": 68.7,
-          "verdict": "可关注"
-        }
-      ],
-      "history": [
-        {
-          "date": "2026-11-19",
-          "total": 68.7,
-          "verdict": "可关注"
-        },
-        {
-          "date": "2026-11-12",
-          "total": 70.4,
-          "verdict": "推荐"
-        },
-        {
-          "date": "2026-11-05",
-          "total": 70.4,
-          "verdict": "推荐"
-        },
-        {
-          "date": "2026-10-30",
-          "total": 70.4,
-          "verdict": "推荐"
-        },
-        {
-          "date": "2026-10-22",
-          "total": 71.7,
-          "verdict": "推荐"
-        },
-        {
-          "date": "2026-09-29",
-          "total": 71.4,
-          "verdict": "推荐"
-        }
-      ]
-    },
-    {
-      "slug": "aier-yanke",
-      "name": "爱尔眼科",
-      "symbol": "300015",
-      "industry": "医药生物",
-      "latest": {
-        "date": "2026-11-19",
-        "total": 68.2,
-        "verdict": "可关注",
-        "icon": "🟡",
-        "metric": "PE",
-        "pct": 21.3
-      },
-      "series": [
-        {
-          "date": "2026-10-22",
-          "total": 70.9,
-          "verdict": "推荐"
-        },
-        {
-          "date": "2026-10-30",
-          "total": 70.9,
-          "verdict": "推荐"
-        },
-        {
-          "date": "2026-11-05",
-          "total": 68.2,
-          "verdict": "可关注"
-        },
-        {
-          "date": "2026-11-12",
-          "total": 68.2,
-          "verdict": "可关注"
-        },
-        {
-          "date": "2026-11-19",
-          "total": 68.2,
-          "verdict": "可关注"
-        }
-      ],
-      "history": [
-        {
-          "date": "2026-11-19",
-          "total": 68.2,
-          "verdict": "可关注"
-        },
-        {
-          "date": "2026-11-12",
-          "total": 68.2,
-          "verdict": "可关注"
-        },
-        {
-          "date": "2026-11-05",
-          "total": 68.2,
-          "verdict": "可关注"
-        },
-        {
-          "date": "2026-10-30",
-          "total": 70.9,
-          "verdict": "推荐"
-        },
-        {
-          "date": "2026-10-22",
-          "total": 70.9,
-          "verdict": "推荐"
-        },
-        {
-          "date": "2026-09-24",
-          "total": 73.2,
-          "verdict": "推荐"
-        }
-      ]
-    },
-    {
-      "slug": "guodian-nanrui",
-      "name": "国电南瑞",
-      "symbol": "600406",
-      "industry": "电力设备",
-      "latest": {
-        "date": "2026-11-19",
-        "total": 67.5,
-        "verdict": "可关注",
-        "icon": "🟡",
-        "metric": "PE",
-        "pct": 33.0
-      },
-      "series": [
-        {
-          "date": "2026-10-22",
-          "total": 71.0,
-          "verdict": "推荐"
-        },
-        {
-          "date": "2026-10-30",
-          "total": 69.5,
-          "verdict": "可关注"
-        },
-        {
-          "date": "2026-11-05",
-          "total": 67.5,
-          "verdict": "可关注"
-        },
-        {
-          "date": "2026-11-12",
-          "total": 71.0,
-          "verdict": "推荐"
-        },
-        {
-          "date": "2026-11-19",
-          "total": 67.5,
-          "verdict": "可关注"
-        }
-      ],
-      "history": [
-        {
-          "date": "2026-11-19",
-          "total": 67.5,
-          "verdict": "可关注"
-        },
-        {
-          "date": "2026-11-12",
-          "total": 71.0,
-          "verdict": "推荐"
-        },
-        {
-          "date": "2026-11-05",
-          "total": 67.5,
-          "verdict": "可关注"
-        },
-        {
-          "date": "2026-10-30",
-          "total": 69.5,
-          "verdict": "可关注"
-        },
-        {
-          "date": "2026-10-22",
-          "total": 71.0,
-          "verdict": "推荐"
-        },
-        {
-          "date": "2026-09-24",
-          "total": 69.0,
-          "verdict": "可关注"
-        }
-      ]
-    },
-    {
       "slug": "zhongxin-zhengquan",
       "name": "中信证券",
       "symbol": "600030",
       "industry": "非银金融",
       "latest": {
-        "date": "2026-11-19",
-        "total": 67.4,
+        "date": "2026-11-26",
+        "total": 68.7,
         "verdict": "可关注",
         "icon": "🟡",
         "metric": "PE",
-        "pct": 1.0
+        "pct": 0.1
       },
       "series": [
-        {
-          "date": "2026-10-22",
-          "total": 65.9,
-          "verdict": "可关注"
-        },
         {
           "date": "2026-10-30",
           "total": 65.9,
@@ -1074,9 +983,19 @@
           "date": "2026-11-19",
           "total": 67.4,
           "verdict": "可关注"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 68.7,
+          "verdict": "可关注"
         }
       ],
       "history": [
+        {
+          "date": "2026-11-26",
+          "total": 68.7,
+          "verdict": "可关注"
+        },
         {
           "date": "2026-11-19",
           "total": 67.4,
@@ -1115,24 +1034,175 @@
       ]
     },
     {
+      "slug": "aier-yanke",
+      "name": "爱尔眼科",
+      "symbol": "300015",
+      "industry": "医药生物",
+      "latest": {
+        "date": "2026-11-26",
+        "total": 68.2,
+        "verdict": "可关注",
+        "icon": "🟡",
+        "metric": "PE",
+        "pct": 19.1
+      },
+      "series": [
+        {
+          "date": "2026-10-30",
+          "total": 70.9,
+          "verdict": "推荐"
+        },
+        {
+          "date": "2026-11-05",
+          "total": 68.2,
+          "verdict": "可关注"
+        },
+        {
+          "date": "2026-11-12",
+          "total": 68.2,
+          "verdict": "可关注"
+        },
+        {
+          "date": "2026-11-19",
+          "total": 68.2,
+          "verdict": "可关注"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 68.2,
+          "verdict": "可关注"
+        }
+      ],
+      "history": [
+        {
+          "date": "2026-11-26",
+          "total": 68.2,
+          "verdict": "可关注"
+        },
+        {
+          "date": "2026-11-19",
+          "total": 68.2,
+          "verdict": "可关注"
+        },
+        {
+          "date": "2026-11-12",
+          "total": 68.2,
+          "verdict": "可关注"
+        },
+        {
+          "date": "2026-11-05",
+          "total": 68.2,
+          "verdict": "可关注"
+        },
+        {
+          "date": "2026-10-30",
+          "total": 70.9,
+          "verdict": "推荐"
+        },
+        {
+          "date": "2026-10-22",
+          "total": 70.9,
+          "verdict": "推荐"
+        },
+        {
+          "date": "2026-09-24",
+          "total": 73.2,
+          "verdict": "推荐"
+        }
+      ]
+    },
+    {
+      "slug": "guodian-nanrui",
+      "name": "国电南瑞",
+      "symbol": "600406",
+      "industry": "电力设备",
+      "latest": {
+        "date": "2026-11-26",
+        "total": 67.5,
+        "verdict": "可关注",
+        "icon": "🟡",
+        "metric": "PE",
+        "pct": 34.0
+      },
+      "series": [
+        {
+          "date": "2026-10-30",
+          "total": 69.5,
+          "verdict": "可关注"
+        },
+        {
+          "date": "2026-11-05",
+          "total": 67.5,
+          "verdict": "可关注"
+        },
+        {
+          "date": "2026-11-12",
+          "total": 71.0,
+          "verdict": "推荐"
+        },
+        {
+          "date": "2026-11-19",
+          "total": 67.5,
+          "verdict": "可关注"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 67.5,
+          "verdict": "可关注"
+        }
+      ],
+      "history": [
+        {
+          "date": "2026-11-26",
+          "total": 67.5,
+          "verdict": "可关注"
+        },
+        {
+          "date": "2026-11-19",
+          "total": 67.5,
+          "verdict": "可关注"
+        },
+        {
+          "date": "2026-11-12",
+          "total": 71.0,
+          "verdict": "推荐"
+        },
+        {
+          "date": "2026-11-05",
+          "total": 67.5,
+          "verdict": "可关注"
+        },
+        {
+          "date": "2026-10-30",
+          "total": 69.5,
+          "verdict": "可关注"
+        },
+        {
+          "date": "2026-10-22",
+          "total": 71.0,
+          "verdict": "推荐"
+        },
+        {
+          "date": "2026-09-24",
+          "total": 69.0,
+          "verdict": "可关注"
+        }
+      ]
+    },
+    {
       "slug": "huichuan-jishu",
       "name": "汇川技术",
       "symbol": "300124",
       "industry": "机械设备",
       "latest": {
-        "date": "2026-11-19",
+        "date": "2026-11-26",
         "total": 67.3,
         "verdict": "可关注",
         "icon": "🟡",
         "metric": "PE",
-        "pct": 2.3
+        "pct": 1.9
       },
       "series": [
-        {
-          "date": "2026-10-22",
-          "total": 67.3,
-          "verdict": "可关注"
-        },
         {
           "date": "2026-10-30",
           "total": 67.3,
@@ -1152,9 +1222,19 @@
           "date": "2026-11-19",
           "total": 67.3,
           "verdict": "可关注"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 67.3,
+          "verdict": "可关注"
         }
       ],
       "history": [
+        {
+          "date": "2026-11-26",
+          "total": 67.3,
+          "verdict": "可关注"
+        },
         {
           "date": "2026-11-19",
           "total": 67.3,
@@ -1188,24 +1268,170 @@
       ]
     },
     {
+      "slug": "ningbo-gang",
+      "name": "宁波港",
+      "symbol": "601018",
+      "industry": "交通运输",
+      "latest": {
+        "date": "2026-11-26",
+        "total": 67.3,
+        "verdict": "可关注",
+        "icon": "🟡",
+        "metric": "PE",
+        "pct": 20.2
+      },
+      "series": [
+        {
+          "date": "2026-10-22",
+          "total": 69.0,
+          "verdict": "可关注"
+        },
+        {
+          "date": "2026-10-30",
+          "total": 69.0,
+          "verdict": "可关注"
+        },
+        {
+          "date": "2026-11-05",
+          "total": 67.3,
+          "verdict": "可关注"
+        },
+        {
+          "date": "2026-11-19",
+          "total": 65.3,
+          "verdict": "可关注"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 67.3,
+          "verdict": "可关注"
+        }
+      ],
+      "history": [
+        {
+          "date": "2026-11-26",
+          "total": 67.3,
+          "verdict": "可关注"
+        },
+        {
+          "date": "2026-11-19",
+          "total": 65.3,
+          "verdict": "可关注"
+        },
+        {
+          "date": "2026-11-05",
+          "total": 67.3,
+          "verdict": "可关注"
+        },
+        {
+          "date": "2026-10-30",
+          "total": 69.0,
+          "verdict": "可关注"
+        },
+        {
+          "date": "2026-10-22",
+          "total": 69.0,
+          "verdict": "可关注"
+        },
+        {
+          "date": "2026-09-29",
+          "total": 70.4,
+          "verdict": "推荐"
+        }
+      ]
+    },
+    {
+      "slug": "jinghu-gaotie",
+      "name": "京沪高铁",
+      "symbol": "601816",
+      "industry": "交通运输",
+      "latest": {
+        "date": "2026-11-26",
+        "total": 66.7,
+        "verdict": "可关注",
+        "icon": "🟡",
+        "metric": "PE",
+        "pct": 13.0
+      },
+      "series": [
+        {
+          "date": "2026-10-30",
+          "total": 69.2,
+          "verdict": "可关注"
+        },
+        {
+          "date": "2026-11-05",
+          "total": 68.4,
+          "verdict": "可关注"
+        },
+        {
+          "date": "2026-11-12",
+          "total": 68.4,
+          "verdict": "可关注"
+        },
+        {
+          "date": "2026-11-19",
+          "total": 65.2,
+          "verdict": "可关注"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 66.7,
+          "verdict": "可关注"
+        }
+      ],
+      "history": [
+        {
+          "date": "2026-11-26",
+          "total": 66.7,
+          "verdict": "可关注"
+        },
+        {
+          "date": "2026-11-19",
+          "total": 65.2,
+          "verdict": "可关注"
+        },
+        {
+          "date": "2026-11-12",
+          "total": 68.4,
+          "verdict": "可关注"
+        },
+        {
+          "date": "2026-11-05",
+          "total": 68.4,
+          "verdict": "可关注"
+        },
+        {
+          "date": "2026-10-30",
+          "total": 69.2,
+          "verdict": "可关注"
+        },
+        {
+          "date": "2026-10-22",
+          "total": 70.4,
+          "verdict": "推荐"
+        },
+        {
+          "date": "2026-09-24",
+          "total": 70.9,
+          "verdict": "推荐"
+        }
+      ]
+    },
+    {
       "slug": "shanggang-jituan",
       "name": "上港集团",
       "symbol": "600018",
       "industry": "交通运输",
       "latest": {
-        "date": "2026-11-19",
+        "date": "2026-11-26",
         "total": 66.5,
         "verdict": "可关注",
         "icon": "🟡",
         "metric": "PE",
-        "pct": 34.0
+        "pct": 28.6
       },
       "series": [
-        {
-          "date": "2026-10-22",
-          "total": 65.8,
-          "verdict": "可关注"
-        },
         {
           "date": "2026-10-30",
           "total": 66.5,
@@ -1225,9 +1451,19 @@
           "date": "2026-11-19",
           "total": 66.5,
           "verdict": "可关注"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 66.5,
+          "verdict": "可关注"
         }
       ],
       "history": [
+        {
+          "date": "2026-11-26",
+          "total": 66.5,
+          "verdict": "可关注"
+        },
         {
           "date": "2026-11-19",
           "total": 66.5,
@@ -1261,92 +1497,19 @@
       ]
     },
     {
-      "slug": "zhongguo-zhongche",
-      "name": "中国中车",
-      "symbol": "601766",
-      "industry": "机械设备",
-      "latest": {
-        "date": "2026-11-19",
-        "total": 66.3,
-        "verdict": "可关注",
-        "icon": "🟡",
-        "metric": "PE",
-        "pct": 17.8
-      },
-      "series": [
-        {
-          "date": "2026-09-29",
-          "total": 69.2,
-          "verdict": "可关注"
-        },
-        {
-          "date": "2026-10-22",
-          "total": 69.3,
-          "verdict": "可关注"
-        },
-        {
-          "date": "2026-10-30",
-          "total": 69.3,
-          "verdict": "可关注"
-        },
-        {
-          "date": "2026-11-05",
-          "total": 66.3,
-          "verdict": "可关注"
-        },
-        {
-          "date": "2026-11-19",
-          "total": 66.3,
-          "verdict": "可关注"
-        }
-      ],
-      "history": [
-        {
-          "date": "2026-11-19",
-          "total": 66.3,
-          "verdict": "可关注"
-        },
-        {
-          "date": "2026-11-05",
-          "total": 66.3,
-          "verdict": "可关注"
-        },
-        {
-          "date": "2026-10-30",
-          "total": 69.3,
-          "verdict": "可关注"
-        },
-        {
-          "date": "2026-10-22",
-          "total": 69.3,
-          "verdict": "可关注"
-        },
-        {
-          "date": "2026-09-29",
-          "total": 69.2,
-          "verdict": "可关注"
-        }
-      ]
-    },
-    {
       "slug": "shunfeng-konggu",
       "name": "顺丰控股",
       "symbol": "002352",
       "industry": "交通运输",
       "latest": {
-        "date": "2026-11-19",
+        "date": "2026-11-26",
         "total": 66.2,
         "verdict": "可关注",
         "icon": "🟡",
         "metric": "PE",
-        "pct": 3.8
+        "pct": 2.7
       },
       "series": [
-        {
-          "date": "2026-10-22",
-          "total": 67.0,
-          "verdict": "可关注"
-        },
         {
           "date": "2026-10-30",
           "total": 67.0,
@@ -1366,9 +1529,19 @@
           "date": "2026-11-19",
           "total": 66.2,
           "verdict": "可关注"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 66.2,
+          "verdict": "可关注"
         }
       ],
       "history": [
+        {
+          "date": "2026-11-26",
+          "total": 66.2,
+          "verdict": "可关注"
+        },
         {
           "date": "2026-11-19",
           "total": 66.2,
@@ -1407,19 +1580,14 @@
       "symbol": "000651",
       "industry": "家用电器",
       "latest": {
-        "date": "2026-11-19",
+        "date": "2026-11-26",
         "total": 65.9,
         "verdict": "可关注",
         "icon": "🟡",
         "metric": "PE",
-        "pct": 53.4
+        "pct": 54.2
       },
       "series": [
-        {
-          "date": "2026-10-22",
-          "total": 70.4,
-          "verdict": "推荐"
-        },
         {
           "date": "2026-10-30",
           "total": 70.4,
@@ -1439,9 +1607,19 @@
           "date": "2026-11-19",
           "total": 65.9,
           "verdict": "可关注"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 65.9,
+          "verdict": "可关注"
         }
       ],
       "history": [
+        {
+          "date": "2026-11-26",
+          "total": 65.9,
+          "verdict": "可关注"
+        },
         {
           "date": "2026-11-19",
           "total": 65.9,
@@ -1480,24 +1658,97 @@
       ]
     },
     {
+      "slug": "shandong-yaobo",
+      "name": "山东药玻",
+      "symbol": "600529",
+      "industry": "医药生物",
+      "latest": {
+        "date": "2026-11-26",
+        "total": 65.9,
+        "verdict": "可关注",
+        "icon": "🟡",
+        "metric": "PE",
+        "pct": 6.1
+      },
+      "series": [
+        {
+          "date": "2026-10-30",
+          "total": 64.2,
+          "verdict": "可关注"
+        },
+        {
+          "date": "2026-11-05",
+          "total": 64.2,
+          "verdict": "可关注"
+        },
+        {
+          "date": "2026-11-12",
+          "total": 65.9,
+          "verdict": "可关注"
+        },
+        {
+          "date": "2026-11-19",
+          "total": 64.2,
+          "verdict": "可关注"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 65.9,
+          "verdict": "可关注"
+        }
+      ],
+      "history": [
+        {
+          "date": "2026-11-26",
+          "total": 65.9,
+          "verdict": "可关注"
+        },
+        {
+          "date": "2026-11-19",
+          "total": 64.2,
+          "verdict": "可关注"
+        },
+        {
+          "date": "2026-11-12",
+          "total": 65.9,
+          "verdict": "可关注"
+        },
+        {
+          "date": "2026-11-05",
+          "total": 64.2,
+          "verdict": "可关注"
+        },
+        {
+          "date": "2026-10-30",
+          "total": 64.2,
+          "verdict": "可关注"
+        },
+        {
+          "date": "2026-10-22",
+          "total": 64.2,
+          "verdict": "可关注"
+        },
+        {
+          "date": "2026-09-29",
+          "total": 66.7,
+          "verdict": "可关注"
+        }
+      ]
+    },
+    {
       "slug": "zhaoshang-yinhang",
       "name": "招商银行",
       "symbol": "600036",
       "industry": "银行",
       "latest": {
-        "date": "2026-11-19",
+        "date": "2026-11-26",
         "total": 65.7,
         "verdict": "可关注",
         "icon": "🟡",
         "metric": "PE",
-        "pct": 35.8
+        "pct": 36.0
       },
       "series": [
-        {
-          "date": "2026-10-22",
-          "total": 65.7,
-          "verdict": "可关注"
-        },
         {
           "date": "2026-10-30",
           "total": 65.7,
@@ -1517,9 +1768,19 @@
           "date": "2026-11-19",
           "total": 65.7,
           "verdict": "可关注"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 65.7,
+          "verdict": "可关注"
         }
       ],
       "history": [
+        {
+          "date": "2026-11-26",
+          "total": 65.7,
+          "verdict": "可关注"
+        },
         {
           "date": "2026-11-19",
           "total": 65.7,
@@ -1563,19 +1824,14 @@
       "symbol": "601318",
       "industry": "非银金融",
       "latest": {
-        "date": "2026-11-19",
+        "date": "2026-11-26",
         "total": 65.7,
         "verdict": "可关注",
         "icon": "🟡",
         "metric": "PE",
-        "pct": 60.0
+        "pct": 60.6
       },
       "series": [
-        {
-          "date": "2026-10-22",
-          "total": 72.7,
-          "verdict": "推荐"
-        },
         {
           "date": "2026-10-30",
           "total": 72.7,
@@ -1595,9 +1851,19 @@
           "date": "2026-11-19",
           "total": 65.7,
           "verdict": "可关注"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 65.7,
+          "verdict": "可关注"
         }
       ],
       "history": [
+        {
+          "date": "2026-11-26",
+          "total": 65.7,
+          "verdict": "可关注"
+        },
         {
           "date": "2026-11-19",
           "total": 65.7,
@@ -1636,143 +1902,75 @@
       ]
     },
     {
-      "slug": "ningbo-gang",
-      "name": "宁波港",
-      "symbol": "601018",
-      "industry": "交通运输",
+      "slug": "zhongguo-zhongche",
+      "name": "中国中车",
+      "symbol": "601766",
+      "industry": "机械设备",
       "latest": {
-        "date": "2026-11-19",
-        "total": 65.3,
+        "date": "2026-11-26",
+        "total": 65.6,
         "verdict": "可关注",
         "icon": "🟡",
         "metric": "PE",
-        "pct": 28.9
+        "pct": 15.9
       },
       "series": [
         {
-          "date": "2026-09-29",
-          "total": 70.4,
-          "verdict": "推荐"
-        },
-        {
           "date": "2026-10-22",
-          "total": 69.0,
+          "total": 69.3,
           "verdict": "可关注"
         },
         {
           "date": "2026-10-30",
-          "total": 69.0,
+          "total": 69.3,
           "verdict": "可关注"
         },
         {
           "date": "2026-11-05",
-          "total": 67.3,
+          "total": 66.3,
           "verdict": "可关注"
         },
         {
           "date": "2026-11-19",
-          "total": 65.3,
+          "total": 66.3,
+          "verdict": "可关注"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 65.6,
           "verdict": "可关注"
         }
       ],
       "history": [
         {
+          "date": "2026-11-26",
+          "total": 65.6,
+          "verdict": "可关注"
+        },
+        {
           "date": "2026-11-19",
-          "total": 65.3,
+          "total": 66.3,
           "verdict": "可关注"
         },
         {
           "date": "2026-11-05",
-          "total": 67.3,
+          "total": 66.3,
           "verdict": "可关注"
         },
         {
           "date": "2026-10-30",
-          "total": 69.0,
+          "total": 69.3,
           "verdict": "可关注"
         },
         {
           "date": "2026-10-22",
-          "total": 69.0,
+          "total": 69.3,
           "verdict": "可关注"
         },
         {
           "date": "2026-09-29",
-          "total": 70.4,
-          "verdict": "推荐"
-        }
-      ]
-    },
-    {
-      "slug": "jinghu-gaotie",
-      "name": "京沪高铁",
-      "symbol": "601816",
-      "industry": "交通运输",
-      "latest": {
-        "date": "2026-11-19",
-        "total": 65.2,
-        "verdict": "可关注",
-        "icon": "🟡",
-        "metric": "PE",
-        "pct": 14.1
-      },
-      "series": [
-        {
-          "date": "2026-10-22",
-          "total": 70.4,
-          "verdict": "推荐"
-        },
-        {
-          "date": "2026-10-30",
           "total": 69.2,
           "verdict": "可关注"
-        },
-        {
-          "date": "2026-11-05",
-          "total": 68.4,
-          "verdict": "可关注"
-        },
-        {
-          "date": "2026-11-12",
-          "total": 68.4,
-          "verdict": "可关注"
-        },
-        {
-          "date": "2026-11-19",
-          "total": 65.2,
-          "verdict": "可关注"
-        }
-      ],
-      "history": [
-        {
-          "date": "2026-11-19",
-          "total": 65.2,
-          "verdict": "可关注"
-        },
-        {
-          "date": "2026-11-12",
-          "total": 68.4,
-          "verdict": "可关注"
-        },
-        {
-          "date": "2026-11-05",
-          "total": 68.4,
-          "verdict": "可关注"
-        },
-        {
-          "date": "2026-10-30",
-          "total": 69.2,
-          "verdict": "可关注"
-        },
-        {
-          "date": "2026-10-22",
-          "total": 70.4,
-          "verdict": "推荐"
-        },
-        {
-          "date": "2026-09-24",
-          "total": 70.9,
-          "verdict": "推荐"
         }
       ]
     },
@@ -1782,19 +1980,14 @@
       "symbol": "600660",
       "industry": "汽车",
       "latest": {
-        "date": "2026-11-19",
+        "date": "2026-11-26",
         "total": 65.0,
         "verdict": "可关注",
         "icon": "🟡",
         "metric": "PE",
-        "pct": 32.5
+        "pct": 25.2
       },
       "series": [
-        {
-          "date": "2026-10-22",
-          "total": 67.7,
-          "verdict": "可关注"
-        },
         {
           "date": "2026-10-30",
           "total": 67.7,
@@ -1814,9 +2007,19 @@
           "date": "2026-11-19",
           "total": 65.0,
           "verdict": "可关注"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 65.0,
+          "verdict": "可关注"
         }
       ],
       "history": [
+        {
+          "date": "2026-11-26",
+          "total": 65.0,
+          "verdict": "可关注"
+        },
         {
           "date": "2026-11-19",
           "total": 65.0,
@@ -1855,19 +2058,14 @@
       "symbol": "600415",
       "industry": "商贸零售",
       "latest": {
-        "date": "2026-11-19",
+        "date": "2026-11-26",
         "total": 64.6,
         "verdict": "可关注",
         "icon": "🟡",
         "metric": "PE",
-        "pct": 16.4
+        "pct": 13.0
       },
       "series": [
-        {
-          "date": "2026-10-22",
-          "total": 67.0,
-          "verdict": "可关注"
-        },
         {
           "date": "2026-10-30",
           "total": 67.0,
@@ -1887,9 +2085,19 @@
           "date": "2026-11-19",
           "total": 64.6,
           "verdict": "可关注"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 64.6,
+          "verdict": "可关注"
         }
       ],
       "history": [
+        {
+          "date": "2026-11-26",
+          "total": 64.6,
+          "verdict": "可关注"
+        },
         {
           "date": "2026-11-19",
           "total": 64.6,
@@ -1928,74 +2136,84 @@
       ]
     },
     {
-      "slug": "shandong-yaobo",
-      "name": "山东药玻",
-      "symbol": "600529",
-      "industry": "医药生物",
+      "slug": "lixun-jingmi",
+      "name": "立讯精密",
+      "symbol": "002475",
+      "industry": "电子",
       "latest": {
-        "date": "2026-11-19",
-        "total": 64.2,
+        "date": "2026-11-26",
+        "total": 63.6,
         "verdict": "可关注",
         "icon": "🟡",
         "metric": "PE",
-        "pct": 10.1
+        "pct": 5.9
       },
       "series": [
         {
-          "date": "2026-10-22",
-          "total": 64.2,
-          "verdict": "可关注"
-        },
-        {
           "date": "2026-10-30",
-          "total": 64.2,
+          "total": 62.6,
           "verdict": "可关注"
         },
         {
           "date": "2026-11-05",
-          "total": 64.2,
+          "total": 63.6,
           "verdict": "可关注"
         },
         {
           "date": "2026-11-12",
-          "total": 65.9,
+          "total": 60.9,
           "verdict": "可关注"
         },
         {
           "date": "2026-11-19",
-          "total": 64.2,
+          "total": 62.6,
+          "verdict": "可关注"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 63.6,
           "verdict": "可关注"
         }
       ],
       "history": [
         {
+          "date": "2026-11-26",
+          "total": 63.6,
+          "verdict": "可关注"
+        },
+        {
           "date": "2026-11-19",
-          "total": 64.2,
+          "total": 62.6,
           "verdict": "可关注"
         },
         {
           "date": "2026-11-12",
-          "total": 65.9,
+          "total": 60.9,
           "verdict": "可关注"
         },
         {
           "date": "2026-11-05",
-          "total": 64.2,
+          "total": 63.6,
           "verdict": "可关注"
         },
         {
           "date": "2026-10-30",
-          "total": 64.2,
+          "total": 62.6,
           "verdict": "可关注"
         },
         {
           "date": "2026-10-22",
-          "total": 64.2,
+          "total": 62.6,
           "verdict": "可关注"
         },
         {
-          "date": "2026-09-29",
-          "total": 66.7,
+          "date": "2026-09-24",
+          "total": 61.5,
+          "verdict": "可关注"
+        },
+        {
+          "date": "2026-09-22",
+          "total": 61.5,
           "verdict": "可关注"
         }
       ]
@@ -2006,19 +2224,14 @@
       "symbol": "002007",
       "industry": "医药生物",
       "latest": {
-        "date": "2026-11-19",
+        "date": "2026-11-26",
         "total": 63.4,
         "verdict": "可关注",
         "icon": "🟡",
         "metric": "PE",
-        "pct": 65.7
+        "pct": 66.6
       },
       "series": [
-        {
-          "date": "2026-10-22",
-          "total": 65.9,
-          "verdict": "可关注"
-        },
         {
           "date": "2026-10-30",
           "total": 66.9,
@@ -2038,9 +2251,19 @@
           "date": "2026-11-19",
           "total": 63.4,
           "verdict": "可关注"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 63.4,
+          "verdict": "可关注"
         }
       ],
       "history": [
+        {
+          "date": "2026-11-26",
+          "total": 63.4,
+          "verdict": "可关注"
+        },
         {
           "date": "2026-11-19",
           "total": 63.4,
@@ -2074,102 +2297,19 @@
       ]
     },
     {
-      "slug": "lixun-jingmi",
-      "name": "立讯精密",
-      "symbol": "002475",
-      "industry": "电子",
-      "latest": {
-        "date": "2026-11-19",
-        "total": 62.6,
-        "verdict": "可关注",
-        "icon": "🟡",
-        "metric": "PE",
-        "pct": 8.2
-      },
-      "series": [
-        {
-          "date": "2026-10-22",
-          "total": 62.6,
-          "verdict": "可关注"
-        },
-        {
-          "date": "2026-10-30",
-          "total": 62.6,
-          "verdict": "可关注"
-        },
-        {
-          "date": "2026-11-05",
-          "total": 63.6,
-          "verdict": "可关注"
-        },
-        {
-          "date": "2026-11-12",
-          "total": 60.9,
-          "verdict": "可关注"
-        },
-        {
-          "date": "2026-11-19",
-          "total": 62.6,
-          "verdict": "可关注"
-        }
-      ],
-      "history": [
-        {
-          "date": "2026-11-19",
-          "total": 62.6,
-          "verdict": "可关注"
-        },
-        {
-          "date": "2026-11-12",
-          "total": 60.9,
-          "verdict": "可关注"
-        },
-        {
-          "date": "2026-11-05",
-          "total": 63.6,
-          "verdict": "可关注"
-        },
-        {
-          "date": "2026-10-30",
-          "total": 62.6,
-          "verdict": "可关注"
-        },
-        {
-          "date": "2026-10-22",
-          "total": 62.6,
-          "verdict": "可关注"
-        },
-        {
-          "date": "2026-09-24",
-          "total": 61.5,
-          "verdict": "可关注"
-        },
-        {
-          "date": "2026-09-22",
-          "total": 61.5,
-          "verdict": "可关注"
-        }
-      ]
-    },
-    {
       "slug": "tongrentang",
       "name": "同仁堂",
       "symbol": "600085",
       "industry": "医药生物",
       "latest": {
-        "date": "2026-11-19",
+        "date": "2026-11-26",
         "total": 62.4,
         "verdict": "可关注",
         "icon": "🟡",
         "metric": "PE",
-        "pct": 41.4
+        "pct": 39.8
       },
       "series": [
-        {
-          "date": "2026-10-22",
-          "total": 62.4,
-          "verdict": "可关注"
-        },
         {
           "date": "2026-10-30",
           "total": 62.4,
@@ -2189,9 +2329,19 @@
           "date": "2026-11-19",
           "total": 62.4,
           "verdict": "可关注"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 62.4,
+          "verdict": "可关注"
         }
       ],
       "history": [
+        {
+          "date": "2026-11-26",
+          "total": 62.4,
+          "verdict": "可关注"
+        },
         {
           "date": "2026-11-19",
           "total": 62.4,
@@ -2230,19 +2380,14 @@
       "symbol": "603259",
       "industry": "医药生物",
       "latest": {
-        "date": "2026-11-19",
+        "date": "2026-11-26",
         "total": 62.2,
         "verdict": "可关注",
         "icon": "🟡",
         "metric": "PE",
-        "pct": 12.2
+        "pct": 11.2
       },
       "series": [
-        {
-          "date": "2026-10-22",
-          "total": 59.2,
-          "verdict": "观望"
-        },
         {
           "date": "2026-10-30",
           "total": 62.9,
@@ -2262,9 +2407,19 @@
           "date": "2026-11-19",
           "total": 62.2,
           "verdict": "可关注"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 62.2,
+          "verdict": "可关注"
         }
       ],
       "history": [
+        {
+          "date": "2026-11-26",
+          "total": 62.2,
+          "verdict": "可关注"
+        },
         {
           "date": "2026-11-19",
           "total": 62.2,
@@ -2308,19 +2463,14 @@
       "symbol": "600887",
       "industry": "食品饮料",
       "latest": {
-        "date": "2026-11-19",
+        "date": "2026-11-26",
         "total": 61.4,
         "verdict": "可关注",
         "icon": "🟡",
         "metric": "PE",
-        "pct": 31.4
+        "pct": 36.8
       },
       "series": [
-        {
-          "date": "2026-10-22",
-          "total": 66.7,
-          "verdict": "可关注"
-        },
         {
           "date": "2026-10-30",
           "total": 66.7,
@@ -2340,9 +2490,19 @@
           "date": "2026-11-19",
           "total": 61.4,
           "verdict": "可关注"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 61.4,
+          "verdict": "可关注"
         }
       ],
       "history": [
+        {
+          "date": "2026-11-26",
+          "total": 61.4,
+          "verdict": "可关注"
+        },
         {
           "date": "2026-11-19",
           "total": 61.4,
@@ -2386,19 +2546,14 @@
       "symbol": "300308",
       "industry": "通信",
       "latest": {
-        "date": "2026-11-19",
+        "date": "2026-11-26",
         "total": 61.4,
         "verdict": "可关注",
         "icon": "🟡",
         "metric": "PE",
-        "pct": 1.2
+        "pct": 2.2
       },
       "series": [
-        {
-          "date": "2026-10-22",
-          "total": 50.3,
-          "verdict": "观望"
-        },
         {
           "date": "2026-10-30",
           "total": 54.1,
@@ -2418,9 +2573,19 @@
           "date": "2026-11-19",
           "total": 61.4,
           "verdict": "可关注"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 61.4,
+          "verdict": "可关注"
         }
       ],
       "history": [
+        {
+          "date": "2026-11-26",
+          "total": 61.4,
+          "verdict": "可关注"
+        },
         {
           "date": "2026-11-19",
           "total": 61.4,
@@ -2464,19 +2629,14 @@
       "symbol": "600150",
       "industry": "国防军工",
       "latest": {
-        "date": "2026-11-19",
+        "date": "2026-11-26",
         "total": 61.1,
         "verdict": "可关注",
         "icon": "🟡",
         "metric": "PE",
-        "pct": 20.0
+        "pct": 20.5
       },
       "series": [
-        {
-          "date": "2026-10-22",
-          "total": 59.6,
-          "verdict": "观望"
-        },
         {
           "date": "2026-10-30",
           "total": 61.1,
@@ -2496,9 +2656,19 @@
           "date": "2026-11-19",
           "total": 61.1,
           "verdict": "可关注"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 61.1,
+          "verdict": "可关注"
         }
       ],
       "history": [
+        {
+          "date": "2026-11-26",
+          "total": 61.1,
+          "verdict": "可关注"
+        },
         {
           "date": "2026-11-19",
           "total": 61.1,
@@ -2532,24 +2702,97 @@
       ]
     },
     {
+      "slug": "baiyun-jichang",
+      "name": "白云机场",
+      "symbol": "600004",
+      "industry": "交通运输",
+      "latest": {
+        "date": "2026-11-26",
+        "total": 61.0,
+        "verdict": "可关注",
+        "icon": "🟡",
+        "metric": "PE",
+        "pct": 59.8
+      },
+      "series": [
+        {
+          "date": "2026-10-30",
+          "total": 63.5,
+          "verdict": "可关注"
+        },
+        {
+          "date": "2026-11-05",
+          "total": 61.0,
+          "verdict": "可关注"
+        },
+        {
+          "date": "2026-11-12",
+          "total": 61.0,
+          "verdict": "可关注"
+        },
+        {
+          "date": "2026-11-19",
+          "total": 60.0,
+          "verdict": "可关注"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 61.0,
+          "verdict": "可关注"
+        }
+      ],
+      "history": [
+        {
+          "date": "2026-11-26",
+          "total": 61.0,
+          "verdict": "可关注"
+        },
+        {
+          "date": "2026-11-19",
+          "total": 60.0,
+          "verdict": "可关注"
+        },
+        {
+          "date": "2026-11-12",
+          "total": 61.0,
+          "verdict": "可关注"
+        },
+        {
+          "date": "2026-11-05",
+          "total": 61.0,
+          "verdict": "可关注"
+        },
+        {
+          "date": "2026-10-30",
+          "total": 63.5,
+          "verdict": "可关注"
+        },
+        {
+          "date": "2026-10-22",
+          "total": 63.5,
+          "verdict": "可关注"
+        },
+        {
+          "date": "2026-09-29",
+          "total": 64.2,
+          "verdict": "可关注"
+        }
+      ]
+    },
+    {
       "slug": "pingan-yinhang",
       "name": "平安银行",
       "symbol": "000001",
       "industry": "银行",
       "latest": {
-        "date": "2026-11-19",
+        "date": "2026-11-26",
         "total": 60.9,
         "verdict": "可关注",
         "icon": "🟡",
         "metric": "PE",
-        "pct": 35.3
+        "pct": 35.1
       },
       "series": [
-        {
-          "date": "2026-10-22",
-          "total": 63.0,
-          "verdict": "可关注"
-        },
         {
           "date": "2026-10-30",
           "total": 65.0,
@@ -2569,9 +2812,19 @@
           "date": "2026-11-19",
           "total": 60.9,
           "verdict": "可关注"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 60.9,
+          "verdict": "可关注"
         }
       ],
       "history": [
+        {
+          "date": "2026-11-26",
+          "total": 60.9,
+          "verdict": "可关注"
+        },
         {
           "date": "2026-11-19",
           "total": 60.9,
@@ -2615,19 +2868,14 @@
       "symbol": "000333",
       "industry": "家用电器",
       "latest": {
-        "date": "2026-11-19",
+        "date": "2026-11-26",
         "total": 60.8,
         "verdict": "可关注",
         "icon": "🟡",
         "metric": "PE",
-        "pct": 53.4
+        "pct": 55.1
       },
       "series": [
-        {
-          "date": "2026-10-22",
-          "total": 64.8,
-          "verdict": "可关注"
-        },
         {
           "date": "2026-10-30",
           "total": 62.3,
@@ -2647,9 +2895,19 @@
           "date": "2026-11-19",
           "total": 60.8,
           "verdict": "可关注"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 60.8,
+          "verdict": "可关注"
         }
       ],
       "history": [
+        {
+          "date": "2026-11-26",
+          "total": 60.8,
+          "verdict": "可关注"
+        },
         {
           "date": "2026-11-19",
           "total": 60.8,
@@ -2688,24 +2946,97 @@
       ]
     },
     {
+      "slug": "luoyang-muye",
+      "name": "洛阳钼业",
+      "symbol": "603993",
+      "industry": "有色金属",
+      "latest": {
+        "date": "2026-11-26",
+        "total": 60.5,
+        "verdict": "可关注",
+        "icon": "🟡",
+        "metric": "PE",
+        "pct": 0.0
+      },
+      "series": [
+        {
+          "date": "2026-10-30",
+          "total": 58.6,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-11-05",
+          "total": 58.6,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-11-12",
+          "total": 58.6,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-11-19",
+          "total": 58.6,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 60.5,
+          "verdict": "可关注"
+        }
+      ],
+      "history": [
+        {
+          "date": "2026-11-26",
+          "total": 60.5,
+          "verdict": "可关注"
+        },
+        {
+          "date": "2026-11-19",
+          "total": 58.6,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-11-12",
+          "total": 58.6,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-11-05",
+          "total": 58.6,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-10-30",
+          "total": 58.6,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-10-22",
+          "total": 56.9,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-09-24",
+          "total": 56.3,
+          "verdict": "观望"
+        }
+      ]
+    },
+    {
       "slug": "guoyao-gufen",
       "name": "国药股份",
       "symbol": "600511",
       "industry": "医药生物",
       "latest": {
-        "date": "2026-11-19",
+        "date": "2026-11-26",
         "total": 60.5,
         "verdict": "可关注",
         "icon": "🟡",
         "metric": "PE",
-        "pct": 17.7
+        "pct": 15.8
       },
       "series": [
-        {
-          "date": "2026-10-22",
-          "total": 62.2,
-          "verdict": "可关注"
-        },
         {
           "date": "2026-10-30",
           "total": 62.2,
@@ -2725,9 +3056,19 @@
           "date": "2026-11-19",
           "total": 60.5,
           "verdict": "可关注"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 60.5,
+          "verdict": "可关注"
         }
       ],
       "history": [
+        {
+          "date": "2026-11-26",
+          "total": 60.5,
+          "verdict": "可关注"
+        },
         {
           "date": "2026-11-19",
           "total": 60.5,
@@ -2766,19 +3107,14 @@
       "symbol": "600111",
       "industry": "有色金属",
       "latest": {
-        "date": "2026-11-19",
+        "date": "2026-11-26",
         "total": 60.1,
         "verdict": "可关注",
         "icon": "🟡",
         "metric": "PE",
-        "pct": 18.7
+        "pct": 18.3
       },
       "series": [
-        {
-          "date": "2026-10-22",
-          "total": 59.1,
-          "verdict": "观望"
-        },
         {
           "date": "2026-10-30",
           "total": 59.1,
@@ -2798,9 +3134,19 @@
           "date": "2026-11-19",
           "total": 60.1,
           "verdict": "可关注"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 60.1,
+          "verdict": "可关注"
         }
       ],
       "history": [
+        {
+          "date": "2026-11-26",
+          "total": 60.1,
+          "verdict": "可关注"
+        },
         {
           "date": "2026-11-19",
           "total": 60.1,
@@ -2839,19 +3185,14 @@
       "symbol": "600941",
       "industry": "通信",
       "latest": {
-        "date": "2026-11-19",
+        "date": "2026-11-26",
         "total": 60.0,
         "verdict": "可关注",
         "icon": "🟡",
         "metric": "PE",
-        "pct": 97.9
+        "pct": 99.3
       },
       "series": [
-        {
-          "date": "2026-10-22",
-          "total": 65.2,
-          "verdict": "可关注"
-        },
         {
           "date": "2026-10-30",
           "total": 62.9,
@@ -2871,9 +3212,19 @@
           "date": "2026-11-19",
           "total": 60.0,
           "verdict": "可关注"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 60.0,
+          "verdict": "可关注"
         }
       ],
       "history": [
+        {
+          "date": "2026-11-26",
+          "total": 60.0,
+          "verdict": "可关注"
+        },
         {
           "date": "2026-11-19",
           "total": 60.0,
@@ -2912,97 +3263,19 @@
       ]
     },
     {
-      "slug": "baiyun-jichang",
-      "name": "白云机场",
-      "symbol": "600004",
-      "industry": "交通运输",
-      "latest": {
-        "date": "2026-11-19",
-        "total": 60.0,
-        "verdict": "可关注",
-        "icon": "🟡",
-        "metric": "PE",
-        "pct": 60.5
-      },
-      "series": [
-        {
-          "date": "2026-10-22",
-          "total": 63.5,
-          "verdict": "可关注"
-        },
-        {
-          "date": "2026-10-30",
-          "total": 63.5,
-          "verdict": "可关注"
-        },
-        {
-          "date": "2026-11-05",
-          "total": 61.0,
-          "verdict": "可关注"
-        },
-        {
-          "date": "2026-11-12",
-          "total": 61.0,
-          "verdict": "可关注"
-        },
-        {
-          "date": "2026-11-19",
-          "total": 60.0,
-          "verdict": "可关注"
-        }
-      ],
-      "history": [
-        {
-          "date": "2026-11-19",
-          "total": 60.0,
-          "verdict": "可关注"
-        },
-        {
-          "date": "2026-11-12",
-          "total": 61.0,
-          "verdict": "可关注"
-        },
-        {
-          "date": "2026-11-05",
-          "total": 61.0,
-          "verdict": "可关注"
-        },
-        {
-          "date": "2026-10-30",
-          "total": 63.5,
-          "verdict": "可关注"
-        },
-        {
-          "date": "2026-10-22",
-          "total": 63.5,
-          "verdict": "可关注"
-        },
-        {
-          "date": "2026-09-29",
-          "total": 64.2,
-          "verdict": "可关注"
-        }
-      ]
-    },
-    {
       "slug": "zhongguo-hedian",
       "name": "中国核电",
       "symbol": "601985",
       "industry": "公用事业",
       "latest": {
-        "date": "2026-11-19",
+        "date": "2026-11-26",
         "total": 59.8,
         "verdict": "不推荐",
         "icon": "🔴",
         "metric": "PE",
-        "pct": 98.1
+        "pct": 98.2
       },
       "series": [
-        {
-          "date": "2026-09-29",
-          "total": 61.4,
-          "verdict": "可关注"
-        },
         {
           "date": "2026-10-22",
           "total": 61.3,
@@ -3020,12 +3293,22 @@
         },
         {
           "date": "2026-11-19",
+          "total": 59.8,
+          "verdict": "不推荐"
+        },
+        {
+          "date": "2026-11-26",
           "total": 59.8,
           "verdict": "不推荐"
         }
       ],
       "history": [
         {
+          "date": "2026-11-26",
+          "total": 59.8,
+          "verdict": "不推荐"
+        },
+        {
           "date": "2026-11-19",
           "total": 59.8,
           "verdict": "不推荐"
@@ -3048,6 +3331,84 @@
         {
           "date": "2026-09-29",
           "total": 61.4,
+          "verdict": "可关注"
+        }
+      ]
+    },
+    {
+      "slug": "fenzhong-chuanmei",
+      "name": "分众传媒",
+      "symbol": "002027",
+      "industry": "传媒",
+      "latest": {
+        "date": "2026-11-26",
+        "total": 59.7,
+        "verdict": "观望",
+        "icon": "🟠",
+        "metric": "PE",
+        "pct": 63.6
+      },
+      "series": [
+        {
+          "date": "2026-10-30",
+          "total": 62.2,
+          "verdict": "可关注"
+        },
+        {
+          "date": "2026-11-05",
+          "total": 59.7,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-11-12",
+          "total": 59.7,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-11-19",
+          "total": 58.2,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 59.7,
+          "verdict": "观望"
+        }
+      ],
+      "history": [
+        {
+          "date": "2026-11-26",
+          "total": 59.7,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-11-19",
+          "total": 58.2,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-11-12",
+          "total": 59.7,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-11-05",
+          "total": 59.7,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-10-30",
+          "total": 62.2,
+          "verdict": "可关注"
+        },
+        {
+          "date": "2026-10-22",
+          "total": 63.0,
+          "verdict": "可关注"
+        },
+        {
+          "date": "2026-09-24",
+          "total": 65.5,
           "verdict": "可关注"
         }
       ]
@@ -3058,19 +3419,14 @@
       "symbol": "600031",
       "industry": "机械设备",
       "latest": {
-        "date": "2026-11-19",
+        "date": "2026-11-26",
         "total": 59.4,
         "verdict": "观望",
         "icon": "🟠",
         "metric": "PE",
-        "pct": 35.0
+        "pct": 34.0
       },
       "series": [
-        {
-          "date": "2026-10-22",
-          "total": 62.2,
-          "verdict": "可关注"
-        },
         {
           "date": "2026-10-30",
           "total": 59.4,
@@ -3090,9 +3446,19 @@
           "date": "2026-11-19",
           "total": 59.4,
           "verdict": "观望"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 59.4,
+          "verdict": "观望"
         }
       ],
       "history": [
+        {
+          "date": "2026-11-26",
+          "total": 59.4,
+          "verdict": "观望"
+        },
         {
           "date": "2026-11-19",
           "total": 59.4,
@@ -3131,19 +3497,14 @@
       "symbol": "000423",
       "industry": "医药生物",
       "latest": {
-        "date": "2026-11-19",
+        "date": "2026-11-26",
         "total": 59.4,
         "verdict": "观望",
         "icon": "🟠",
         "metric": "PE",
-        "pct": 31.5
+        "pct": 29.8
       },
       "series": [
-        {
-          "date": "2026-10-22",
-          "total": 63.2,
-          "verdict": "可关注"
-        },
         {
           "date": "2026-10-30",
           "total": 63.2,
@@ -3163,9 +3524,19 @@
           "date": "2026-11-19",
           "total": 59.4,
           "verdict": "观望"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 59.4,
+          "verdict": "观望"
         }
       ],
       "history": [
+        {
+          "date": "2026-11-26",
+          "total": 59.4,
+          "verdict": "观望"
+        },
         {
           "date": "2026-11-19",
           "total": 59.4,
@@ -3204,19 +3575,14 @@
       "symbol": "600535",
       "industry": "医药生物",
       "latest": {
-        "date": "2026-11-19",
+        "date": "2026-11-26",
         "total": 59.3,
         "verdict": "观望",
         "icon": "🟠",
         "metric": "PE",
-        "pct": 22.8
+        "pct": 24.0
       },
       "series": [
-        {
-          "date": "2026-09-29",
-          "total": 57.5,
-          "verdict": "观望"
-        },
         {
           "date": "2026-10-22",
           "total": 58.3,
@@ -3236,9 +3602,19 @@
           "date": "2026-11-19",
           "total": 59.3,
           "verdict": "观望"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 59.3,
+          "verdict": "观望"
         }
       ],
       "history": [
+        {
+          "date": "2026-11-26",
+          "total": 59.3,
+          "verdict": "观望"
+        },
         {
           "date": "2026-11-19",
           "total": 59.3,
@@ -3272,19 +3648,14 @@
       "symbol": "601336",
       "industry": "非银金融",
       "latest": {
-        "date": "2026-11-19",
+        "date": "2026-11-26",
         "total": 59.2,
         "verdict": "观望",
         "icon": "🟠",
         "metric": "PE",
-        "pct": 12.5
+        "pct": 10.4
       },
       "series": [
-        {
-          "date": "2026-10-22",
-          "total": 60.9,
-          "verdict": "可关注"
-        },
         {
           "date": "2026-10-30",
           "total": 60.9,
@@ -3304,9 +3675,19 @@
           "date": "2026-11-19",
           "total": 59.2,
           "verdict": "观望"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 59.2,
+          "verdict": "观望"
         }
       ],
       "history": [
+        {
+          "date": "2026-11-26",
+          "total": 59.2,
+          "verdict": "观望"
+        },
         {
           "date": "2026-11-19",
           "total": 59.2,
@@ -3350,19 +3731,14 @@
       "symbol": "600332",
       "industry": "医药生物",
       "latest": {
-        "date": "2026-11-19",
+        "date": "2026-11-26",
         "total": 59.1,
         "verdict": "观望",
         "icon": "🟠",
         "metric": "PE",
-        "pct": 48.6
+        "pct": 46.3
       },
       "series": [
-        {
-          "date": "2026-10-22",
-          "total": 61.1,
-          "verdict": "可关注"
-        },
         {
           "date": "2026-10-30",
           "total": 61.1,
@@ -3382,9 +3758,19 @@
           "date": "2026-11-19",
           "total": 59.1,
           "verdict": "观望"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 59.1,
+          "verdict": "观望"
         }
       ],
       "history": [
+        {
+          "date": "2026-11-26",
+          "total": 59.1,
+          "verdict": "观望"
+        },
         {
           "date": "2026-11-19",
           "total": 59.1,
@@ -3418,24 +3804,321 @@
       ]
     },
     {
+      "slug": "yangguang-dianyuan",
+      "name": "阳光电源",
+      "symbol": "300274",
+      "industry": "电力设备",
+      "latest": {
+        "date": "2026-11-26",
+        "total": 59.0,
+        "verdict": "观望",
+        "icon": "🟠",
+        "metric": "PE",
+        "pct": 29.6
+      },
+      "series": [
+        {
+          "date": "2026-10-30",
+          "total": 63.5,
+          "verdict": "可关注"
+        },
+        {
+          "date": "2026-11-05",
+          "total": 59.0,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-11-12",
+          "total": 58.0,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-11-19",
+          "total": 59.0,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 59.0,
+          "verdict": "观望"
+        }
+      ],
+      "history": [
+        {
+          "date": "2026-11-26",
+          "total": 59.0,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-11-19",
+          "total": 59.0,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-11-12",
+          "total": 58.0,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-11-05",
+          "total": 59.0,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-10-30",
+          "total": 63.5,
+          "verdict": "可关注"
+        },
+        {
+          "date": "2026-10-22",
+          "total": 61.0,
+          "verdict": "可关注"
+        },
+        {
+          "date": "2026-09-24",
+          "total": 61.7,
+          "verdict": "可关注"
+        }
+      ]
+    },
+    {
+      "slug": "daqin-tielu",
+      "name": "大秦铁路",
+      "symbol": "601006",
+      "industry": "交通运输",
+      "latest": {
+        "date": "2026-11-26",
+        "total": 58.8,
+        "verdict": "观望",
+        "icon": "🟠",
+        "metric": "PE",
+        "pct": 98.1
+      },
+      "series": [
+        {
+          "date": "2026-10-22",
+          "total": 58.8,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-10-30",
+          "total": 58.8,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-11-05",
+          "total": 58.0,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-11-19",
+          "total": 58.0,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 58.8,
+          "verdict": "观望"
+        }
+      ],
+      "history": [
+        {
+          "date": "2026-11-26",
+          "total": 58.8,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-11-19",
+          "total": 58.0,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-11-05",
+          "total": 58.0,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-10-30",
+          "total": 58.8,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-10-22",
+          "total": 58.8,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-09-29",
+          "total": 60.8,
+          "verdict": "可关注"
+        }
+      ]
+    },
+    {
+      "slug": "yanhu-gufen",
+      "name": "盐湖股份",
+      "symbol": "000792",
+      "industry": "基础化工",
+      "latest": {
+        "date": "2026-11-26",
+        "total": 58.7,
+        "verdict": "观望",
+        "icon": "🟠",
+        "metric": "PE",
+        "pct": 42.0
+      },
+      "series": [
+        {
+          "date": "2026-10-30",
+          "total": 58.7,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-11-05",
+          "total": 58.7,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-11-12",
+          "total": 58.7,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-11-19",
+          "total": 58.7,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 58.7,
+          "verdict": "观望"
+        }
+      ],
+      "history": [
+        {
+          "date": "2026-11-26",
+          "total": 58.7,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-11-19",
+          "total": 58.7,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-11-12",
+          "total": 58.7,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-11-05",
+          "total": 58.7,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-10-30",
+          "total": 58.7,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-10-22",
+          "total": 56.8,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-09-24",
+          "total": 57.4,
+          "verdict": "观望"
+        }
+      ]
+    },
+    {
+      "slug": "zhongguo-tonghao",
+      "name": "中国通号",
+      "symbol": "688009",
+      "industry": "机械设备",
+      "latest": {
+        "date": "2026-11-26",
+        "total": 58.4,
+        "verdict": "观望",
+        "icon": "🟠",
+        "metric": "PE",
+        "pct": 43.0
+      },
+      "series": [
+        {
+          "date": "2026-10-22",
+          "total": 63.4,
+          "verdict": "可关注"
+        },
+        {
+          "date": "2026-10-30",
+          "total": 63.4,
+          "verdict": "可关注"
+        },
+        {
+          "date": "2026-11-05",
+          "total": 63.4,
+          "verdict": "可关注"
+        },
+        {
+          "date": "2026-11-19",
+          "total": 58.4,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 58.4,
+          "verdict": "观望"
+        }
+      ],
+      "history": [
+        {
+          "date": "2026-11-26",
+          "total": 58.4,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-11-19",
+          "total": 58.4,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-11-05",
+          "total": 63.4,
+          "verdict": "可关注"
+        },
+        {
+          "date": "2026-10-30",
+          "total": 63.4,
+          "verdict": "可关注"
+        },
+        {
+          "date": "2026-10-22",
+          "total": 63.4,
+          "verdict": "可关注"
+        },
+        {
+          "date": "2026-09-29",
+          "total": 63.6,
+          "verdict": "可关注"
+        }
+      ]
+    },
+    {
       "slug": "changjiang-dianli",
       "name": "长江电力",
       "symbol": "600900",
       "industry": "公用事业",
       "latest": {
-        "date": "2026-11-19",
-        "total": 59.0,
+        "date": "2026-11-26",
+        "total": 58.3,
         "verdict": "观望",
         "icon": "🟠",
         "metric": "PE",
-        "pct": 86.0
+        "pct": 90.9
       },
       "series": [
-        {
-          "date": "2026-10-22",
-          "total": 62.3,
-          "verdict": "可关注"
-        },
         {
           "date": "2026-10-30",
           "total": 61.3,
@@ -3455,9 +4138,19 @@
           "date": "2026-11-19",
           "total": 59.0,
           "verdict": "观望"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 58.3,
+          "verdict": "观望"
         }
       ],
       "history": [
+        {
+          "date": "2026-11-26",
+          "total": 58.3,
+          "verdict": "观望"
+        },
         {
           "date": "2026-11-19",
           "total": 59.0,
@@ -3496,384 +4189,19 @@
       ]
     },
     {
-      "slug": "yangguang-dianyuan",
-      "name": "阳光电源",
-      "symbol": "300274",
-      "industry": "电力设备",
-      "latest": {
-        "date": "2026-11-19",
-        "total": 59.0,
-        "verdict": "观望",
-        "icon": "🟠",
-        "metric": "PE",
-        "pct": 31.4
-      },
-      "series": [
-        {
-          "date": "2026-10-22",
-          "total": 61.0,
-          "verdict": "可关注"
-        },
-        {
-          "date": "2026-10-30",
-          "total": 63.5,
-          "verdict": "可关注"
-        },
-        {
-          "date": "2026-11-05",
-          "total": 59.0,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-11-12",
-          "total": 58.0,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-11-19",
-          "total": 59.0,
-          "verdict": "观望"
-        }
-      ],
-      "history": [
-        {
-          "date": "2026-11-19",
-          "total": 59.0,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-11-12",
-          "total": 58.0,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-11-05",
-          "total": 59.0,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-10-30",
-          "total": 63.5,
-          "verdict": "可关注"
-        },
-        {
-          "date": "2026-10-22",
-          "total": 61.0,
-          "verdict": "可关注"
-        },
-        {
-          "date": "2026-09-24",
-          "total": 61.7,
-          "verdict": "可关注"
-        }
-      ]
-    },
-    {
-      "slug": "yanhu-gufen",
-      "name": "盐湖股份",
-      "symbol": "000792",
-      "industry": "基础化工",
-      "latest": {
-        "date": "2026-11-19",
-        "total": 58.7,
-        "verdict": "观望",
-        "icon": "🟠",
-        "metric": "PE",
-        "pct": 43.3
-      },
-      "series": [
-        {
-          "date": "2026-10-22",
-          "total": 56.8,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-10-30",
-          "total": 58.7,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-11-05",
-          "total": 58.7,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-11-12",
-          "total": 58.7,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-11-19",
-          "total": 58.7,
-          "verdict": "观望"
-        }
-      ],
-      "history": [
-        {
-          "date": "2026-11-19",
-          "total": 58.7,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-11-12",
-          "total": 58.7,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-11-05",
-          "total": 58.7,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-10-30",
-          "total": 58.7,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-10-22",
-          "total": 56.8,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-09-24",
-          "total": 57.4,
-          "verdict": "观望"
-        }
-      ]
-    },
-    {
-      "slug": "luoyang-muye",
-      "name": "洛阳钼业",
-      "symbol": "603993",
-      "industry": "有色金属",
-      "latest": {
-        "date": "2026-11-19",
-        "total": 58.6,
-        "verdict": "观望",
-        "icon": "🟠",
-        "metric": "PE",
-        "pct": 0.0
-      },
-      "series": [
-        {
-          "date": "2026-10-22",
-          "total": 56.9,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-10-30",
-          "total": 58.6,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-11-05",
-          "total": 58.6,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-11-12",
-          "total": 58.6,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-11-19",
-          "total": 58.6,
-          "verdict": "观望"
-        }
-      ],
-      "history": [
-        {
-          "date": "2026-11-19",
-          "total": 58.6,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-11-12",
-          "total": 58.6,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-11-05",
-          "total": 58.6,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-10-30",
-          "total": 58.6,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-10-22",
-          "total": 56.9,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-09-24",
-          "total": 56.3,
-          "verdict": "观望"
-        }
-      ]
-    },
-    {
-      "slug": "zhongguo-tonghao",
-      "name": "中国通号",
-      "symbol": "688009",
-      "industry": "机械设备",
-      "latest": {
-        "date": "2026-11-19",
-        "total": 58.4,
-        "verdict": "观望",
-        "icon": "🟠",
-        "metric": "PE",
-        "pct": 43.5
-      },
-      "series": [
-        {
-          "date": "2026-09-29",
-          "total": 63.6,
-          "verdict": "可关注"
-        },
-        {
-          "date": "2026-10-22",
-          "total": 63.4,
-          "verdict": "可关注"
-        },
-        {
-          "date": "2026-10-30",
-          "total": 63.4,
-          "verdict": "可关注"
-        },
-        {
-          "date": "2026-11-05",
-          "total": 63.4,
-          "verdict": "可关注"
-        },
-        {
-          "date": "2026-11-19",
-          "total": 58.4,
-          "verdict": "观望"
-        }
-      ],
-      "history": [
-        {
-          "date": "2026-11-19",
-          "total": 58.4,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-11-05",
-          "total": 63.4,
-          "verdict": "可关注"
-        },
-        {
-          "date": "2026-10-30",
-          "total": 63.4,
-          "verdict": "可关注"
-        },
-        {
-          "date": "2026-10-22",
-          "total": 63.4,
-          "verdict": "可关注"
-        },
-        {
-          "date": "2026-09-29",
-          "total": 63.6,
-          "verdict": "可关注"
-        }
-      ]
-    },
-    {
-      "slug": "fenzhong-chuanmei",
-      "name": "分众传媒",
-      "symbol": "002027",
-      "industry": "传媒",
-      "latest": {
-        "date": "2026-11-19",
-        "total": 58.2,
-        "verdict": "观望",
-        "icon": "🟠",
-        "metric": "PE",
-        "pct": 71.8
-      },
-      "series": [
-        {
-          "date": "2026-10-22",
-          "total": 63.0,
-          "verdict": "可关注"
-        },
-        {
-          "date": "2026-10-30",
-          "total": 62.2,
-          "verdict": "可关注"
-        },
-        {
-          "date": "2026-11-05",
-          "total": 59.7,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-11-12",
-          "total": 59.7,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-11-19",
-          "total": 58.2,
-          "verdict": "观望"
-        }
-      ],
-      "history": [
-        {
-          "date": "2026-11-19",
-          "total": 58.2,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-11-12",
-          "total": 59.7,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-11-05",
-          "total": 59.7,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-10-30",
-          "total": 62.2,
-          "verdict": "可关注"
-        },
-        {
-          "date": "2026-10-22",
-          "total": 63.0,
-          "verdict": "可关注"
-        },
-        {
-          "date": "2026-09-24",
-          "total": 65.5,
-          "verdict": "可关注"
-        }
-      ]
-    },
-    {
       "slug": "guangqi-jishu",
       "name": "光启技术",
       "symbol": "002625",
       "industry": "国防军工",
       "latest": {
-        "date": "2026-11-19",
+        "date": "2026-11-26",
         "total": 58.1,
         "verdict": "观望",
         "icon": "🟠",
         "metric": "PE",
-        "pct": 22.8
+        "pct": 21.7
       },
       "series": [
-        {
-          "date": "2026-10-22",
-          "total": 56.2,
-          "verdict": "观望"
-        },
         {
           "date": "2026-10-30",
           "total": 56.2,
@@ -3893,9 +4221,19 @@
           "date": "2026-11-19",
           "total": 58.1,
           "verdict": "观望"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 58.1,
+          "verdict": "观望"
         }
       ],
       "history": [
+        {
+          "date": "2026-11-26",
+          "total": 58.1,
+          "verdict": "观望"
+        },
         {
           "date": "2026-11-19",
           "total": 58.1,
@@ -3929,233 +4267,19 @@
       ]
     },
     {
-      "slug": "daqin-tielu",
-      "name": "大秦铁路",
-      "symbol": "601006",
-      "industry": "交通运输",
-      "latest": {
-        "date": "2026-11-19",
-        "total": 58.0,
-        "verdict": "观望",
-        "icon": "🟠",
-        "metric": "PE",
-        "pct": 98.9
-      },
-      "series": [
-        {
-          "date": "2026-09-29",
-          "total": 60.8,
-          "verdict": "可关注"
-        },
-        {
-          "date": "2026-10-22",
-          "total": 58.8,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-10-30",
-          "total": 58.8,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-11-05",
-          "total": 58.0,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-11-19",
-          "total": 58.0,
-          "verdict": "观望"
-        }
-      ],
-      "history": [
-        {
-          "date": "2026-11-19",
-          "total": 58.0,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-11-05",
-          "total": 58.0,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-10-30",
-          "total": 58.8,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-10-22",
-          "total": 58.8,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-09-29",
-          "total": 60.8,
-          "verdict": "可关注"
-        }
-      ]
-    },
-    {
-      "slug": "shanghai-yiyao",
-      "name": "上海医药",
-      "symbol": "601607",
-      "industry": "医药生物",
-      "latest": {
-        "date": "2026-11-19",
-        "total": 58.0,
-        "verdict": "观望",
-        "icon": "🟠",
-        "metric": "PE",
-        "pct": 20.6
-      },
-      "series": [
-        {
-          "date": "2026-09-29",
-          "total": 57.9,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-10-22",
-          "total": 56.0,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-10-30",
-          "total": 56.0,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-11-05",
-          "total": 58.0,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-11-19",
-          "total": 58.0,
-          "verdict": "观望"
-        }
-      ],
-      "history": [
-        {
-          "date": "2026-11-19",
-          "total": 58.0,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-11-05",
-          "total": 58.0,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-10-30",
-          "total": 56.0,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-10-22",
-          "total": 56.0,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-09-29",
-          "total": 57.9,
-          "verdict": "观望"
-        }
-      ]
-    },
-    {
-      "slug": "shenghong-keji",
-      "name": "胜宏科技",
-      "symbol": "300476",
-      "industry": "电子",
-      "latest": {
-        "date": "2026-11-19",
-        "total": 57.3,
-        "verdict": "观望",
-        "icon": "🟠",
-        "metric": "PE",
-        "pct": 17.5
-      },
-      "series": [
-        {
-          "date": "2026-10-22",
-          "total": 47.7,
-          "verdict": "不推荐"
-        },
-        {
-          "date": "2026-10-30",
-          "total": 47.7,
-          "verdict": "不推荐"
-        },
-        {
-          "date": "2026-11-05",
-          "total": 55.8,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-11-12",
-          "total": 52.8,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-11-19",
-          "total": 57.3,
-          "verdict": "观望"
-        }
-      ],
-      "history": [
-        {
-          "date": "2026-11-19",
-          "total": 57.3,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-11-12",
-          "total": 52.8,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-11-05",
-          "total": 55.8,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-10-30",
-          "total": 47.7,
-          "verdict": "不推荐"
-        },
-        {
-          "date": "2026-10-22",
-          "total": 47.7,
-          "verdict": "不推荐"
-        },
-        {
-          "date": "2026-09-24",
-          "total": 41.5,
-          "verdict": "不推荐"
-        }
-      ]
-    },
-    {
       "slug": "shouchuang-huanbao",
       "name": "首创环保",
       "symbol": "600008",
       "industry": "环保",
       "latest": {
-        "date": "2026-11-19",
-        "total": 57.3,
+        "date": "2026-11-26",
+        "total": 58.1,
         "verdict": "不推荐",
         "icon": "🔴",
         "metric": "PE",
-        "pct": 42.6
+        "pct": 39.1
       },
       "series": [
-        {
-          "date": "2026-10-22",
-          "total": 57.3,
-          "verdict": "不推荐"
-        },
         {
           "date": "2026-10-30",
           "total": 58.1,
@@ -4175,9 +4299,19 @@
           "date": "2026-11-19",
           "total": 57.3,
           "verdict": "不推荐"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 58.1,
+          "verdict": "不推荐"
         }
       ],
       "history": [
+        {
+          "date": "2026-11-26",
+          "total": 58.1,
+          "verdict": "不推荐"
+        },
         {
           "date": "2026-11-19",
           "total": 57.3,
@@ -4211,24 +4345,253 @@
       ]
     },
     {
+      "slug": "biyadi",
+      "name": "比亚迪",
+      "symbol": "002594",
+      "industry": "汽车",
+      "latest": {
+        "date": "2026-11-26",
+        "total": 58.0,
+        "verdict": "不推荐",
+        "icon": "🔴",
+        "metric": "PE",
+        "pct": 4.6
+      },
+      "series": [
+        {
+          "date": "2026-10-30",
+          "total": 53.8,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-11-05",
+          "total": 53.8,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-11-12",
+          "total": 53.8,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-11-19",
+          "total": 55.3,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 58.0,
+          "verdict": "不推荐"
+        }
+      ],
+      "history": [
+        {
+          "date": "2026-11-26",
+          "total": 58.0,
+          "verdict": "不推荐"
+        },
+        {
+          "date": "2026-11-19",
+          "total": 55.3,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-11-12",
+          "total": 53.8,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-11-05",
+          "total": 53.8,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-10-30",
+          "total": 53.8,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-10-22",
+          "total": 53.8,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-09-24",
+          "total": 56.2,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-09-18",
+          "total": 56.2,
+          "verdict": "观望"
+        }
+      ]
+    },
+    {
+      "slug": "shanghai-yiyao",
+      "name": "上海医药",
+      "symbol": "601607",
+      "industry": "医药生物",
+      "latest": {
+        "date": "2026-11-26",
+        "total": 58.0,
+        "verdict": "观望",
+        "icon": "🟠",
+        "metric": "PE",
+        "pct": 18.0
+      },
+      "series": [
+        {
+          "date": "2026-10-22",
+          "total": 56.0,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-10-30",
+          "total": 56.0,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-11-05",
+          "total": 58.0,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-11-19",
+          "total": 58.0,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 58.0,
+          "verdict": "观望"
+        }
+      ],
+      "history": [
+        {
+          "date": "2026-11-26",
+          "total": 58.0,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-11-19",
+          "total": 58.0,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-11-05",
+          "total": 58.0,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-10-30",
+          "total": 56.0,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-10-22",
+          "total": 56.0,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-09-29",
+          "total": 57.9,
+          "verdict": "观望"
+        }
+      ]
+    },
+    {
+      "slug": "shenghong-keji",
+      "name": "胜宏科技",
+      "symbol": "300476",
+      "industry": "电子",
+      "latest": {
+        "date": "2026-11-26",
+        "total": 57.3,
+        "verdict": "观望",
+        "icon": "🟠",
+        "metric": "PE",
+        "pct": 23.0
+      },
+      "series": [
+        {
+          "date": "2026-10-30",
+          "total": 47.7,
+          "verdict": "不推荐"
+        },
+        {
+          "date": "2026-11-05",
+          "total": 55.8,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-11-12",
+          "total": 52.8,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-11-19",
+          "total": 57.3,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 57.3,
+          "verdict": "观望"
+        }
+      ],
+      "history": [
+        {
+          "date": "2026-11-26",
+          "total": 57.3,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-11-19",
+          "total": 57.3,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-11-12",
+          "total": 52.8,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-11-05",
+          "total": 55.8,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-10-30",
+          "total": 47.7,
+          "verdict": "不推荐"
+        },
+        {
+          "date": "2026-10-22",
+          "total": 47.7,
+          "verdict": "不推荐"
+        },
+        {
+          "date": "2026-09-24",
+          "total": 41.5,
+          "verdict": "不推荐"
+        }
+      ]
+    },
+    {
       "slug": "zijin-kuangye",
       "name": "紫金矿业",
       "symbol": "601899",
       "industry": "有色金属",
       "latest": {
-        "date": "2026-11-19",
+        "date": "2026-11-26",
         "total": 57.1,
         "verdict": "不推荐",
         "icon": "🔴",
         "metric": "PE",
-        "pct": 0.4
+        "pct": 0.0
       },
       "series": [
-        {
-          "date": "2026-10-22",
-          "total": 55.2,
-          "verdict": "不推荐"
-        },
         {
           "date": "2026-10-30",
           "total": 55.2,
@@ -4248,9 +4611,19 @@
           "date": "2026-11-19",
           "total": 57.1,
           "verdict": "不推荐"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 57.1,
+          "verdict": "不推荐"
         }
       ],
       "history": [
+        {
+          "date": "2026-11-26",
+          "total": 57.1,
+          "verdict": "不推荐"
+        },
         {
           "date": "2026-11-19",
           "total": 57.1,
@@ -4294,19 +4667,14 @@
       "symbol": "600886",
       "industry": "公用事业",
       "latest": {
-        "date": "2026-11-19",
+        "date": "2026-11-26",
         "total": 56.7,
         "verdict": "不推荐",
         "icon": "🔴",
         "metric": "PE",
-        "pct": 79.7
+        "pct": 82.1
       },
       "series": [
-        {
-          "date": "2026-09-29",
-          "total": 59.1,
-          "verdict": "观望"
-        },
         {
           "date": "2026-10-22",
           "total": 61.5,
@@ -4326,9 +4694,19 @@
           "date": "2026-11-19",
           "total": 56.7,
           "verdict": "不推荐"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 56.7,
+          "verdict": "不推荐"
         }
       ],
       "history": [
+        {
+          "date": "2026-11-26",
+          "total": 56.7,
+          "verdict": "不推荐"
+        },
         {
           "date": "2026-11-19",
           "total": 56.7,
@@ -4362,19 +4740,14 @@
       "symbol": "600276",
       "industry": "医药生物",
       "latest": {
-        "date": "2026-11-19",
+        "date": "2026-11-26",
         "total": 56.4,
         "verdict": "观望",
         "icon": "🟠",
         "metric": "PE",
-        "pct": 0.6
+        "pct": 0.4
       },
       "series": [
-        {
-          "date": "2026-10-22",
-          "total": 56.4,
-          "verdict": "观望"
-        },
         {
           "date": "2026-10-30",
           "total": 56.4,
@@ -4394,9 +4767,19 @@
           "date": "2026-11-19",
           "total": 56.4,
           "verdict": "观望"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 56.4,
+          "verdict": "观望"
         }
       ],
       "history": [
+        {
+          "date": "2026-11-26",
+          "total": 56.4,
+          "verdict": "观望"
+        },
         {
           "date": "2026-11-19",
           "total": 56.4,
@@ -4440,19 +4823,14 @@
       "symbol": "601166",
       "industry": "银行",
       "latest": {
-        "date": "2026-11-19",
+        "date": "2026-11-26",
         "total": 56.4,
         "verdict": "观望",
         "icon": "🟠",
         "metric": "PE",
-        "pct": 59.6
+        "pct": 64.3
       },
       "series": [
-        {
-          "date": "2026-10-22",
-          "total": 60.2,
-          "verdict": "可关注"
-        },
         {
           "date": "2026-10-30",
           "total": 60.2,
@@ -4472,9 +4850,19 @@
           "date": "2026-11-19",
           "total": 56.4,
           "verdict": "观望"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 56.4,
+          "verdict": "观望"
         }
       ],
       "history": [
+        {
+          "date": "2026-11-26",
+          "total": 56.4,
+          "verdict": "观望"
+        },
         {
           "date": "2026-11-19",
           "total": 56.4,
@@ -4508,84 +4896,6 @@
         {
           "date": "2026-09-21",
           "total": 59.5,
-          "verdict": "观望"
-        }
-      ]
-    },
-    {
-      "slug": "jianshe-yinhang",
-      "name": "建设银行",
-      "symbol": "601939",
-      "industry": "银行",
-      "latest": {
-        "date": "2026-11-19",
-        "total": 56.0,
-        "verdict": "观望",
-        "icon": "🟠",
-        "metric": "PE",
-        "pct": 99.1
-      },
-      "series": [
-        {
-          "date": "2026-10-22",
-          "total": 56.0,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-10-30",
-          "total": 56.0,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-11-05",
-          "total": 56.0,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-11-12",
-          "total": 56.0,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-11-19",
-          "total": 56.0,
-          "verdict": "观望"
-        }
-      ],
-      "history": [
-        {
-          "date": "2026-11-19",
-          "total": 56.0,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-11-12",
-          "total": 56.0,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-11-05",
-          "total": 56.0,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-10-30",
-          "total": 56.0,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-10-22",
-          "total": 56.0,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-09-24",
-          "total": 55.3,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-09-21",
-          "total": 55.3,
           "verdict": "观望"
         }
       ]
@@ -4596,19 +4906,14 @@
       "symbol": "600674",
       "industry": "公用事业",
       "latest": {
-        "date": "2026-11-19",
+        "date": "2026-11-26",
         "total": 55.8,
         "verdict": "观望",
         "icon": "🟠",
         "metric": "PE",
-        "pct": 94.8
+        "pct": 93.9
       },
       "series": [
-        {
-          "date": "2026-09-29",
-          "total": 57.6,
-          "verdict": "观望"
-        },
         {
           "date": "2026-10-22",
           "total": 58.7,
@@ -4626,12 +4931,22 @@
         },
         {
           "date": "2026-11-19",
+          "total": 55.8,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-11-26",
           "total": 55.8,
           "verdict": "观望"
         }
       ],
       "history": [
         {
+          "date": "2026-11-26",
+          "total": 55.8,
+          "verdict": "观望"
+        },
+        {
           "date": "2026-11-19",
           "total": 55.8,
           "verdict": "观望"
@@ -4654,84 +4969,6 @@
         {
           "date": "2026-09-29",
           "total": 57.6,
-          "verdict": "观望"
-        }
-      ]
-    },
-    {
-      "slug": "biyadi",
-      "name": "比亚迪",
-      "symbol": "002594",
-      "industry": "汽车",
-      "latest": {
-        "date": "2026-11-19",
-        "total": 55.3,
-        "verdict": "观望",
-        "icon": "🟠",
-        "metric": "PE",
-        "pct": 12.2
-      },
-      "series": [
-        {
-          "date": "2026-10-22",
-          "total": 53.8,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-10-30",
-          "total": 53.8,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-11-05",
-          "total": 53.8,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-11-12",
-          "total": 53.8,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-11-19",
-          "total": 55.3,
-          "verdict": "观望"
-        }
-      ],
-      "history": [
-        {
-          "date": "2026-11-19",
-          "total": 55.3,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-11-12",
-          "total": 53.8,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-11-05",
-          "total": 53.8,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-10-30",
-          "total": 53.8,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-10-22",
-          "total": 53.8,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-09-24",
-          "total": 56.2,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-09-18",
-          "total": 56.2,
           "verdict": "观望"
         }
       ]
@@ -4742,19 +4979,14 @@
       "symbol": "601857",
       "industry": "石油石化",
       "latest": {
-        "date": "2026-11-19",
+        "date": "2026-11-26",
         "total": 55.1,
         "verdict": "观望",
         "icon": "🟠",
         "metric": "PE",
-        "pct": 47.7
+        "pct": 47.3
       },
       "series": [
-        {
-          "date": "2026-10-22",
-          "total": 56.1,
-          "verdict": "观望"
-        },
         {
           "date": "2026-10-30",
           "total": 52.6,
@@ -4774,9 +5006,19 @@
           "date": "2026-11-19",
           "total": 55.1,
           "verdict": "观望"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 55.1,
+          "verdict": "观望"
         }
       ],
       "history": [
+        {
+          "date": "2026-11-26",
+          "total": 55.1,
+          "verdict": "观望"
+        },
         {
           "date": "2026-11-19",
           "total": 55.1,
@@ -4815,19 +5057,14 @@
       "symbol": "001965",
       "industry": "交通运输",
       "latest": {
-        "date": "2026-11-19",
+        "date": "2026-11-26",
         "total": 54.9,
         "verdict": "观望",
         "icon": "🟠",
         "metric": "PE",
-        "pct": 84.7
+        "pct": 82.6
       },
       "series": [
-        {
-          "date": "2026-10-22",
-          "total": 58.5,
-          "verdict": "观望"
-        },
         {
           "date": "2026-10-30",
           "total": 58.5,
@@ -4847,9 +5084,19 @@
           "date": "2026-11-19",
           "total": 54.9,
           "verdict": "观望"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 54.9,
+          "verdict": "观望"
         }
       ],
       "history": [
+        {
+          "date": "2026-11-26",
+          "total": 54.9,
+          "verdict": "观望"
+        },
         {
           "date": "2026-11-19",
           "total": 54.9,
@@ -4888,19 +5135,14 @@
       "symbol": "003816",
       "industry": "公用事业",
       "latest": {
-        "date": "2026-11-19",
+        "date": "2026-11-26",
         "total": 54.9,
         "verdict": "不推荐",
         "icon": "🔴",
         "metric": "PE",
-        "pct": 90.4
+        "pct": 88.4
       },
       "series": [
-        {
-          "date": "2026-10-22",
-          "total": 54.9,
-          "verdict": "不推荐"
-        },
         {
           "date": "2026-10-30",
           "total": 54.9,
@@ -4920,9 +5162,19 @@
           "date": "2026-11-19",
           "total": 54.9,
           "verdict": "不推荐"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 54.9,
+          "verdict": "不推荐"
         }
       ],
       "history": [
+        {
+          "date": "2026-11-26",
+          "total": 54.9,
+          "verdict": "不推荐"
+        },
         {
           "date": "2026-11-19",
           "total": 54.9,
@@ -4961,19 +5213,14 @@
       "symbol": "002371",
       "industry": "电子",
       "latest": {
-        "date": "2026-11-19",
+        "date": "2026-11-26",
         "total": 54.8,
         "verdict": "观望",
         "icon": "🟠",
         "metric": "PE",
-        "pct": 34.9
+        "pct": 32.4
       },
       "series": [
-        {
-          "date": "2026-10-22",
-          "total": 54.8,
-          "verdict": "观望"
-        },
         {
           "date": "2026-10-30",
           "total": 54.8,
@@ -4993,9 +5240,19 @@
           "date": "2026-11-19",
           "total": 54.8,
           "verdict": "观望"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 54.8,
+          "verdict": "观望"
         }
       ],
       "history": [
+        {
+          "date": "2026-11-26",
+          "total": 54.8,
+          "verdict": "观望"
+        },
         {
           "date": "2026-11-19",
           "total": 54.8,
@@ -5034,24 +5291,102 @@
       ]
     },
     {
+      "slug": "jianshe-yinhang",
+      "name": "建设银行",
+      "symbol": "601939",
+      "industry": "银行",
+      "latest": {
+        "date": "2026-11-26",
+        "total": 54.3,
+        "verdict": "观望",
+        "icon": "🟠",
+        "metric": "PE",
+        "pct": 99.5
+      },
+      "series": [
+        {
+          "date": "2026-10-30",
+          "total": 56.0,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-11-05",
+          "total": 56.0,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-11-12",
+          "total": 56.0,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-11-19",
+          "total": 56.0,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 54.3,
+          "verdict": "观望"
+        }
+      ],
+      "history": [
+        {
+          "date": "2026-11-26",
+          "total": 54.3,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-11-19",
+          "total": 56.0,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-11-12",
+          "total": 56.0,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-11-05",
+          "total": 56.0,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-10-30",
+          "total": 56.0,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-10-22",
+          "total": 56.0,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-09-24",
+          "total": 55.3,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-09-21",
+          "total": 55.3,
+          "verdict": "观望"
+        }
+      ]
+    },
+    {
       "slug": "muyuan-gufen",
       "name": "牧原股份",
       "symbol": "002714",
       "industry": "农林牧渔",
       "latest": {
-        "date": "2026-11-19",
+        "date": "2026-11-26",
         "total": 53.6,
         "verdict": "不推荐",
         "icon": "🔴",
         "metric": "PE",
-        "pct": 21.0
+        "pct": 21.2
       },
       "series": [
-        {
-          "date": "2026-10-22",
-          "total": 57.6,
-          "verdict": "不推荐"
-        },
         {
           "date": "2026-10-30",
           "total": 54.9,
@@ -5071,9 +5406,19 @@
           "date": "2026-11-19",
           "total": 53.6,
           "verdict": "不推荐"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 53.6,
+          "verdict": "不推荐"
         }
       ],
       "history": [
+        {
+          "date": "2026-11-26",
+          "total": 53.6,
+          "verdict": "不推荐"
+        },
         {
           "date": "2026-11-19",
           "total": 53.6,
@@ -5112,19 +5457,14 @@
       "symbol": "600050",
       "industry": "通信",
       "latest": {
-        "date": "2026-11-19",
+        "date": "2026-11-26",
         "total": 53.4,
         "verdict": "不推荐",
         "icon": "🔴",
         "metric": "PE",
-        "pct": 52.1
+        "pct": 53.2
       },
       "series": [
-        {
-          "date": "2026-10-22",
-          "total": 60.9,
-          "verdict": "不推荐"
-        },
         {
           "date": "2026-10-30",
           "total": 59.6,
@@ -5144,9 +5484,19 @@
           "date": "2026-11-19",
           "total": 53.4,
           "verdict": "不推荐"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 53.4,
+          "verdict": "不推荐"
         }
       ],
       "history": [
+        {
+          "date": "2026-11-26",
+          "total": 53.4,
+          "verdict": "不推荐"
+        },
         {
           "date": "2026-11-19",
           "total": 53.4,
@@ -5185,19 +5535,14 @@
       "symbol": "601088",
       "industry": "煤炭",
       "latest": {
-        "date": "2026-11-19",
+        "date": "2026-11-26",
         "total": 53.1,
         "verdict": "观望",
         "icon": "🟠",
         "metric": "PE",
-        "pct": 93.4
+        "pct": 97.2
       },
       "series": [
-        {
-          "date": "2026-10-22",
-          "total": 53.1,
-          "verdict": "观望"
-        },
         {
           "date": "2026-10-30",
           "total": 53.1,
@@ -5217,9 +5562,19 @@
           "date": "2026-11-19",
           "total": 53.1,
           "verdict": "观望"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 53.1,
+          "verdict": "观望"
         }
       ],
       "history": [
+        {
+          "date": "2026-11-26",
+          "total": 53.1,
+          "verdict": "观望"
+        },
         {
           "date": "2026-11-19",
           "total": 53.1,
@@ -5258,19 +5613,14 @@
       "symbol": "601398",
       "industry": "银行",
       "latest": {
-        "date": "2026-11-19",
+        "date": "2026-11-26",
         "total": 52.8,
         "verdict": "观望",
         "icon": "🟠",
         "metric": "PE",
-        "pct": 99.1
+        "pct": 99.0
       },
       "series": [
-        {
-          "date": "2026-10-22",
-          "total": 51.0,
-          "verdict": "观望"
-        },
         {
           "date": "2026-10-30",
           "total": 53.8,
@@ -5290,9 +5640,19 @@
           "date": "2026-11-19",
           "total": 52.8,
           "verdict": "观望"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 52.8,
+          "verdict": "观望"
         }
       ],
       "history": [
+        {
+          "date": "2026-11-26",
+          "total": 52.8,
+          "verdict": "观望"
+        },
         {
           "date": "2026-11-19",
           "total": 52.8,
@@ -5331,24 +5691,170 @@
       ]
     },
     {
+      "slug": "hailuo-shuini",
+      "name": "海螺水泥",
+      "symbol": "600585",
+      "industry": "建筑材料",
+      "latest": {
+        "date": "2026-11-26",
+        "total": 52.7,
+        "verdict": "观望",
+        "icon": "🟠",
+        "metric": "PE",
+        "pct": 99.4
+      },
+      "series": [
+        {
+          "date": "2026-10-30",
+          "total": 52.7,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-11-05",
+          "total": 51.7,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-11-12",
+          "total": 51.7,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-11-19",
+          "total": 51.7,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 52.7,
+          "verdict": "观望"
+        }
+      ],
+      "history": [
+        {
+          "date": "2026-11-26",
+          "total": 52.7,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-11-19",
+          "total": 51.7,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-11-12",
+          "total": 51.7,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-11-05",
+          "total": 51.7,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-10-30",
+          "total": 52.7,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-10-22",
+          "total": 54.5,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-09-24",
+          "total": 53.5,
+          "verdict": "观望"
+        }
+      ]
+    },
+    {
+      "slug": "jiuzhoutong",
+      "name": "九州通",
+      "symbol": "600998",
+      "industry": "医药生物",
+      "latest": {
+        "date": "2026-11-26",
+        "total": 52.5,
+        "verdict": "观望",
+        "icon": "🟠",
+        "metric": "PE",
+        "pct": 44.6
+      },
+      "series": [
+        {
+          "date": "2026-10-22",
+          "total": 52.5,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-10-30",
+          "total": 52.5,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-11-05",
+          "total": 51.2,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-11-19",
+          "total": 51.2,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 52.5,
+          "verdict": "观望"
+        }
+      ],
+      "history": [
+        {
+          "date": "2026-11-26",
+          "total": 52.5,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-11-19",
+          "total": 51.2,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-11-05",
+          "total": 51.2,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-10-30",
+          "total": 52.5,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-10-22",
+          "total": 52.5,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-09-29",
+          "total": 54.1,
+          "verdict": "观望"
+        }
+      ]
+    },
+    {
       "slug": "zhongguo-yinhang",
       "name": "中国银行",
       "symbol": "601988",
       "industry": "银行",
       "latest": {
-        "date": "2026-11-19",
+        "date": "2026-11-26",
         "total": 52.3,
         "verdict": "观望",
         "icon": "🟠",
         "metric": "PE",
-        "pct": 100.0
+        "pct": 99.8
       },
       "series": [
-        {
-          "date": "2026-10-22",
-          "total": 52.3,
-          "verdict": "观望"
-        },
         {
           "date": "2026-10-30",
           "total": 52.3,
@@ -5368,9 +5874,19 @@
           "date": "2026-11-19",
           "total": 52.3,
           "verdict": "观望"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 52.3,
+          "verdict": "观望"
         }
       ],
       "history": [
+        {
+          "date": "2026-11-26",
+          "total": 52.3,
+          "verdict": "观望"
+        },
         {
           "date": "2026-11-19",
           "total": 52.3,
@@ -5414,19 +5930,14 @@
       "symbol": "002230",
       "industry": "计算机",
       "latest": {
-        "date": "2026-11-19",
+        "date": "2026-11-26",
         "total": 52.2,
         "verdict": "观望",
         "icon": "🟠",
         "metric": "PE",
-        "pct": 29.1
+        "pct": 25.5
       },
       "series": [
-        {
-          "date": "2026-10-22",
-          "total": 51.2,
-          "verdict": "观望"
-        },
         {
           "date": "2026-10-30",
           "total": 52.2,
@@ -5446,9 +5957,19 @@
           "date": "2026-11-19",
           "total": 52.2,
           "verdict": "观望"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 52.2,
+          "verdict": "观望"
         }
       ],
       "history": [
+        {
+          "date": "2026-11-26",
+          "total": 52.2,
+          "verdict": "观望"
+        },
         {
           "date": "2026-11-19",
           "total": 52.2,
@@ -5492,19 +6013,14 @@
       "symbol": "002602",
       "industry": "传媒",
       "latest": {
-        "date": "2026-11-19",
+        "date": "2026-11-26",
         "total": 52.2,
         "verdict": "观望",
         "icon": "🟠",
         "metric": "PE",
-        "pct": 10.8
+        "pct": 10.6
       },
       "series": [
-        {
-          "date": "2026-10-22",
-          "total": 50.3,
-          "verdict": "观望"
-        },
         {
           "date": "2026-10-30",
           "total": 50.3,
@@ -5524,9 +6040,19 @@
           "date": "2026-11-19",
           "total": 52.2,
           "verdict": "观望"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 52.2,
+          "verdict": "观望"
         }
       ],
       "history": [
+        {
+          "date": "2026-11-26",
+          "total": 52.2,
+          "verdict": "观望"
+        },
         {
           "date": "2026-11-19",
           "total": 52.2,
@@ -5560,142 +6086,74 @@
       ]
     },
     {
-      "slug": "hailuo-shuini",
-      "name": "海螺水泥",
-      "symbol": "600585",
-      "industry": "建筑材料",
+      "slug": "zhongguo-jiaojian",
+      "name": "中国交建",
+      "symbol": "601800",
+      "industry": "建筑装饰",
       "latest": {
-        "date": "2026-11-19",
-        "total": 51.7,
-        "verdict": "观望",
-        "icon": "🟠",
+        "date": "2026-11-26",
+        "total": 51.8,
+        "verdict": "不推荐",
+        "icon": "🔴",
         "metric": "PE",
-        "pct": 100.0
+        "pct": 70.6
       },
       "series": [
         {
           "date": "2026-10-22",
-          "total": 54.5,
-          "verdict": "观望"
+          "total": 51.8,
+          "verdict": "不推荐"
         },
         {
           "date": "2026-10-30",
-          "total": 52.7,
-          "verdict": "观望"
+          "total": 51.8,
+          "verdict": "不推荐"
         },
         {
           "date": "2026-11-05",
-          "total": 51.7,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-11-12",
-          "total": 51.7,
-          "verdict": "观望"
+          "total": 48.7,
+          "verdict": "不推荐"
         },
         {
           "date": "2026-11-19",
-          "total": 51.7,
-          "verdict": "观望"
+          "total": 48.7,
+          "verdict": "不推荐"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 51.8,
+          "verdict": "不推荐"
         }
       ],
       "history": [
         {
-          "date": "2026-11-19",
-          "total": 51.7,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-11-12",
-          "total": 51.7,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-11-05",
-          "total": 51.7,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-10-30",
-          "total": 52.7,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-10-22",
-          "total": 54.5,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-09-24",
-          "total": 53.5,
-          "verdict": "观望"
-        }
-      ]
-    },
-    {
-      "slug": "jiuzhoutong",
-      "name": "九州通",
-      "symbol": "600998",
-      "industry": "医药生物",
-      "latest": {
-        "date": "2026-11-19",
-        "total": 51.2,
-        "verdict": "观望",
-        "icon": "🟠",
-        "metric": "PE",
-        "pct": 48.8
-      },
-      "series": [
-        {
-          "date": "2026-09-29",
-          "total": 54.1,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-10-22",
-          "total": 52.5,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-10-30",
-          "total": 52.5,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-11-05",
-          "total": 51.2,
-          "verdict": "观望"
+          "date": "2026-11-26",
+          "total": 51.8,
+          "verdict": "不推荐"
         },
         {
           "date": "2026-11-19",
-          "total": 51.2,
-          "verdict": "观望"
-        }
-      ],
-      "history": [
-        {
-          "date": "2026-11-19",
-          "total": 51.2,
-          "verdict": "观望"
+          "total": 48.7,
+          "verdict": "不推荐"
         },
         {
           "date": "2026-11-05",
-          "total": 51.2,
-          "verdict": "观望"
+          "total": 48.7,
+          "verdict": "不推荐"
         },
         {
           "date": "2026-10-30",
-          "total": 52.5,
-          "verdict": "观望"
+          "total": 51.8,
+          "verdict": "不推荐"
         },
         {
           "date": "2026-10-22",
-          "total": 52.5,
-          "verdict": "观望"
+          "total": 51.8,
+          "verdict": "不推荐"
         },
         {
           "date": "2026-09-29",
-          "total": 54.1,
+          "total": 52.1,
           "verdict": "观望"
         }
       ]
@@ -5706,19 +6164,14 @@
       "symbol": "601728",
       "industry": "通信",
       "latest": {
-        "date": "2026-11-19",
+        "date": "2026-11-26",
         "total": 50.9,
         "verdict": "观望",
         "icon": "🟠",
         "metric": "PE",
-        "pct": 96.8
+        "pct": 98.8
       },
       "series": [
-        {
-          "date": "2026-09-29",
-          "total": 55.1,
-          "verdict": "观望"
-        },
         {
           "date": "2026-10-22",
           "total": 54.6,
@@ -5736,12 +6189,22 @@
         },
         {
           "date": "2026-11-19",
+          "total": 50.9,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-11-26",
           "total": 50.9,
           "verdict": "观望"
         }
       ],
       "history": [
         {
+          "date": "2026-11-26",
+          "total": 50.9,
+          "verdict": "观望"
+        },
+        {
           "date": "2026-11-19",
           "total": 50.9,
           "verdict": "观望"
@@ -5764,74 +6227,6 @@
         {
           "date": "2026-09-29",
           "total": 55.1,
-          "verdict": "观望"
-        }
-      ]
-    },
-    {
-      "slug": "youchu-yinhang",
-      "name": "邮储银行",
-      "symbol": "601658",
-      "industry": "银行",
-      "latest": {
-        "date": "2026-11-19",
-        "total": 50.7,
-        "verdict": "观望",
-        "icon": "🟠",
-        "metric": "PE",
-        "pct": 84.2
-      },
-      "series": [
-        {
-          "date": "2026-09-29",
-          "total": 55.3,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-10-22",
-          "total": 55.3,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-10-30",
-          "total": 55.3,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-11-05",
-          "total": 50.7,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-11-19",
-          "total": 50.7,
-          "verdict": "观望"
-        }
-      ],
-      "history": [
-        {
-          "date": "2026-11-19",
-          "total": 50.7,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-11-05",
-          "total": 50.7,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-10-30",
-          "total": 55.3,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-10-22",
-          "total": 55.3,
-          "verdict": "观望"
-        },
-        {
-          "date": "2026-09-29",
-          "total": 55.3,
           "verdict": "观望"
         }
       ]
@@ -5842,7 +6237,7 @@
       "symbol": "601668",
       "industry": "建筑装饰",
       "latest": {
-        "date": "2026-11-19",
+        "date": "2026-11-26",
         "total": 49.5,
         "verdict": "不推荐",
         "icon": "🔴",
@@ -5850,11 +6245,6 @@
         "pct": 77.0
       },
       "series": [
-        {
-          "date": "2026-10-22",
-          "total": 51.8,
-          "verdict": "观望"
-        },
         {
           "date": "2026-10-30",
           "total": 51.8,
@@ -5874,9 +6264,19 @@
           "date": "2026-11-19",
           "total": 49.5,
           "verdict": "不推荐"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 49.5,
+          "verdict": "不推荐"
         }
       ],
       "history": [
+        {
+          "date": "2026-11-26",
+          "total": 49.5,
+          "verdict": "不推荐"
+        },
         {
           "date": "2026-11-19",
           "total": 49.5,
@@ -5910,79 +6310,79 @@
       ]
     },
     {
-      "slug": "jingdongfang",
-      "name": "京东方A",
-      "symbol": "000725",
-      "industry": "电子",
+      "slug": "hangfa-dongli",
+      "name": "航发动力",
+      "symbol": "600893",
+      "industry": "国防军工",
       "latest": {
-        "date": "2026-11-19",
+        "date": "2026-11-26",
         "total": 49.2,
         "verdict": "不推荐",
         "icon": "🔴",
         "metric": "PE",
-        "pct": 51.1
+        "pct": 78.5
       },
       "series": [
         {
-          "date": "2026-10-22",
-          "total": 48.9,
-          "verdict": "不推荐"
-        },
-        {
           "date": "2026-10-30",
-          "total": 50.7,
+          "total": 47.7,
           "verdict": "不推荐"
         },
         {
           "date": "2026-11-05",
-          "total": 49.2,
+          "total": 47.7,
           "verdict": "不推荐"
         },
         {
           "date": "2026-11-12",
-          "total": 49.2,
+          "total": 47.7,
           "verdict": "不推荐"
         },
         {
           "date": "2026-11-19",
+          "total": 47.7,
+          "verdict": "不推荐"
+        },
+        {
+          "date": "2026-11-26",
           "total": 49.2,
           "verdict": "不推荐"
         }
       ],
       "history": [
         {
-          "date": "2026-11-19",
+          "date": "2026-11-26",
           "total": 49.2,
+          "verdict": "不推荐"
+        },
+        {
+          "date": "2026-11-19",
+          "total": 47.7,
           "verdict": "不推荐"
         },
         {
           "date": "2026-11-12",
-          "total": 49.2,
+          "total": 47.7,
           "verdict": "不推荐"
         },
         {
           "date": "2026-11-05",
-          "total": 49.2,
+          "total": 47.7,
           "verdict": "不推荐"
         },
         {
           "date": "2026-10-30",
-          "total": 50.7,
+          "total": 47.7,
           "verdict": "不推荐"
         },
         {
           "date": "2026-10-22",
-          "total": 48.9,
+          "total": 47.7,
           "verdict": "不推荐"
         },
         {
           "date": "2026-09-24",
-          "total": 44.7,
-          "verdict": "不推荐"
-        },
-        {
-          "date": "2026-09-22",
-          "total": 44.7,
+          "total": 48.0,
           "verdict": "不推荐"
         }
       ]
@@ -5993,19 +6393,14 @@
       "symbol": "601288",
       "industry": "银行",
       "latest": {
-        "date": "2026-11-19",
+        "date": "2026-11-26",
         "total": 49.0,
         "verdict": "不推荐",
         "icon": "🔴",
         "metric": "PE",
-        "pct": 96.8
+        "pct": 97.9
       },
       "series": [
-        {
-          "date": "2026-10-22",
-          "total": 48.3,
-          "verdict": "不推荐"
-        },
         {
           "date": "2026-10-30",
           "total": 50.0,
@@ -6025,9 +6420,19 @@
           "date": "2026-11-19",
           "total": 49.0,
           "verdict": "不推荐"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 49.0,
+          "verdict": "不推荐"
         }
       ],
       "history": [
+        {
+          "date": "2026-11-26",
+          "total": 49.0,
+          "verdict": "不推荐"
+        },
         {
           "date": "2026-11-19",
           "total": 49.0,
@@ -6066,69 +6471,74 @@
       ]
     },
     {
-      "slug": "zhongguo-jiaojian",
-      "name": "中国交建",
-      "symbol": "601800",
-      "industry": "建筑装饰",
+      "slug": "youchu-yinhang",
+      "name": "邮储银行",
+      "symbol": "601658",
+      "industry": "银行",
       "latest": {
-        "date": "2026-11-19",
-        "total": 48.7,
+        "date": "2026-11-26",
+        "total": 48.9,
         "verdict": "不推荐",
         "icon": "🔴",
         "metric": "PE",
-        "pct": 76.5
+        "pct": 88.6
       },
       "series": [
         {
-          "date": "2026-09-29",
-          "total": 52.1,
+          "date": "2026-10-22",
+          "total": 55.3,
           "verdict": "观望"
         },
         {
-          "date": "2026-10-22",
-          "total": 51.8,
-          "verdict": "不推荐"
-        },
-        {
           "date": "2026-10-30",
-          "total": 51.8,
-          "verdict": "不推荐"
+          "total": 55.3,
+          "verdict": "观望"
         },
         {
           "date": "2026-11-05",
-          "total": 48.7,
-          "verdict": "不推荐"
+          "total": 50.7,
+          "verdict": "观望"
         },
         {
           "date": "2026-11-19",
-          "total": 48.7,
+          "total": 50.7,
+          "verdict": "观望"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 48.9,
           "verdict": "不推荐"
         }
       ],
       "history": [
         {
-          "date": "2026-11-19",
-          "total": 48.7,
+          "date": "2026-11-26",
+          "total": 48.9,
           "verdict": "不推荐"
+        },
+        {
+          "date": "2026-11-19",
+          "total": 50.7,
+          "verdict": "观望"
         },
         {
           "date": "2026-11-05",
-          "total": 48.7,
-          "verdict": "不推荐"
+          "total": 50.7,
+          "verdict": "观望"
         },
         {
           "date": "2026-10-30",
-          "total": 51.8,
-          "verdict": "不推荐"
+          "total": 55.3,
+          "verdict": "观望"
         },
         {
           "date": "2026-10-22",
-          "total": 51.8,
-          "verdict": "不推荐"
+          "total": 55.3,
+          "verdict": "观望"
         },
         {
           "date": "2026-09-29",
-          "total": 52.1,
+          "total": 55.3,
           "verdict": "观望"
         }
       ]
@@ -6139,19 +6549,14 @@
       "symbol": "600795",
       "industry": "公用事业",
       "latest": {
-        "date": "2026-11-19",
+        "date": "2026-11-26",
         "total": 48.4,
         "verdict": "不推荐",
         "icon": "🔴",
         "metric": "PE",
-        "pct": 65.0
+        "pct": 60.9
       },
       "series": [
-        {
-          "date": "2026-09-29",
-          "total": 55.0,
-          "verdict": "观望"
-        },
         {
           "date": "2026-10-22",
           "total": 54.4,
@@ -6171,9 +6576,19 @@
           "date": "2026-11-19",
           "total": 48.4,
           "verdict": "不推荐"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 48.4,
+          "verdict": "不推荐"
         }
       ],
       "history": [
+        {
+          "date": "2026-11-26",
+          "total": 48.4,
+          "verdict": "不推荐"
+        },
         {
           "date": "2026-11-19",
           "total": 48.4,
@@ -6207,19 +6622,14 @@
       "symbol": "601186",
       "industry": "建筑装饰",
       "latest": {
-        "date": "2026-11-19",
+        "date": "2026-11-26",
         "total": 48.0,
         "verdict": "不推荐",
         "icon": "🔴",
         "metric": "PE",
-        "pct": 62.7
+        "pct": 62.4
       },
       "series": [
-        {
-          "date": "2026-09-29",
-          "total": 51.0,
-          "verdict": "观望"
-        },
         {
           "date": "2026-10-22",
           "total": 50.5,
@@ -6237,12 +6647,22 @@
         },
         {
           "date": "2026-11-19",
+          "total": 48.0,
+          "verdict": "不推荐"
+        },
+        {
+          "date": "2026-11-26",
           "total": 48.0,
           "verdict": "不推荐"
         }
       ],
       "history": [
         {
+          "date": "2026-11-26",
+          "total": 48.0,
+          "verdict": "不推荐"
+        },
+        {
           "date": "2026-11-19",
           "total": 48.0,
           "verdict": "不推荐"
@@ -6266,79 +6686,6 @@
           "date": "2026-09-29",
           "total": 51.0,
           "verdict": "观望"
-        }
-      ]
-    },
-    {
-      "slug": "hangfa-dongli",
-      "name": "航发动力",
-      "symbol": "600893",
-      "industry": "国防军工",
-      "latest": {
-        "date": "2026-11-19",
-        "total": 47.7,
-        "verdict": "不推荐",
-        "icon": "🔴",
-        "metric": "PE",
-        "pct": 83.5
-      },
-      "series": [
-        {
-          "date": "2026-10-22",
-          "total": 47.7,
-          "verdict": "不推荐"
-        },
-        {
-          "date": "2026-10-30",
-          "total": 47.7,
-          "verdict": "不推荐"
-        },
-        {
-          "date": "2026-11-05",
-          "total": 47.7,
-          "verdict": "不推荐"
-        },
-        {
-          "date": "2026-11-12",
-          "total": 47.7,
-          "verdict": "不推荐"
-        },
-        {
-          "date": "2026-11-19",
-          "total": 47.7,
-          "verdict": "不推荐"
-        }
-      ],
-      "history": [
-        {
-          "date": "2026-11-19",
-          "total": 47.7,
-          "verdict": "不推荐"
-        },
-        {
-          "date": "2026-11-12",
-          "total": 47.7,
-          "verdict": "不推荐"
-        },
-        {
-          "date": "2026-11-05",
-          "total": 47.7,
-          "verdict": "不推荐"
-        },
-        {
-          "date": "2026-10-30",
-          "total": 47.7,
-          "verdict": "不推荐"
-        },
-        {
-          "date": "2026-10-22",
-          "total": 47.7,
-          "verdict": "不推荐"
-        },
-        {
-          "date": "2026-09-24",
-          "total": 48.0,
-          "verdict": "不推荐"
         }
       ]
     },
@@ -6348,19 +6695,14 @@
       "symbol": "000988",
       "industry": "机械设备",
       "latest": {
-        "date": "2026-11-19",
+        "date": "2026-11-26",
         "total": 47.6,
         "verdict": "不推荐",
         "icon": "🔴",
         "metric": "PE",
-        "pct": 40.8
+        "pct": 25.1
       },
       "series": [
-        {
-          "date": "2026-10-22",
-          "total": 43.8,
-          "verdict": "不推荐"
-        },
         {
           "date": "2026-10-30",
           "total": 46.8,
@@ -6380,9 +6722,19 @@
           "date": "2026-11-19",
           "total": 47.6,
           "verdict": "不推荐"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 47.6,
+          "verdict": "不推荐"
         }
       ],
       "history": [
+        {
+          "date": "2026-11-26",
+          "total": 47.6,
+          "verdict": "不推荐"
+        },
         {
           "date": "2026-11-19",
           "total": 47.6,
@@ -6421,19 +6773,14 @@
       "symbol": "600019",
       "industry": "钢铁",
       "latest": {
-        "date": "2026-11-19",
+        "date": "2026-11-26",
         "total": 47.3,
         "verdict": "不推荐",
         "icon": "🔴",
         "metric": "PE",
-        "pct": 77.8
+        "pct": 76.0
       },
       "series": [
-        {
-          "date": "2026-10-22",
-          "total": 50.9,
-          "verdict": "观望"
-        },
         {
           "date": "2026-10-30",
           "total": 49.6,
@@ -6453,9 +6800,19 @@
           "date": "2026-11-19",
           "total": 47.3,
           "verdict": "不推荐"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 47.3,
+          "verdict": "不推荐"
         }
       ],
       "history": [
+        {
+          "date": "2026-11-26",
+          "total": 47.3,
+          "verdict": "不推荐"
+        },
         {
           "date": "2026-11-19",
           "total": 47.3,
@@ -6499,19 +6856,14 @@
       "symbol": "601000",
       "industry": "交通运输",
       "latest": {
-        "date": "2026-11-19",
+        "date": "2026-11-26",
         "total": 47.3,
         "verdict": "不推荐",
         "icon": "🔴",
         "metric": "PE",
-        "pct": 84.0
+        "pct": 84.7
       },
       "series": [
-        {
-          "date": "2026-09-29",
-          "total": 52.1,
-          "verdict": "观望"
-        },
         {
           "date": "2026-10-22",
           "total": 51.4,
@@ -6531,9 +6883,19 @@
           "date": "2026-11-19",
           "total": 47.3,
           "verdict": "不推荐"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 47.3,
+          "verdict": "不推荐"
         }
       ],
       "history": [
+        {
+          "date": "2026-11-26",
+          "total": 47.3,
+          "verdict": "不推荐"
+        },
         {
           "date": "2026-11-19",
           "total": 47.3,
@@ -6562,24 +6924,102 @@
       ]
     },
     {
+      "slug": "jingdongfang",
+      "name": "京东方A",
+      "symbol": "000725",
+      "industry": "电子",
+      "latest": {
+        "date": "2026-11-26",
+        "total": 47.2,
+        "verdict": "不推荐",
+        "icon": "🔴",
+        "metric": "PE",
+        "pct": 52.1
+      },
+      "series": [
+        {
+          "date": "2026-10-30",
+          "total": 50.7,
+          "verdict": "不推荐"
+        },
+        {
+          "date": "2026-11-05",
+          "total": 49.2,
+          "verdict": "不推荐"
+        },
+        {
+          "date": "2026-11-12",
+          "total": 49.2,
+          "verdict": "不推荐"
+        },
+        {
+          "date": "2026-11-19",
+          "total": 49.2,
+          "verdict": "不推荐"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 47.2,
+          "verdict": "不推荐"
+        }
+      ],
+      "history": [
+        {
+          "date": "2026-11-26",
+          "total": 47.2,
+          "verdict": "不推荐"
+        },
+        {
+          "date": "2026-11-19",
+          "total": 49.2,
+          "verdict": "不推荐"
+        },
+        {
+          "date": "2026-11-12",
+          "total": 49.2,
+          "verdict": "不推荐"
+        },
+        {
+          "date": "2026-11-05",
+          "total": 49.2,
+          "verdict": "不推荐"
+        },
+        {
+          "date": "2026-10-30",
+          "total": 50.7,
+          "verdict": "不推荐"
+        },
+        {
+          "date": "2026-10-22",
+          "total": 48.9,
+          "verdict": "不推荐"
+        },
+        {
+          "date": "2026-09-24",
+          "total": 44.7,
+          "verdict": "不推荐"
+        },
+        {
+          "date": "2026-09-22",
+          "total": 44.7,
+          "verdict": "不推荐"
+        }
+      ]
+    },
+    {
       "slug": "zhongxin-guoji",
       "name": "中芯国际",
       "symbol": "688981",
       "industry": "电子",
       "latest": {
-        "date": "2026-11-19",
+        "date": "2026-11-26",
         "total": 46.8,
         "verdict": "不推荐",
         "icon": "🔴",
         "metric": "PE",
-        "pct": 56.2
+        "pct": 59.5
       },
       "series": [
-        {
-          "date": "2026-10-22",
-          "total": 46.8,
-          "verdict": "不推荐"
-        },
         {
           "date": "2026-10-30",
           "total": 48.5,
@@ -6599,9 +7039,19 @@
           "date": "2026-11-19",
           "total": 46.8,
           "verdict": "不推荐"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 46.8,
+          "verdict": "不推荐"
         }
       ],
       "history": [
+        {
+          "date": "2026-11-26",
+          "total": 46.8,
+          "verdict": "不推荐"
+        },
         {
           "date": "2026-11-19",
           "total": 46.8,
@@ -6645,19 +7095,14 @@
       "symbol": "000617",
       "industry": "非银金融",
       "latest": {
-        "date": "2026-11-19",
+        "date": "2026-11-26",
         "total": 46.7,
         "verdict": "不推荐",
         "icon": "🔴",
         "metric": "PE",
-        "pct": 64.2
+        "pct": 58.7
       },
       "series": [
-        {
-          "date": "2026-10-22",
-          "total": 46.7,
-          "verdict": "不推荐"
-        },
         {
           "date": "2026-10-30",
           "total": 46.7,
@@ -6677,9 +7122,19 @@
           "date": "2026-11-19",
           "total": 46.7,
           "verdict": "不推荐"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 46.7,
+          "verdict": "不推荐"
         }
       ],
       "history": [
+        {
+          "date": "2026-11-26",
+          "total": 46.7,
+          "verdict": "不推荐"
+        },
         {
           "date": "2026-11-19",
           "total": 46.7,
@@ -6718,165 +7173,19 @@
       ]
     },
     {
-      "slug": "jiaotong-yinhang",
-      "name": "交通银行",
-      "symbol": "601328",
-      "industry": "银行",
-      "latest": {
-        "date": "2026-11-19",
-        "total": 46.2,
-        "verdict": "不推荐",
-        "icon": "🔴",
-        "metric": "PE",
-        "pct": 99.8
-      },
-      "series": [
-        {
-          "date": "2026-09-29",
-          "total": 46.2,
-          "verdict": "不推荐"
-        },
-        {
-          "date": "2026-10-22",
-          "total": 46.2,
-          "verdict": "不推荐"
-        },
-        {
-          "date": "2026-10-30",
-          "total": 46.2,
-          "verdict": "不推荐"
-        },
-        {
-          "date": "2026-11-05",
-          "total": 46.2,
-          "verdict": "不推荐"
-        },
-        {
-          "date": "2026-11-19",
-          "total": 46.2,
-          "verdict": "不推荐"
-        }
-      ],
-      "history": [
-        {
-          "date": "2026-11-19",
-          "total": 46.2,
-          "verdict": "不推荐"
-        },
-        {
-          "date": "2026-11-05",
-          "total": 46.2,
-          "verdict": "不推荐"
-        },
-        {
-          "date": "2026-10-30",
-          "total": 46.2,
-          "verdict": "不推荐"
-        },
-        {
-          "date": "2026-10-22",
-          "total": 46.2,
-          "verdict": "不推荐"
-        },
-        {
-          "date": "2026-09-29",
-          "total": 46.2,
-          "verdict": "不推荐"
-        }
-      ]
-    },
-    {
-      "slug": "baoli-fazhan",
-      "name": "保利发展",
-      "symbol": "600048",
-      "industry": "房地产",
-      "latest": {
-        "date": "2026-11-19",
-        "total": 42.8,
-        "verdict": "不推荐",
-        "icon": "🔴",
-        "metric": "PE",
-        "pct": 91.6
-      },
-      "series": [
-        {
-          "date": "2026-10-22",
-          "total": 42.3,
-          "verdict": "不推荐"
-        },
-        {
-          "date": "2026-10-30",
-          "total": 42.3,
-          "verdict": "不推荐"
-        },
-        {
-          "date": "2026-11-05",
-          "total": 42.8,
-          "verdict": "不推荐"
-        },
-        {
-          "date": "2026-11-12",
-          "total": 42.8,
-          "verdict": "不推荐"
-        },
-        {
-          "date": "2026-11-19",
-          "total": 42.8,
-          "verdict": "不推荐"
-        }
-      ],
-      "history": [
-        {
-          "date": "2026-11-19",
-          "total": 42.8,
-          "verdict": "不推荐"
-        },
-        {
-          "date": "2026-11-12",
-          "total": 42.8,
-          "verdict": "不推荐"
-        },
-        {
-          "date": "2026-11-05",
-          "total": 42.8,
-          "verdict": "不推荐"
-        },
-        {
-          "date": "2026-10-30",
-          "total": 42.3,
-          "verdict": "不推荐"
-        },
-        {
-          "date": "2026-10-22",
-          "total": 42.3,
-          "verdict": "不推荐"
-        },
-        {
-          "date": "2026-09-24",
-          "total": 42.2,
-          "verdict": "不推荐"
-        }
-      ]
-    },
-    {
       "slug": "nanjing-gaoke",
       "name": "南京高科",
       "symbol": "600064",
       "industry": "房地产",
       "latest": {
-        "date": "2026-11-19",
-        "total": 42.4,
+        "date": "2026-11-26",
+        "total": 44.7,
         "verdict": "不推荐",
         "icon": "🔴",
         "metric": "PE",
-        "pct": 84.1
+        "pct": 83.3
       },
       "series": [
-        {
-          "date": "2026-10-22",
-          "total": 44.7,
-          "verdict": "不推荐"
-        },
         {
           "date": "2026-10-30",
           "total": 44.7,
@@ -6896,9 +7205,19 @@
           "date": "2026-11-19",
           "total": 42.4,
           "verdict": "不推荐"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 44.7,
+          "verdict": "不推荐"
         }
       ],
       "history": [
+        {
+          "date": "2026-11-26",
+          "total": 44.7,
+          "verdict": "不推荐"
+        },
         {
           "date": "2026-11-19",
           "total": 42.4,
@@ -6932,24 +7251,170 @@
       ]
     },
     {
+      "slug": "jiaotong-yinhang",
+      "name": "交通银行",
+      "symbol": "601328",
+      "industry": "银行",
+      "latest": {
+        "date": "2026-11-26",
+        "total": 44.5,
+        "verdict": "不推荐",
+        "icon": "🔴",
+        "metric": "PE",
+        "pct": 100.0
+      },
+      "series": [
+        {
+          "date": "2026-10-22",
+          "total": 46.2,
+          "verdict": "不推荐"
+        },
+        {
+          "date": "2026-10-30",
+          "total": 46.2,
+          "verdict": "不推荐"
+        },
+        {
+          "date": "2026-11-05",
+          "total": 46.2,
+          "verdict": "不推荐"
+        },
+        {
+          "date": "2026-11-19",
+          "total": 46.2,
+          "verdict": "不推荐"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 44.5,
+          "verdict": "不推荐"
+        }
+      ],
+      "history": [
+        {
+          "date": "2026-11-26",
+          "total": 44.5,
+          "verdict": "不推荐"
+        },
+        {
+          "date": "2026-11-19",
+          "total": 46.2,
+          "verdict": "不推荐"
+        },
+        {
+          "date": "2026-11-05",
+          "total": 46.2,
+          "verdict": "不推荐"
+        },
+        {
+          "date": "2026-10-30",
+          "total": 46.2,
+          "verdict": "不推荐"
+        },
+        {
+          "date": "2026-10-22",
+          "total": 46.2,
+          "verdict": "不推荐"
+        },
+        {
+          "date": "2026-09-29",
+          "total": 46.2,
+          "verdict": "不推荐"
+        }
+      ]
+    },
+    {
+      "slug": "baoli-fazhan",
+      "name": "保利发展",
+      "symbol": "600048",
+      "industry": "房地产",
+      "latest": {
+        "date": "2026-11-26",
+        "total": 42.8,
+        "verdict": "不推荐",
+        "icon": "🔴",
+        "metric": "PE",
+        "pct": 91.5
+      },
+      "series": [
+        {
+          "date": "2026-10-30",
+          "total": 42.3,
+          "verdict": "不推荐"
+        },
+        {
+          "date": "2026-11-05",
+          "total": 42.8,
+          "verdict": "不推荐"
+        },
+        {
+          "date": "2026-11-12",
+          "total": 42.8,
+          "verdict": "不推荐"
+        },
+        {
+          "date": "2026-11-19",
+          "total": 42.8,
+          "verdict": "不推荐"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 42.8,
+          "verdict": "不推荐"
+        }
+      ],
+      "history": [
+        {
+          "date": "2026-11-26",
+          "total": 42.8,
+          "verdict": "不推荐"
+        },
+        {
+          "date": "2026-11-19",
+          "total": 42.8,
+          "verdict": "不推荐"
+        },
+        {
+          "date": "2026-11-12",
+          "total": 42.8,
+          "verdict": "不推荐"
+        },
+        {
+          "date": "2026-11-05",
+          "total": 42.8,
+          "verdict": "不推荐"
+        },
+        {
+          "date": "2026-10-30",
+          "total": 42.3,
+          "verdict": "不推荐"
+        },
+        {
+          "date": "2026-10-22",
+          "total": 42.3,
+          "verdict": "不推荐"
+        },
+        {
+          "date": "2026-09-24",
+          "total": 42.2,
+          "verdict": "不推荐"
+        }
+      ]
+    },
+    {
       "slug": "yageer",
       "name": "雅戈尔",
       "symbol": "600177",
       "industry": "纺织服饰",
       "latest": {
-        "date": "2026-11-19",
+        "date": "2026-11-26",
         "total": 39.3,
         "verdict": "不推荐",
         "icon": "🔴",
         "metric": "PE",
-        "pct": 77.1
+        "pct": 86.7
       },
       "series": [
-        {
-          "date": "2026-10-22",
-          "total": 39.3,
-          "verdict": "不推荐"
-        },
         {
           "date": "2026-10-30",
           "total": 39.3,
@@ -6969,9 +7434,19 @@
           "date": "2026-11-19",
           "total": 39.3,
           "verdict": "不推荐"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 39.3,
+          "verdict": "不推荐"
         }
       ],
       "history": [
+        {
+          "date": "2026-11-26",
+          "total": 39.3,
+          "verdict": "不推荐"
+        },
         {
           "date": "2026-11-19",
           "total": 39.3,
@@ -7010,19 +7485,14 @@
       "symbol": "000625",
       "industry": "汽车",
       "latest": {
-        "date": "2026-11-19",
+        "date": "2026-11-26",
         "total": 38.6,
         "verdict": "远离",
         "icon": "❌",
         "metric": "PE",
-        "pct": 95.8
+        "pct": 94.8
       },
       "series": [
-        {
-          "date": "2026-10-22",
-          "total": 40.1,
-          "verdict": "不推荐"
-        },
         {
           "date": "2026-10-30",
           "total": 40.1,
@@ -7042,9 +7512,19 @@
           "date": "2026-11-19",
           "total": 38.6,
           "verdict": "远离"
+        },
+        {
+          "date": "2026-11-26",
+          "total": 38.6,
+          "verdict": "远离"
         }
       ],
       "history": [
+        {
+          "date": "2026-11-26",
+          "total": 38.6,
+          "verdict": "远离"
+        },
         {
           "date": "2026-11-19",
           "total": 38.6,
